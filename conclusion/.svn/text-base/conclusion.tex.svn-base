@@ -1,0 +1,33 @@
+% --------------------------------------------------------------------------- %
+% --------------------------------------------------------------------------- %
+\chapter{Summary and Conclusions}
+\label {ch:conclusion}
+% --------------------------------------------------------------------------- %
+% --------------------------------------------------------------------------- %
+This thesis reports on a search for new physics in a final state with two
+same-sign leptons, missing transverse energy, and significant hadronic
+activity. The results use the data collected by the CMS detector from 2012
+corresponding to 19.5 \fbinv of integrated luminosity. No significant deviation
+from the Standard Model expectations were observed.
+
+The results are used to set upper limits on the same-sign top-pair production
+cross section $\sigma(pp \to tt + {\overline{t}}{\overline{t}}) < 0.71~\pb$ and
+$\sigma(pp \to tt) < 0.33~\pb$ at the 95\% confidence level. Also the upper
+limit on the SM cross section for the four-top-quark production is computed to
+be $\sigma(pp \to tt\overline{t}\overline{t}) < 47~\fb$ at the 95\% confidence level.
+
+Upper limits on the cross section for several models of supersymmetry are also
+set. Specifically, sparticle production cross-sections calculated assuming that
+gluinos decay exclusively into top or bottom squarks. The probed models show an
+upper limit on gluinos masses up to $\sim 1050~\GeVcc$ and on bottom squarks
+with masses up to $~\sim 500~\GeVcc$. In models where no third generation
+squarks were involved in the gluino decays, a somewhat weaker limit is obtained
+for the probed gluino masses of up to $\sim 900~\GeVcc$.
+
+The future of this analysis looks towards the next LHC run that will increase
+the center-of-mass energy to 13 or 14 \TeV. This, along with improvements
+to the estimation for the main SM backgrounds (i.e.~\ttW,~\ttZ,~\qqWW,
+and~\HToTauTau) will result in a large increase in the sensitivity of this
+analysis for all of the supersymmetry models probed. The CMS collaboration
+intends to pursue this analysis when the LHC comes back online sometime in
+2015.

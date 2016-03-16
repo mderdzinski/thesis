@@ -1,0 +1,213 @@
+% --------------------------------------------------------------------------- %
+% --------------------------------------------------------------------------- %
+% captions for the SRs
+% --------------------------------------------------------------------------- %
+% --------------------------------------------------------------------------- %
+
+% caption used for the exclusive yields
+\newcommand{\exclcaption}{
+compared to expectations from simulation alone, and from the data-driven
+methods. The upper part of the table is based on simulation only and is used
+only as a reference. The lower part is the main result of the analysis. The
+SF (DF) contributions are for events with one (two) fake leptons. The {\em MC
+Pred} contribution includes contributions from genuine same-sign lepton pairs
+(a sum of the rows from \Wgamma down to the Higgs samples). The statistical
+uncertainties on the MC contribution are calculated using the Clopper-Pearson
+method. Systematic uncertainties (the second uncertainty if present) are
+displayed only for the final combined type of background, no systematic
+uncertainty is added for estimates with zero entries. Systematic uncertainties
+are 100\% correlated among the channels.
+}
+
+% high pt
+% --------------------------------------------------------------------------- %
+
+\newcommand{\exclhptnamerZERO      } {{\bf Baseline with 0 btags (Signal Region 0): } Observed event yields in the \hpt~baseline                            } 
+\newcommand{\exclhptnamerONE       } {{\bf Exclusive \hpt~Signal Region 1:       } Observed event yields in the low-\met, low-\Ht, and low-\njets~region    } 
+\newcommand{\exclhptnamerTWO       } {{\bf Exclusive \hpt~Signal Region 2:       } Observed event yields in the low-\met, high-\Ht, and low-\njets~region   } 
+\newcommand{\exclhptnamerTHREE     } {{\bf Exclusive \hpt~Signal Region 3:       } Observed event yields in the low-\met, low-\Ht, and high-\njets~region   } 
+\newcommand{\exclhptnamerFOUR      } {{\bf Exclusive \hpt~Signal Region 4:       } Observed event yields in the low-\met, high-\Ht, and high-\njets~region  } 
+\newcommand{\exclhptnamerFIVE      } {{\bf Exclusive \hpt~Signal Region 5:       } Observed event yields in the high-\met, low-\Ht, and low-\njets~region   } 
+\newcommand{\exclhptnamerSIX       } {{\bf Exclusive \hpt~Signal Region 6:       } Observed event yields in the high-\met, high-\Ht, and low-\njets~region  } 
+\newcommand{\exclhptnamerSEVEN     } {{\bf Exclusive \hpt~Signal Region 7:       } Observed event yields in the high-\met, low-\Ht, and high-\njets~region  } 
+\newcommand{\exclhptnamerEIGHT     } {{\bf Exclusive \hpt~Signal Region 8:       } Observed event yields in the high-\met, high-\Ht, and high-\njets~region } 
+\newcommand{\exclhptnamerONEZERO   } {{\bf Baseline with 1 btag (Signal Region 10): } Observed event yields in the \hpt~baseline                            } 
+\newcommand{\exclhptnamerONEONE    } {{\bf Exclusive \hpt~Signal Region 11:      } Observed event yields in the low-\met, low-\Ht, and low-\njets~region    } 
+\newcommand{\exclhptnamerONETWO    } {{\bf Exclusive \hpt~Signal Region 12:      } Observed event yields in the low-\met, high-\Ht, and low-\njets~region   } 
+\newcommand{\exclhptnamerONETHREE  } {{\bf Exclusive \hpt~Signal Region 13:      } Observed event yields in the low-\met, low-\Ht, and high-\njets~region   } 
+\newcommand{\exclhptnamerONEFOUR   } {{\bf Exclusive \hpt~Signal Region 14:      } Observed event yields in the low-\met, high-\Ht, and high-\njets~region  } 
+\newcommand{\exclhptnamerONEFIVE   } {{\bf Exclusive \hpt~Signal Region 15:      } Observed event yields in the high-\met, low-\Ht, and low-\njets~region   } 
+\newcommand{\exclhptnamerONESIX    } {{\bf Exclusive \hpt~Signal Region 16:      } Observed event yields in the high-\met, high-\Ht, and low-\njets~region  } 
+\newcommand{\exclhptnamerONESEVEN  } {{\bf Exclusive \hpt~Signal Region 17:      } Observed event yields in the high-\met, low-\Ht, and high-\njets~region  } 
+\newcommand{\exclhptnamerONEEIGHT  } {{\bf Exclusive \hpt~Signal Region 18:      } Observed event yields in the high-\met, high-\Ht, and high-\njets~region } 
+\newcommand{\exclhptnamerTWOZERO   } {{\bf Baseline with 2 btag (Signal Region 20): } Observed event yields in the \hpt~baseline                            } 
+\newcommand{\exclhptnamerTWOONE    } {{\bf Exclusive \hpt~Signal Region 21:      } Observed event yields in the low-\met, low-\Ht, and low-\njets~region    } 
+\newcommand{\exclhptnamerTWOTWO    } {{\bf Exclusive \hpt~Signal Region 22:      } Observed event yields in the low-\met, high-\Ht, and low-\njets~region   } 
+\newcommand{\exclhptnamerTWOTHREE  } {{\bf Exclusive \hpt~Signal Region 23:      } Observed event yields in the low-\met, low-\Ht, and high-\njets~region   } 
+\newcommand{\exclhptnamerTWOFOUR   } {{\bf Exclusive \hpt~Signal Region 24:      } Observed event yields in the low-\met, high-\Ht, and high-\njets~region  } 
+\newcommand{\exclhptnamerTWOFIVE   } {{\bf Exclusive \hpt~Signal Region 25:      } Observed event yields in the high-\met, low-\Ht, and low-\njets~region   } 
+\newcommand{\exclhptnamerTWOSIX    } {{\bf Exclusive \hpt~Signal Region 26:      } Observed event yields in the high-\met, high-\Ht, and low-\njets~region  } 
+\newcommand{\exclhptnamerTWOSEVEN  } {{\bf Exclusive \hpt~Signal Region 27:      } Observed event yields in the high-\met, low-\Ht, and high-\njets~region  } 
+\newcommand{\exclhptnamerTWOEIGHT  } {{\bf Exclusive \hpt~Signal Region 28:      } Observed event yields in the high-\met, high-\Ht, and high-\njets~region } 
+\newcommand{\exclhptnamerTHREEZERO } {{\bf High \pt~Signal Region 30:            } Observed event yields in the minimal region                              } 
+\newcommand{\exclhptnamerTHREEONE  } {{\bf High \pt~Signal Region 31:            } Observed event yields in the minimal ``++'' region used for same-sign top} 
+\newcommand{\exclhptnamerTHREETWO  } {{\bf High \pt~Signal Region 32:            } Observed event yields in the R-parity violation search region            } 
+\newcommand{\exclhptnamerTHREETHREE} {{\bf High \pt~Signal Region 33:            } Observed event yields in the R-parity violation search region            } 
+\newcommand{\exclhptnamerTHREEFOUR } {{\bf High \pt~Signal Region 34:            } Observed event yields in the minimal region                              } 
+\newcommand{\exclhptnamerTHREEFIVE } {{\bf High \pt~Signal Region 35:            } Observed event yields in the minimal ``++'' region used for same-sign top} 
+
+\newcommand{\exclhptcutsrZERO      } {(lepton \pt~$>$ 20/20 GeV, \Ht~$>$ 80 GeV, \met~$>$ 30 GeV if \Ht~$<$ 500 GeV (otherise no \met~cut), at least 2 jets with \pt~$>$ 40 GeV)                                           } 
+\newcommand{\exclhptcutsrONE       } {($50\ \GeV < \met < 120\ \GeV$, $200\ \GeV < \Ht < 400\ \GeV$, between two and three jets with \pt~$>$ 40 GeV, and no b-tagged jets using CSVM)                                      } 
+\newcommand{\exclhptcutsrTWO       } {($50\ \GeV < \met < 120\ \GeV$, $\Ht > 400\ \GeV$, between two and three jets with \pt~$>$ 40 GeV, and no b-tagged jets using CSVM)                                                  } 
+\newcommand{\exclhptcutsrTHREE     } {($50\ \GeV < \met < 120\ \GeV$, $200\ \GeV < \Ht < 400\ \GeV$, greater than three jets with \pt~$>$ 40 GeV, and no b-tagged jets using CSVM)                                         } 
+\newcommand{\exclhptcutsrFOUR      } {($50\ \GeV < \met < 120\ \GeV$, $\Ht > 400\ \GeV$, greater than three jets with \pt~$>$ 40 GeV, and no b-tagged jets using CSVM)                                                     } 
+\newcommand{\exclhptcutsrFIVE      } {($\met > 120\ \GeV$, $200\ \GeV < \Ht < 400\ \GeV$, between two and three jets with \pt~$>$ 40 GeV, and no b-tagged jets using CSVM)                                                 } 
+\newcommand{\exclhptcutsrSIX       } {($\met > 120\ \GeV$, $\Ht > 400\ \GeV$, between two and three jets with \pt~$>$ 40 GeV, and no b-tagged jets using CSVM)                                                             } 
+\newcommand{\exclhptcutsrSEVEN     } {($\met > 120\ \GeV$, $200\ \GeV < \Ht < 400\ \GeV$, greater than three jets with \pt~$>$ 40 GeV, and no b-tagged jets using CSVM)                                                    } 
+\newcommand{\exclhptcutsrEIGHT     } {($\met > 120\ \GeV$, $\Ht > 400\ \GeV$, greater than three jets with \pt~$>$ 40 GeV)                                                                                                 } 
+\newcommand{\exclhptcutsrONEZERO   } {(lepton \pt~$>$ 20/20 GeV, \Ht~$>$ 80 GeV, \met~$>$ 30 GeV if \Ht~$<$ 500 GeV (otherise no \met~cut), at least 2 jets with \pt~$>$ 40 GeV and exactly one b-tagged jet using CSVM)   } 
+\newcommand{\exclhptcutsrONEONE    } {($50\ \GeV < \met < 120\ \GeV$, $200\ \GeV < \Ht < 400\ \GeV$, between two and three jets with \pt~$>$ 40 GeV and exactly one b-tagged jet using CSVM)                               } 
+\newcommand{\exclhptcutsrONETWO    } {($50\ \GeV < \met < 120\ \GeV$, $\Ht > 400\ \GeV$, between two and three jets with \pt~$>$ 40 GeV and exactly one b-tagged jet using CSVM)                                           } 
+\newcommand{\exclhptcutsrONETHREE  } {($50\ \GeV < \met < 120\ \GeV$, $200\ \GeV < \Ht < 400\ \GeV$, greater than three jets with \pt~$>$ 40 GeV and exactly one b-tagged jet using CSVM)                                  } 
+\newcommand{\exclhptcutsrONEFOUR   } {($50\ \GeV < \met < 120\ \GeV$, $\Ht > 400\ \GeV$, greater than three jets with \pt~$>$ 40 GeV and exactly one b-tagged jet using CSVM)                                              } 
+\newcommand{\exclhptcutsrONEFIVE   } {($\met > 120\ \GeV$, $200\ \GeV < \Ht < 400\ \GeV$, between two and three jets with \pt~$>$ 40 GeV and exactly one b-tagged jet using CSVM)                                          } 
+\newcommand{\exclhptcutsrONESIX    } {($\met > 120\ \GeV$, $\Ht > 400\ \GeV$, between two and three jets with \pt~$>$ 40 GeV and exactly one b-tagged jet using CSVM)                                                      } 
+\newcommand{\exclhptcutsrONESEVEN  } {($\met > 120\ \GeV$, $200\ \GeV < \Ht < 400\ \GeV$, greater than three jets with \pt~$>$ 40 GeV and exactly one b-tagged jet using CSVM)                                             } 
+\newcommand{\exclhptcutsrONEEIGHT  } {($\met > 120\ \GeV$, $\Ht > 400\ \GeV$, greater than three jets with \pt~$>$ 40 GeV and exactly one b-tagged jet using CSVM)                                                         } 
+\newcommand{\exclhptcutsrTWOZERO   } {(lepton \pt~$>$ 20/20 GeV, \Ht~$>$ 80 GeV, \met~$>$ 30 GeV if \Ht~$<$ 500 GeV (otherise no \met~cut), at least 2 jets with \pt~$>$ 40 GeV and at least two b-tagged jets using CSVM) } 
+\newcommand{\exclhptcutsrTWOONE    } {($50\ \GeV < \met < 120\ \GeV$, $200\ \GeV < \Ht < 400\ \GeV$, between two and three jets with \pt~$>$ 40 GeV and at least two b-tagged jets using CSVM)                             } 
+\newcommand{\exclhptcutsrTWOTWO    } {($50\ \GeV < \met < 120\ \GeV$, $\Ht > 400\ \GeV$, between two and three jets with \pt~$>$ 40 GeV and at least two b-tagged jets using CSVM)                                         } 
+\newcommand{\exclhptcutsrTWOTHREE  } {($50\ \GeV < \met < 120\ \GeV$, $200\ \GeV < \Ht < 400\ \GeV$, greater than three jets with \pt~$>$ 40 GeV and at least two b-tagged jets using CSVM)                                } 
+\newcommand{\exclhptcutsrTWOFOUR   } {($50\ \GeV < \met < 120\ \GeV$, $\Ht > 400\ \GeV$, greater than three jets with \pt~$>$ 40 GeV and at least two b-tagged jets using CSVM)                                            } 
+\newcommand{\exclhptcutsrTWOFIVE   } {($\met > 120\ \GeV$, $200\ \GeV < \Ht < 400\ \GeV$, between two and three jets with \pt~$>$ 40 GeV and at least two b-tagged jets using CSVM)                                        } 
+\newcommand{\exclhptcutsrTWOSIX    } {($\met > 120\ \GeV$, $\Ht > 400\ \GeV$, between two and three jets with \pt~$>$ 40 GeV and at least two b-tagged jets using CSVM)                                                    } 
+\newcommand{\exclhptcutsrTWOSEVEN  } {($\met > 120\ \GeV$, $200\ \GeV < \Ht < 400\ \GeV$, greater than three jets with \pt~$>$ 40 GeV and at least two b-tagged jets using CSVM)                                           } 
+\newcommand{\exclhptcutsrTWOEIGHT  } {($\met > 120\ \GeV$, $\Ht > 400\ \GeV$, greater than three jets with \pt~$>$ 40 GeV and at least two b-tagged jets using CSVM)                                                       } 
+\newcommand{\exclhptcutsrTHREEZERO } {($\met > 30\ \GeV$, at least two jets with \pt~$>$ 40 GeV and at least two b-tagged jets using CSVM)                                                                                 } 
+\newcommand{\exclhptcutsrTHREEONE  } {($\met > 30\ \GeV$, dilepton charge is ``++'', at least two jets with \pt~$>$ 40 GeV and at least two b-tagged jets using CSVM)                                                      } 
+\newcommand{\exclhptcutsrTHREETWO  } {($\Ht > 500\ \GeV$, at least two jets with \pt~$>$ 40 GeV and no requirement on the number of b-tagged jets                                                                          } 
+\newcommand{\exclhptcutsrTHREETHREE} {($\Ht > 500\ \GeV$, at least two jets with \pt~$>$ 40 GeV and at least two b-tagged jets using CSVM)                                                                                 } 
+\newcommand{\exclhptcutsrTHREEFOUR } {($\met > 30\ \GeV$, at least two jets with \pt~$>$ 40 GeV and exactly one b-tagged jets using CSVM)                                                                                  } 
+\newcommand{\exclhptcutsrTHREEFIVE } {($\met > 30\ \GeV$, dilepton charge is ``++'', at least two jets with \pt~$>$ 40 GeV and exactly one b-tagged jets using CSVM)                                                       } 
+
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/high_pt/exclusive/sr0.tex}} \end{center} \caption{\label{tab:yield_excl_hpt_sr0} \exclhptnamerZERO       \exclhptcutsrZERO       \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/high_pt/exclusive/sr1.tex }} \end{center} \caption{\label{tab:yield_excl_hpt_sr1 } \exclhptnamerONE        \exclhptcutsrONE        \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/high_pt/exclusive/sr2.tex }} \end{center} \caption{\label{tab:yield_excl_hpt_sr2 } \exclhptnamerTWO        \exclhptcutsrTWO        \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/high_pt/exclusive/sr3.tex }} \end{center} \caption{\label{tab:yield_excl_hpt_sr3 } \exclhptnamerTHREE      \exclhptcutsrTHREE      \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/high_pt/exclusive/sr4.tex }} \end{center} \caption{\label{tab:yield_excl_hpt_sr4 } \exclhptnamerFOUR       \exclhptcutsrFOUR       \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/high_pt/exclusive/sr5.tex }} \end{center} \caption{\label{tab:yield_excl_hpt_sr5 } \exclhptnamerFIVE       \exclhptcutsrFIVE       \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/high_pt/exclusive/sr6.tex }} \end{center} \caption{\label{tab:yield_excl_hpt_sr6 } \exclhptnamerSIX        \exclhptcutsrSIX        \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/high_pt/exclusive/sr7.tex }} \end{center} \caption{\label{tab:yield_excl_hpt_sr7 } \exclhptnamerSEVEN      \exclhptcutsrSEVEN      \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/high_pt/exclusive/sr8.tex }} \end{center} \caption{\label{tab:yield_excl_hpt_sr8 } \exclhptnamerEIGHT      \exclhptcutsrEIGHT      \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/high_pt/exclusive/sr10.tex}} \end{center} \caption{\label{tab:yield_excl_hpt_sr10} \exclhptnamerONEZERO    \exclhptcutsrONEZERO    \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/high_pt/exclusive/sr11.tex}} \end{center} \caption{\label{tab:yield_excl_hpt_sr11} \exclhptnamerONEONE     \exclhptcutsrONEONE     \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/high_pt/exclusive/sr12.tex}} \end{center} \caption{\label{tab:yield_excl_hpt_sr12} \exclhptnamerONETWO     \exclhptcutsrONETWO     \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/high_pt/exclusive/sr13.tex}} \end{center} \caption{\label{tab:yield_excl_hpt_sr13} \exclhptnamerONETHREE   \exclhptcutsrONETHREE   \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/high_pt/exclusive/sr14.tex}} \end{center} \caption{\label{tab:yield_excl_hpt_sr14} \exclhptnamerONEFOUR    \exclhptcutsrONEFOUR    \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/high_pt/exclusive/sr15.tex}} \end{center} \caption{\label{tab:yield_excl_hpt_sr15} \exclhptnamerONEFIVE    \exclhptcutsrONEFIVE    \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/high_pt/exclusive/sr16.tex}} \end{center} \caption{\label{tab:yield_excl_hpt_sr16} \exclhptnamerONESIX     \exclhptcutsrONESIX     \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/high_pt/exclusive/sr17.tex}} \end{center} \caption{\label{tab:yield_excl_hpt_sr17} \exclhptnamerONESEVEN   \exclhptcutsrONESEVEN   \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/high_pt/exclusive/sr18.tex}} \end{center} \caption{\label{tab:yield_excl_hpt_sr18} \exclhptnamerONEEIGHT   \exclhptcutsrONEEIGHT   \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/high_pt/exclusive/sr20.tex}} \end{center} \caption{\label{tab:yield_excl_hpt_sr20} \exclhptnamerTWOZERO    \exclhptcutsrTWOZERO    \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/high_pt/exclusive/sr21.tex}} \end{center} \caption{\label{tab:yield_excl_hpt_sr21} \exclhptnamerTWOONE     \exclhptcutsrTWOONE     \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/high_pt/exclusive/sr22.tex}} \end{center} \caption{\label{tab:yield_excl_hpt_sr22} \exclhptnamerTWOTWO     \exclhptcutsrTWOTWO     \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/high_pt/exclusive/sr23.tex}} \end{center} \caption{\label{tab:yield_excl_hpt_sr23} \exclhptnamerTWOTHREE   \exclhptcutsrTWOTHREE   \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/high_pt/exclusive/sr24.tex}} \end{center} \caption{\label{tab:yield_excl_hpt_sr24} \exclhptnamerTWOFOUR    \exclhptcutsrTWOFOUR    \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/high_pt/exclusive/sr25.tex}} \end{center} \caption{\label{tab:yield_excl_hpt_sr25} \exclhptnamerTWOFIVE    \exclhptcutsrTWOFIVE    \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/high_pt/exclusive/sr26.tex}} \end{center} \caption{\label{tab:yield_excl_hpt_sr26} \exclhptnamerTWOSIX     \exclhptcutsrTWOSIX     \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/high_pt/exclusive/sr27.tex}} \end{center} \caption{\label{tab:yield_excl_hpt_sr27} \exclhptnamerTWOSEVEN   \exclhptcutsrTWOSEVEN   \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/high_pt/exclusive/sr28.tex}} \end{center} \caption{\label{tab:yield_excl_hpt_sr28} \exclhptnamerTWOEIGHT   \exclhptcutsrTWOEIGHT   \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/high_pt/exclusive/sr30.tex}} \end{center} \caption{\label{tab:yield_excl_hpt_sr30} \exclhptnamerTHREEZERO  \exclhptcutsrTHREEZERO  \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/high_pt/exclusive/sr31.tex}} \end{center} \caption{\label{tab:yield_excl_hpt_sr31} \exclhptnamerTHREEONE   \exclhptcutsrTHREEONE   \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/high_pt/exclusive/sr32.tex}} \end{center} \caption{\label{tab:yield_excl_hpt_sr32} \exclhptnamerTHREETWO   \exclhptcutsrTHREETWO   \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/high_pt/exclusive/sr33.tex}} \end{center} \caption{\label{tab:yield_excl_hpt_sr33} \exclhptnamerTHREETHREE \exclhptcutsrTHREETHREE \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/high_pt/exclusive/sr34.tex}} \end{center} \caption{\label{tab:yield_excl_hpt_sr34} \exclhptnamerTHREEFOUR  \exclhptcutsrTHREEFOUR  \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/high_pt/exclusive/sr35.tex}} \end{center} \caption{\label{tab:yield_excl_hpt_sr35} \exclhptnamerTHREEFIVE  \exclhptcutsrTHREEFIVE  \exclcaption} \end{table} \clearpage
+% --------------------------------------------------------------------------- %
+
+% low pt
+% --------------------------------------------------------------------------- %
+\newcommand{\excllptnamerZERO     } {{\bf Baseline with 0 btags (Signal Region 0): } Observed event yields in the \lpt~baseline                            } 
+\newcommand{\excllptnamerONE      } {{\bf Exclusive \lpt~Signal Region 1:       } Observed event yields in the low-\met, low-\Ht, and low-\njets~region    } 
+\newcommand{\excllptnamerTWO      } {{\bf Exclusive \lpt~Signal Region 2:       } Observed event yields in the low-\met, high-\Ht, and low-\njets~region   } 
+\newcommand{\excllptnamerTHREE    } {{\bf Exclusive \lpt~Signal Region 3:       } Observed event yields in the low-\met, low-\Ht, and high-\njets~region   } 
+\newcommand{\excllptnamerFOUR     } {{\bf Exclusive \lpt~Signal Region 4:       } Observed event yields in the low-\met, high-\Ht, and high-\njets~region  } 
+\newcommand{\excllptnamerFIVE     } {{\bf Exclusive \lpt~Signal Region 5:       } Observed event yields in the high-\met, low-\Ht, and low-\njets~region   } 
+\newcommand{\excllptnamerSIX      } {{\bf Exclusive \lpt~Signal Region 6:       } Observed event yields in the high-\met, high-\Ht, and low-\njets~region  } 
+\newcommand{\excllptnamerSEVEN    } {{\bf Exclusive \lpt~Signal Region 7:       } Observed event yields in the high-\met, low-\Ht, and high-\njets~region  } 
+\newcommand{\excllptnamerEIGHT    } {{\bf Exclusive \lpt~Signal Region 8:       } Observed event yields in the high-\met, high-\Ht, and high-\njets~region } 
+\newcommand{\excllptnamerONEZERO  } {{\bf Baseline with 1 btag (Signal Region 10): } Observed event yields in the \lpt~baseline                            } 
+\newcommand{\excllptnamerONEONE   } {{\bf Exclusive \lpt~Signal Region 11:      } Observed event yields in the low-\met, low-\Ht, and low-\njets~region    } 
+\newcommand{\excllptnamerONETWO   } {{\bf Exclusive \lpt~Signal Region 12:      } Observed event yields in the low-\met, high-\Ht, and low-\njets~region   } 
+\newcommand{\excllptnamerONETHREE } {{\bf Exclusive \lpt~Signal Region 13:      } Observed event yields in the low-\met, low-\Ht, and high-\njets~region   } 
+\newcommand{\excllptnamerONEFOUR  } {{\bf Exclusive \lpt~Signal Region 14:      } Observed event yields in the low-\met, high-\Ht, and high-\njets~region  } 
+\newcommand{\excllptnamerONEFIVE  } {{\bf Exclusive \lpt~Signal Region 15:      } Observed event yields in the high-\met, low-\Ht, and low-\njets~region   } 
+\newcommand{\excllptnamerONESIX   } {{\bf Exclusive \lpt~Signal Region 16:      } Observed event yields in the high-\met, high-\Ht, and low-\njets~region  } 
+\newcommand{\excllptnamerONESEVEN } {{\bf Exclusive \lpt~Signal Region 17:      } Observed event yields in the high-\met, low-\Ht, and high-\njets~region  } 
+\newcommand{\excllptnamerONEEIGHT } {{\bf Exclusive \lpt~Signal Region 18:      } Observed event yields in the high-\met, high-\Ht, and high-\njets~region } 
+\newcommand{\excllptnamerTWOZERO  } {{\bf Baseline with 2 btag (Signal Region 20): } Observed event yields in the \lpt~baseline                            } 
+\newcommand{\excllptnamerTWOONE   } {{\bf Exclusive \lpt~Signal Region 21:      } Observed event yields in the low-\met, low-\Ht, and low-\njets~region    } 
+\newcommand{\excllptnamerTWOTWO   } {{\bf Exclusive \lpt~Signal Region 22:      } Observed event yields in the low-\met, high-\Ht, and low-\njets~region   } 
+\newcommand{\excllptnamerTWOTHREE } {{\bf Exclusive \lpt~Signal Region 23:      } Observed event yields in the low-\met, low-\Ht, and high-\njets~region   } 
+\newcommand{\excllptnamerTWOFOUR  } {{\bf Exclusive \lpt~Signal Region 24:      } Observed event yields in the low-\met, high-\Ht, and high-\njets~region  } 
+\newcommand{\excllptnamerTWOFIVE  } {{\bf Exclusive \lpt~Signal Region 25:      } Observed event yields in the high-\met, low-\Ht, and low-\njets~region   } 
+\newcommand{\excllptnamerTWOSIX   } {{\bf Exclusive \lpt~Signal Region 26:      } Observed event yields in the high-\met, high-\Ht, and low-\njets~region  } 
+\newcommand{\excllptnamerTWOSEVEN } {{\bf Exclusive \lpt~Signal Region 27:      } Observed event yields in the high-\met, low-\Ht, and high-\njets~region  } 
+\newcommand{\excllptnamerTWOEIGHT } {{\bf Exclusive \lpt~Signal Region 28:      } Observed event yields in the high-\met, high-\Ht, and high-\njets~region } 
+
+\newcommand{\excllptcutsrZERO     } {(lepton \pt~$>$ 10/10 GeV, \Ht~$>$ 250 GeV, \met~$>$ 30 GeV if \Ht~$<$ 500 GeV (otherise no \met~cut), at least 2 jets with \pt~$>$ 40 GeV)                                          } 
+\newcommand{\excllptcutsrONE      } {($50\ \GeV < \met < 120\ \GeV$, $250\ \GeV < \Ht < 400\ \GeV$, between two and three jets with \pt~$>$ 40 GeV, and no b-tagged jets using CSVM)                                      } 
+\newcommand{\excllptcutsrTWO      } {($50\ \GeV < \met < 120\ \GeV$, $\Ht > 400\ \GeV$, between two and three jets with \pt~$>$ 40 GeV, and no b-tagged jets using CSVM)                                                  } 
+\newcommand{\excllptcutsrTHREE    } {($50\ \GeV < \met < 120\ \GeV$, $250\ \GeV < \Ht < 400\ \GeV$, greater than three jets with \pt~$>$ 40 GeV, and no b-tagged jets using CSVM)                                         } 
+\newcommand{\excllptcutsrFOUR     } {($50\ \GeV < \met < 120\ \GeV$, $\Ht > 400\ \GeV$, greater than three jets with \pt~$>$ 40 GeV, and no b-tagged jets using CSVM)                                                     } 
+\newcommand{\excllptcutsrFIVE     } {($\met > 120\ \GeV$, $250\ \GeV < \Ht < 400\ \GeV$, between two and three jets with \pt~$>$ 40 GeV, and no b-tagged jets using CSVM)                                                 } 
+\newcommand{\excllptcutsrSIX      } {($\met > 120\ \GeV$, $\Ht > 400\ \GeV$, between two and three jets with \pt~$>$ 40 GeV, and no b-tagged jets using CSVM)                                                             } 
+\newcommand{\excllptcutsrSEVEN    } {($\met > 120\ \GeV$, $250\ \GeV < \Ht < 400\ \GeV$, greater than three jets with \pt~$>$ 40 GeV, and no b-tagged jets using CSVM)                                                    } 
+\newcommand{\excllptcutsrEIGHT    } {($\met > 120\ \GeV$, $\Ht > 400\ \GeV$, greater than three jets with \pt~$>$ 40 GeV, and no b-tagged jets using CSVM)                                                                } 
+\newcommand{\excllptcutsrONEZERO  } {(lepton \pt~$>$ 10/10 GeV, \Ht~$>$ 250 GeV, \met~$>$ 30 GeV if \Ht~$<$ 500 GeV (otherise no \met~cut), at least 2 jets with \pt~$>$ 40 GeV and exactly one b-tagged jet using CSVM)  } 
+\newcommand{\excllptcutsrONEONE   } {($50\ \GeV < \met < 120\ \GeV$, $250\ \GeV < \Ht < 400\ \GeV$, between two and three jets with \pt~$>$ 40 GeV and exactly one b-tagged jet using CSVM)                               } 
+\newcommand{\excllptcutsrONETWO   } {($50\ \GeV < \met < 120\ \GeV$, $\Ht > 400\ \GeV$, between two and three jets with \pt~$>$ 40 GeV and exactly one b-tagged jet using CSVM)                                           } 
+\newcommand{\excllptcutsrONETHREE } {($50\ \GeV < \met < 120\ \GeV$, $250\ \GeV < \Ht < 400\ \GeV$, greater than three jets with \pt~$>$ 40 GeV and exactly one b-tagged jet using CSVM)                                  } 
+\newcommand{\excllptcutsrONEFOUR  } {($50\ \GeV < \met < 120\ \GeV$, $\Ht > 400\ \GeV$, greater than three jets with \pt~$>$ 40 GeV and exactly one b-tagged jet using CSVM)                                              } 
+\newcommand{\excllptcutsrONEFIVE  } {($\met > 120\ \GeV$, $250\ \GeV < \Ht < 400\ \GeV$, between two and three jets with \pt~$>$ 40 GeV and exactly one b-tagged jet using CSVM)                                          } 
+\newcommand{\excllptcutsrONESIX   } {($\met > 120\ \GeV$, $\Ht > 400\ \GeV$, between two and three jets with \pt~$>$ 40 GeV and exactly one b-tagged jet using CSVM)                                                      } 
+\newcommand{\excllptcutsrONESEVEN } {($\met > 120\ \GeV$, $250\ \GeV < \Ht < 400\ \GeV$, greater than three jets with \pt~$>$ 40 GeV and exactly one b-tagged jet using CSVM)                                             } 
+\newcommand{\excllptcutsrONEEIGHT } {($\met > 120\ \GeV$, $\Ht > 400\ \GeV$, greater than three jets with \pt~$>$ 40 GeV and exactly one b-tagged jet using CSVM)                                                         } 
+\newcommand{\excllptcutsrTWOZERO  } {(lepton \pt~$>$ 10/10 GeV, \Ht~$>$ 250 GeV, \met~$>$ 30 GeV if \Ht~$<$ 500 GeV (otherise no \met~cut), at least 2 jets with \pt~$>$ 40 GeV and at least two b-tagged jets using CSVM)} 
+\newcommand{\excllptcutsrTWOONE   } {($50\ \GeV < \met < 120\ \GeV$, $250\ \GeV < \Ht < 400\ \GeV$, between two and three jets with \pt~$>$ 40 GeV and at least two b-tagged jets using CSVM)                             } 
+\newcommand{\excllptcutsrTWOTWO   } {($50\ \GeV < \met < 120\ \GeV$, $\Ht > 400\ \GeV$, between two and three jets with \pt~$>$ 40 GeV and at least two b-tagged jets using CSVM)                                         } 
+\newcommand{\excllptcutsrTWOTHREE } {($50\ \GeV < \met < 120\ \GeV$, $250\ \GeV < \Ht < 400\ \GeV$, greater than three jets with \pt~$>$ 40 GeV and at least two b-tagged jets using CSVM)                                } 
+\newcommand{\excllptcutsrTWOFOUR  } {($50\ \GeV < \met < 120\ \GeV$, $\Ht > 400\ \GeV$, greater than three jets with \pt~$>$ 40 GeV and at least two b-tagged jets using CSVM)                                            } 
+\newcommand{\excllptcutsrTWOFIVE  } {($\met > 120\ \GeV$, $250\ \GeV < \Ht < 400\ \GeV$, between two and three jets with \pt~$>$ 40 GeV and at least two b-tagged jets using CSVM)                                        } 
+\newcommand{\excllptcutsrTWOSIX   } {($\met > 120\ \GeV$, $\Ht > 400\ \GeV$, between two and three jets with \pt~$>$ 40 GeV and at least two b-tagged jets using CSVM)                                                    } 
+\newcommand{\excllptcutsrTWOSEVEN } {($\met > 120\ \GeV$, $250\ \GeV < \Ht < 400\ \GeV$, greater than three jets with \pt~$>$ 40 GeV and at least two b-tagged jets using CSVM)                                           } 
+\newcommand{\excllptcutsrTWOEIGHT } {($\met > 120\ \GeV$, $\Ht > 400\ \GeV$, greater than three jets with \pt~$>$ 40 GeV and at least two b-tagged jets using CSVM)                                                       } 
+
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/low_pt/exclusive/sr0.tex }} \end{center} \caption{\label{tab:yield_excl_lpt_sr0}  \excllptnamerZERO     \excllptcutsrZERO     \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/low_pt/exclusive/sr1.tex }} \end{center} \caption{\label{tab:yield_excl_lpt_sr1}  \excllptnamerONE      \excllptcutsrONE      \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/low_pt/exclusive/sr2.tex }} \end{center} \caption{\label{tab:yield_excl_lpt_sr2}  \excllptnamerTWO      \excllptcutsrTWO      \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/low_pt/exclusive/sr3.tex }} \end{center} \caption{\label{tab:yield_excl_lpt_sr3}  \excllptnamerTHREE    \excllptcutsrTHREE    \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/low_pt/exclusive/sr4.tex }} \end{center} \caption{\label{tab:yield_excl_lpt_sr4}  \excllptnamerFOUR     \excllptcutsrFOUR     \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/low_pt/exclusive/sr5.tex }} \end{center} \caption{\label{tab:yield_excl_lpt_sr5}  \excllptnamerFIVE     \excllptcutsrFIVE     \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/low_pt/exclusive/sr6.tex }} \end{center} \caption{\label{tab:yield_excl_lpt_sr6}  \excllptnamerSIX      \excllptcutsrSIX      \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/low_pt/exclusive/sr7.tex }} \end{center} \caption{\label{tab:yield_excl_lpt_sr7}  \excllptnamerSEVEN    \excllptcutsrSEVEN    \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/low_pt/exclusive/sr8.tex }} \end{center} \caption{\label{tab:yield_excl_lpt_sr8}  \excllptnamerEIGHT    \excllptcutsrEIGHT    \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/low_pt/exclusive/sr10.tex}} \end{center} \caption{\label{tab:yield_excl_lpt_sr10} \excllptnamerONEZERO  \excllptcutsrONEZERO  \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/low_pt/exclusive/sr11.tex}} \end{center} \caption{\label{tab:yield_excl_lpt_sr11} \excllptnamerONEONE   \excllptcutsrONEONE   \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/low_pt/exclusive/sr12.tex}} \end{center} \caption{\label{tab:yield_excl_lpt_sr12} \excllptnamerONETWO   \excllptcutsrONETWO   \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/low_pt/exclusive/sr13.tex}} \end{center} \caption{\label{tab:yield_excl_lpt_sr13} \excllptnamerONETHREE \excllptcutsrONETHREE \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/low_pt/exclusive/sr14.tex}} \end{center} \caption{\label{tab:yield_excl_lpt_sr14} \excllptnamerONEFOUR  \excllptcutsrONEFOUR  \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/low_pt/exclusive/sr15.tex}} \end{center} \caption{\label{tab:yield_excl_lpt_sr15} \excllptnamerONEFIVE  \excllptcutsrONEFIVE  \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/low_pt/exclusive/sr16.tex}} \end{center} \caption{\label{tab:yield_excl_lpt_sr16} \excllptnamerONESIX   \excllptcutsrONESIX   \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/low_pt/exclusive/sr17.tex}} \end{center} \caption{\label{tab:yield_excl_lpt_sr17} \excllptnamerONESEVEN \excllptcutsrONESEVEN \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/low_pt/exclusive/sr18.tex}} \end{center} \caption{\label{tab:yield_excl_lpt_sr18} \excllptnamerONEEIGHT \excllptcutsrONEEIGHT \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/low_pt/exclusive/sr20.tex}} \end{center} \caption{\label{tab:yield_excl_lpt_sr20} \excllptnamerTWOZERO  \excllptcutsrTWOZERO  \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/low_pt/exclusive/sr21.tex}} \end{center} \caption{\label{tab:yield_excl_lpt_sr21} \excllptnamerTWOONE   \excllptcutsrTWOONE   \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/low_pt/exclusive/sr22.tex}} \end{center} \caption{\label{tab:yield_excl_lpt_sr22} \excllptnamerTWOTWO   \excllptcutsrTWOTWO   \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/low_pt/exclusive/sr23.tex}} \end{center} \caption{\label{tab:yield_excl_lpt_sr23} \excllptnamerTWOTHREE \excllptcutsrTWOTHREE \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/low_pt/exclusive/sr24.tex}} \end{center} \caption{\label{tab:yield_excl_lpt_sr24} \excllptnamerTWOFOUR  \excllptcutsrTWOFOUR  \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/low_pt/exclusive/sr25.tex}} \end{center} \caption{\label{tab:yield_excl_lpt_sr25} \excllptnamerTWOFIVE  \excllptcutsrTWOFIVE  \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/low_pt/exclusive/sr26.tex}} \end{center} \caption{\label{tab:yield_excl_lpt_sr26} \excllptnamerTWOSIX   \excllptcutsrTWOSIX   \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/low_pt/exclusive/sr27.tex}} \end{center} \caption{\label{tab:yield_excl_lpt_sr27} \excllptnamerTWOSEVEN \excllptcutsrTWOSEVEN \exclcaption} \end{table} \clearpage
+% \begin{table}[h] \begin{center} {\footnotesize \input{results/yields/low_pt/exclusive/sr28.tex}} \end{center} \caption{\label{tab:yield_excl_lpt_sr28} \excllptnamerTWOEIGHT \excllptcutsrTWOEIGHT \exclcaption} \end{table} \clearpage
+% --------------------------------------------------------------------------- %

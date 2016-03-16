@@ -1,0 +1,942 @@
+% --------------------------------------------------------------------------- %
+% --------------------------------------------------------------------------- %
+\chapter{Results}
+\label {ch:results}
+\input{results/sr_captions} % defines captions for yield tables 
+% --------------------------------------------------------------------------- %
+% --------------------------------------------------------------------------- %
+We have conducted a search for new physics in a final state with same-sign
+leptons, missing transverse energy, and significant hadronic activity. The
+selection for this analysis was discussed in Chapter~\ref{ch:evtsel}, which
+described search regions sensitive to new physics, while rejecting a large amount
+of the SM background. Observed events yields in the baseline control regions
+are compared with the background estimates whose methods were described in
+Chapter~\ref{ch:bkgd}. The event yields in the search regions defined in
+Section~\ref{sec:evtsel_sr} are reported with their associated estimated
+background yield prediction. No new physics is observed.
+
+Given the lack of a significant excess over the predicted backgrounds, the
+results of this search are used to place limits on the cross section of rare
+SM processes and on the parameters for various model of new physics. The 95\%
+confidence level (CL) upper limit on the on the signal $\sigma_{prod} \times
+BR$ is calculated. For each model considered, limits are obtained by performing
+a statistical combination of the most sensitive, exclusive, search regions.
+
+The selections chosen for this analysis were motivated by considering generic
+new physics signatures and their Standard Model backgrounds. Although
+opposite-sign dileptons are significantly more prevalent in the SM than
+same-sign, any new physics model with pairs of Majorana particles will produce
+the two in equal abundance. Astrophysical evidence for dark matter suggests
+the existence of a weakly interacting, massive particle; thus search regions
+with significant \met are motivated. Finally, particles produced via strong
+interactions tend to have larger cross sections than those produced via
+electroweak interactions; therefore, final states with significant hadronic
+activity are thus likely to require a smaller integrated luminosity for
+observation. These motivating factors are seen in a variety of models such
+as SUSY, models with extra dimensions, Majorana neutrinos, and same-sign top
+resonances (See discussion in Chapters~\ref{ch:intro} and~\ref{ch:ss}).
+
+This chapter consists of three sections. The first section discusses the
+results of the \hpt analysis starting with a discussion of the yields for the
+three baseline regions. Results from each search region follow where we discuss
+the variation in the background composition with changed \njets, \nbtags, \Ht
+and \met requirements. The following section provides an analogous discussion
+of the \lpt analysis. The final section discusses limits set on various models
+of new physics.
+
+% --------------------------------------------------------------------------- %
+% --------------------------------------------------------------------------- %
+\section{High \pt Results}
+\label {sec:results_hpt}
+% --------------------------------------------------------------------------- %
+% --------------------------------------------------------------------------- %
+
+% --------------------------------------------------------------------------- %
+\subsection{High \pt Control Regions}
+\label {sec:results_hpt_bl}
+% --------------------------------------------------------------------------- %
+
+In Section~\ref{sec:evtsel_sr}, we defined a control region enriched in
+background by requiring a minimal selection. These baseline selections was
+listed in Table~\ref{tab:evtsel_srbl} but are repeated here for convenience in
+Table~\ref{tab:results_srbl_hpt}.
+% --------------------------------------------------------------------------- %
+\begin{table}[!htb]
+\begin{center}
+\caption[Summary of the baseline search regions considered in the \hpt analysis]
+{\label{tab:results_srbl_hpt}
+Summary of the baseline search regions considered in the \hpt and \lpt analysis.
+}
+\end{center}
+\resizebox{0.78\textwidth}{!}{\begin{minipage}{\textwidth}
+\begin{tabular}{c|c|c|c|c|c}
+\hline\hline
+Search Region \# & min lepton \pt ($\mu$, e) (\GeV) & \Ht (\GeV)           & \met (\GeV)                               & \njets             & \nbtags \\ \hline
+SR0              & \multirow{3}{*}{20, 20}          & \multirow{3}{*}{80}  & \multirow{3}{*}{30 if $\Ht < 500$ else 0} & \multirow{3}{*}{2} & $\ge$ 0 \\ \cline{1-1}\cline{6-6}
+SR10             &                                  &                      &                                           &                    & = 1     \\ \cline{1-1}\cline{6-6}
+SR20             &                                  &                      &                                           &                    & $\ge$ 2 \\ \hline\hline
+\end{tabular}
+\end{minipage}
+}
+\end{table}  
+% --------------------------------------------------------------------------- %
+SR0 is designed to be inclusive to all the search regions and is mostly
+sensitive to fake leptons in SM multi-jet processes: predominately \ttbar
+and \Wj. The contribution from backgrounds without intrinsic b-quarks is
+suppressed in SR10 and SR20 since we add a \nbtags requirement of exactly one
+and two or more, respectively. Figure~\ref{fig:results_hpt_ht_vs_met} shows
+the distribution of events from SR0 in the \Ht-\met plane. The events cluster
+in the lower left corner as expected for background events.
+% --------------------------------------------------------------------------- %
+\begin{figure}[!htb]
+\begin{center}
+\includegraphics[width=0.8\linewidth]{p_ht_vs_met_hpt_sr0_nbs.pdf}
+\end{center}
+\caption[Distribution of events in the \Ht-\met plane passing the analysis selections for the \hpt baseline region]
+{\label{fig:results_hpt_ht_vs_met}
+Distribution of events in the \Ht-\met plane passing the analysis selections
+for the \hpt baseline region (SR0).
+}
+\end{figure}
+
+% --------------------------------------------------------------------------- %
+The observed event yields and estimated backgrounds in the \hpt
+control regions can be seen in Tables~\ref{tab:yield_excl_hpt_sr0},
+\ref{tab:yield_excl_hpt_sr10}, and \ref{tab:yield_excl_hpt_sr20}. The yield
+reported as {\it MC Pred} includes contributions from genuine same-sign lepton
+pairs (sum of the rows from the \Wgamma down to the Higgs samples). The
+statistical uncertainty on the simulated contributions is calculated using the
+Clopper-Pearson method~\cite{clopperpearson}. Systematic uncertainties (the second uncertainty if
+present) are displayed only for the final combined background component and no
+uncertainty is added for estimates with zero entries. Systematic uncertainties
+are 100\% correlated among the channels. The upper portion of the table (from
+the top down to \ZZ) is based on simulation and is used as a reference only.
+The total background when taken from simulation only is reported as {\it Total
+MC} and again is given as a reference only. The SF (DF) contributions are for
+events with one (two) fake leptons and the SC refers to the contamination to the
+fake prediction from rare SM events.
+% --------------------------------------------------------------------------- %
+\begin{table}[!hbt]
+\begin{center}
+\caption[High \pt baseline yields and predictions with no b-tagged jets requirement (Signal Region 0)]
+{\label{tab:yield_excl_hpt_sr0}\footnotesize{
+\exclhptnamerZERO
+\exclhptcutsrZERO
+\exclcaption
+}
+}
+\end{center} 
+\resizebox{0.63\textwidth}{!}{\begin{minipage}{\textwidth}
+\input{results/yields/high_pt/exclusive/sr0.tex} 
+\end{minipage} 
+}
+\end{table}
+% --------------------------------------------------------------------------- %
+\clearpage
+% --------------------------------------------------------------------------- %
+\begin{table}[!hbt]
+\begin{center}
+\caption[High \pt baseline yields and predictions with exaclty 1 b-tagged jet (Signal Region 10)]
+{\label{tab:yield_excl_hpt_sr10}\footnotesize{
+\exclhptnamerONEZERO
+\exclhptcutsrONEZERO
+\exclcaption
+}
+}
+\end{center} 
+\resizebox{0.65\textwidth}{!}{\begin{minipage}{\textwidth}
+\input{results/yields/high_pt/exclusive/sr10.tex}
+\end{minipage} 
+}
+\end{table}
+% --------------------------------------------------------------------------- %
+\clearpage
+% --------------------------------------------------------------------------- %
+\begin{table}[!hbt]
+\begin{center}
+\caption[High \pt baseline yields and predictions with two or more b-tagged jets (Signal Region 20)]
+{\label{tab:yield_excl_hpt_sr20}\footnotesize{
+\exclhptnamerTWOZERO
+\exclhptcutsrTWOZERO
+\exclcaption
+}
+}
+\end{center} 
+\resizebox{0.67\textwidth}{!}{\begin{minipage}{\textwidth}
+\input{results/yields/high_pt/exclusive/sr20.tex}
+\end{minipage} 
+}
+\end{table}
+% --------------------------------------------------------------------------- %
+\clearpage
+
+Consider first the inclusive baseline SR0. Simulation alone indicates an expected
+background contribution of 20\% fake leptons, 10\% leptons with incorrect
+charge assignment and 70\% from SM source is prompt, isolated same-sign
+dileptons.  This is in contrast to previous iterations of this analysis which
+saw the contribution from fake leptons dominating the background composition.
+This is due to the tighter impact parameter requirement on the lepton selection
+and increased yield of the rare process with the increase in both luminosity
+and center-of-mass energy of the collisions. The background from fake leptons
+is mostly from top events. It is difficult to estimate the contribution from
+\Wj due to the limited statistics in this sample with a large uncertainty of
+$\pm72$ events; but this could be a significant component of the fake lepton
+background. The background from electrons with a mis-reconstructed charge comes
+from fully leptonic \ttbar decays and \DY events. The remaining irreducible
+background comes from several different process that involve genuine same-sign
+dileptons, although most predominately are \ttW, \WZ, and \qqWW.
+
+The data-driven background estimation over-predicts by a factor of almost
+seven higher than that expected from pure simulation ($\approx 63$ vs.
+395). This is attributed to several factors. First, the fake rate
+method itself over-predicted by 60\% in the \ttbar closure test shown in
+Section~\ref{sec:bkgd_fakes_frstudy_closure}. This accounts for the 50\%
+systematic uncertainty driven by this method. Secondly, the simulation also
+has a large uncertainty since the \Wj sample has low statistics. Finally,
+the simulation itself may be failing to accurately account for all the sources
+of fake leptons. When one accounts for the large uncertainties on both the
+simulated and data-driven fake lepton prediction, the methods are
+consistent and thus no correction is made at this time.
+
+In baselines SR10 and SR20, a b-tagged jet requirement is made. This reduces
+the contributions from rare SM processes such as \WZ and \qqWW where
+there are no intrinsic b-quarks in the final state. In these regions, the
+contributions from fakes leptons becomes reduced due to the increased b-tagged
+jet requirement. Figure~\ref{fig:results_yield_hpt_bl} shows a graphical
+representation of the yields and there full background predictions for SR0,
+SR10 and SR20. Here we see the background prediction and the data yield are in
+agreement within the uncertainty. This lends confidence that our data-driven
+methods are performing reasonably well.
+
+% --------------------------------------------------------------------------- %
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.49\linewidth]{p_hpt_sr0_yield}
+\includegraphics[width=0.49\linewidth]{p_hpt_sr10_yield}
+\includegraphics[width=0.49\linewidth]{p_hpt_sr20_yield}
+\caption[Graphical representation of the event yields in the \hpt baseline regions]
+{\label{fig:results_yield_hpt_bl}
+Graphical representation of the event yields in the \hpt baseline region
+with no (top left), exactly one (top right) and $\geq 2$ (bottom column)
+\nbtags~requirement (Search Region 0, 10 and 20). Also shown as a histogram
+is the result of the background prediction. The shading around the histogram
+represents the uncertainty in the background prediction.
+}
+\end{center}
+\end{figure}
+% --------------------------------------------------------------------------- %
+\clearpage
+% --------------------------------------------------------------------------- %
+% --------------------------------------------------------------------------- %
+\subsection{High \pt Search Regions}
+\label {sec:results_hpt_sr}
+% --------------------------------------------------------------------------- %
+
+We now consider the search regions shown in Table~\ref{tab:evtsel_sr_hpt}
+and repeated in Table~\ref{tab:results_sr_hpt} for convenience. The
+observed yields and estimated backgrounds for each region are shown in
+Table~\ref{tab:results_hpt_excl_yield_summary}. The uncertainty is the total
+statistical and systematic uncertainty. A graphical representation of these
+results can also be seen in Figure~\ref{fig:results_yield_hpt_sr}. We see no
+evidence of an event yield in significant excess of the background estimations.
+% --------------------------------------------------------------------------- %
+\begin{table}[!htb]
+\begin{center}
+\caption[Search regions selected for the high \pt~analysis]
+{\label{tab:results_sr_hpt}
+Search regions selected for the high \pt~search where we require $\Ht>200\ \GeV$.
+}
+\begin{tabular}{c|c|c|c|c}
+\hline\hline
+\nbtags                   & \met                    & \njets   & \Ht[200-400] & \Ht[$>400$] \\ \hline
+\multirow{4}{*}{$=0$}     & \multirow{2}{*}{50-120} & 2-3      & SR1          & SR2         \\ \cline{3-5}
+                          &                         & $\geq 4$ & SR3          & SR4         \\ \cline{2-5}
+                          & \multirow{2}{*}{$>120$} & 2-3      & SR5          & SR6         \\ \cline{3-5}
+                          &                         & $\geq 4$ & SR7          & SR8         \\ \hline
+\multirow{4}{*}{$=1$}     & \multirow{2}{*}{50-120} & 2-3      & SR11         & SR12        \\ \cline{3-5}
+                          &                         & $\geq 4$ & SR13         & SR14        \\ \cline{2-5}
+                          & \multirow{2}{*}{$>120$} & 2-3      & SR15         & SR16        \\ \cline{3-5}
+                          &                         & $\geq 4$ & SR17         & SR18        \\ \hline
+\multirow{4}{*}{$\geq 2$} & \multirow{2}{*}{50-120} & 2-3      & SR21         & SR22        \\ \cline{3-5}
+                          &                         & $\geq 4$ & SR23         & SR24        \\ \cline{2-5}
+                          & \multirow{2}{*}{$>120$} & 2-3      & SR25         & SR26        \\ \cline{3-5}
+                          &                         & $\geq 4$ & SR27         & SR28        \\ \hline\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+% --------------------------------------------------------------------------- %
+\begin{table}
+\begin{center}
+\caption[A summary of the results of this search for the \hpt~analysis]
+{\label{tab:results_hpt_excl_yield_summary}
+A summary of the results of this search for the \hpt~analysis. For each signal
+region, we show its most important kinematical requirements, the prediction for
+the three background (BG) components as well as the total, and the event yield.
+} 
+\end{center}
+\resizebox{0.58\textwidth}{!}{\begin{minipage}{\textwidth}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\nbtags                   & \met                    & \njets                    & \Ht     & SR & Fake BG           & Flip BG        & Rare MC           & Total BG          & Observed \\ \hline\hline
+$\geq 0$                  & 30 if $\Ht<500$ else 0  & 2                         & 80      & 0  & 394.96$\pm$198.06 & 28.66$\pm$8.69 & 211.62$\pm$105.86 & 635.24$\pm$224.74 & 477      \\ \hline
+\multirow{8}{*}{$= 0$}    & \multirow{4}{*}{50-120} & \multirow{2}{*}{2-3}      & 200-400 & 1  & 28.62$\pm$14.52   & 1.56$\pm$0.48  & 25.84$\pm$12.96   & 56.02$\pm$19.47   & 48       \\ \cline{4-5}
+                          &                         &                           & $>400$  & 2  & 2.94$\pm$1.63     & 0.37$\pm$0.12  & 6.30$\pm$3.20     & 9.61$\pm$3.60     & 11       \\ \cline{3-5}
+                          &                         & \multirow{2}{*}{$\geq 4$} & 200-400 & 3  & 5.64$\pm$2.98     & 0.13$\pm$0.04  & 2.54$\pm$1.36     & 8.32$\pm$3.28     & 5        \\ \cline{4-5}
+                          &                         &                           & $>400$  & 4  & 2.33$\pm$1.33     & 0.15$\pm$0.05  & 2.99$\pm$1.58     & 5.47$\pm$2.07     & 2        \\ \cline{2-5}
+                          & \multirow{4}{*}{$>120$} & \multirow{2}{*}{2-3}      & 200-400 & 5  & 8.53$\pm$4.45     & 0.19$\pm$0.06  & 12.74$\pm$6.41    & 21.47$\pm$7.81    & 12       \\ \cline{4-5}
+                          &                         &                           & $>400$  & 6  & 2.11$\pm$1.23     & 0.06$\pm$0.02  & 7.38$\pm$3.75     & 9.55$\pm$3.94     & 11       \\ \cline{3-5}
+                          &                         & \multirow{2}{*}{$\geq 4$} & 200-400 & 7  & 1.32$\pm$0.81     & 0.02$\pm$0.01  & 0.87$\pm$0.60     & 2.21$\pm$1.01     & 1        \\ \cline{4-5}
+                          &                         &                           & $>400$  & 8  & 1.97$\pm$1.13     & 0.02$\pm$0.01  & 2.41$\pm$1.29     & 4.40$\pm$1.72     & 3        \\ \hline
+\multirow{9}{*}{$=1$}     & 30 if $\Ht<500$ else 0  & 2                         & 80      & 10 & 181.89$\pm$91.28  & 6.53$\pm$1.98  & 51.27$\pm$25.69   & 239.68$\pm$94.85  & 152      \\ \cline{2-5}
+                          & \multirow{4}{*}{50-120} & \multirow{2}{*}{2-3}      & 200-400 & 11 & 34.63$\pm$17.51   & 1.00$\pm$0.31  & 9.13$\pm$4.61     & 44.76$\pm$18.10   & 29       \\ \cline{4-5}
+                          &                         &                           & $>400$  & 12 & 1.88$\pm$1.10     & 0.12$\pm$0.04  & 2.01$\pm$1.10     & 4.01$\pm$1.56     & 5        \\ \cline{3-5}
+                          &                         & \multirow{2}{*}{$\geq 4$} & 200-400 & 13 & 7.00$\pm$3.67     & 0.16$\pm$0.05  & 3.73$\pm$1.93     & 10.89$\pm$4.15    & 6        \\ \cline{4-5}
+                          &                         &                           & $>400$  & 14 & 4.27$\pm$2.31     & 0.09$\pm$0.03  & 3.00$\pm$1.57     & 7.35$\pm$2.79     & 2        \\ \cline{2-5}
+                          & \multirow{4}{*}{$>120$} & \multirow{2}{*}{2-3}      & 200-400 & 15 & 6.31$\pm$3.31     & 0.33$\pm$0.10  & 4.91$\pm$2.51     & 11.55$\pm$4.16    & 11       \\ \cline{4-5}
+                          &                         &                           & $>400$  & 16 & 1.70$\pm$1.02     & 0.07$\pm$0.02  & 2.33$\pm$1.25     & 4.10$\pm$1.62     & 2        \\ \cline{3-5}
+                          &                         & \multirow{2}{*}{$\geq 4$} & 200-400 & 17 & 2.03$\pm$1.16     & 0.04$\pm$0.01  & 1.24$\pm$0.75     & 3.31$\pm$1.38     & 3        \\ \cline{4-5}
+                          &                         &                           & $>400$  & 18 & 1.27$\pm$0.78     & 0.05$\pm$0.02  & 2.45$\pm$1.30     & 3.76$\pm$1.52     & 7        \\ \hline
+\multirow{9}{*}{$\geq 2$} & 30 if $\Ht<500$ else 0  & 2                         & 80      & 20 & 22.18$\pm$11.28   & 2.83$\pm$0.86  & 21.38$\pm$10.74   & 46.39$\pm$15.60   & 52       \\ \cline{2-5}
+                          & \multirow{4}{*}{50-120} & \multirow{2}{*}{2-3}      & 200-400 & 21 & 3.87$\pm$2.10     & 0.56$\pm$0.17  & 4.00$\pm$2.06     & 8.43$\pm$2.95     & 12       \\ \cline{4-5}
+                          &                         &                           & $>400$  & 22 & 0.28$\pm$0.26     & 0.06$\pm$0.02  & 0.69$\pm$0.52     & 1.03$\pm$0.59     & 1        \\ \cline{3-5}
+                          &                         & \multirow{2}{*}{$\geq 4$} & 200-400 & 23 & 2.40$\pm$1.35     & 0.11$\pm$0.04  & 2.10$\pm$1.14     & 4.61$\pm$1.77     & 3        \\ \cline{4-5}
+                          &                         &                           & $>400$  & 24 & 1.13$\pm$0.72     & 0.06$\pm$0.02  & 2.03$\pm$1.11     & 3.23$\pm$1.32     & 7        \\ \cline{2-5}
+                          & \multirow{4}{*}{$>120$} & \multirow{2}{*}{2-3}      & 200-400 & 25 & 0.99$\pm$0.63     & 0.14$\pm$0.04  & 1.81$\pm$1.00     & 2.94$\pm$1.19     & 4        \\ \cline{4-5}
+                          &                         &                           & $>400$  & 26 & 0.13$\pm$0.19     & 0.03$\pm$0.01  & 0.76$\pm$0.54     & 0.91$\pm$0.58     & 1        \\ \cline{3-5}
+                          &                         & \multirow{2}{*}{$\geq 4$} & 200-400 & 27 & 0.38$\pm$0.34     & 0.03$\pm$0.01  & 0.73$\pm$0.54     & 1.14$\pm$0.64     & 0        \\ \cline{4-5}
+                          &                         &                           & $>400$  & 28 & 0.45$\pm$0.34     & 0.03$\pm$0.01  & 1.67$\pm$0.94     & 2.16$\pm$1.00     & 2        \\ \hline
+\end{tabular}
+\end{minipage}
+}
+\end{table}
+% --------------------------------------------------------------------------- %
+
+% --------------------------------------------------------------------------- %
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.49\linewidth]{p_yields_hpt_exclusive_nb0}
+\includegraphics[width=0.49\linewidth]{p_yields_hpt_exclusive_nb1}
+\includegraphics[width=0.49\linewidth]{p_yields_hpt_exclusive_nb2}
+\caption[Graphical representation of the event yields in the \hpt search regions]
+{\label{fig:results_yield_hpt_sr}
+Graphical representation of the event yields in the \hpt search regions
+with one (top left), exactly one (top right) and $\geq 2$ (bottom column)
+\nbtags~requirement (Search Region 1-8, 11-18, and 21-28). Also shown as a histogram
+is the result of the background prediction. The shading around the histogram
+represents the uncertainty in the background prediction.
+}
+\end{center}
+\end{figure}
+
+% --------------------------------------------------------------------------- %
+In the various search regions, irreducible backgrounds, primarily from \ttW,
+\WZ and \qqWW, are the dominant backgrounds at approximately 25-80\%, depending
+on the search region. Fake leptons account for approximately 15-75\% of the
+background also depending on the search region. The background from charge
+mis-reconstruction is small contributing less than 5\%.
+
+% --------------------------------------------------------------------------- %
+% --------------------------------------------------------------------------- %
+\section{Low \pt Results}
+\label {sec:results_lpt}
+% --------------------------------------------------------------------------- %
+% --------------------------------------------------------------------------- %
+
+% --------------------------------------------------------------------------- %
+\subsection{Low \pt Control Regions}
+\label {sec:results_lpt_bl}
+% --------------------------------------------------------------------------- %
+
+For the \lpt analysis, the control region (baseline) selections were
+listed in Table~\ref{tab:evtsel_srbl} but are repeated here for convenience in
+Table~\ref{tab:results_srbl_lpt}.
+% --------------------------------------------------------------------------- %
+\begin{table}[!tbh]
+\begin{center}
+\caption[Summary of the baseline search regions considered in the \lpt analysis]
+{\label{tab:results_srbl_lpt}
+Summary of the baseline search regions considered in the \lpt analysis.
+}
+\end{center}
+\resizebox{0.78\textwidth}{!}{\begin{minipage}{\textwidth}
+\begin{tabular}{c|c|c|c|c|c}
+\hline\hline
+Search Region \# & min lepton \pt ($\mu$, e) (\GeV) & \Ht (\GeV)           & \met (\GeV)                               & \njets             & \nbtags \\ \hline
+SR0              & \multirow{3}{*}{10, 10}          & \multirow{3}{*}{250} & \multirow{3}{*}{30 if $\Ht < 500$ else 0} & \multirow{3}{*}{2} & $\ge$ 0 \\ \cline{1-1}\cline{6-6}
+SR10             &                                  &                      &                                           &                    & = 1     \\ \cline{1-1}\cline{6-6}
+SR20             &                                  &                      &                                           &                    & $\ge$ 2 \\ \hline\hline
+\end{tabular}
+\end{minipage}
+}
+\end{table}  
+% --------------------------------------------------------------------------- %
+The control regions in the \lpt analysis are essentially the same as the \hpt
+analysis with two notable exceptions: the lepton \pt threshold is lowered from
+20 to 10 \GeV on both leptons and the minimum \Ht requirement is raised from
+80 to 250 \GeV. The lowered lepton \pt allows more sensitivity for regions
+with a compressed mass spectrum that would lead to lower \pt leptons. The
+\Ht requirement is raised since the low \pt online trigger selection has a
+minimum \Ht requirement of 175 \GeV; thus, 250 \GeV was chosen to account for
+the trigger turn-on. As with the \hpt analysis, the control region SR0 was
+designed to be inclusive to all the search regions and is mostly sensitive
+to fake leptons in SM multi-jet processes: predominately \ttbar and \Wj. The
+contribution for backgrounds without intrinsic b-quarks is suppressed in SR10
+and SR20 which add a \nbtags requirement of exactly one and at least two,
+respectively. Figure~\ref{fig:results_lpt_ht_vs_met} shows the distribution of
+events from SR0 in the \Ht-\met plane. The events cluster in lower left corner
+as expected for background events.
+
+% --------------------------------------------------------------------------- %
+\begin{figure}[!htb]
+\begin{center}
+\includegraphics[width=0.8\linewidth]{p_ht_vs_met_lpt_sr0_nbs.pdf}
+\end{center}
+\caption[Distribution of events in the \Ht-\met plane passing the analysis selections for the \lpt baseline region]
+{\label{fig:results_lpt_ht_vs_met}
+Distribution of events in the \Ht-\met plane passing the analysis selections
+for the \lpt baseline region (SR0).
+}
+\end{figure}
+% --------------------------------------------------------------------------- %
+
+The observed event yields and estimated backgrounds in the \lpt
+control regions can be seen in Tables~\ref{tab:yield_excl_lpt_sr0},
+\ref{tab:yield_excl_lpt_sr10}, and \ref{tab:yield_excl_lpt_sr20}. The yield
+reported as {\it MC Pred} includes contributions from genuine same-sign lepton
+pairs (sum of the rows from the \Wgamma down to the Higgs samples). The
+statistical uncertainty on the simulated contributions is calculated using the
+Clopper-Pearson method~\cite{clopperpearson}. Systematic uncertainties (the second uncertainty if
+present) are displayed only for the final combined background component and no
+uncertainty is added for estimates with zero entries. Systematic uncertainties
+are 100\% correlated among the channels. The upper portion of the table (from
+the top down to \ZZ) is based on simulation only and is used as a reference only.
+The total background when taken from simulation only is reported as {\it Total
+MC} and again is given as a reference only. The SF(DF) contributions are for
+events with one(two) fake leptons and the SC refers to the contamination to the
+fake prediction from rare SM events.
+
+The data-driven background estimation over-predicts by a factor of almost
+four higher than that expected from pure simulation ($\approx 73$ vs.
+240). This is attributed to several factors. First, the fake rate
+method itself over-predicted by 60\% in the \ttbar closure test shown in
+Section~\ref{sec:bkgd_fakes_frstudy_closure}. This accounts for the 50\%
+systematic uncertainty driven by this method. Secondly, the simulation also
+has a large uncertainty since the \Wj sample has low statistics. Finally,
+the simulation itself may be failing to accurately account for all the sources
+of fake leptons. When one accounts for the large uncertainties on both the
+simulated and data-driven fake lepton prediction, the methods are
+consistent and thus no correction is made at this time.
+
+Consider first the inclusive baseline SR0. Simulation alone indicates a that
+background contribution of 20\% fake leptons, 10\% leptons with incorrect
+charge assignment and 70\% from SM source is prompt, isolated same-sign
+dileptons. The background from fake leptons is mostly from top events. Its
+difficult to estimate the contribution from \Wj due to the limited statistics
+in this sample with a large uncertainty of $\pm72$ events; but this could be
+a significant component of the fake lepton background. The background from
+electrons with a mis-reconstructed charge comes from fully leptonic \ttbar
+decays and \DY events. The remaining irreducible background comes from several
+different process that involve genuine same-sign dileptons, although most
+predominately are \ttW, \WZ, and \qqWW.
+% --------------------------------------------------------------------------- %
+% --------------------------------------------------------------------------- %
+\begin{table}[!hbt]
+\begin{center}
+\caption[Low \pt baseline yields and predictions with no b-tagged jets requirement (Signal Region 0)]
+{\label{tab:yield_excl_lpt_sr0}\footnotesize{
+\excllptnamerZERO
+\excllptcutsrZERO
+\exclcaption
+}
+}
+\end{center} 
+\resizebox{0.65\textwidth}{!}{\begin{minipage}{\textwidth}
+\input{results/yields/low_pt/exclusive/sr0.tex} 
+\end{minipage} 
+}
+\end{table}
+% --------------------------------------------------------------------------- %
+\clearpage
+% --------------------------------------------------------------------------- %
+\begin{table}[!hbt]
+\begin{center}
+\caption[Low \pt baseline yields and predictions with exactly one b-tagged jet (Signal Region 10)]
+{\label{tab:yield_excl_lpt_sr10}\footnotesize{
+\excllptnamerONEZERO
+\excllptcutsrONEZERO
+\exclcaption
+}
+}
+\end{center} 
+\resizebox{0.65\textwidth}{!}{\begin{minipage}{\textwidth}
+\input{results/yields/low_pt/exclusive/sr10.tex} 
+\end{minipage} 
+}
+\end{table}
+% --------------------------------------------------------------------------- %
+\clearpage
+% --------------------------------------------------------------------------- %
+\begin{table}[!hbt]
+\begin{center}
+\caption[Low \pt baseline yields and predictions with two or more b-tagged jets (Signal Region 20)]
+{\label{tab:yield_excl_lpt_sr20}\footnotesize{
+\excllptnamerTWOZERO
+\excllptcutsrTWOZERO
+\exclcaption
+}
+}
+\end{center} 
+\resizebox{0.67\textwidth}{!}{\begin{minipage}{\textwidth}
+\input{results/yields/low_pt/exclusive/sr20.tex} 
+\end{minipage} 
+}
+\end{table}
+% --------------------------------------------------------------------------- %
+\clearpage
+In baselines SR10 and SR20, a b-tagged jet requirement is made. This reduces
+the contributions from mostly rare SM process such as \WZ and \qqWW where
+there are no intrinsic b-quarks in the final state. In these regions, the
+contributions from fakes leptons becomes enhanced and the main rare SM
+background is now \ttW. Figure~\ref{fig:results_yield_hpt_bl} shows a graphical
+representation of the yields and there full background predictions for SR0,
+SR10 and SR20. Here we see the background prediction and the data yield
+are in agreement within the uncertainty. This lends confidence that our
+data-driven methods are performing reasonably well. In all search regions,
+we see reasonable consistency between the data yields and the background
+prediction.
+
+% --------------------------------------------------------------------------- %
+\begin{figure}[!hbt]
+\begin{center}
+\includegraphics[width=0.49\linewidth]{p_lpt_sr0_yield}
+\includegraphics[width=0.49\linewidth]{p_lpt_sr10_yield}
+\includegraphics[width=0.49\linewidth]{p_lpt_sr20_yield}
+\caption[Graphical representation of the event yields in the \lpt baseline region]
+{\label{fig:results_lpt_yield_bl}
+Graphical representation of the event yields in the \lpt baseline region
+with no (top left), exactly one (top right) and $\geq 2$ (bottom column)
+\nbtags~requirement (Search Region 0, 10 and 20). Also shown as a histogram
+is the result of the background prediction. The shading around the histogram
+represents the uncertainty in the background prediction.
+}
+\end{center}
+\end{figure}
+
+% --------------------------------------------------------------------------- %
+% --------------------------------------------------------------------------- %
+\subsection{Low \pt Search Regions}
+\label {sec:results_lpt_sr}
+% --------------------------------------------------------------------------- %
+
+The general search regions for the \lpt analysis are defined
+in Table~\ref{tab:evtsel_sr_lpt} and are repeated in
+Table~\ref{tab:results_sr_lpt}. The observed yields and estimated backgrounds
+for each region are shown in Table~\ref{tab:results_lpt_excl_yield_summary}.
+The uncertainty is the total statistical and systematic uncertainty.
+A graphical representation of these results can also be seen in
+Figure~\ref{fig:results_lpt_yield_sr}. We see no evidence of an event yield in
+significant excess of the background estimations.
+% --------------------------------------------------------------------------- %
+\begin{table}[!htb]
+\begin{center}
+\caption[Search regions selected for the \lpt analysis]
+{\label{tab:results_sr_lpt}
+Search regions selected for the \lpt search where we require
+$\Ht>250\ \GeV$.
+}
+\begin{tabular}{c|c|c|c|c}
+\hline\hline
+\nbtags                   & \met                    & \njets   & \Ht[250-400] & \Ht[$>400$] \\ \hline
+\multirow{4}{*}{$=0$}     & \multirow{2}{*}{50-120} & 2-3      & SR1          & SR2         \\ \cline{3-5}
+                          &                         & $\geq 4$ & SR3          & SR4         \\ \cline{2-5}
+                          & \multirow{2}{*}{$>120$} & 2-3      & SR5          & SR6         \\ \cline{3-5}
+                          &                         & $\geq 4$ & SR7          & SR8         \\ \hline
+\multirow{4}{*}{$=1$}     & \multirow{2}{*}{50-120} & 2-3      & SR11         & SR12        \\ \cline{3-5}
+                          &                         & $\geq 4$ & SR13         & SR14        \\ \cline{2-5}
+                          & \multirow{2}{*}{$>120$} & 2-3      & SR15         & SR16        \\ \cline{3-5}
+                          &                         & $\geq 4$ & SR17         & SR18        \\ \hline
+\multirow{4}{*}{$\geq 2$} & \multirow{2}{*}{50-120} & 2-3      & SR21         & SR22        \\ \cline{3-5}
+                          &                         & $\geq 4$ & SR23         & SR24        \\ \cline{2-5}
+                          & \multirow{2}{*}{$>120$} & 2-3      & SR25         & SR26        \\ \cline{3-5}
+                          &                         & $\geq 4$ & SR27         & SR28        \\ \hline\hline
+\end{tabular}
+\end{center}
+\end{table}  
+
+% --------------------------------------------------------------------------- %
+
+% --------------------------------------------------------------------------- %
+\begin{table}
+\begin{center}
+\caption[Summary of the yields for the \lpt~analysis]
+{\label{tab:results_lpt_excl_yield_summary}
+A summary of the results of this search for the \lpt~analysis. For each signal
+region, we show its most important kinematical requirements, the prediction for
+the three background (BG) components as well as the total, and the event yield.
+}
+\end{center}
+\resizebox{0.58\textwidth}{!}{\begin{minipage}{\textwidth}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\nbtags                   & \met                    & \njets                    & \Ht     & SR & Fake BG           & Flip BG       & Rare MC          & Total BG          & Observe \\ \hline\hline
+$\geq 0$                  & 30 if $\Ht<500$ else 0  & 2                         & 250     & 0  & 241.48$\pm$121.13 & 8.43$\pm$2.58 & 118.51$\pm$59.31 & 368.42$\pm$134.89 & 349     \\ \hline       
+\multirow{8}{*}{$= 0$}    & \multirow{4}{*}{50-120} & \multirow{2}{*}{2-3}      & 250-400 & 1  & 28.49$\pm$14.44   & 0.95$\pm$0.29 & 18.05$\pm$9.07   & 47.49$\pm$17.05   & 50      \\ \cline{4-5}  
+                          &                         &                           & $>400$  & 2  & 5.46$\pm$2.89     & 0.41$\pm$0.13 & 7.35$\pm$3.73    & 13.22$\pm$4.72    & 17      \\ \cline{3-5}  
+                          &                         & \multirow{2}{*}{$\geq 4$} & 250-400 & 3  & 10.94$\pm$5.63    & 0.12$\pm$0.04 & 2.80$\pm$1.51    & 13.86$\pm$5.83    & 13      \\ \cline{4-5}  
+                          &                         &                           & $>400$  & 4  & 5.43$\pm$2.87     & 0.16$\pm$0.05 & 3.51$\pm$1.84    & 9.10$\pm$3.41     & 4       \\ \cline{2-5}  
+                          & \multirow{4}{*}{$>120$} & \multirow{2}{*}{2-3}      & 250-400 & 5  & 10.48$\pm$5.41    & 0.13$\pm$0.04 & 11.78$\pm$5.93   & 22.39$\pm$8.02    & 22      \\ \cline{4-5}  
+                          &                         &                           & $>400$  & 6  & 3.98$\pm$2.16     & 0.07$\pm$0.02 & 9.06$\pm$4.58    & 13.11$\pm$5.07    & 18      \\ \cline{3-5}  
+                          &                         & \multirow{2}{*}{$\geq 4$} & 250-400 & 7  & 2.39$\pm$1.35     & 0.02$\pm$0.01 & 1.08$\pm$0.68    & 3.49$\pm$1.51     & 2       \\ \cline{4-5}  
+                          &                         &                           & $>400$  & 8  & 4.44$\pm$2.36     & 0.03$\pm$0.01 & 3.14$\pm$1.65    & 7.60$\pm$2.88     & 4       \\ \hline       
+\multirow{9}{*}{$=1$}     & 30 if $\Ht<500$ else 0  & 2                         & 250     & 10 & 117.46$\pm$58.99  & 2.00$\pm$0.61 & 33.43$\pm$16.77  & 152.88$\pm$61.33  & 132     \\ \cline{2-5}  
+                          & \multirow{4}{*}{50-120} & \multirow{2}{*}{2-3}      & 250-400 & 11 & 35.51$\pm$17.93   & 0.56$\pm$0.17 & 6.29$\pm$3.20    & 42.36$\pm$18.22   & 40      \\ \cline{4-5}  
+                          &                         &                           & $>400$  & 12 & 5.13$\pm$2.73     & 0.14$\pm$0.04 & 2.47$\pm$1.32    & 7.74$\pm$3.03     & 5       \\ \cline{3-5}  
+                          &                         & \multirow{2}{*}{$\geq 4$} & 250-400 & 13 & 17.60$\pm$8.96    & 0.14$\pm$0.05 & 4.11$\pm$2.12    & 21.85$\pm$9.21    & 15      \\ \cline{4-5}  
+                          &                         &                           & $>400$  & 14 & 9.74$\pm$5.02     & 0.10$\pm$0.03 & 3.64$\pm$1.89    & 13.47$\pm$5.36    & 6       \\ \cline{2-5}  
+                          & \multirow{4}{*}{$>120$} & \multirow{2}{*}{2-3}      & 250-400 & 15 & 9.15$\pm$4.72     & 0.23$\pm$0.07 & 4.40$\pm$2.26    & 13.78$\pm$5.24    & 9       \\ \cline{4-5}  
+                          &                         &                           & $>400$  & 16 & 3.16$\pm$1.73     & 0.07$\pm$0.02 & 2.75$\pm$1.46    & 5.98$\pm$2.26     & 5       \\ \cline{3-5}  
+                          &                         & \multirow{2}{*}{$\geq 4$} & 250-400 & 17 & 3.58$\pm$1.94     & 0.04$\pm$0.01 & 1.61$\pm$0.92    & 5.23$\pm$2.14     & 3       \\ \cline{4-5}  
+                          &                         &                           & $>400$  & 18 & 4.22$\pm$2.25     & 0.05$\pm$0.02 & 3.27$\pm$1.71    & 7.54$\pm$2.82     & 11      \\ \hline       
+\multirow{9}{*}{$\geq 2$} & 30 if $\Ht<500$ else 0  & 2                         & 250     & 20 & 20.18$\pm$10.27   & 0.98$\pm$0.30 & 17.32$\pm$8.72   & 38.47$\pm$13.47   & 45      \\ \cline{2-5}  
+                          & \multirow{4}{*}{50-120} & \multirow{2}{*}{2-3}      & 250-400 & 21 & 4.60$\pm$2.45     & 0.32$\pm$0.10 & 3.00$\pm$1.58    & 7.92$\pm$2.91     & 10      \\ \cline{4-5}  
+                          &                         &                           & $>400$  & 22 & 0.46$\pm$0.36     & 0.06$\pm$0.02 & 0.83$\pm$0.57    & 1.35$\pm$0.68     & 1       \\ \cline{3-5}  
+                          &                         & \multirow{2}{*}{$\geq 4$} & 250-400 & 23 & 4.50$\pm$2.41     & 0.11$\pm$0.03 & 2.47$\pm$1.32    & 7.07$\pm$2.75     & 6       \\ \cline{4-5}  
+                          &                         &                           & $>400$  & 24 & 1.84$\pm$1.07     & 0.07$\pm$0.02 & 2.42$\pm$1.29    & 4.33$\pm$1.68     & 11      \\ \cline{2-5}  
+                          & \multirow{4}{*}{$>120$} & \multirow{2}{*}{2-3}      & 250-400 & 25 & 1.05$\pm$0.65     & 0.10$\pm$0.03 & 1.57$\pm$0.89    & 2.72$\pm$1.11     & 1       \\ \cline{4-5}  
+                          &                         &                           & $>400$  & 26 & 0.34$\pm$0.29     & 0.03$\pm$0.01 & 0.89$\pm$0.59    & 1.25$\pm$0.66     & 2       \\ \cline{3-5}  
+                          &                         & \multirow{2}{*}{$\geq 4$} & 250-400 & 27 & 0.95$\pm$0.60     & 0.03$\pm$0.01 & 0.83$\pm$0.58    & 1.81$\pm$0.83     & 0       \\ \cline{4-5}  
+                          &                         &                           & $>400$  & 28 & 1.29$\pm$0.79     & 0.04$\pm$0.01 & 2.07$\pm$1.12    & 3.40$\pm$1.37     & 3       \\ \hline       
+\end{tabular}
+\end{minipage}
+}
+\end{table}
+% --------------------------------------------------------------------------- %
+\begin{figure}[!hbt]
+\begin{center}
+\includegraphics[width=0.49\linewidth]{p_yields_lpt_exclusive_nb0}
+\includegraphics[width=0.49\linewidth]{p_yields_lpt_exclusive_nb1}
+\includegraphics[width=0.49\linewidth]{p_yields_lpt_exclusive_nb2}
+\caption[Graphical representation of the event yields in the \lpt search regions]
+{\label{fig:results_lpt_yield_sr}
+Graphical representation of the event yields in the \lpt search regions
+with one (top left), exactly one (top right) and $\geq 2$ (bottom column)
+\nbtags~requirement (Search Region 1-8, 11-18, and 21-28). Also shown as a histogram
+is the result of the background prediction. The shading around the histogram
+represents the uncertainty in the background prediction.
+}
+\end{center}
+\end{figure}
+% --------------------------------------------------------------------------- %
+In the various search regions, irreducible backgrounds, primarily from \ttW,
+\WZ and \qqWW, are the dominant backgrounds at approximately 15-70\%, depending
+on the search region. Fake leptons account for approximately 25-80\% of the
+background also depending on the search region. The background from charge
+mis-reconstruction is small contributing less than 5\%.
+\clearpage
+
+% --------------------------------------------------------------------------- %
+% --------------------------------------------------------------------------- %
+\section{Interpretations}
+\label {sec:results_int}
+% --------------------------------------------------------------------------- %
+% --------------------------------------------------------------------------- %
+Given the lack of a significant excess over the expected SM background, the
+results of the search are used to place limits on the cross section of rare SM
+processes and on the parameters of various models of new physics. In total,
+we have 54 search regions (SR) for this analysis, but for the limit setting
+procedure for each model we take into account only the dedicated search regions
+as described in Section~\ref{sec:evtsel_sr}. For each model in consideration,
+all relevant search regions are included into a multi-bin fit in order to
+maximize sensitivity. The 95\% confidence level (CL) upper limits on the signal
+yields are calculated using the modified frequentist CL$_s$ method. Formally we
+construct a likelihood function, i.e.,
+%==========================================================================================
+\begin{eqnarray}\label{eq:likelihood}
+\lumi ({\rm data}|\mu,\theta) = {\rm Poisson } \Bigl({\rm data}|\mu \cdot s(\theta) + b(\theta)\Bigr) \cdot p\left(\hat{\theta}|\theta\right),
+\end{eqnarray}
+%==========================================================================================
+where ``data'' represents our observed yields, and Poisson(data$|$
+$\mu$,$\theta$) represents the product of probabilities to observe $n_i$ events
+in the $i$th region, i.e.,
+%==========================================================================================
+\begin{eqnarray}
+\prod_i \frac{ \left(\mu s_i + b_i\right)^{n_i}}{n_i!} e^{-\mu s_i-b_i}.
+\end{eqnarray}
+%==========================================================================================
+Here, the parameter $\mu$ represents our signal strength modifier and
+corresponds to $\sigma \times BR$ in the context of the R-parity-conserving
+simplified SUSY models (SMS)~\cite{sms}. The parameter $\theta$ denotes the
+collection of nuisance parameters that can influence the values of $b$ and
+$s$. Log-normal pdf's are assumed for the signal and background nuisance
+parameters. These are taken to be either 0\% or 100\% correlated where
+appropriate. The profile likelihood ratio is used to test the compatibility
+of the observed data with the background-only and signal+background
+hypotheses. The full prescription of the statistical model can be found
+elsewhere~\cite{Read:2002hq,ATL-PHYS-PUB-2011-011,Junk:1999kv}.
+
+In this section, we first give the upper limits on the cross sections for
+same-sign top production followed by the Standard Model four top production.
+We conclude this chapter with the limits on various Supersymmetry models
+with Simplified Model Spaces (SMS), which can lead to a same-sign dilepton
+signature.
+
+% --------------------------------------------------------------------------- %
+\subsection{Same-Sign Top}
+\label {sec:results_int_sstop}
+% --------------------------------------------------------------------------- %
+The results of the search regions SStop1, SStop1++, SStop2, and SStop2++
+are used to set limits on the cross section for same-sign top-quark pair
+production, $\sigma(\Pp \Pp \to \cPqt \cPqt + \cPaqt \cPaqt)$ from SStop1 and
+SStop2, and $\sigma(\Pp \Pp \to \cPqt \cPqt)$ from SStop1++ and SStop2++.
+Here $\sigma(\Pp \Pp \to \cPqt \cPqt + \cPaqt \cPaqt)$ is short hand for the
+sum $\sigma(\Pp \Pp \to \cPqt \cPqt)+\sigma(\Pp \Pp \to \cPaqt \cPaqt)$. Note
+that in most new physics scenarios $\Pp \Pp \to \cPaqt \cPaqt$ is suppressed
+with respect to $\Pp \Pp \to \cPqt \cPqt$ because of the parton distribution
+functions of the proton. These limits are calculated using an acceptance
+obtained using simulated $\Pp \Pp \to \cPqt \cPaqt$ events and an opposite-sign
+selection. This acceptance, including branching fractions, is $0.43\%$
+($0.26\%$) for SStop1 (SStop2) search region. The relative uncertainty on
+this acceptance is $14\%$. The observed upper limits are $\sigma(\Pp \Pp \to
+\cPqt \cPqt + \cPaqt \cPaqt) < 0.71$ pb and $\sigma(\Pp \Pp \to \cPqt \cPqt)
+< 0.33\unit{pb}$ at 95\% CL; the median expected limits are 0.48 and 0.30
+\unit{pb}, respectively.  The full procedure was documented in~\cite{an_ssb2012}.
+% --------------------------------------------------------------------------- %
+\subsection{Standard Model Four Top}
+\label {sec:results_int_tttt}
+% --------------------------------------------------------------------------- %
+Similarly, the results from search regions SR21--SR28 and high-\pt lepton
+selection are used to set limits on the SM cross section for the Standard
+Model four-top-quark production. The observed upper limit is $\sigma(\Pp \Pp
+\to \cPqt \cPqt \cPaqt \cPaqt) < 47$\unit{fb} at 95\% CL, compared to a
+median expected limit of 36\unit{fb}. The SM cross section as computed
+with the MC$@$NLO program~\cite{Frixione:2002ik} is $\sigma_{\rm SM} =
+\left(9.14\pm0.05\right) \times10^{-1}~{\rm fb}$. The most sensitive search
+regions, SR24 and SR28, have a signal acceptance of 0.52\% and 0.49\%,
+respectively, with relative uncertainties of 13\% and 17\%.
+
+% --------------------------------------------------------------------------- %
+\subsection{Supersymmetry}
+\label {sec:results_int_susy}
+% --------------------------------------------------------------------------- %
+
+Next, we present limits on the parameter spaces of various
+R-parity-conserving simplified Supersymmetry models (SMS)~\cite{sms}.
+The exclusion contours are obtained with the gluino (sbottom)
+pair production cross-sections at the NLO + NLL accuracy that
+are calculated in the limit where other sparticles are heavy and
+decoupled~\cite{bib-nlo-nll-01,bib-nlo-nll-02,bib-nlo-nll-03,bib-nlo-nll-04,
+bib-nlo-nll-05,Kramer:2012bx}. The production of SUSY particles and
+the decay chains under consideration are shown schematically in
+Figure~\ref{fig:results_feyn_models} and the summary of the search regions used
+for each SMS model is given in Table~\ref{tab:results_models_srs} with the
+results from each model discussed below.
+% --------------------------------------------------------------------------- %
+\begin{figure}[!htb]
+\begin{center}
+\includegraphics[width=0.45\linewidth]{T1tttt} \hfill
+\includegraphics[width=0.45\linewidth]{T5tttt}
+\includegraphics[width=0.45\linewidth]{T6ttWW} \hfill
+\includegraphics[width=0.45\linewidth]{T7btW}
+\includegraphics[width=0.45\linewidth]{T5WW} \hfill
+\includegraphics[width=0.45\linewidth]{T1tbs}
+\caption[Diagrams for the four SUSY models considered]
+{\label{fig:results_feyn_models}
+Feynman diagrams for the four SUSY models considered (A1, A2, B1, B2, C1 and RPV).
+}
+\end{center}
+\end{figure}
+% --------------------------------------------------------------------------- %
+\begin{table}[!hbt]
+\begin{center}
+\caption[Summary of the search regions used for limit setting in each SMS model considered]
+{\label{tab:results_models_srs}
+Summary of the search regions used for limit setting in each SMS model considered.
+}
+\begin{tabular}{|c|c|c|c|}
+\hline\hline
+Model                                     & Model Restriction                                & Analysis Type & Signal Regions Used \\ \hline\hline
+A1                                        &                                                  & high-$\pt$    & 21--28              \\ 
+A2                                        & m$_{\chiz}$ = 50 GeV                             & high-$\pt$    & 21--28              \\ 
+B1                                        & m$_{\chiz}$ = 50 GeV                             & high-$\pt$    & 11--18, 21--28      \\ 
+B1                                        & x = $\text{m}_{\chiz}/\text{m}_{\chipm_1} = 0.5$ & high-$\pt$    & 11--18, 21--28      \\ 
+B1                                        & x = $\text{m}_{\chiz}/\text{m}_{\chipm_1} = 0.8$ & low-$\pt$     & 11--18, 21--28      \\ 
+B2                                        & m$_{\chiz}$ = 50 GeV, m$_{\chipm_1}$ = 150 GeV   & high-$\pt$    & 21--28              \\ 
+B2                                        & m$_{\chiz}$ = 50 GeV, m$_{\chipm_1}$ = 300 GeV   & high-$\pt$    & 21--28              \\ 
+C1                                        & x = 0.5                                          & high-$\pt$    & 01--08              \\ 
+C1                                        & x = 0.8                                          & low-$\pt$     & 01--08              \\ 
+RPV                                       &                                                  & high-$\pt$    & RPV2                \\ 
+% $pp \to tt + \overline{t}\overline{t}$    &                                                  & high-$\pt$ & SStop1, SStop2      \\ 
+% $pp \to tt$                               &                                                  & high-$\pt$ & SStop1++, SStop2++  \\ 
+% $pp \to tt\overline{t}\overline{t}$       &                                                  & high-$\pt$ & 21--28              \\ 
+\hline\hline
+\end{tabular}
+\end{center}
+\end{table}
+% --------------------------------------------------------------------------- %
+\clearpage
+Scenarios A1 and A2 represent models of gluino pair production resulting in the
+$\cPqt \cPqt \cPaqt \cPaqt \chiz_1 \chiz_1$ final state, where $\chiz_1$ is the
+lightest neutralino~\cite{stopVirtual,stopVirtualPRD,sms,wacker,naturalness4}.
+In model A1, the gluino undergoes a three-body decay $\sGlu \to \ttbar \chiz_1$
+mediated by an off-shell top squark. In model A2, the gluino decays to a top
+quark and an anti-top squark, with the on-shell anti-squark further decaying
+into an anti-top quark and a neutralino. Both of these models produce four
+on-shell W bosons and four bottom quarks. Therefore, these models can be probed with
+search regions SR21--SR28 where at least two b-tagged jets and \hpt leptons
+are required, the region with the best sensitivity is SR28. The 95\% CL upper
+limits on the cross section times branching ratio, as well as the exclusion
+contours, are shown in Figure~\ref{fig:results_limit_a12}. For model A1 these
+are presented as a function of gluino mass and $\chiz_1$ mass and for model
+A2 as a function of gluino mass and stop mass for $\chiz_1$ mass set to 50
+\GeV.
+% --------------------------------------------------------------------------- %
+\begin{figure}[!tbh]
+\begin{center}
+\includegraphics[width=0.49\linewidth]{p_limit_T1tttt}
+\includegraphics[width=0.49\linewidth]{p_limit_T5tttt}
+\caption[Exclusion curves for models A1 and A2]
+{\label{fig:results_limit_a12}
+Exclusion regions at 95\% CL in the planes of $m(\chiz_1)$ \vs $m(\sGlu)$
+(model A1) and $m(\sTop_1)$ \vs $m(\sGlu)$ (model A2). The excluded
+regions are those within the kinematic boundaries and to the left
+of the curves. The effects of the theoretical uncertainties in the
+next-to-leading-order plus next-to-leading-log calculations of the production
+cross sections~\cite{kramer_2012bx} are indicated by the black-thin curves; the
+expected limits and their $\pm$1 standard-deviation variations are also shown
+in dashed red curves.
+}
+\end{center}
+\end{figure}
+% --------------------------------------------------------------------------- %
+\clearpage
+
+Model B1 is a model of bottom-squark pair production, followed by one of the
+most likely decay modes of the bottom squark, $\sBot_1 \to \cPqt \chim_1$
+and $\chim_1 \to \PWm \chiz_1$. We consider three scenarios in this decay
+mode. We either fix the $\chiz_1$ mass at 50~\GeV and present the limits in
+the $m_{\sBot_1}$--$m_{\chipm_1}$ plane, or use $m_{\sBot_1}$--$m_{\chiz_1}$
+plane with variable mass of $m_{\chipm_1}$ using the equation $m_{\chipm_1} 
+=  xm_{\chiz_1}  +  (1-x)m_{\sBot_1}$ with $x=0.5$ or $x=0.8$. The value of
+$x$ determines whether the top and W are produced on- or off-shell. The limits
+on this model, obtained using search regions SR11 to SR28, are presented in
+Figure~\ref{fig:results_limit_b12}. For the $x=0.8$ scenario the low-\pt lepton selection
+is used, while high-\pt leptons are used for the other two scenarios. SR28 is
+again the most sensitive search region, followed by the regions requiring one
+b-tagged jet: SR18, SR15, and SR13.
+
+Model B2 consists of gluino pair production followed by $\sGlu \to \sBot_1
+\cPaqb$. The gluino decay modes in models A1 and A2 would be dominant if the
+top squark is the lightest supersymmetric quark. Conversely, if the bottom
+squark is the lightest, the decay mode in model B2 would be the most probable.
+The limits on this model, calculated using search regions SR21--SR28 and the
+high-\pt lepton selection, are presented as a function of $m(\sBot_1)$ and
+$m(\sGlu)$ for two fixed masses of $m_{\chipm_1}$, 150 and 300 \GeV. The region
+with the largest sensitivity to this model is SR28.
+% --------------------------------------------------------------------------- %
+\begin{figure}[!tbh]
+\resizebox{0.93\textwidth}{!}{\begin{minipage}{\textwidth}
+\begin{center}
+\includegraphics[width=0.49\linewidth]{p_limit_t6ttww} \\
+\includegraphics[width=0.49\linewidth]{p_limit_t6ttww_x05}
+\includegraphics[width=0.49\linewidth]{p_limit_t6ttww_x08}
+\includegraphics[width=0.49\linewidth]{p_limit_t7btw_150}
+\includegraphics[width=0.49\linewidth]{p_limit_t7btw_300}
+\caption[Exclusion curves for models B1 and B2]
+{\label{fig:results_limit_b12}
+Exclusion regions at 95\% CL in the planes of $m(\chipm_1)$ \vs $m(\sBot_1)$
+and $m(\chiz_1)$ \vs $m(\sBot_1)$ (model B1) and $m(\sBot_1)$ \vs $m(\sGlu)$
+(model B2). The convention for the exclusion curves are same as in
+Figure~\ref{fig:results_limit_b12}.
+}
+\end{center}
+\end{minipage}
+}
+\end{figure}
+% --------------------------------------------------------------------------- %
+\clearpage
+
+Model C1 is another decay chain following a gluino pair production
+$\Pp\Pp\to\sGlu\sGlu$, where each gluino decays to light quarks and a
+chargino via a heavy virtual squark: $\sGlu\to\Pq\Paq'\chipm_1$, $\chipm_1
+\to \text{W}^{(*)}\chiz_1$. The decay is charge democratic, resulting in an
+equal fraction of same-sign and opposite-sign W pairs in the final state.
+In this model there are three parameters: $m_{\sGlu}$, $m_{\chipm_1}$, and
+$m_{\chiz_1}$. The scan is performed in the $m_{\chiz_1}$, $m_{\sGlu}$
+plane, while the chargino mass is defined as $m_{\chipm_1} = xm_{\chiz_1}
++ (1-x)m_{\sGlu}$ where we examine $x$ values of 0.5 and 0.8. Depending on
+the value of the $x$-parameter, for a given $m_{\chiz_1}$ and $m_{\sGlu}$,
+the W can be produced on-shell or off-shell giving rise to either high-
+or low-\pt leptons. In this model no enrichment of heavy-flavour jets
+is expected. Therefore, the search regions SR01--SR08, with both low-
+and high-\pt lepton selection, are used for cross section upper limit
+calculation. In Figure~\ref{fig:results_limit_c1} we present the limit in the
+$m_{\chiz_1}$--$m_{\sGlu}$ plane with $x=0.8$. In this model, gluino masses up
+to 900 \GeV are probed. Most of the sensitivity for this model is obtained from
+search region SR08.
+% \clearpage
+% --------------------------------------------------------------------------- %
+\begin{figure}[!htb]
+\begin{center}
+\includegraphics[width=0.49\linewidth]{p_limit_t5lnu}
+\includegraphics[width=0.49\linewidth]{p_limit_t5vv}
+\caption[Exclusion curves for model C1]
+{\label{fig:results_limit_c1}
+Exclusion regions at 95\% CL in the planes of $m(\chiz_1)$ \vs $m(\sGlu)$
+(model C1). The convention for the exclusion curves are same as in
+Figure~\ref{fig:results_limit_c1}.
+}
+\end{center}
+\end{figure}
+% --------------------------------------------------------------------------- %
+
+Excluded regions in the parameter space of the five models are shown
+in Figures~\ref{fig:results_limit_a12}, \ref{fig:results_limit_b12},
+and~\ref{fig:results_limit_c1}. These results extend the sensitivity obtained
+in the previous version of this analysis~\cite{sspaper2012} on gluino and
+sbottom masses. For the gluino-initiated models (A1, A2, B2, and C1), we probe
+gluinos with masses below around 1050 \GeV, with relatively small dependence on
+the details of the models. This is because the limits are driven by the common
+gluino-pair production cross section. In the case of the direct bottom-squark
+pair production, model B1, our search shows sensitivity for sbottom masses up
+to 500 \GeV.
+
+These models are also probed by other CMS new physics searches in
+different decay modes, although other searches have so far been
+interpreted in the context of model A1 but not A2, B1, or B2. For model
+A1 the limits given here are complementary to the limits from other
+searches~\cite{maria,Chatrchyan:2012wa,Chatrchyan:2013lya,Chatrchyan:2013wxa}:
+less stringent at low $m(\chiz_1)$ but more stringent at high $m(\chiz_1)$.
+A similar conclusion applies to model A2, since the final state is the same,
+while in the case of bottom-squark pair production limits on $m(\sBot_1)$ are
+about 500(600) \GeV, but assuming the decay mode $\sBot_1 \to \cPqb \chiz_1$
+instead of the model B1 mode $\sBot_1 \to \cPqt \chim_1$~\cite{ATLAS:2011cw}.
+Comparable limits for model A1, as well as for similar models with top
+and bottom quarks from gluino decays, have been reported by the ATLAS
+collaboration~\cite{ATLAS:2012ai,ATLAS:2012ah,ATLAS:2012pq,ATLAS:2012naa}.
+
+One R-parity violating scenario is considered in the scope of gluino-pair
+production, where each gluino decays to three quarks: $\sGlu\to\cPqt\cPqb\cPqs
+(\cPaqt\cPaqb\cPaqs)$ (model RPV). Such decays lead to same-sign W pairs in
+the final state in 50\% of the cases. The model is governed by one parameter
+($m_{\sGlu}$) which dictates the production cross section and the final state
+kinematics. The dedicated search region RPV2 with the high-$\pt$ lepton selection
+is used to place an upper limit on the production cross section. The signal
+selection efficiency is $0.1\%$ for low gluino masses and reaches to $0.5\%$
+for the higher gluino masses considered in this analysis. The result is shown
+in Figure~\ref{fig:results_limit_rpv}. In this scenario, the gluino mass is probed up to
+approximately 900 \GeV.
+
+% --------------------------------------------------------------------------- %
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.60\linewidth]{p_limit_rpv.pdf}
+\caption[Exclusion curve for RPV model]
+{\label{fig:results_limit_rpv}
+Exclusion at 95\% CL upper limit on the gluino production cross section for
+an RPV simplified model, $pp \to \sGlu \sGlu, \sGlu \to \cPqt\cPqb\cPqs
+(\cPaqt\cPaqb\cPaqs)$.
+}
+\end{center}
+\end{figure}
+% --------------------------------------------------------------------------- %

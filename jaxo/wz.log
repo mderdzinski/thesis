@@ -1,0 +1,196 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=latex 2013.5.30)  26 AUG 2013 14:48
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**wz.tex
+(./wz.tex
+LaTeX2e <2011/06/27>
+Babel <3.9f> and hyphenation patterns for 78 languages loaded.
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(./axodraw4j.sty
+Package: axodraw4j 2008/11/19
+
+Document option: axodraw4j. 19 Nov 2008
+***************************************************************************
+WARNING: use of axodraw4j is recommended only in conjunction with JaxoDraw!
+.....See http://jaxodraw.sourceforge.net/ for information on JaxoDraw......
+***************************************************************************
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/dvips/colordvi.sty)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/dvips/rotate.tex
+\rotdimen=\dimen103
+))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pstricks/pstricks.sty
+Package: pstricks 2013/05/21 v0.56 LaTeX wrapper for `PSTricks' (RN,HV)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pstricks/pstricks.tex
+(/usr/local/texlive/2013/texmf-dist/tex/generic/xkeyval/pst-xkey.tex
+File: pst-xkey.tex 2005/11/25 v1.6 PSTricks specialization of xkeyval (HA)
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+\XKV@toks=\toks15
+\XKV@tempa@toks=\toks16
+\XKV@depth=\count87
+File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
+)))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pstricks/pst-fp.tex
+`pst-fp' v0.05, 2010/01/17 (hv)
+\pstFP@xs=\count88
+\pstFP@xia=\count89
+\pstFP@xib=\count90
+\pstFP@xfa=\count91
+\pstFP@xfb=\count92
+\pstFP@rega=\count93
+\pstFP@regb=\count94
+\pstFP@regs=\count95
+\pstFP@times=\count96
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x
+\pgfutil@everybye=\toks17
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks18
+\pgfkeys@temptoks=\toks19
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
+ode.tex
+\pgfkeys@tmptoks=\toks20
+))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+\pgffor@iter=\dimen104
+\pgffor@skip=\dimen105
+\pgffor@stack=\toks21
+\pgffor@toks=\toks22
+)
+\psLoopIndex=\count97
+
+`PSTricks' v2.43  <2013/05/12> (tvz)
+\pst@dima=\dimen106
+\pst@dimb=\dimen107
+\pst@dimc=\dimen108
+\pst@dimd=\dimen109
+\pst@dimg=\dimen110
+\pst@dimh=\dimen111
+\pst@dimm=\dimen112
+\pst@dimn=\dimen113
+\pst@dimo=\dimen114
+\pst@dimp=\dimen115
+\pst@hbox=\box26
+\pst@ibox=\box27
+\pst@boxg=\box28
+\pst@cnta=\count98
+\pst@cntb=\count99
+\pst@cntc=\count100
+\pst@cntd=\count101
+\pst@cntg=\count102
+\pst@cnth=\count103
+\pst@cntm=\count104
+\pst@cntn=\count105
+\pst@cnto=\count106
+\pst@cntp=\count107
+\@zero=\count108
+\pst@toks=\toks23
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pstricks/pstricks.con)
+\psunit=\dimen116
+\psxunit=\dimen117
+\psyunit=\dimen118
+\pst@C@@rType=\count109
+\pslinewidth=\dimen119
+\psk@startLW=\dimen120
+\psk@endLW=\dimen121
+\pst@customdefs=\toks24
+\pslinearc=\dimen122
+\pst@symbolStep=\dimen123
+\pst@symbolWidth=\dimen124
+\pst@symbolLinewidth=\dimen125
+\everypsbox=\toks25
+\psframesep=\dimen126
+\pslabelsep=\dimen127
+\sh@wgridXunit=\dimen128
+\sh@wgridYunit=\dimen129
+\pst@shift=\dimen130
+\theoverlaybox=\box29
+)
+File: pstricks.tex 2013/05/12 v2.43 `PSTricks' (tvz,hv)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pstricks/pst-fp.tex)
+File: pst-fp.tex 2013/05/12 v2.43 `PST-fp' (hv)
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: dvips.def on input line 225.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)) (./wz.aux)
+\openout1 = `wz.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <20.74> on input line 58.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 58.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 58.
+
+[1
+
+] (./wz.aux) ) 
+Here is how much of TeX's memory you used:
+ 3278 strings out of 493316
+ 48517 string characters out of 6137930
+ 150261 words of memory out of 5000000
+ 6747 multiletter control sequences out of 15000+600000
+ 6380 words of font info for 23 fonts, out of 8000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 37i,8n,51p,284b,308s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on wz.dvi (1 page, 19516 bytes).
