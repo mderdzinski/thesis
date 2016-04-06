@@ -11,7 +11,7 @@ In order to pass the trigger, at least two leptons with a loose ID and isolation
 Then lepton \pt\ thresholds of the triggers are low enough such that the triggers are fully efficient after making an offline \pt\ cut at 20 \gev\ for both the leading and sub-leading lepton in the event.
 In addition to the signal triggers, two other sets of triggers are used in order to collect data in control regions used for data-driven background predictions in the signal region,
 and a last set of triggers is used to collect data used to measure the efficiency of the dilepton triggers.
-The efficiencies of the ee and e$\mu$ triggers with respect to the offline selection with two leptons with \pt\ $>$ 20 GeV have been measured as NUMBERA, NUMBERB, respectively.
+The efficiencies of the ee, e$\mu$ and $\mu\mu$ triggers with respect to the offline selection with two leptons with \pt\ $>$ 20 GeV have been measured as 0.95, 0.94 and 0.93 respectively.
 The way this measurement was made is described in section~\ref{sec:bkg_fs}.
 All triggers used to collect data for this analysis are listed in table~\ref{table:triggers}.
 
@@ -335,6 +335,64 @@ After applying the effective area corrections,
 the leptons in this analysis are required to have miniRelIso $<$ 0.10 ( 0.20) for electrons (muons). 
 This gives an efficiency for prompt leptons of $>$~90\% and rejection rate for non-prompt leptons of about 80\% for electrons and 90\% for muons.
 \clearpage
+
+\subsection{Lepton Scale Factors}
+Scale factors are applied in order to correct for the differences in efficiencies in data and MC when selecting applying lepton ID and isolation requirements.
+Additional scale factors are derived to correct for differences in simulation of leptons when using Fastsim~\cite{fastsim} instead of fullsim.
+These scale factors are derived in data and MC using a ``tag and probe'' technique.
+The main premise of this technique is that leptons coming from a Z boson are produced in opposite-sign same-flavor pairs in very large quantities.
+in an event, a lepton with very tight ID and isolation requirements is chosen (the tag),
+and then a second lepton with very loose requirements (the probe) can be studied if it is found that the pair of leptons has a dilepton mass consistent with the Z mass.
+the efficiency of various kinematic cut requirements can then be assessed on individual leptons, such as the efficiency of the ID and isolation requirements.
+This is done separately in data and MC, and then the MC is corrected based on these differences to match what is observed in data.
+Scale factors for electron ID and isolation criteria are shown in~\ref{fig:sf_electrons},
+scale factors for muon ID and isolation criteria are shown in~\ref{fig:sf_muons},
+and Fastsim scale factors are shown in~\ref{fig:FS_sfs}.
+\begin{figure}[!ht]
+  \begin{center}
+    \begin{tabular}{cc}
+      \includegraphics[width=0.8\textwidth]{evtsel/figs/sf_el_tight2d3d.pdf}  
+    \end{tabular}
+    \caption{
+      \label{fig:sf_electrons}
+      Electron scale factors as a function of \pt\ and $\eta$.
+      The scale factor is applied as an event weight once per electron in the event.
+    }
+  \end{center}
+\end{figure}
+
+\begin{figure}[!ht]
+  \begin{center}
+    \begin{tabular}{cc}
+      \includegraphics[width=0.4\textwidth]{evtsel/figs/sf_mu_mediumID.pdf}  &
+      \includegraphics[width=0.4\textwidth]{evtsel/figs/sf_mu_mini02.pdf}  \\
+    \end{tabular}
+    \caption{
+      \label{fig:sf_muons}
+      Muon scale factors as a function of \pt\ and $\eta$.
+      The left plot shows the scale factors associated with the ID selection criteria,
+      and the right plot shows the scale factors associated with the isolation selection criteria.
+      Each scale factor is applied as an event weight once per muon in the event.
+    }
+  \end{center}
+\end{figure}
+
+\begin{figure}[!ht]
+  \begin{center}
+    \begin{tabular}{cc}
+      \includegraphics[width=0.4\textwidth]{evtsel/figs/FS_sf_el_tight_mini01.pdf}  &
+      \includegraphics[width=0.4\textwidth]{evtsel/figs/FS_sf_mu_mediumID_mini02.pdf}  \\
+    \end{tabular}
+    \caption{
+      \label{fig:FS_sfs}
+      Fastsim scale factors as a function of \pt\ and $\eta$.
+      The left plot shows the scale factors applied per electron,
+      and the right plot shows the scale factors applied per muon.
+      Each scale factor is applied as an event weight once per lepton in the event.
+    }
+  \end{center}
+\end{figure}
+
 
 \subsection{Electron Selection}
 \label{ssec:elsel}

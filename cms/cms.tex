@@ -78,7 +78,22 @@ meaning they do not lose very much energy as they pass through the detector comp
 
 \subsection{Silicon Tracker}
 \label {subs:tracker}
+figure~\ref{fig:tracker}
+
 Something about pixels and other stuff.
+
+\begin{figure}[!htb]
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=0.8\textwidth]{cms/figs/Barrel.pdf}
+\end{tabular}
+\caption{
+  A cross-sectional in the x-y plane of the CMS tracking system is shown here.
+  The tracker provides excellent coverage for reconstruction of tracks from charged particles for $|\eta| < $2.5.
+\label{fig:tracker}
+}
+\end{center}
+\end{figure}
 
 \subsection{Electromagnetic Calorimeter}
 \label {subs:ECAL}
@@ -86,10 +101,10 @@ The ECAL is split into two regions, the ECAL barrel (EB), and ECAL endcap (EE).
 The EB occupies a region in the detector within $|\eta| < 1.479$, and the EE occupies the region with $1.479 < |\eta| < 3.0$.
 The geometry can be seen in figure~\ref{fig:ecal_eta}.
 
-\begin{figure}[!ht]
+\begin{figure}[!htb]
 \begin{center}
 \begin{tabular}{cc}
-\includegraphics[width=0.8\textwidth]{cms/figs/Figures_Experimental_Apparatus_ECALRapidity.png}
+\includegraphics[width=0.8\textwidth]{cms/figs/Figures_Experimental_Apparatus_ECALRapidity.pdf}
 \end{tabular}
 \caption{ A cross-sectional view of the CMS ECAL is shown in this figure, with values of $\eta$ shown that determine the coverage of each subdetector.
 \label{fig:ecal_eta}
@@ -170,7 +185,7 @@ The muon's trajectory can then be reconstructed using this information.
 \begin{figure}[!ht]
 \begin{center}
 \begin{tabular}{cc}
-\includegraphics[width=0.8\textwidth]{cms/figs/DT.png}
+\includegraphics[width=0.8\textwidth]{cms/figs/DT.pdf}
 \end{tabular}
 \caption{ A cartoon depiction of a drift tube is shown in this figure. 
 \label{fig:DT}
@@ -183,7 +198,7 @@ There are 540 CSCs, ~\ref{fig:CSC}.
 \begin{figure}[!ht]
 \begin{center}
 \begin{tabular}{cc}
-\includegraphics[width=0.8\textwidth]{cms/figs/CSC.png}
+\includegraphics[width=0.8\textwidth]{cms/figs/CSC.pdf}
 \end{tabular}
 \caption{ A cartoon depiction of a cathode strip chamber is shown in this figure. 
 \label{fig:CSC}
@@ -196,7 +211,7 @@ There are 610 resistive plate chambers (RPCs), an example of which is shown in ~
 \begin{figure}[!ht]
 \begin{center}
 \begin{tabular}{cc}
-\includegraphics[width=0.8\textwidth]{cms/figs/RPClayers.png}
+\includegraphics[width=0.8\textwidth]{cms/figs/RPClayers.pdf}
 \end{tabular}
 \caption{ A cartoon depiction of a resistive plate chamber is shown in this figure. 
 \label{fig:RPC}
@@ -215,7 +230,7 @@ The reconstruction of these objects is discussed in detail in the following sect
 
 \subsection{Particle Flow}
 \label{subs:particleflow}
-In order to classify objects, an algorithm named particle flow (PF) is used. ADD REFERENCE
+In order to classify objects, an algorithm named particle flow (PF) is used~\cite{pfReco}. 
 The main goal when using the pf algorithm is to account for all energies measured in the detector.
 The way this is done is by clustering energies measured across all subdetectors into separate PF candidates, and classifying these cadidates.
 Once an object is classified, the clustering is done again with all the energy associated with the classified object removed.
@@ -295,7 +310,7 @@ reference later chapter with detailed selection.
 \begin{figure}[!ht]
 \begin{center}
 \begin{tabular}{cc}
-\includegraphics[width=0.8\textwidth]{cms/figs/muon_energy_loss.png}
+\includegraphics[width=0.8\textwidth]{cms/figs/muon_energy_loss.pdf}
 \end{tabular}
 \caption{ Stopping power of copper as a function of muon momentum. Typical momenta of muons in this analysis are between 20-200 GeV. 
 \label{fig:muonenergyloss}

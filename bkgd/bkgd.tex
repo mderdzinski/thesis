@@ -245,7 +245,7 @@ The prediction for the number of same-flavor (SF) events observed ($N_{SF}^{obs.
 can be obtained by using the ratio of SF to opposite-flavor (OF) events ($R_{SF/OF}$) multiplied by the number of OF events observed in data($N_{OF}^{obs.}$).
 This is done in the following way.
 
-\subsection{$R_{SF/OF}$}
+\subsection{\texorpdfstring{$R_{SF/OF}$}{Rsfof}}
 The number of observed events in data for each dilepton region is the number of events produced multiplied by the trigger and reconstruction efficiencies,
 Therefore the true number of events produced can be obtained from this relation as seen in equation~\ref{eqn:ntrueFSbg}.
 
@@ -305,7 +305,7 @@ The final value of \rsfof\ is calculated in two ways.
 The first is a direct measurement of the ratio in data in a control region enriched in \ttbar\ described in subsection~\ref{ssec:rsfofDirect},
 while the second consists of the separated estimation of the \rmue and $R_T$ factors described in subsection~\ref{ssec:rsfoffactorization}.
 
-\subsection{Direct measurement of \rsfof}
+\subsection{Direct measurement of \texorpdfstring{\rsfof}{Rsfof}}
 \label{ssec:rsfofDirect}
 \rsfof is measured directly in a control region enriched in \ttbar.
 This region is orthogonal to the signal regions and defined below.
@@ -328,7 +328,7 @@ The two values are combined using a weighted average for the final result.
 The values measured in data for \rsfof\ shown in figure~\ref{fig:rsfof} agree with the measurement made in MC within the uncertainties,
 and both measured values are close to 1.
 
-\begin{figure}[h]
+\begin{figure}[htb]
   \begin{center}
     \includegraphics[scale=0.35]{bkgd/figs/plot_rsfof_mll_central.png}
     \includegraphics[scale=0.35]{bkgd/figs/plot_rsfof_mll_forward.png}
@@ -350,7 +350,6 @@ the ratio of \rsfof in the control and signal region on simulation is studied.
 It is found to be compatible with unity within the statistical uncertainty of the simulation.
 This statistical uncertainty is therefore assigned as the systematic uncertainty of this method.
 \begin{table}[hbt]
-  \centering
   \caption{
     Observed event yields in the control region and the resulting values of \Rsfof, \Reeof, and \Rmmof.
     The results are shown separately for the central and forward lepton selection and the same quantities derived on simulation are shown for comaprison.
@@ -395,7 +394,7 @@ This statistical uncertainty is therefore assigned as the systematic uncertainty
   \end{tabular}  
 \end{table}
 
-\subsection{Measureing \rsfof using the Factorization Method}
+\subsection{Measureing \texorpdfstring{\rsfof}{Rsfof} using the Factorization Method}
 \label{ssec:rsfoffactorization}
 \rmue and \rt are measured in data in order to calculate \rsfof according to Eq.~\ref{masterformulaExpAlt}.
 
@@ -413,7 +412,6 @@ for central leptons and by 20\% in the forward region.
 Consistent results are observed in the simulation.
 
 \begin{table}[hbtp]
-  \centering
   \caption{
     Result of the calculation of \rmue.
     The observed event yields are shown in the Drell--Yan control region for the central and forward lepton selection in the ee and $\mu\mu$ channels
@@ -431,7 +429,7 @@ Consistent results are observed in the simulation.
     \hline
     & \multicolumn{3}{c}{Forward}  \\ 
     \hline
-    Data     &  14937                   & 9807              &  1.23$\pm$0.01$\pm$0.25    \\
+    Data     &  14937                   &  9807              &  1.23$\pm$0.01$\pm$0.25    \\
     MC       &  19449                   & 12287              &  1.26$\pm$0.01$\pm$0.25    \\
   \end{tabular}
 \end{table}
@@ -446,7 +444,6 @@ No dependency is observed on the number of reconstructed vertices showing that \
 a systematic uncertainty of 10\%(20\%) is assigned in the central (forward) lepton selection based on these results.
 
 \begin{figure}[htbp]
-  \centering
   \begin{minipage}[t]{0.3\textwidth}
     \includegraphics[width=\textwidth]{bkgd/figs/rSFOFFromRMuE_ZPeakControlCentral_Run2015_25ns_NJets_None.pdf}
   \end{minipage}
@@ -474,7 +471,6 @@ a systematic uncertainty of 10\%(20\%) is assigned in the central (forward) lept
 \end{figure}
 
 \begin{figure}[htbp]
-  \centering
   \begin{minipage}[t]{0.3\textwidth}
     \includegraphics[width=\textwidth]{bkgd/figs/rSFOFFromRMuE_ZPeakControlForward_Run2015_25ns_NJets_None.pdf}
   \end{minipage}
@@ -523,7 +519,7 @@ indicating the abscense of bias in the trigger efficiency measurement due to the
 It is important to note that the lowest \HT threshold included in the trigger simulation is 350\GeV.
 Therefore a higher offline \HT threshold is needed in the case of MC to match this trigger requirement. 
 
-\begin{figure}[h]
+\begin{figure}[htb]
   \begin{center}
     \includegraphics[scale=0.35]{bkgd/figs/Triggereff_AlphaTSyst_PFHT_HighHTExclusive_Run2015_25ns_HT_None.pdf}
     \caption{
@@ -542,7 +538,7 @@ The values measured in data are limited by statistics, but the values measured a
 \begin{table}[hbp]
   \begin{center}
   \caption{
-    Trigger efficiency-values for data and MC with OS, $p_T>20(20)\,\GeV$
+    Trigger efficiencies for data and MC with OS, $p_T>20(20)\,\GeV$
     and $H_T>400\,\GeV$ for central and forward region seperated.
   } 
   \begin{tabular}{l|c|c|c}     
@@ -590,7 +586,6 @@ and a systematic uncertainty of 5\% is assigned to each of the trigger efficienc
 which translates to an uncertainty of 6\% on \rt.
 
 \begin{figure}[htbp]
-  \centering
   \begin{minipage}[t]{0.3\textwidth}
     \includegraphics[width=\textwidth]{bkgd/figs/Triggereff_SFvsOF_Syst_PFHT_HighHTExclusiveCentral_Run2015_25ns_NJets_None_NonIso_MC.pdf}
   \end{minipage}
@@ -618,7 +613,6 @@ which translates to an uncertainty of 6\% on \rt.
 \end{figure}
 
 \begin{figure}[htbp]
-  \centering
   \begin{minipage}[t]{0.3\textwidth}
     \includegraphics[width=\textwidth]{bkgd/figs/Triggereff_SFvsOF_Syst_PFHT_HighHTExclusiveForward_Run2015_25ns_NJets_None_NonIso_MC.pdf}
   \end{minipage}
@@ -644,14 +638,13 @@ which translates to an uncertainty of 6\% on \rt.
   \label{fig:EffDependencyEndcap}
 \end{figure}
 
-\paragraph*{Results of factorizaton method}\mbox{}
+\subsection{Results of factorizaton method}
 
 The result of the factorization method is summarized in table~\ref{tab:factorization}.
 The value and statistical uncertainty of \rsfof are both driven by \rt.
 Good agreement between data and MC is observed within the uncertainties. 
 
 \begin{table}[hbtp]
-  \centering
   \caption{
     The values for \rmue, \rt, and \rsfof\ are shown.
   }
@@ -681,7 +674,6 @@ This results in an systematic uncertainty of 5\% and 7\% on the dominant backgro
 The final value uses the weighted average of \rsfof\ from the central and forward regions,
 and is calculated to be \rsfof $ = 1.05 \pm 0.04$.
 \begin{table}[hbtp]
-  \centering
   \caption{
     The results of the factorization method, and from direct measurement of \rsfof\ are shown.
     The values from these two methods are combined using a weighted average to get the value for \rsfof
@@ -738,12 +730,12 @@ works regardless of the number of required b-tagged jets.
 
 \begin{figure}[htb]
   \begin{center}
-    \includegraphics[scale=0.30]{bkgd/figs/plot_results_mll_MCClosure_central_onlyTT_nbInc.pdf}
-    \includegraphics[scale=0.30]{bkgd/figs/plot_results_mll_MCClosure_forward_onlyTT_nbInc.pdf}\\
-    \includegraphics[scale=0.30]{bkgd/figs/plot_results_mll_MCClosure_central_onlyTT_nb0.pdf}
-    \includegraphics[scale=0.30]{bkgd/figs/plot_results_mll_MCClosure_forward_onlyTT_nb0.pdf} \\
-    \includegraphics[scale=0.30]{bkgd/figs/plot_results_mll_MCClosure_central_onlyTT_nb1.pdf}
-    \includegraphics[scale=0.30]{bkgd/figs/plot_results_mll_MCClosure_forward_onlyTT_nb1.pdf}\\
+    \includegraphics[scale=0.25]{bkgd/figs/plot_results_mll_MCClosure_central_onlyTT_nbInc.pdf}
+    \includegraphics[scale=0.25]{bkgd/figs/plot_results_mll_MCClosure_forward_onlyTT_nbInc.pdf}\\
+    \includegraphics[scale=0.25]{bkgd/figs/plot_results_mll_MCClosure_central_onlyTT_nb0.pdf}
+    \includegraphics[scale=0.25]{bkgd/figs/plot_results_mll_MCClosure_forward_onlyTT_nb0.pdf} \\
+    \includegraphics[scale=0.25]{bkgd/figs/plot_results_mll_MCClosure_central_onlyTT_nb1.pdf}
+    \includegraphics[scale=0.25]{bkgd/figs/plot_results_mll_MCClosure_forward_onlyTT_nb1.pdf}\\
     \caption{
       MC closure test for central (left) and forward (right) in the \mll variable.
       The blue histogram shows the MC prediction from the OF sample by multiplying
@@ -766,7 +758,6 @@ Non FS backgrounds, such as \DYjets $\rightarrow ee,~\mu\mu$ or rare processes i
 are not predicted well, as expected.
 
 \begin{table}[hbtp]
-  \centering
   \caption{
     Event yields in the signal region in simulation for both SF and OF lepton pairs.
     The OF yield is multiplied with \Rsfof.
@@ -821,7 +812,7 @@ The full requirements are listed below:
 From the limited statistics we have in this region, we see good closure for the MC to predict data.
 We assign an systematic uncertainty of 50\% to the background predictions from this MC in our signal region.
 
-\begin{figure}[!h]
+\begin{figure}[!htb]
 \begin{center}
 \begin{tabular}{cc}
 \includegraphics[width=0.4\textwidth]{bkgd/figs/h_metall_ll_signalregion_CR3lep_passtrig.pdf} &
@@ -911,7 +902,7 @@ From the limited statistics we have in this region, we see reasonable closure fo
 We assign an systematic uncertainty of 50\% to the background predictions from this MC in our signal region.
 
 
-\begin{figure}[!h]
+\begin{figure}[!htb]
 \begin{center}
 \begin{tabular}{cc}
 \includegraphics[width=0.4\textwidth]{bkgd/figs/h_metall_ll_signalregion_CR4lep_passtrig.pdf} &
