@@ -69,9 +69,7 @@ The result of this reweighting can be seen in figures~\ref{fig:photonptreweighti
 
 \begin{figure}[!htb]
   \begin{center}
-    \begin{tabular}{cc}
       \includegraphics[width=0.8\textwidth]{bkgd/figs/photon_SRB_2p1fb_vs_dilep_ptg_withb.pdf}
-    \end{tabular}
     \caption{
       The \pt\ distributions are shown for the \zjets\ (black) and \gjets\ (red) events
       in signal region B where at least 1 jet is required to be b-tagged.
@@ -83,9 +81,7 @@ The result of this reweighting can be seen in figures~\ref{fig:photonptreweighti
 
 \begin{figure}[!htb]
   \begin{center}
-    \begin{tabular}{cc}
       \includegraphics[width=0.8\textwidth]{bkgd/figs/gjets_full2p1_rawMET_withb_SRB_datavsdata_comparereweighted.pdf}
-    \end{tabular}
     \caption{
       The \MET\ distributions are shown before reweighting the \gjets\ sample in \pt\ (red) and after reweighting (black)
       for \gjets\ events in signal region B where at least 1 jet is required to be b-tagged.
@@ -106,7 +102,7 @@ The uncertainties of this method are described in detail in subsection~\ref{ssec
 \subsection{Systematic Uncertainties in the \texorpdfstring{\MET}{MET}\ Template Prediction}
 \label{ssec:bkg_zjetssyst}
 
-The systematic uncertainty in the \MET\ template prediction comes from two sources:
+The systematic uncertainty associated with the \MET\ template prediction comes from two sources:
 a MC closure study, and the uncertainty associated with normalizing in low \MET.
 The largest uncertainty comes from the results of the closure study.
 This study is done by generating a \MET\ template using simulated \gjets\ events and using this template to predict the \MET\ for events in simulated \zjets\ events.
@@ -119,9 +115,7 @@ The systematic uncertainty chosen for all regions is listed in table~\ref{tab:te
 
 \begin{figure}[!htb]
   \begin{center}
-    \begin{tabular}{cc}
       \includegraphics[width=0.8\textwidth]{bkgd/figs/h_met_closure_rawMET_withb_SRB_novtxweight.pdf}
-    \end{tabular}
     \caption{
       The closure test for Signal region B where at least 1 jet is required to be b-tagged is shown
       where simulated \gjets\ events are used to predict the \MET\ for simulated \zjets\ events.
@@ -330,8 +324,10 @@ and both measured values are close to 1.
 
 \begin{figure}[htb]
   \begin{center}
-    \includegraphics[scale=0.35]{bkgd/figs/plot_rsfof_mll_central.png}
-    \includegraphics[scale=0.35]{bkgd/figs/plot_rsfof_mll_forward.png}
+    \begin{tabular}{cc}
+      \includegraphics[width=0.4\textwidth]{bkgd/figs/plot_rsfof_mll_central.png} &
+      \includegraphics[width=0.4\textwidth]{bkgd/figs/plot_rsfof_mll_forward.png} \\
+    \end{tabular}
     \caption{
       Direct measurement of \rsfof in the control region for data (black) and \ttbar MC (red).
       Values in the signal region are shown in blue for \ttbar MC. Central rapidity is shown on the left and forward rapidity on the right.
@@ -450,12 +446,12 @@ a systematic uncertainty of 10\%(20\%) is assigned in the central (forward) lept
 \begin{figure}[htbp]
   \begin{center}
     \begin{tabular}{ccc}
-      \includegraphics[width=0.30\textwidth]{bkgd/figs/rSFOFFromRMuE_ZPeakControlCentral_Run2015_25ns_NJets_None.pdf} & 
-      \includegraphics[width=0.30\textwidth]{bkgd/figs/rSFOFFromRMuE_ZPeakControlCentral_Run2015_25ns_nVtx_None.pdf}  &
-      \includegraphics[width=0.30\textwidth]{bkgd/figs/rSFOFFromRMuE_ZPeakControlCentral_Run2015_25ns_TrailingPt_None.pdf} \\
-      \includegraphics[width=0.30\textwidth]{bkgd/figs/rSFOFFromRMuE_ZPeakControlCentral_Run2015_25ns_Mll_None.pdf} &
-      \includegraphics[width=0.30\textwidth]{bkgd/figs/rSFOFFromRMuE_ZPeakControlCentral_Run2015_25ns_MET_None.pdf} &
-      \includegraphics[width=0.30\textwidth]{bkgd/figs/rSFOFFromRMuE_ZPeakControlCentral_Run2015_25ns_NBJets_None.pdf} \\
+      \includegraphics[width=0.25\textwidth]{bkgd/figs/rSFOFFromRMuE_ZPeakControlCentral_Run2015_25ns_NJets_None.pdf} & 
+      \includegraphics[width=0.25\textwidth]{bkgd/figs/rSFOFFromRMuE_ZPeakControlCentral_Run2015_25ns_nVtx_None.pdf}  &
+      \includegraphics[width=0.25\textwidth]{bkgd/figs/rSFOFFromRMuE_ZPeakControlCentral_Run2015_25ns_TrailingPt_None.pdf} \\
+      \includegraphics[width=0.25\textwidth]{bkgd/figs/rSFOFFromRMuE_ZPeakControlCentral_Run2015_25ns_Mll_None.pdf} &
+      \includegraphics[width=0.25\textwidth]{bkgd/figs/rSFOFFromRMuE_ZPeakControlCentral_Run2015_25ns_MET_None.pdf} &
+      \includegraphics[width=0.25\textwidth]{bkgd/figs/rSFOFFromRMuE_ZPeakControlCentral_Run2015_25ns_NBJets_None.pdf} \\
     \end{tabular}
   \end{center}
   \caption{
@@ -468,12 +464,12 @@ a systematic uncertainty of 10\%(20\%) is assigned in the central (forward) lept
 \begin{figure}[htbp]
   \begin{center}
     \begin{tabular}{ccc}
-      \includegraphics[width=0.30\textwidth]{bkgd/figs/rSFOFFromRMuE_ZPeakControlForward_Run2015_25ns_NJets_None.pdf} &
-      \includegraphics[width=0.30\textwidth]{bkgd/figs/rSFOFFromRMuE_ZPeakControlForward_Run2015_25ns_nVtx_None.pdf}  &
-      \includegraphics[width=0.30\textwidth]{bkgd/figs/rSFOFFromRMuE_ZPeakControlForward_Run2015_25ns_TrailingPt_None.pdf} \\
-      \includegraphics[width=0.30\textwidth]{bkgd/figs/rSFOFFromRMuE_ZPeakControlForward_Run2015_25ns_Mll_None.pdf} &
-      \includegraphics[width=0.30\textwidth]{bkgd/figs/rSFOFFromRMuE_ZPeakControlForward_Run2015_25ns_MET_None.pdf} &
-      \includegraphics[width=0.30\textwidth]{bkgd/figs/rSFOFFromRMuE_ZPeakControlForward_Run2015_25ns_NBJets_None.pdf} \\
+      \includegraphics[width=0.25\textwidth]{bkgd/figs/rSFOFFromRMuE_ZPeakControlForward_Run2015_25ns_NJets_None.pdf} &
+      \includegraphics[width=0.25\textwidth]{bkgd/figs/rSFOFFromRMuE_ZPeakControlForward_Run2015_25ns_nVtx_None.pdf}  &
+      \includegraphics[width=0.25\textwidth]{bkgd/figs/rSFOFFromRMuE_ZPeakControlForward_Run2015_25ns_TrailingPt_None.pdf} \\
+      \includegraphics[width=0.25\textwidth]{bkgd/figs/rSFOFFromRMuE_ZPeakControlForward_Run2015_25ns_Mll_None.pdf} &
+      \includegraphics[width=0.25\textwidth]{bkgd/figs/rSFOFFromRMuE_ZPeakControlForward_Run2015_25ns_MET_None.pdf} &
+      \includegraphics[width=0.25\textwidth]{bkgd/figs/rSFOFFromRMuE_ZPeakControlForward_Run2015_25ns_NBJets_None.pdf} \\
     \end{tabular}
   \end{center}
   \caption{
@@ -507,7 +503,7 @@ Therefore a higher offline \HT threshold is needed in the case of MC to match th
 
 \begin{figure}[htb]
   \begin{center}
-    \includegraphics[scale=0.35]{bkgd/figs/Triggereff_AlphaTSyst_PFHT_HighHTExclusive_Run2015_25ns_HT_None.pdf}
+    \includegraphics[width=0.8\textwidth]{bkgd/figs/Triggereff_AlphaTSyst_PFHT_HighHTExclusive_Run2015_25ns_HT_None.pdf}
     \caption{
       \label{fig:triggerBias}
       Ratio of measured to true trigger efficiency for combined SF and OF triggers as a function of \HT measured in \ttbar simulation.
@@ -704,12 +700,14 @@ works regardless of the number of required b-tagged jets.
 
 \begin{figure}[htb]
   \begin{center}
-    \includegraphics[scale=0.25]{bkgd/figs/plot_results_mll_MCClosure_central_onlyTT_nbInc.pdf}
-    \includegraphics[scale=0.25]{bkgd/figs/plot_results_mll_MCClosure_forward_onlyTT_nbInc.pdf}\\
-    \includegraphics[scale=0.25]{bkgd/figs/plot_results_mll_MCClosure_central_onlyTT_nb0.pdf}
-    \includegraphics[scale=0.25]{bkgd/figs/plot_results_mll_MCClosure_forward_onlyTT_nb0.pdf} \\
-    \includegraphics[scale=0.25]{bkgd/figs/plot_results_mll_MCClosure_central_onlyTT_nb1.pdf}
-    \includegraphics[scale=0.25]{bkgd/figs/plot_results_mll_MCClosure_forward_onlyTT_nb1.pdf}\\
+    \begin{tabular}{cc}
+      \includegraphics[width=0.3\textwidth]{bkgd/figs/plot_results_mll_MCClosure_central_onlyTT_nbInc.pdf} &
+      \includegraphics[width=0.3\textwidth]{bkgd/figs/plot_results_mll_MCClosure_forward_onlyTT_nbInc.pdf}\\
+      \includegraphics[width=0.3\textwidth]{bkgd/figs/plot_results_mll_MCClosure_central_onlyTT_nb0.pdf} &
+      \includegraphics[width=0.3\textwidth]{bkgd/figs/plot_results_mll_MCClosure_forward_onlyTT_nb0.pdf} \\
+      \includegraphics[width=0.3\textwidth]{bkgd/figs/plot_results_mll_MCClosure_central_onlyTT_nb1.pdf} &
+      \includegraphics[width=0.3\textwidth]{bkgd/figs/plot_results_mll_MCClosure_forward_onlyTT_nb1.pdf}\\
+    \end{tabular}
     \caption{
       MC closure test for central (left) and forward (right) in the \mll variable.
       The blue histogram shows the MC prediction from the OF sample by multiplying
