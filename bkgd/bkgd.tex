@@ -40,7 +40,7 @@ otherwise the trigger information will not be saved.
   \begin{center}
     \caption{
       \label{tab:photontriggers}
-      List of single photon triggers used in this analysis and their prescales.
+      List of single-$\gamma$ triggers used in this analysis and their prescales.
     }
     \begin{tabular}{l|l|l}
       \hline
@@ -67,6 +67,8 @@ the \gjets\ sample is reweighted such that the boson \pt\ matches that of the \z
 A separate reweighting scheme is derived for each signal region, where the same cuts on $\mathrm{N_{jets}}$\ and \HT\ are applied to the \zjets\ and \gjets\ data samples.
 The result of this reweighting can be seen in figures~\ref{fig:photonptreweighting} and~\ref{fig:metptreweighting}.
 
+\clearpage
+
 \begin{figure}[!htb]
   \begin{center}
       \includegraphics[width=0.8\textwidth]{bkgd/figs/photon_SRB_2p1fb_vs_dilep_ptg_withb.pdf}
@@ -83,15 +85,13 @@ The result of this reweighting can be seen in figures~\ref{fig:photonptreweighti
   \begin{center}
       \includegraphics[width=0.8\textwidth]{bkgd/figs/gjets_full2p1_rawMET_withb_SRB_datavsdata_comparereweighted.pdf}
     \caption{
+      \label{fig:metptreweighting}
       The \MET\ distributions are shown before reweighting the \gjets\ sample in \pt\ (red) and after reweighting (black)
       for \gjets\ events in signal region B where at least 1 jet is required to be b-tagged.
       The distributions are normalized to unit area.
-      \label{fig:metptreweighting}
     }
   \end{center}
 \end{figure}
-
-\clearpage
 
 After reweighting in \pt, the resulting \MET distribution is normalized in a region where \zjets\ is the dominant background, namely, \MET\ $<$ 50 \gev.
 In order to assess the systematic uncertainties associated with the template method,
