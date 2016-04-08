@@ -90,13 +90,11 @@ All triggers used to collect data for this analysis are listed in table~\ref{tab
 \section{Simulations from Monte-Carlo}
 
 For the backgrounds predicted with Monte-Carlo (MC), the events are required to pass the same triggers as in data using the simulated triggers in the MC.
-This is seen in the inclusive data vs. MC plots in section {\bf ADD SECTION WITH data vs MC} to show good agreement after requiring 2 leptons in the event.
+This is seen in the inclusive data vs. MC plots in section~\ref{ssec:datavsmc} to show good agreement after requiring 2 leptons in the event.
 Cross sections and k-factors are applied to MC backgrounds to normalize them to the calculated luminosity of the signal triggers, which is 2.3 $\mathrm{fb^{-1}}$.
 Cross section values are calculated using MadGraph software (CITATION),
 and k-factors are derived in different control regions in order to correct for beyond leading-order effects. %%https://twiki.cern.ch/twiki/bin/viewauth/CMS/SummaryTable1G25ns
 In addition, the MC is reweighted to accurately represent the number of pileup events in data.
-
-{\bf add a paragraph or two about generators, and what was used to make these samples with citations}
 
 \begin{sidewaystable}[htb]                                                                                                                                                              
 \begin{center}                                                                                                                                                
@@ -145,6 +143,92 @@ Signal      & \verb=SMS-T5ZZ_mGluino-*_mLSP-*_TuneCUETP8M1_13TeV-madgraphMLM-pyt
 \end{sidewaystable}
 
 \clearpage
+
+\subsection{Monte-Carlo Generators}
+{\bf add a paragraph or two about generators, and what was used to make these samples with citations}
+
+\subsection{Data vs. MC Comparison}
+\label{ssec:datavsmc}
+data is compared to MC simulation for many kinematic variables relevant to the search.
+
+\begin{figure}[!ht]
+  \begin{center}
+    \begin{tabular}{cc}
+      \includegraphics[width=0.4\linewidth]{evtsel/figs/h_mll_ee_signalregion_inclusive_passtrig.pdf} &
+      \includegraphics[width=0.4\linewidth]{evtsel/figs/h_mll_mm_signalregion_inclusive_passtrig.pdf} \\
+    \end{tabular}
+    \caption{
+      \label{fig:datavsmc_mll}
+      data vs. MC comparison showing \mll\ with ee events on the left and $\mu\mu$~events on the right.
+    }
+  \end{center}
+\end{figure}
+
+\begin{figure}[!ht]
+  \begin{center}
+    \begin{tabular}{cc}
+      \includegraphics[width=0.4\linewidth]{evtsel/figs/h_mll_ll_signalregion_inclusive_passtrig.pdf} &
+      \includegraphics[width=0.4\linewidth]{evtsel/figs/h_mll_em_signalregion_inclusive_passtrig.pdf} \\
+    \end{tabular}
+    \caption{
+      \label{fig:datavsmc_mll}
+      data vs. MC comparison showing \mll\ with ee+$\mu\mu$~events on the left and e$\mu$~events on the right.
+    }
+  \end{center}
+\end{figure}
+
+\begin{figure}[!ht]
+  \begin{center}
+    \begin{tabular}{cc}
+      \includegraphics[width=0.4\linewidth]{evtsel/figs/h_njets_ee_signalregion_inclusive_passtrig.pdf} &
+      \includegraphics[width=0.4\linewidth]{evtsel/figs/h_njets_mm_signalregion_inclusive_passtrig.pdf} \\
+    \end{tabular}
+    \caption{
+      \label{fig:datavsmc_njets}
+      data vs. MC comparison showing $\mathrm{N_{jets}}$ with ee events on the left and $\mu\mu$~events on the right.
+    }
+  \end{center}
+\end{figure}
+
+\begin{figure}[!ht]
+  \begin{center}
+    \begin{tabular}{cc}
+      \includegraphics[width=0.4\linewidth]{evtsel/figs/h_nbjets_ee_signalregion_inclusive_passtrig.pdf} &
+      \includegraphics[width=0.4\linewidth]{evtsel/figs/h_nbjets_mm_signalregion_inclusive_passtrig.pdf} \\
+    \end{tabular}
+    \caption{
+      \label{fig:datavsmc_nbjets}
+      data vs. MC comparison showing $\mathrm{N_{b-jets}}$ with ee events on the left and $\mu\mu$~events on the right.
+    }
+  \end{center}
+\end{figure}
+
+\begin{figure}[!ht]
+  \begin{center}
+    \begin{tabular}{cc}
+      \includegraphics[width=0.4\linewidth]{evtsel/figs/h_ht_highbin_ee_signalregion_inclusive_passtrig.pdf} &
+      \includegraphics[width=0.4\linewidth]{evtsel/figs/h_ht_highbin_mm_signalregion_inclusive_passtrig.pdf} \\
+    \end{tabular}
+    \caption{
+      \label{fig:datavsmc_ht}
+      data vs. MC comparison showing \HT\ with ee events on the left and $\mu\mu$~events on the right.
+    }
+  \end{center}
+\end{figure}
+
+\begin{figure}[!ht]
+  \begin{center}
+    \begin{tabular}{cc}
+      \includegraphics[width=0.4\linewidth]{evtsel/figs/h_ptdil_ee_signalregion_inclusive_passtrig.pdf} &
+      \includegraphics[width=0.4\linewidth]{evtsel/figs/h_ptdil_mm_signalregion_inclusive_passtrig.pdf} \\
+    \end{tabular}
+    \caption{
+      \label{fig:datavsmc_ptdil}
+      data vs. MC comparison showing Z \pt\ with ee events on the left and $\mu\mu$~events on the right.
+    }
+  \end{center}
+\end{figure}
+
 
 \section{Event Selection}
 The object selections in this analysis are based on recommendations made by the relevant physics object groups (POGs) in CMS.
