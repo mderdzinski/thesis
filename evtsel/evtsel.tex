@@ -88,7 +88,7 @@ All triggers used to collect data for this analysis are listed in table~\ref{tab
 \clearpage
 
 \section{Simulations from Monte-Carlo}
-The CMS detector is simulated using the Geant4 toolbox~\cite{Geant}
+The CMS detector is simulated using the Geant4 toolbox~\cite{Geant}, and various physics processes are simulated in order to study and predict stuff.
 Simulations are done in order to study is composed of the following steps
 \begin{itemize}
 \item Modeling of the Interaction Region
@@ -97,19 +97,16 @@ Simulations are done in order to study is composed of the following steps
 \item Modeling of the detector's electronics response (digitization)
 \end{itemize}
 
-powheg~\cite{powheg} aMCatNLO~\cite{aMCatNLO} pythia~\cite{Pythia}
+The actual simulation of the physics process is done using a variety of different software where each package performs differently in simulating certain physics processes.
+In this analysis, \ttbar\ events are simulated using powheg~\cite{powheg} and DY processes are simulated using MadGraph~\cite{aMCatNLO}.
+The matrix element calculations performed with these generators are then interfaced with pythia 8~\cite{Pythia} for the simulation of parton showering and hadronization.
 
-For the backgrounds predicted with Monte-Carlo (MC), the events are required to pass the same triggers as in data using the simulated triggers in the MC.
-
-%% \subsection{Monte-Carlo Generators}
-%% {\bf add a paragraph or two about generators, and what was used to make these samples with citations}
-
-
-This is seen in the inclusive data vs. MC plots in section~\ref{ssec:datavsmc} to show good agreement after requiring 2 leptons in the event.
+After selecting events with two leptons, data is compared to MC and good agreement can be seein in the plots shown in section~\ref{ssec:datavsmc}.
 Cross sections and k-factors are applied to MC backgrounds to normalize them to the calculated luminosity of the signal triggers, which is 2.3 $\mathrm{fb^{-1}}$.
 Cross section values are calculated using FEWZ software~\cite{Li:2012wna},
 and k-factors are derived in different control regions in order to correct for beyond leading-order effects. %%https://twiki.cern.ch/twiki/bin/viewauth/CMS/SummaryTable1G25ns
-In addition, the MC is reweighted to accurately represent the number of pileup events in data.
+The events from MC are required to pass the same triggers as in data where the triggers are simulated in the MC,
+and the MC is then reweighted to accurately represent the number of pileup events in data.
 
 \begin{sidewaystable}[htb]                                                                                                                                                              
 \begin{center}                                                                                                                                                
@@ -170,7 +167,7 @@ data is compared to MC simulation for many kinematic variables relevant to the s
       \includegraphics[width=0.4\linewidth]{evtsel/figs/h_mll_mm_signalregion_inclusive_passtrig.pdf} \\
     \end{tabular}
     \caption{
-      \label{fig:datavsmc_mll}
+      \label{fig:datavsmc_mll_eemm}
       data vs. MC comparison showing \mll\ with ee events on the left and $\mu\mu$~events on the right.
     }
   \end{center}
@@ -183,7 +180,7 @@ data is compared to MC simulation for many kinematic variables relevant to the s
       \includegraphics[width=0.4\linewidth]{evtsel/figs/h_mll_em_signalregion_inclusive_passtrig.pdf} \\
     \end{tabular}
     \caption{
-      \label{fig:datavsmc_mll}
+      \label{fig:datavsmc_mll_emll}
       data vs. MC comparison showing \mll\ with ee+$\mu\mu$~events on the left and e$\mu$~events on the right.
     }
   \end{center}
@@ -497,6 +494,7 @@ Output from an MVA is used to identify the electrons used in this analysis.
 This method is based on a previously approved method~\cite{egamma8tev}, and updated to be used to identify electrons in 13 TeV data.
 Electrons with \pt $>$ 15 GeV and $|\eta|<2.4$ are considered.
 The electron MVA requirements are listed in Table~\ref{table:electrons} for completeness.
+(NEED TO ADD BETTER DESCRIPTION ABOUT MVA ELECTRONS)
 
 \begin{table}[htb]
 \begin{center}
@@ -577,7 +575,7 @@ miniRelIso / \pt                  & $<0.20$ \\
 In this analysis it is not necessary that the photon sample is high in purity,
 it is only required that the photon-like object in each event is well-measured.
 The reason for this is discussed in more detail in section~\ref{sec:bkg_zjets}.
-Photons are required to pass a loose working point designed by the EGamma POG at CMS({\bf FIND SOME REFERENCE}) with some additional cuts.
+Photons are required to pass a loose working point designed by the EGamma POG at CMS with some additional cuts.
 This working point was designed to be 90\% efficient with a background rejection of greater than 80\%,
 and photons with \pt $>$ 22 \gev\ and $\eta~<$~2.4 are considered.
 Photons that are in the transition region between the ECAL barrel and ECAL endcap are vetoed,
@@ -615,7 +613,7 @@ The photon is required to be mostly electromagnetic, and a cut is made on the ra
 In order to reject fake photons from $\pi^{0}$ decays, a requirement is made of $\mathrm{\sigma_{i\eta i\eta}~<~}$0.0102 (0.274) for photons in the barrel (endcap).
 It is possible to end up with real \MET in photon events in the process of W$\rightarrow e+\mathrm{\bar{\nu_{e}}}$
 where the electron immediately radiates most of its energy away in the form of a photon.
-Before radiating away its energy, the electron would likely leave a track in the pixel layer,
+Before radiating away its energy, it is possible for the electron to leave a track in the pixel layer,
 therefore in order to remove these events, it is required that there be no pixel track matched to the photon.
 These events are also removed by rejecting photons which have an electron of at least \pt $>$ 10 GeV matched within a cone of $\mathrm{dR} < 0.2$.
 It is required that a pfjet with \pt\ $>~$10 \gev\ be matched to the photon with a cone of $\Delta R~<~0.3$. 

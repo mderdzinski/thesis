@@ -34,21 +34,35 @@ the electromagnetic force is governed by the photon, and the strong force is gov
 In 2012, it was announced that a new particle was discovered at the LHC by the CMS and ATLAS experiments.
 This particle has properties that make it look like a Higgs boson.
 The Higgs boson is responsible for particles to have mass.
+A diagram of all the particles making up the standard model is shown in figure~\ref{fig:SM}.
+
+\begin{figure}[!htb]
+  \begin{center}
+    \includegraphics[width=0.8\textwidth]{intro/figs/Standard_Model_of_Elementary_Particles.pdf}
+    \caption{
+      \label{fig:SM}
+      A diagram is shown with the particles making up the Standard Model along with the attributes of each particle.
+    }
+  \end{center}
+\end{figure}
 
 \subsection{Problems with The Standard Model}
 The standard model is able to explain many things, but it is not complete.
 One example of where it fails is in explaining the existence of dark matter.
 The universe is composed of 5\% visible matter, explained by the standard model,
 and the rest of the matter in the universe is in the form of dark matter and dark energy.
-A second example of where the standard model falls short is the hierarchy problem.
+This is known due to direct observations made by astrophysicists(ADD CITATION).
 
-(FROM WIKIPEDIA)
-In particle physics, the most important hierarchy problem is the question that asks why the weak force is 1032 times stronger than gravity.
-Both of these forces involve constants of nature, Fermi's constant for the weak force and Newton's constant for gravity.
-Furthermore if the Standard Model is used to calculate the quantum corrections to Fermi's constant,
-it appears that Fermi's constant is surprisingly large and is expected to be closer to Newton's constant,
-unless there is a delicate cancellation between the bare value of Fermi's constant and the quantum corrections to it.
-(END FROM WIKIPEDIA)
+
+The hierarchy problem is another question that is not explained by the standard model,
+which essential asks why is the weak force more than 1000 times stronger than gravity?
+(NEED TO EXAND)
+
+%% Both of these forces involve constants of nature, Fermi's constant for the weak force and Newton's constant for gravity.
+%% Furthermore if the Standard Model is used to calculate the quantum corrections to Fermi's constant,
+%% it appears that Fermi's constant is surprisingly large and is expected to be closer to Newton's constant,
+%% unless there is a delicate cancellation between the bare value of Fermi's constant and the quantum corrections to it.
+%% (END FROM WIKIPEDIA)
 
 One of the main goals of particle physics is to understand these shortcomings of the standard model.
 Theorists attempt to do this in many ways and one of these ways is using supersymmetry.
@@ -57,36 +71,57 @@ Theorists attempt to do this in many ways and one of these ways is using supersy
 SUSY is an idea which postulates that for every particle in the standard model,
 there exists a supersymmetric partner which has the property that the partners to bosons is fermionic, and the partners to fermions are bosonic.
 These particles are named sparticles, and for fermions, an s is added to the beginning of the standard model particle name to represent the SUSY particle.
+A diagram of this is shown in figure~\ref{fig:SM_SUSY}.
 For example, a supersymmetric electron is known as a selectron, and a supersymmetric quark is known as a squark.
 For gauge bosons, the end of the name is changed to contain ``ino''.
 For example, the supersymmetric partner to the W boson is known as the Wino and a supersymmetric gluon is known as a gluino.
 Using this idea, one can create a model that can answer both the hierarchy problem as well as explain the existence of dark matter.
+
+\begin{figure}[!htb]
+  \begin{center}
+    \includegraphics[width=0.8\textwidth]{intro/figs/Susy-particles.pdf}
+    \caption{
+      \label{fig:SM_SUSY}
+      A diagram is shown with the particles making up the Standard Model on the left, and their SUSY counterparts on the right.
+    }
+  \end{center}
+\end{figure}
 
 \subsection{Gauge-Mediated Supersymmetry Breaking (GMSB)}
 Gauge-Mediated Supersymmetry Breaking (GMSB) is a mechanism that allows supersymmetry to be broken.
 This mechanism postulates the existence of a particle that can be used to explain gravity, the graviton ($\mathrm{\tilde{G}}$).
 Within SUSY, the hierarchy problem can be solved with one loop corrections coming from heavy stop quarks,
 and another consequence of GMSB is the proposal that stop quarks must have a mass greater than 2 TeV if the Higgs mass is 125 GeV.
-The current upper limits for excluding the observation of stop quarks set by CMS are around 650 GeV. (ADD STOP LIMIT PLOT)
+The current upper limits for excluding the observation of stop quarks set by CMS are around 800 GeV, as seen in figure~\ref{fig:T2tt_limits}.
+
+\begin{figure}[!htb]
+  \begin{center}
+    \includegraphics[width=0.8\textwidth]{intro/figs/T2tt_moriond2016.pdf}
+    \caption{
+      \label{fig:T2tt_limits}
+      Exclusion limit on the SUSY final states where two stop squarks are pair-produced are shown,
+      where the region in gray has been excluded by data taken by the CMS experiment.
+    }
+  \end{center}
+\end{figure}
 
 \section{Searches for SUSY in final states with a Z boson}
 \label{sec:signalmodel}
-Many models can be produced within the context of SUSY leading to a nearly endless variety of final states.
+Many models can exist within the context of SUSY, leading to a nearly endless variety of final states.
 There are many variables within SUSY that can be tuned to allow for the existence of different final states, for example the mass of the SUSY particles.
 A set of simplified models can be described to get a sense of what possible final states can be probed using the CMS detector at the LHC.
 These models are named SMS models, where SMS stands for Simplified Model Space.
-One of these models nicknamed T5ZZgmsb, is a model with a final state containing two Z bosons,
-four quarks and two invisible SUSY particles where the invisible particles in this model are the gravitino as seen in figure~\ref{fig:SMS_T5ZZgmsb}
+One of these models, shown in figure~\ref{fig:SMS_T5ZZgmsb}, is a model with a final state containing two Z bosons,
+four quarks and two invisible SUSY particles where the invisible particles in this model are the gravitino.
 This thesis focuses on a search done using data taken by the CMS detector at the LHC colliding protons with a center of mass energy of $\mathrm{\sqrt{s}=13 TeV}$.
 The next chapter will explain in detail how particles are measured using the CMS detector.
 
 \begin{figure}[!htb]
   \begin{center}
-    \includegraphics[]{intro/figs/Feynman_graph_T5ZZgmsb.pdf}
+    \includegraphics[width=0.8\textwidth]{intro/figs/Feynman_graph_T5ZZgmsb.pdf}
     \caption{
       \label{fig:SMS_T5ZZgmsb}
-      A feynman diagram for the T5ZZgmsb modeled is shown here.
-      In this process, two protons collide and the result is pair-production of two gluinos,
+      A feynman diagram showing a SUSY process where two protons collide and the result is pair-production of two gluinos,
       where each decays to a pair of quarks and a neutralino which subsequently decays to a Z boson and gravitino.
     }
   \end{center}

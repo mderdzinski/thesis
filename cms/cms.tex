@@ -78,7 +78,7 @@ meaning they do not lose very much energy as they pass through the detector comp
 \label {subs:tracker}
 figure~\ref{fig:tracker}
 
-Something about pixels and other stuff.
+(NEED TO ADD SECTION ON TRACKER)
 
 \begin{figure}[!htb]
 \begin{center}
@@ -136,6 +136,19 @@ Leading order diagrams of these processes are shown in figures~\ref{fig:pair_pro
 
 As the initial particle passes through the crystal, it loses energy due to these processes, and this energy is converted to light by the scintilating properties of the crystal.
 This light is read out using a avalanche photo-diode (APDs) for each crystal in the EB, and a vacuum phototriode for each crystal in the EE.
+The amount of energy absorbed by the crystals can be parameterized by a quantity known as the radiation length ($X_{0}$).
+The expected amount of energy left (E(x)) after a particle with initial energy ($E_{0}$)
+travels a distance x through an absorbing material is shown in equation~\ref{eqn:radiation_length}.
+The CMS ECAL has a depth of \~25$X_{0}$ at small (O(0)) and large (1.6-3.0) values of $\eta$.
+In between these regions, the depth is larger due to the barrel-like geometry of the ECAL.
+Because of this depth, electron and photon energies are measured very well in the ECAL.
+There is one exception where the depth of the ECAL is small, and this is where the barrel and endcap meet.
+This leads to poor reconstruction of electrons and photons in this region.
+
+\begin{equation}
+  \label{eqn:radiation_length}
+  E(x) = E_{0}e^{\frac{-x}{X_{0}}}  
+\end{equation}
 
 \subsection{Hadronic Calorimeter}
 \label {subs:HCAL}
@@ -153,8 +166,17 @@ The HCAL at CMS is not able to compensate for these effects, so it must be calib
 The HCAL geometry is such that it is fully contained within the solenoid.
 It is divided into towers, each of which lies behind an integer number of ECAL crystals.
 This helps in calibrating the energies of incident particles during reconstruction.
-The number of interaction lengths ($\lambda$) in the HCAL starts at about $\lambda = 7$ at $\eta = 0$, and increases with eta to the end of the barrel up to $\lambda = 11$.
-There is then a slight decrease in the endcap of $\lambda = 10$.
+The number of interaction lengths ($\lambda_{int}$) in the HCAL starts at about $\lambda_{int} = 7$ at $\eta = 0$, and increases with eta to the end of the barrel up to $\lambda_{int} = 11$.
+There is then a slight decrease in the endcap of $\lambda_{int} = 10$.
+The interaction length is used to characterize the longitudinal and transverse profile of hadronic showers.
+The expected number of secondary particles produced ($N(x)$)
+by a number of particles traveling through the HCAL ($N_{0}$)
+is written in equation~\ref{eqn:interaction_length} as a function of $\lambda_{int}$ and the distance traveled (x).
+
+\begin{equation}
+  \label{eqn:interaction_length}
+  N(x) = N_{0}e^{\frac{-x}{\lambda_{int}}}  
+\end{equation}
 
 \subsection{Muon System}
 \label {subs:MUON}
@@ -184,7 +206,7 @@ The muon's trajectory can then be reconstructed using this information.
 
 There are 540 CSCs shown in figure~\ref{fig:CSC}.
 
-\begin{figure}[!ht]
+\begin{figure}[!htb]
 \begin{center}
 \includegraphics[width=0.8\textwidth]{cms/figs/CSC.pdf}
 \caption{ A cartoon depiction of a cathode strip chamber is shown in this figure. 
@@ -236,7 +258,7 @@ These cuts are described in detail in the following section for each object we a
 \subsection{Vertex Determination and Pileup}
 \label{ssec:vtxandpileup}
 The LHC collides protons in large bunches to maximize the probability of a hard collision.
-Multiple pairs of protons can interact at each bunch crossing, and the number of interactions depends on the beam density. (CITE PP COLLISION X-SECTION)
+Multiple pairs of protons can interact at each bunch crossing, and the number of interactions depends on the beam density.
 It is important to identify which proton-pair interaction is responsible triggering the event being studied.
 In this analysis, the primary vertex is chosen using track information.
 Every track is associated with a unique vertex,
@@ -245,16 +267,14 @@ Neutral candidates do not have associated tracks, so they are redefined to alway
 The energy of objects affected by this reassociation is recalibrated, and this calibration is described in section~\ref{ssec:jets}.
 
 Pileup is defined as energy in the detector which does not come from the interaction being studied.
-There are two primary sources of pileup, in-time pileup and out-of-time pileup.
-In-time pileup comes from two main sources, multiple proton collisions in the event and ``underlying event''.
-Pileup from the underlying event is the leftover energy that comes from what's left of the two protons in the primary interaction.
-This energy is deposited in the detector blah blah, SHOULD THIS EVEN BE HERE?
-Pileup from collisions that are not from the primary vertex usually produce soft di-jet events. - REWORD
-Out-of-time pileup occurs when a collision happens during a different beam crossing than the event which is being recorded. 
-The beam collision frequency is 25 ns, and information from some components of the detector is not read out faster than this.
-HOW IS THIS DEALT WITH? SOMETHING ABOUT HCAL TIMING AND FIT
+The majority of energy from pileup comes from proton-proton interactions other than primary interaction.
+These soft interactions produce predominantly hadronic final states, for example two jets from  gluon splitting.
+Due to these final states being hadronic, the overall energy deposited in the detector is balanced.
+However, there can still be small contributions to \MET\ from to pileup due to the poor resolution of jets in CMS.
+A calibration is applied to account for pileup according to the method described in section~\ref{sec:t1met}.
 
 \subsection{Isolation}
+\label{ssec:isolation}
 Isolation is a concept that is very important when identifying leptons, and photons.
 It can be simply described as the total energy in the detector near an object of interest.
 The distance between two objects ($\Delta$R) is defined by equation~\ref{eqn:DR},
@@ -284,14 +304,25 @@ In order to keep the analysis simple, this search is done in final states with $
 and when referencing leptons, only electrons and muons are considered.
 It is also important to be able to identify photons in order to measure one of the main backgrounds.
 
-The ECAL is designed to contain Electrons and photons.
-briefly describe electrons have tracks, photons dont.
-then talk about muons, and then close with one thing in common with all three objects is isolation.
-reference later chapter with detailed selection.
+The depth of the ECAL is \~25 radiation lengths which means electrons and photons lose almost all of their energy in the ECAL.
+Another thing that helps to distinguish electrons from photons is that electrons will deposit energy in the silicon tracker whereas photons will not.
+Therefore, a track can be matched to energy deposits in the ECAL to help identify electrons.
+Similarly, a track found to correspond to a hit in the ECAL can be used to help determined that the energy deposited in the ECAL was not from a photon.
 
-%% In order to identify electrons and muons, a track is required.
-%% For electrons, this track is matched with energy in the ecal, and an algorithm is run to determine the actual electron energy.
-%% For muons, the interaction with matter is different.~\ref{fig:muonenergyloss}
+Muons have a low interaction cross section with the materials used to build CMS in the energy range they are most produced in collisions at the LHC.
+They are referred to as minimum ionizing particles, and the stopping power of copper on muons can be seen in figure~\ref{fig:muonenergyloss}.
+Therefore, muons do not deposit very much energy in any of the calorimeters.
+A different approach is taken to identify and measure muons in the CMS detector.
+Since muons are charged, they leave hits in the silicon detector which can be reconstructed as a track.
+The ECAL and HCAL are designed to contain all measureable energy,
+but due to the minimum ionizing nature of muons, muons are able to pass through these subdetectors without depositing much energy.
+The muon subdetector is the outermost layer of the CMS detector, and it is designed to identify muons.
+Muon tracks can be measured independently in the muon subdetector,
+and the measurement is matched to a set of hits in the tracker to determine the final muon energy.
+
+The main thing all of these objects have in common is they are produced in interactions that do not have a hadronic component.
+Quantifying this energy is done by calculation the particles isolation, as described in section~\ref{ssec:isolation},
+and is used to discriminate against unwanted physics processes.
 
 \begin{figure}[!htb]
   \begin{center}
@@ -312,6 +343,7 @@ For jets in this analysis, the charged candidates not associated with the primar
 This removes some unwanted energy from pileup, and the jets are then calibrated in order to more accurately reflect the energy of the particles they represent.
 
 The jet energy corrections are done in multiple levels, labeled as L1L2L3.
+A detailed procedure of how the corrections are applied can be found here~\cite{CMS-DP-2015-044}.
 Jets are corrected such that the calibrated energy is as close to the parton that the jet came from as possible.
 The corrections are derived using MC, and each level corrects for different effects in the following way:
 L1 corrects for pileup,
@@ -326,7 +358,4 @@ The L3 correction is done by deriving scale factors as a function of jet \pt\ wh
 In addition to the L1L2L3 corrections, residual corrections are derived in data control regions to correct for differences in the detector response to jets between data and MC.
 This is done in a region with at least one photon or a Z boson which decays to two leptons, where the boson recoils off of a jet.
 The photon and leptons are measured with better resolution than the jets, so scale factors are derived as a function of \pt\ to correct the detector response of jets.
-
-{\bf add plot of closure with full JECs}
-
-The full description of cuts used to define jets for the analysis is defined in section 
+The full description of cuts used to define jets for the analysis is defined in sub-section~\ref{ssec:jetsel}.
