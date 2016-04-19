@@ -42,7 +42,7 @@ As the prescale is increased, the rate of the trigger is reduced.
 
 The CMS sub detector components are layered in such a way that one can take advantage of different particle interactions with different materials.
 The innermost layer is the tracker (decribed in section~\ref{subs:tracker}) which is used to measure the charge and and momentum of charged particles.
-When a charged particle passes through the silicon layers in the pixel detector, a small amount of energy is deposited.
+When a charged particle passes through the silicon layers tracker, a small amount of energy is deposited.
 The deposit is lager enough that a hit will be registered by the electronics, but small enough that the trajectory of the particle will be minimally affected.
 Neutral particles do not interact with the tracker.
 
@@ -76,9 +76,30 @@ meaning they do not lose very much energy as they pass through the detector comp
 
 \subsection{Silicon Tracker}
 \label {subs:tracker}
-figure~\ref{fig:tracker}
+The tracker, shown in figure~\ref{fig:tracker}, has two main components, the pixels and the strips.
+The pixel component has three cylindrical layers very close to the beam pipe, which are positioned at 4, 7 and 11 cm from the center.
+Each layer is tiled with over 65 million sensors (pixels) measuring 150 by 150 $\mu$m which are connected directly to a chip used to read out the data.
+A diagram showing the pixels can be seen in figure~\ref{fig:pixels}.
+When a charged particle travels through the three pixel layers,
+the hits are recorded then used together with the measurement of the particle's trajectory through the strip component of the tracker.
 
-(NEED TO ADD SECTION ON TRACKER)
+\begin{figure}[!htb]
+  \begin{center}
+    \includegraphics[width=0.8\textwidth]{cms/figs/Pixelement.pdf}
+    \caption{
+      \label{fig:pixels}
+      A diagram showing the pixel component of the tracker subdetector.
+    }
+  \end{center}
+\end{figure}
+
+Immediately outside of the the pixel layer is the strip layer.
+There are 10 layers of strips through which a charged particle passing through will leave deposits of energy that are read out.
+The very large magnetic field in this region from the solenoid is in the same direction as the beam,
+and this causes particle trajectories to curve in a direction tangent to the beam direction. 
+The radius of this curvature is proportional to the particle's momentum and inversely proportional to the particle's charge according to equation~\ref{eqn:bfieldmomentum}.
+Using the hit information from the pixels and strips together,
+the momentum of all the charged particles that pass through the tracker is reconstructed and used as input to the particle flow algorithm~\ref{subs:particleflow} in order to identify particles produced in the collision.
 
 \begin{figure}[!htb]
 \begin{center}
