@@ -431,6 +431,7 @@ This gives an efficiency for prompt leptons of $>$~90\% and rejection rate for n
 \clearpage
 
 \subsection{Lepton Scale Factors}
+\label{ssec:lepscalefactors}
 Scale factors are applied in order to correct for the differences in efficiencies in data and MC when selecting applying lepton ID and isolation requirements.
 Additional scale factors are derived to correct for differences in simulation of leptons when using Fastsim~\cite{fastsim} instead of fullsim.
 These scale factors are derived in data and MC using a ``tag and probe'' technique.
@@ -444,9 +445,7 @@ scale factors for muon ID and isolation criteria are shown in~\ref{fig:sf_muons}
 and Fastsim scale factors are shown in~\ref{fig:FS_sfs}.
 \begin{figure}[!ht]
   \begin{center}
-    \begin{tabular}{cc}
       \includegraphics[width=0.8\textwidth]{evtsel/figs/sf_el_tight2d3d.pdf}  
-    \end{tabular}
     \caption{
       \label{fig:sf_electrons}
       Electron scale factors as a function of \pt\ and $\eta$.
@@ -487,43 +486,112 @@ and Fastsim scale factors are shown in~\ref{fig:FS_sfs}.
   \end{center}
 \end{figure}
 
+\clearpage
 
 \subsection{Electron Selection}
 \label{ssec:elsel}
-Output from an MVA is used to identify the electrons used in this analysis.
-This method is based on a previously approved method~\cite{egamma8tev}, and updated to be used to identify electrons in 13 TeV data.
+Output from a multivariate analysis (MVA) is used to identify the electrons used in this analysis~\cite{egamma13tev} based on a method used previously~\cite{egamma8tev}.
+This is done separately in the barrel and endcap using a variety of kinematic variables as input.
 Electrons with \pt $>$ 15 GeV and $|\eta|<2.4$ are considered.
-The electron MVA requirements are listed in Table~\ref{table:electrons} for completeness.
-(NEED TO ADD BETTER DESCRIPTION ABOUT MVA ELECTRONS)
+The training of the MVA is done using a Z+jets MC sample where the electrons used as signal input are
+required to be matched to generator level electrons, and electrons used as background are required to not be matched.
 
-\begin{table}[htb]
-\begin{center}
-\caption{\label{table:electrons} Requirements for electrons with \pt\ $>$ 10 \gev. }
-\begin{tabular}{l|cc}
-\hline
-Region                & MVA minimum cut value \\
-\hline
-Barrel $|\eta| < 0.8$ & 0.913286 \\
-Barrel $|\eta| > 0.8$ & 0.805013 \\
-Endcap                & 0.358969 \\
-\hline
-\hline
-Cut variable                  & Requirement   \\
-\hline
-$d_{0}$ (w.r.t. 1st good PV)   & $<0.05$ cm  \\
-$d_{z}$ (w.r.t. 1st good PV)   & $<0.1$  cm  \\
-miniRelIso / \pt              &  $<0.10$ \\
-%% $\delta\eta$                           &  $<0.007$ & $<0.009$ \\
-%% $\delta\phi$                           &  $<0.15$  &  $<0.10$ \\
-%% $\sigma_{i\eta i\eta}$                    &  $<0.01$  &  $<0.03$ \\
-%% H/E                                    &  $<0.12$  & $<0.10$ \\
-%% $|1/E-1/P|$                            &  $<0.05~\rm{GeV}^{-1}$ & $<0.05~\rm{GeV}^{-1}$ \\
-%% conversion rejection: fit probability  &  $<10^{-6}$ & $<10^{-6}$ \\
-%% conversion rejection: missing hits     &  $\leq1$  & $\leq1$  \\
-\hline
-\end{tabular}
-\end{center}
+Variables used to differentiate electrons from fakes mainly use information from the tracker and ECAL.
+Measurements made by the ECAL and tracker are compared using the ratio of the electron cluster energy to the track momentum at the outermost track layer.
+This ratio is expected to be 1 for real electrons, but not necessarily for fakes.
+$\sigma_{i\eta i\eta}$ is a purely calometric variable defined as BLAH.
+The shape for real electrons and fake electrons is very different making it a good variable to differentiate the two.
+A way to differentiate real and fake electrons is to check the consistency of the track of the reconstructed electron object left in the tracker.
+This is done by measuring the difference in $\eta$ of the track measured in the outer layer and the electron cluster in the ECAL ($\mathrm{\Delta\eta(track-cluster)}$).
+An plot showing how each of these variables looks for real and fake electrons is shown in figure~\ref{fig:electron_mva_vars}.
+
+\begin{figure}[!htb]
+  \begin{center}
+    \begin{tabular}{cc}
+      \includegraphics[width=0.4\textwidth]{evtsel/figs/EoPout_EB_LowPt.pdf} &
+      \includegraphics[width=0.4\textwidth]{evtsel/figs/EoPout_EE_LowPt.pdf} \\      
+      \includegraphics[width=0.4\textwidth]{evtsel/figs/deltaEta_EB_LowPt.pdf} &
+      \includegraphics[width=0.4\textwidth]{evtsel/figs/deltaEta_EE_LowPt.pdf} \\      
+      \includegraphics[width=0.4\textwidth]{evtsel/figs/see_EB_LowPt.pdf} &
+      \includegraphics[width=0.4\textwidth]{evtsel/figs/see_EE_LowPt.pdf} \\      
+    \end{tabular}
+    \caption{
+      \label{fig:electron_mva_vars}
+      Kinematic variables used to distinguish real electrons from fake electrons are shown
+      with electrons in the barrel on the left and electrons in the endcap on the right.
+    }
+  \end{center}
+\end{figure}
+  
+Electrons in data are compared to the electrons from MC using the probe leg from a
+``tag and probe'' technique similar to the one described in section~\ref{ssec:lepscalefactors}.
+The requirements for the probe electron are as follows:
+\begin{itemize}
+\item $\mathrm{p_{T}(e) > 10~GeV}$
+\item $\mathrm{\eta(e) < 2.5}$
+\item Loose identification criteria
+\item Relative isolation (pileup corrected) < 0.1
+\end{itemize}
+The output of this MVA is shown in figure~\ref{fig:electron_mva},
+and the MVA cut requirement for this analysis is shown in table~\ref{table:electrons}.
+  
+\begin{figure}[!ht]
+  \begin{center}
+      \includegraphics[width=0.8\textwidth]{evtsel/figs/Electron_MVA_2015.pdf}
+    \caption{
+      \label{fig:electron_mva}
+      Output of the electron MVA is shown comparing electrons in data vs. MC with electrons in the barrel on the left and the endcap on the right.
+      The electrons shown are the probe leg when using a ``Tag and Probe'' technique.
+    }
+  \end{center}
+\end{figure}
+  
+\begin{table}[!htb]
+  \begin{center}
+    \caption{
+      \label{table:electrons}
+      Requirements for electrons with \pt\ $>$ 10 \gev.
+    }
+    \begin{tabular}{l|cc}
+      \hline
+      Region                & MVA minimum cut value \\
+      \hline
+      Barrel $|\eta| < 0.8$ & 0.913286 \\
+      Barrel $|\eta| > 0.8$ & 0.805013 \\
+      Endcap                & 0.358969 \\
+      \hline
+      \hline
+      Cut variable                  & Requirement   \\
+      \hline
+      $d_{0}$ (w.r.t. 1st good PV)   & $<0.05$ cm  \\
+      $d_{z}$ (w.r.t. 1st good PV)   & $<0.1$  cm  \\
+      miniRelIso / \pt              &  $<0.10$ \\
+      %% $\delta\eta$                           &  $<0.007$ & $<0.009$ \\
+      %% $\delta\phi$                           &  $<0.15$  &  $<0.10$ \\
+      %% $\sigma_{i\eta i\eta}$                    &  $<0.01$  &  $<0.03$ \\
+      %% H/E                                    &  $<0.12$  & $<0.10$ \\
+      %% $|1/E-1/P|$                            &  $<0.05~\rm{GeV}^{-1}$ & $<0.05~\rm{GeV}^{-1}$ \\
+      %% conversion rejection: fit probability  &  $<10^{-6}$ & $<10^{-6}$ \\
+      %% conversion rejection: missing hits     &  $\leq1$  & $\leq1$  \\
+      \hline
+    \end{tabular}
+  \end{center}
 \end{table}
+
+The efficiency of the electron selection is measured to be on average 80\% for electrons with $\mathrm{p_{T} >~ 20~GeV}$ as seen in figure~\ref{fig:electronideff}.
+
+\begin{figure}[!ht]
+  \begin{center}
+      \includegraphics[width=0.8\textwidth]{evtsel/figs/Electron_MVA_efficiency.pdf}
+    \caption{
+      \label{fig:electronideff}
+      Electron identification efficiency in data (top) and data to MC efficiency ratios (bottom)
+      measured for the identification criteria based on a MVA discriminant with an average efficiency of 80\%.
+      The efficiency is measured with the tag and probe method and shown in three pseudorapidity ranges as a function of the electron transverse momentum.
+    }
+  \end{center}
+\end{figure}
+  
 
 \subsection{Muon Selection}
 \label{ssec:musel}
@@ -738,9 +806,7 @@ and the cut value corresponding to the working point in this analysis is CSV$~>~
 
 \begin{figure}[!ht]
   \begin{center}
-    \begin{tabular}{cc}
       \includegraphics[width=0.8\textwidth]{evtsel/figs/ak4Inclusive_CSVIVF_Log.pdf}
-    \end{tabular}
     \caption{
       The distribution showing the CSVv2 Discriminator is shown comparing data vs. MC.
       The MC is split by jet parton flavor.
