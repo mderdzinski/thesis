@@ -499,8 +499,9 @@ required to be matched to generator level electrons, and electrons used as backg
 Variables used to differentiate electrons from fakes mainly use information from the tracker and ECAL.
 Measurements made by the ECAL and tracker are compared using the ratio of the electron cluster energy to the track momentum at the outermost track layer.
 This ratio is expected to be 1 for real electrons, but not necessarily for fakes.
-$\sigma_{i\eta i\eta}$ is a purely calometric variable defined as BLAH.
-The shape for real electrons and fake electrons is very different making it a good variable to differentiate the two.
+$\sigma_{i\eta i\eta}$ is a purely calometric variable which uses the shower shape of the electron object to differentiate real and fake electrons.
+The main premise behind this variable is that electron energies are contained within 1-2 crystals in $\eta$
+where ECAL energy from jets is spread across many crystals leading to the shape for real electrons and fake electrons to be very different making it a good variable to differentiate the two.
 A way to differentiate real and fake electrons is to check the consistency of the track of the reconstructed electron object left in the tracker.
 This is done by measuring the difference in $\eta$ of the track measured in the outer layer and the electron cluster in the ECAL ($\mathrm{\Delta\eta(track-cluster)}$).
 An plot showing how each of these variables looks for real and fake electrons is shown in figure~\ref{fig:electron_mva_vars}.
@@ -795,14 +796,60 @@ In addition to using the above requirements to classify jets, it is also useful 
 This disctinction is useful since b-tagged jets tend to come from processes having top quarks in the decay chain,
 and these backgrounds can be reduced by removing events with b-tagged jets.
 In order for the search to remain inclusive, signal regions containing b-tagged jets are analyzed separately.
-The Combined Secondary Vertex (CSV) algorithm~\cite{btagging} is used to tag b-jets.
-This algorithm makes use of the fact that b-quarks have a larger lifetime than lighter partons due to having larger mass
+
+The Combined Secondary Vertex (CSV) algorithm~\cite{btagging}\cite{btagging2015} is used to tag b-jets.
+This algorithm makes use of the fact that b-quarks have a larger average lifetime than lighter partons due to having larger mass
 leading to the possibility to identify a second vertex away from the primary vertex where the tracks in the b-jet are associated with this secondary vertex.
-{\bf need to add a bit more to say what goes into the MVA}
+A diagram showing this process is shown in figure~\ref{fig:secondaryVTX}.
+Other variables that are used to discriminate heavy flavor jets from light are the track multiplicity, jet mass and jet energy.
+These variables can be seen in figures~\ref{fig:3dip},~\ref{fig:3dflightdistance}, and~\ref{fig:svmass}.
 In this analysis, a working point was chosen which corresponds to the misidentification rate for b-jets to be 1\%.
 For this working point, the b-tagging efficiency is measured to be 65\% per b-tag for the working point used. 
 The b-tag discriminator distribution can be seen in figure~\ref{fig:csv},
 and the cut value corresponding to the working point in this analysis is CSV$~>~$0.890.
+
+\begin{figure}[!ht]
+  \begin{center}
+      \includegraphics[width=0.8\textwidth]{evtsel/figs/CMS-PAS-BTV-15-001_Figure_001-a.pdf}
+    \caption{
+      \label{fig:3dip}
+      A plot of the impact parameter for the secondary vertex with respect to the primary vertex
+      which is used in order to differentiate jets from heavy and light flavor decay.
+    }
+  \end{center}
+\end{figure}
+
+\begin{figure}[!ht]
+  \begin{center}
+      \includegraphics[width=0.8\textwidth]{evtsel/figs/CMS-PAS-BTV-15-001_Figure_002-a.pdf}
+    \caption{
+      \label{fig:3dflightdistance}
+      A plot of the 3-D flight distance of the secondary vertex with respect to the primary vertex
+      which is used in order to differentiate jets from heavy and light flavor decay.
+    }
+  \end{center}
+\end{figure}
+
+\begin{figure}[!ht]
+  \begin{center}
+      \includegraphics[width=0.8\textwidth]{evtsel/figs/CMS-PAS-BTV-15-001_Figure_002-d.pdf}
+    \caption{
+      \label{fig:svmass}
+      A plot of the mass of the jet originating at the secondary vertex
+      which is used in order to differentiate jets from heavy and light flavor decay.
+    }
+  \end{center}
+\end{figure}
+
+\begin{figure}[!ht]
+  \begin{center}
+      \includegraphics[width=0.8\textwidth]{evtsel/figs/secondaryVTX.pdf}
+    \caption{
+      \label{fig:secondaryVTX}
+      A diagram showing a jet forming away from the primary vertex of a heavy flavor parton, for example a b or c quark.
+    }
+  \end{center}
+\end{figure}
 
 \begin{figure}[!ht]
   \begin{center}
