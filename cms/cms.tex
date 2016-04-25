@@ -226,6 +226,10 @@ The muon's trajectory can then be reconstructed using this information.
 \end{figure}
 
 There are 540 CSCs shown in figure~\ref{fig:CSC}.
+The CSCs are made up of negatively charged wires (anodes) and positively charged strips (cathodes) within a gas volume.
+The gas molecules within this volume are ionized when a muon passes through the volume.
+This leads to a measurable hit on both the anodes and cathodes, and they are perpendicular to eachother so that the muon's trajectory can be reconstructed accurately.
+There are six layers in each CSC module, which helps to accurately identify muons.
 
 \begin{figure}[!htb]
 \begin{center}
@@ -237,6 +241,11 @@ There are 540 CSCs shown in figure~\ref{fig:CSC}.
 \end{figure}
 
 There are 610 resistive plate chambers (RPCs), an example of which is shown in figure~\ref{fig:RPC}.
+These are designed to have overlapping trigger coverage with the other components of the muon system for $\eta <$ 2.1.
+Each RPC is made of two very high resistance plates, separated by a volume of gas.
+They are charged kept at a high voltage and when a muon passes through the gas, electrons are knocked off of the molecules.
+Metal strips are used to read out the position of the hit, and the muons momentum is measured with this information.
+The readout for the RPCs is very fast (1 ns) which makes it ideal to use for triggering events with good muons.
 
 \begin{figure}[!htb]
   \begin{center}
@@ -325,7 +334,7 @@ In order to keep the analysis simple, this search is done in final states with $
 and when referencing leptons, only electrons and muons are considered.
 It is also important to be able to identify photons in order to measure one of the main backgrounds.
 
-The depth of the ECAL is \~25 radiation lengths which means electrons and photons lose almost all of their energy in the ECAL.
+The depth of the ECAL is \textasciitilde25 radiation lengths which means electrons and photons lose almost all of their energy in the ECAL.
 Another thing that helps to distinguish electrons from photons is that electrons will deposit energy in the silicon tracker whereas photons will not.
 Therefore, a track can be matched to energy deposits in the ECAL to help identify electrons.
 Similarly, a track found to correspond to a hit in the ECAL can be used to help determined that the energy deposited in the ECAL was not from a photon.
