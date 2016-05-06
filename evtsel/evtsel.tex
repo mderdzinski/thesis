@@ -88,23 +88,23 @@ All triggers used to collect data for this analysis are listed in table~\ref{tab
 \clearpage
 
 \section{Simulations from Monte-Carlo}
-The CMS detector is simulated using the Geant4 toolbox~\cite{Geant}, and various physics processes are simulated in order to study and predict stuff.
-Simulations are done in order to study is composed of the following steps
+The CMS detector is simulated using the Geant4 toolbox~\cite{Geant}, and various physics processes are simulated.
+The simulation is composed of the following steps
 \begin{itemize}
-\item Modeling of the Interaction Region
-\item Modeling of the particle passage through the hierarchy of volumes that compose CMS detector and of the accompanying physics processes
-\item Modeling of the effect of multiple interactions per beam crossing and/or the effect of events overlay (PileUp simulation)
-\item Modeling of the detector's electronics response (digitization)
+\item Modeling the Interaction Region
+\item Modeling the particles passage through the hierarchy of volumes that compose CMS detector and of the accompanying physics processes
+\item Modeling the effects of multiple interactions per beam crossing and/or the effect of events overlay (PileUp simulation)
+\item Modeling the detector's electronics response (digitization)
 \end{itemize}
 
-The actual simulation of the physics process is done using a variety of different software where each package performs differently in simulating certain physics processes.
+The actual simulation of the physics process is done using a variety of different software where the various packages used perform differently at simulating certain physics effects.
 In this analysis, \ttbar\ events are simulated using powheg~\cite{powheg} and DY processes are simulated using MadGraph~\cite{aMCatNLO}.
 The matrix element calculations performed with these generators are then interfaced with pythia 8~\cite{Pythia} for the simulation of parton showering and hadronization.
 
-After selecting events with two leptons, data is compared to MC and good agreement can be seein in the plots shown in section~\ref{ssec:datavsmc}.
-Cross sections and k-factors are applied to MC backgrounds to normalize them to the calculated luminosity of the signal triggers, which is 2.3 $\mathrm{fb^{-1}}$.
-Cross section values are calculated using FEWZ software~\cite{Li:2012wna},
-and k-factors are derived in different control regions in order to correct for beyond leading-order effects. %%https://twiki.cern.ch/twiki/bin/viewauth/CMS/SummaryTable1G25ns
+After selecting events with two leptons, data is compared to MC and good agreement can be seen in the plots shown in section~\ref{ssec:datavsmc}.
+Cross sections and k-factors are applied to MC backgrounds to normalize them to the calculated luminosity of the signal triggers used to take data in 2015, which is 2.3 $\mathrm{fb^{-1}}$.
+Cross section values are calculated using the FEWZ software package~\cite{Li:2012wna},
+and factors are derived by comparing data to MC in control regions in order to correct the MC for beyond leading-order effects. %%https://twiki.cern.ch/twiki/bin/viewauth/CMS/SummaryTable1G25ns
 The events from MC are required to pass the same triggers as in data where the triggers are simulated in the MC,
 and the MC is then reweighted to accurately represent the number of pileup events in data.
 
@@ -251,15 +251,18 @@ The method to choose the primary vertices in the event is described in section~\
 For every event, we require the presence of at least one primary vertex satisfying the following criteria:
 
 \begin{itemize}
-\item vertex is not fake; $\mathrm{ndf}>4$; quality requirement
+\item vertex is not fake; \# of degrees of freedom($\mathrm{ndf}$)$>4$; quality requirement
 \item $\rho<2$ cm \&\ $|z|<24$ cm; require vertex is inside tracker volume
 \end{itemize}
+
+$\rho$ is the radial distance from the center of the beam spot,
+and $|z|$ is the distance along the beam direction calculated from the center of the beam spot.
 
 \subsection{MET filters}
 \label{ssec:metfilter}
 A set of filters designated ``\MET\ filters'' are used in this analysis,
-where these filters are designed to remove events in data where large values of \MET\ not due to physics are observed.
-Large values of \MET\ in events that are due to physics effects are due to detector effects such as such as noise in the detector or the reconstruction algorithm failing.
+where these filters are designed to remove events in data where large values of \MET\
+occur that can come from effects such as noise in the detector or the reconstruction algorithm failing.
 The first of these is simply a requirement that at least one good primary vertex is reconstructed in the event.
 The next filter is designed to remove events where hits are left in the CSC due to ``beam halo'' effects.
 Beam halo is cause by radiation coming from the interactions with the beam in the beam pipe before the beams are collided inside the detector volume.
@@ -394,7 +397,8 @@ The plots in figures~\ref{fig:isoels}~and~\ref{fig:isomus}
 show the isolation distribution for leptons that pass the ID selections made using simulated \zjets\ MC.
 These leptons are separated into two categories, prompt and non-prompt leptons.
 Prompt leptons are defined to be leptons that come directly from the hard scatter process rather than a second order process, for example semi-leptonic b-decay.
-This disctinction is made by requiring a generator level lepton to be within a cone of $\Delta$R < 0.4 for prompt leptons.
+In order to study the difference in expected behavior of prompt and non-prompt leptons, a disctinction is made such that a prompt,
+reconstructed lepton is defined as being matched to a generator-level lepton within a cone of $\Delta$R < 0.4.
 Any lepton that passes the ID requirements that does not pass this matching requirement is designated as a non-prompt lepton.
 
 \begin{figure}[!ht]
@@ -436,9 +440,9 @@ Scale factors are applied in order to correct for the differences in efficiencie
 Additional scale factors are derived to correct for differences in simulation of leptons when using Fastsim~\cite{fastsim} instead of fullsim.
 These scale factors are derived in data and MC using a ``tag and probe'' technique.
 The main premise of this technique is that leptons coming from a Z boson are produced in opposite-sign same-flavor pairs in very large quantities.
-in an event, a lepton with very tight ID and isolation requirements is chosen (the tag),
+In an event, a lepton with very tight ID and isolation requirements is chosen (the tag),
 and then a second lepton with very loose requirements (the probe) can be studied if it is found that the pair of leptons has a dilepton mass consistent with the Z mass.
-the efficiency of various kinematic cut requirements can then be assessed on individual leptons, such as the efficiency of the ID and isolation requirements.
+The efficiency of various kinematic cut requirements can then be assessed on individual leptons, such as the efficiency of the ID and isolation requirements.
 This is done separately in data and MC, and then the MC is corrected based on these differences to match what is observed in data.
 Scale factors for electron ID and isolation criteria are shown in~\ref{fig:sf_electrons},
 scale factors for muon ID and isolation criteria are shown in~\ref{fig:sf_muons},
@@ -567,13 +571,6 @@ and the MVA cut requirement for this analysis is shown in table~\ref{table:elect
       $d_{0}$ (w.r.t. 1st good PV)   & $<0.05$ cm  \\
       $d_{z}$ (w.r.t. 1st good PV)   & $<0.1$  cm  \\
       miniRelIso / \pt              &  $<0.10$ \\
-      %% $\delta\eta$                           &  $<0.007$ & $<0.009$ \\
-      %% $\delta\phi$                           &  $<0.15$  &  $<0.10$ \\
-      %% $\sigma_{i\eta i\eta}$                    &  $<0.01$  &  $<0.03$ \\
-      %% H/E                                    &  $<0.12$  & $<0.10$ \\
-      %% $|1/E-1/P|$                            &  $<0.05~\rm{GeV}^{-1}$ & $<0.05~\rm{GeV}^{-1}$ \\
-      %% conversion rejection: fit probability  &  $<10^{-6}$ & $<10^{-6}$ \\
-      %% conversion rejection: missing hits     &  $\leq1$  & $\leq1$  \\
       \hline
     \end{tabular}
   \end{center}
@@ -741,7 +738,8 @@ A simple way to quantify the amount of hadronic activity in an event is to use t
 
 The jets used in this analysis are described in section~\ref{ssec:jets}.
 Jets with \pt\ $>$ 35 \gev and  $|\eta| < 2.4$~are used
-with the L1L2L3 corrections applied to MC and the additional L1L2L3ResidualL2L3 corrections applied to data.
+with the L1, L2 and L3 corrections applied to MC and the additional ResidualL2L3 corrections applied to data.
+The residualL2L3 correction is used to correct the scale of the jets in MC to match what is measured in data as a function of the jet's \pt, and $\eta$.
 A loose selection criteria, listed in table~\ref{tab:jetlooseid}, is applied to each jet to remove jets coming from noise in the detector.
 In addition to this, any jet that is found to be near a lepton within a cone of dR = 0.4 is removed from the event.
 This is done to avoid possibly double counting energy.
@@ -798,7 +796,7 @@ and these backgrounds can be reduced by removing events with b-tagged jets.
 In order for the search to remain inclusive, signal regions containing b-tagged jets are analyzed separately.
 
 The Combined Secondary Vertex (CSV) algorithm~\cite{btagging}\cite{btagging2015} is used to tag b-jets.
-This algorithm makes use of the fact that b-quarks have a larger average lifetime than lighter partons due to having larger mass
+This algorithm makes use of the fact that b-quarks have a larger average lifetime than lighter partons
 leading to the possibility to identify a second vertex away from the primary vertex where the tracks in the b-jet are associated with this secondary vertex.
 A diagram showing this process is shown in figure~\ref{fig:secondaryVTX}.
 Other variables that are used to discriminate heavy flavor jets from light are the track multiplicity, jet mass and jet energy.

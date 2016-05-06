@@ -1,24 +1,24 @@
 % --------------------------------------------------------------------------- %
 % --------------------------------------------------------------------------- %
-\chapter{The LHC Accelerator and CMS Experiment}
+\chapter{The LHC and The CMS Experiment}
 \label {ch:cms}
 
 \section{The Large Hadron Collider}
-The Large Hadron Collider (LHC) is the largest particle accelerator in the world.
+The Large Hadron Collider (LHC) is the largest particle accelerator in the world~\cite{lhcmachine}.
 It is designed to collide protons against other protons with a center of mass energy up to 14 TeV.
 The first collisions used for physics happened in March 2010, where the LHC was running at a center of mass energy of 7 TeV.
 The LHC was restarted the following year and operated at a higher energy of 8 TeV
 eventually delivering about four times the amount of data that was taken at 7 TeV.
 After the successful first run ended, the machine was shut down in order to upgrade many components.
 The next time the LHC was run was in May 2015, where protons were successfully collided at a center of mass energy of 13 TeV.
-The analysis shown in this thesis is based on the data taken during the 2015 running period.
+The analysis shown in this thesis is based on the data taken during the 2015 running period at 13 TeV.
 
 In order to achieve such large center of mass energies,
 the protons are accelerated in a circular beam pipe which is 27 km long and and 100 m underground.
 Since the pipe is circular,
 it's possible to accelerate two beams of protons in opposite directions and repeatedly collide them at various points around the ring.
 There are 4 points along the ring where protons are made to collide and the resulting collisions are recorded by various experiments as seen in figure~\ref{fig:lhcunderground}.
-The Compact Muon Solenoid (CMS) experiment is where the data was taken used for the results shown in this thesis.
+The Compact Muon Solenoid (CMS) experiment~\cite{jinst} is where the data was taken used for the results shown in this thesis.
 
 \begin{figure}[!ht]
 \begin{center}
@@ -37,8 +37,8 @@ The volume of collisions is so high that it is impossible to record all of the d
 The way this is controlled is by the use of triggers, the level 1 (L1) trigger and the high level triggers (HLT).
 The triggers are designed such that the full event information is stored when all the requirements of a trigger are met.
 For some physics processes, trigger rates are much higher than can be afforded by the allowed budget of the CMS experiment.
-These processes can still be studied by prescaling the triggers meaning the full information is saved once for every set number of events.
-As the prescale is increased, the rate of the trigger is reduced.
+These processes can still be studied by prescaling the triggers meaning the full information is saved once per N events.
+As the prescale N is increased, the rate of the trigger is reduced.
 
 The CMS sub detector components are layered in such a way that one can take advantage of different particle interactions with different materials.
 The innermost layer is the tracker (decribed in section~\ref{subs:tracker}) which is used to measure the charge and and momentum of charged particles.
@@ -48,8 +48,9 @@ Neutral particles do not interact with the tracker.
 
 The next layer is the Electromagnetic Calorimeter (decribed in section~\ref{subs:ECAL}) which is used to contain and measure the energy of electrons and photons.
 The Electromagnetic Calorimeter (ECAL) is made of lead tungstate ($\mathrm{PbWO_{4}}$) scintilating crystals.
-The material has a radiation length of 0.89 cm and Moli\`ere radius ($\mathrm{R_{M} \simeq 2.19~cm}$).
 Electrons and photons that enter the ECAL lose energy due to showering, and the depth of the ECAL is sufficient enought to fully contain these particles.
+The ECAL material has a radiation length~\ref{eqn:radiation_length} of 0.89 cm and Moli\`ere radius ($\mathrm{R_{M} \simeq 2.19~cm}$).
+$\mathrm{R_{M}}$ is defined as the radius of a cylinder containing on average 90\% of the shower's energy deposition.
 
 Outside of the ECAL is the Hadronic Calorimeter (decribed in section~\ref{subs:HCAL}) which is used to contain and measure the energy of hadronic particles.
 The Hadronic Calorimeter (HCAL) is designed in such a way that hadronic particles incident on the HCAL lose energy to showering.
@@ -132,7 +133,7 @@ The geometry can be seen in figure~\ref{fig:ecal_eta}.
 As written previously, the ECAL is made of lead tungstate crystals.
 These crystals act as absorbers as well as scintilators.
 What this means is that the when electrons or photons are incident on the crystals, they lose energy due to showering.
-The showering process can be simply described as a combination of electromagnetic scattering, and electron-positron pair production.
+The showering process can be simply described as a combination of photon emission, and electron-positron pair production.
 Leading order diagrams of these processes are shown in figures~\ref{fig:pair_production}~and~\ref{fig:photon_brem}.
 
 \begin{figure}[!ht]
@@ -160,7 +161,7 @@ This light is read out using a avalanche photo-diode (APDs) for each crystal in 
 The amount of energy absorbed by the crystals can be parameterized by a quantity known as the radiation length ($X_{0}$).
 The expected amount of energy left (E(x)) after a particle with initial energy ($E_{0}$)
 travels a distance x through an absorbing material is shown in equation~\ref{eqn:radiation_length}.
-The CMS ECAL has a depth of \~25$X_{0}$ at small (O(0)) and large (1.6-3.0) values of $\eta$.
+The CMS ECAL has a depth of \~25$X_{0}$ at small (0-1.3) and large (1.6-3.0) values of $\eta$.
 In between these regions, the depth is larger due to the barrel-like geometry of the ECAL.
 Because of this depth, electron and photon energies are measured very well in the ECAL.
 There is one exception where the depth of the ECAL is small, and this is where the barrel and endcap meet.
@@ -173,7 +174,7 @@ This leads to poor reconstruction of electrons and photons in this region.
 
 \subsection{Hadronic Calorimeter}
 \label {subs:HCAL}
-The Hadronic Calorimeter (HCAL) is used to measure energies of hadronic particles, such as pions, gluons, protons, kaons and neutrons.
+The Hadronic Calorimeter (HCAL) is used to measure energies of hadronic particles, such as pions, gluons, protons, kaons and neutrons~\cite{hcalperformance}.
 It is a sampling calorimeter meaning it has many layers of absorber material (brass) and scintilator material (plastic).
 As hadronic particles pass through the HCAL, they interacts with the absorber layers by showering, meaning they decay to multiple lower energy particles.
 As these particles shower and the constituents pass through the scintilator, photons are emitted by the scintilating material and then measured by Hybrid-Photo Diodes (HPDs).
@@ -269,10 +270,10 @@ The reconstruction of these objects is discussed in detail in the following sect
 \subsection{Particle Flow}
 \label{subs:particleflow}
 In order to classify objects, an algorithm named particle flow (PF) is used~\cite{pfReco}. 
-The main goal when using the pf algorithm is to account for all energies measured in the detector.
-The way this is done is by clustering energies measured across all subdetectors into separate PF candidates, and classifying these cadidates.
+The main goal when using the PF algorithm is to account for all energy deposits measured in the detector.
+The way this is done is by clustering energy deposits measured across all subdetectors into separate PF candidates, and classifying these cadidates.
 Once an object is classified, the clustering is done again with all the energy associated with the classified object removed.
-This process is repeated until all measured energies are accounted for.
+This process is repeated until all measured energy deposits are accounted for.
 The objects that are identified by this algorithm are listed below.
 In order to further reduce fakes from contaminating our signal region, we make additional cuts to help classify objects.
 These cuts are described in detail in the following section for each object we are interested in.
@@ -288,17 +289,17 @@ These cuts are described in detail in the following section for each object we a
 \subsection{Vertex Determination and Pileup}
 \label{ssec:vtxandpileup}
 The LHC collides protons in large bunches to maximize the probability of a hard collision.
-Multiple pairs of protons can interact at each bunch crossing, and the number of interactions depends on the beam density.
-It is important to identify which proton-pair interaction is responsible triggering the event being studied.
+Multiple pairs of protons can interact at each bunch crossing, and the number of interactions is stochastic but depends on the beam density.
+It is important to identify which proton-pair interaction is responsible for triggering the event being studied.
 In this analysis, the primary vertex is chosen using track information.
 Every track is associated with a unique vertex,
 and the primary vertex is chosen by finding the vertex with the largest sum of $\mathrm{(p_{T})^{2}}$ of tracks associated with that vertex.
-Neutral candidates do not have associated tracks, so they are redefined to always be from the primary vertex.
+Neutral candidates do not have associated tracks, so they are defined to always be from the primary vertex.
 The energy of objects affected by this reassociation is recalibrated, and this calibration is described in section~\ref{ssec:jets}.
 
 Pileup is defined as energy in the detector which does not come from the interaction being studied.
-The majority of energy from pileup comes from proton-proton interactions other than primary interaction.
-These soft interactions produce predominantly hadronic final states, for example two jets from  gluon splitting.
+The majority of energy from pileup comes from proton-proton interactions other than the primary interaction.
+These ``soft'' interactions produce predominantly hadronic final states, for example two jets from  gluon splitting.
 Due to these final states being hadronic, the overall energy deposited in the detector is balanced.
 However, there can still be small contributions to \MET\ from to pileup due to the poor resolution of jets in CMS.
 A calibration is applied to account for pileup according to the method described in section~\ref{sec:t1met}.
@@ -324,12 +325,13 @@ whereas the same is not true for changes in $\theta$.
   \eta = -\ln(\mathrm{tan}(\frac{\theta}{2}))
 \end{equation}
 
-The choice if what to include when calculating isolation is defined differently for each object and will be described in the following sections.
+The choice of what to include when calculating isolation is defined differently for each object and will be described in the following sections.
 
 \subsection{leptons and photons}
 \label{ssec:lepsandphots}
-Z bosons can decay leptonically to $e\bar{e}$, $\mu\bar{\mu}$, and $\tau\bar{\tau}$~pairs,
-but identifying $\tau$s is very complicated in CMS, and their resolution is not as good as electrons and muons.
+Z bosons decay leptonically to $e\bar{e}$, $\mu\bar{\mu}$, and $\tau\bar{\tau}$~pairs approximately 10\% of the time.
+The rest of the time they decay to neutrinos, or to quark-antiquark pairs.
+This analysis focuses on decays to $e\bar{e}$ and $\mu\bar{\mu}$ because identifying $\tau$s is very complicated in CMS, and their resolution is not as good as electrons and muons.
 In order to keep the analysis simple, this search is done in final states with $Z\rightarrow ee$ and $Z\rightarrow\mu\bar{\mu}$ only,
 and when referencing leptons, only electrons and muons are considered.
 It is also important to be able to identify photons in order to measure one of the main backgrounds.
@@ -351,7 +353,7 @@ Muon tracks can be measured independently in the muon subdetector,
 and the measurement is matched to a set of hits in the tracker to determine the final muon energy.
 
 The main thing all of these objects have in common is they are produced in interactions that do not have a hadronic component.
-Quantifying this energy is done by calculation the particles isolation, as described in section~\ref{ssec:isolation_summary},
+Quantifying this energy is done by calculating the particles isolation, as described in section~\ref{ssec:isolation_summary},
 and is used to discriminate against unwanted physics processes.
 
 \begin{figure}[!htb]
@@ -372,20 +374,20 @@ The region is defined using the ``anti-$\mathrm{k_{T}}$'' (ak) algorithm~\cite{a
 For jets in this analysis, the charged candidates not associated with the primary vertex are removed before clustering. 
 This removes some unwanted energy from pileup, and the jets are then calibrated in order to more accurately reflect the energy of the particles they represent.
 
-The jet energy corrections are done in multiple levels, labeled as L1L2L3.
+The jet energy corrections are done in multiple levels, labeled as L1,L2 and L3.
 A detailed procedure of how the corrections are applied can be found here~\cite{CMS-DP-2015-044}.
-Jets are corrected such that the calibrated energy is as close to the parton that the jet came from as possible.
+Jets are corrected such that the calibrated energy is as close as possible to the parton that produced the jet.
 The corrections are derived using MC, and each level corrects for different effects in the following way:
 L1 corrects for pileup,
 L2 corrects for different responses in the detector as a function of $\eta$,
 and L3 corrects the overall energy scale.
-The L1 correction is done by assuming a flat overall energy density in the detector which is calculated per event,
+The L1 correction is done by assuming a flat overall energy density from pileup in the detector which is calculated per event,
 and then subtracting this energy from the jet using the jet area to determine the overall energy contributed from pileup.
-The L2 correction is done by selecting di-jet events where one of the jets is central and the second jet is non-central $\eta$.
+The L2 correction is done by selecting di-jet events where one of the jets is central($\eta < 0.8$) and the second jet is non-central ($\eta > 0.8$).
 Scale factors are then derived to correct the energy measurement for the non-central jet in separate regions of $\eta$.
 The L3 correction is done by deriving scale factors as a function of jet \pt\ which correct the jet energy to match the true energy of the parton that the jet came from.
 
-In addition to the L1L2L3 corrections, residual corrections are derived in data control regions to correct for differences in the detector response to jets between data and MC.
+In addition to the L1, L2 and L3 corrections, residual corrections are derived in data control regions to correct for differences in the detector response to jets between data and MC.
 This is done in a region with at least one photon or a Z boson which decays to two leptons, where the boson recoils off of a jet.
 The photon and leptons are measured with better resolution than the jets, so scale factors are derived as a function of \pt\ to correct the detector response of jets.
 The full description of cuts used to define jets for the analysis is defined in sub-section~\ref{ssec:jetsel}.
