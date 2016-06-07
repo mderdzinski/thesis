@@ -672,6 +672,7 @@ on microfilm and electronically: }}\\
   \begin{alwayssingle}
   \phantomsection
   \addcontentsline{toc}{frontmatter}{\protect\numberline{}\abstractshortname}
+  %% \addcontentsline{toc}{frontmatter}{\protect\numberline{}Abstract of the dissertation}
   \begin{center}
   \ssp
   {\fmfont
@@ -747,7 +748,7 @@ on microfilm and electronically: }}\\
 \def\theenumii{\alph{enumii}}
 \def\p@enumii{\theenumi}
 
-\def\labelenumiii{\theenumiii.}
+\def\labelenumiii{\theenumiii}
 \def\theenumiii{\roman{enumiii}}
 \def\p@enumiii{\theenumi(\theenumii)}
 
@@ -987,7 +988,7 @@ on microfilm and electronically: }}\\
 %   \@dotsep    : Separation between dots, in mu units.  Should be
 %                 \def'd to a number like 2 or 1.7
 
-\def\@pnumwidth{1.55em}
+\def\@pnumwidth{2.55em}
 \def\@tocrmarg {2.55em}
 \def\@dotsep{4.5}
 \setcounter{tocdepth}{2}

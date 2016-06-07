@@ -75,6 +75,46 @@ Lastly, the muon system (decribed in section~\ref{subs:MUON}) is used to measure
 At the energies that muons are most commonly produced in collisions at the LHC, muons are minimum ionizing particles (MIPs)
 meaning they do not lose very much energy as they pass through the detector components.
 
+\begin{table}[htb]                                                                                                                                                              
+  \begin{center}
+    \caption{
+      \label{tab:rad_int_lengths}
+      Radiation ($\mathrm{X_{0}}$) and interaction lengths ($\lambda_{int}$) for various materials that make up different sub-detectors in CMS.
+    }
+    \begin{tabular}{l|c|c}
+      \hline
+      \hline
+      Material & $\mathrm{X_{0}}$ [cm] & $\lambda_{int}$ [cm] \\
+      \hline
+      Silicon                             & 9.36 & 45.5 \\
+      Lead Tungstate (PbW$\mathrm{O_{4}}$) & 0.88 & 19.5 \\
+      Copper                              & 1.43 & 15.1 \\
+      \hline
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\begin{table}[htb]                                                                                                                                                              
+  \begin{center}
+    \caption{
+      \label{tab:materialbudget}
+      Material budget of tracker and calorimeters in CMS at $|\eta|=0$ as a function of radiation ($\mathrm{X_{0}}$) and interaction ($\lambda_{int}$) lengths.
+    }
+    \begin{tabular}{l|c|c}
+      \hline
+      \hline
+      Material & Radiation lengths [$\mathrm{X_{0}}$] & Interaction lengths [$\lambda_{int}$]  \\
+      \hline
+      Silicon                             & 0.5 & 0.1 \\
+      Lead Tungstate (PbW$\mathrm{O_{4}}$) & 25 & 1.1 \\
+      Copper                              & 73.9 & 7 \\
+      \hline
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
 \subsection{Silicon Tracker}
 \label {subs:tracker}
 The tracker, shown in figure~\ref{fig:tracker}, has two main components, the pixels and the strips.
@@ -112,6 +152,20 @@ the momentum of all the charged particles that pass through the tracker is recon
 }
 \end{center}
 \end{figure}
+
+\begin{figure}[!htb]
+  \begin{center}
+  \begin{tabular}{c|c}
+    \includegraphics[width=0.4\textwidth]{cms/figs/figs_2011_cmsTracker_MaterialBudget_RadLengths.png} &
+    \includegraphics[width=0.4\textwidth]{cms/figs/figs_2011_cmsTracker_MaterialBudget_InteractionLengths.png} \\
+  \end{tabular}
+    \caption{
+      \label{fig:trackerbudget}
+      A diagram showing material budget of the tracker as a function of $\eta$ on the x-axis, and radiation lengths (left) and interaction lengths (right).
+    }
+  \end{center}
+\end{figure}
+
 
 \subsection{Electromagnetic Calorimeter}
 \label {subs:ECAL}
