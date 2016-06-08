@@ -21,15 +21,75 @@ it's possible to accelerate two beams of protons in opposite directions and repe
 There are 4 points along the ring where protons are made to collide and the resulting collisions are recorded by various experiments as seen in figure~\ref{fig:lhcunderground}.
 The Compact Muon Solenoid (CMS) experiment~\cite{jinst} is where the data was taken used for the results shown in this thesis.
 
-{\bf FIXME: write some stuff about luminosity}
+\begin{figure}[!ht]
+  \begin{center}
+    \includegraphics[width=0.8\textwidth]{cms/figs/lhc-underground.jpeg}
+    \caption{ The LHC can be seen along with the 4 main experiments at different points along the beamline.
+      \label{fig:lhcunderground}
+    }
+  \end{center}
+\end{figure}
+
+\section{Physics Processes and Cross Sections}
+The way physics processes are measured is by predicting the number of times a given event will occur when two protons collide.
+When protons collide,
+it is not the protons themselves that interact but rather the constituents, or partons, that make up the proton.
+The formula describing this is given in equation~\ref{eqn:nevts}.
+In this formula,
+the number of events of a specific physics process is given by
+the integrated luminosity ($\mathcal{L}$) times
+the cross section for the event to happen ($\sigma$) times
+the efficiency for the event to be reconstructed ($\epsilon$).
+One other thing that needs to be accounted for is the branching fraction of a specific process to decay to a certain final state.
+For example, Z bosons decay to $\mathrm{e^{+}e^{-}}$ or $\mathrm{mu^{+}\mu^{-}}$ pairs roughly 6\% of the time.
+
+\begin{equation}
+\label{eqn:nevts}
+  \mathrm{N_{events} = \mathcal{L} * \sigma * \epsilon}
+\end{equation}
+
+The cross section for two protons to collide at a center of mass energy of 13 TeV is about 100 mb.
+This can be seen in figure~\ref{fig:xsecs} along with the cross section values for other interesting
+standard model processes.
+Other processes that are main backgrounds in the signal region of this analysis are Z and $\mathrm{t\bar{t}}$ production
+which have a cross section at 13 TeV of roughly 4 nb, and .8 nb respectively.
+Taking into account all the branching fractions and detector efficiencies,
+these processes are reconstructed roughly once in a billion (trillion) times per proton collision for Z ($\mathrm{t\bar{t}}$) production.
 
 \begin{figure}[!ht]
-\begin{center}
-\includegraphics[width=0.8\textwidth]{cms/figs/lhc-underground.jpeg}
-\caption{ The LHC can be seen along with the 4 main experiments at different points along the beamline.
-\label{fig:lhcunderground}
-}
-\end{center}
+  \begin{center}
+    \includegraphics[width=0.8\textwidth]{cms/figs/cross-sections.png}
+    \caption{
+      The cross section values for various standard model processes is shown in this figure as a
+      function of the center of mass energy of two protons colliding.
+      \label{fig:xsecs}
+    }
+  \end{center}
+\end{figure}
+
+The peak instantaneous luminosity per day during the 2015 data taking period is shown on the left in figure~\ref{fig:peaklumi},
+and the highest value is 5.13 $\mathrm{\frac{Hz}{nb}}$.
+This means that approximately $\mathrm{10^{8}}$ protons collide per second.
+The rate of collisions is much larger than the capacity for the detector to write out data,
+and as discussed previously, most of these events are just soft collisions of two protons.
+In order to maximize the efficiency of collecting data that is useful to this analysis,
+a triggering system is put in place which only writes out the event information if certain conditions are met.
+The maximum rate of all the concurrent triggers in CMS is about 1 kHz.
+The total luminosity collected in 2015 was 3.81 $\mathrm{fb^{-1}}$ which can be seen on the right in figure~\ref{fig:peaklumi},
+but due to data quality issues the amount that was useable for physics analysis was 2.26 $\mathrm{fb^{-1}}$.
+
+\begin{figure}[!ht]
+  \begin{center}
+    \begin{tabular}{c c}
+      \includegraphics[width=0.4\textwidth]{cms/figs/peak_lumi_per_day_pp_2015.pdf} &
+      \includegraphics[width=0.4\textwidth]{cms/figs/int_lumi_per_day_cumulative_pp_2015.pdf} \\      
+    \end{tabular}
+    \caption{
+      The peak instantaneous luminosity per day during the 2015 data taking period is shown on the left
+      and the total integrated luminosity is shown on the right in this figure.
+      \label{fig:peaklumi}
+    }
+  \end{center}
 \end{figure}
 
 \section{The Compact Muon Solenoid}
@@ -198,7 +258,7 @@ The total depth is seen to be increasing with $|\eta|$ up to where the tracker b
 
 \begin{figure}[!htb]
   \begin{center}
-  \begin{tabular}{c|c}
+  \begin{tabular}{c c}
     \includegraphics[width=0.4\textwidth]{cms/figs/figs_2011_cmsTracker_MaterialBudget_RadLengths.png} &
     \includegraphics[width=0.4\textwidth]{cms/figs/figs_2011_cmsTracker_MaterialBudget_InteractionLengths.png} \\
   \end{tabular}
@@ -313,7 +373,9 @@ The muon's trajectory can then be reconstructed using this information.
     \includegraphics[width=0.8\textwidth]{cms/figs/DT.pdf}
     \caption{
       \label{fig:DT}
-      A cartoon depiction of a drift tube is shown in this figure. 
+      A cartoon depiction of a set of drift tubes is shown in this figure
+      where a charged particle passing through the system ionizes the gas,
+      and the ions are collected on the wires to detect a signal.      
     }
   \end{center}
 \end{figure}
@@ -350,6 +412,21 @@ The readout for the RPCs is very fast (1 ns) which makes it ideal to use for tri
   \end{center}
 \end{figure}
 
+Muons have a low interaction cross section with the materials used to build CMS in the energy range that they are produced when coming from Z bosons produced at the LHC.
+They are referred to as minimum ionizing particles, and the stopping power of copper on muons can be seen in figure~\ref{fig:muonenergyloss}.
+Therefore, muons do not deposit very much energy in any of the calorimeters.
+Typical momenta of muons in this analysis are between 20-200 GeV.
+When muons have momenta greater than 200 GeV, radiative losses start to become the primary reason for energy loss.
+
+\begin{figure}[!htb]
+  \begin{center}
+    \includegraphics[width=0.8\textwidth]{cms/figs/muon_energy_loss.pdf}
+    \caption{
+      \label{fig:muonenergyloss}
+      Stopping power of copper as a function of muon momentum. Typical momenta of muons in this analysis are between 20-200 GeV.
+    }
+  \end{center}
+\end{figure}
 
 \section{Physics objects}
 The data taken by the CMS detector has to be processed in such a way that all the physics processes that happen in a single collision can be reconstructed.
@@ -366,6 +443,16 @@ The main goal when using the PF algorithm is to account for all energy deposits 
 The way this is done is by clustering energy deposits measured across all subdetectors into separate PF candidates, and classifying these candidates.
 Once an object is classified, the clustering is done again with all the energy associated with the classified object removed.
 This process is repeated until all measured energy deposits are accounted for.
+For example, a charged hadron would be reconstructed by first identifying a track in the tracker.
+Then a check is done to see if this track is consistent with an identified muon in the muon chambers.
+If not, all the energy that is associated with this track in the ECAL and HCAL is removed from the event,
+and the track measurement is used to describe the particle.
+This is done because the precision in the tracker is much better than in the calorimeters.
+This is done iteratively for all particles in the event until there are no tracks left,
+then all that remain are the neutral energy deposits.
+The use of particle flow leads to greatly improved measurements of jets since more of the jet energy is measured using the tracker.
+This also leads to a higher precision measurement of missing transverse energy for the same reasons.
+
 The objects that are identified by this algorithm are listed below.
 In order to further reduce fakes from contaminating our signal region, we make additional cuts to help classify objects.
 These cuts are described in detail in the following section for each object we are interested in.
@@ -381,25 +468,42 @@ These cuts are described in detail in the following section for each object we a
 \subsection{Vertex Determination and Pileup}
 \label{ssec:vtxandpileup}
 The LHC collides protons in large bunches to maximize the probability of a hard collision.
-Multiple pairs of protons can interact at each bunch crossing, and the number of interactions is stochastic but depends on the beam density.
+Multiple pairs of protons interact at each bunch crossing,
+and the number of interactions is stochastic but depends on the beam density.
+Each proton proton collision can produce particles that get reconstructed,
+and when these particles are reconstructed they are associated to a specific proton proton collision using track information.
 It is important to identify which proton-pair interaction is responsible for triggering the event being studied.
-In this analysis, the primary vertex is chosen using track information.
-Every track is associated with a unique vertex,
+Every particle track is associated with a unique vertex,
 and the primary vertex is chosen by finding the vertex with the largest sum of $\mathrm{(p_{T})^{2}}$ of tracks associated with that vertex.
 Neutral candidates do not have associated tracks, so they are defined to always be from the primary vertex.
 The energy of objects affected by this reassociation is recalibrated, and this calibration is described in section~\ref{ssec:jets}.
 
-Pileup is defined as energy in the detector which does not come from the interaction being studied.
+Pileup is defined as energy in the detector which does not come from the primary collision or primary interaction.
+There are two primary sources of pileup, in-time pileup (ITPU), and out-of-time pileup (OOTPU).
+ITPU occurs when protons other than those in the primary interaction interact in the same bunch crossing,
+and the particles produced are reconstructed.
+OOTPU occurs mainly due to the fact that protons are collided with a frequency of 25ns,
+and the timing resolution of some detector components is not fast enough to resolve which bunch crossing certain reconstructed particles came from.
+
 The majority of energy from pileup comes from proton-proton interactions other than the primary interaction.
-These ``soft'' interactions produce predominantly hadronic final states, for example two jets from  gluon splitting.
-Due to these final states being hadronic, the overall energy deposited in the detector is balanced.
-However, there can still be small contributions to \MET\ from to pileup due to the poor resolution of jets in CMS.
+These ``soft'' interactions produce predominantly hadronic final states,
+and the majority of these interactions are due to gluons scattering off of quarks or other gluons.
+These final states inherently do not have \MET\ due to particles escaping detection due to them being hadronic,
+and this leads to a balance in the overall energy deposited in the detector.
+There are still contributions to \MET\ from to pileup due to the poor resolution of jets in CMS.
 A calibration is applied to account for pileup according to the method described in section~\ref{sec:t1met}.
+
 
 \subsection{Isolation}
 \label{ssec:isolation_summary}
 Isolation is a concept that is very important when identifying leptons, and photons.
-It can be simply described as the total energy in the detector near an object of interest.
+Isolation can be simply described as the total energy in the detector near an object of interest.
+Leptons and photons from the primary interaction are not produced together with colored objects,
+and are deemed prompt.
+Non-prompt leptons, such as those from a b-quark decaying semi-leptonically,
+and non-prompt photons such as those from $\pi ^{0}$ decay,
+are always produced in conjunction with a hadronic shower.
+These non-prompt objects are then very likely to be non-isolated due to the hadronic energy nearby.
 The distance between two objects ($\Delta$R) is defined by equation~\ref{eqn:DR},
 where $\phi$ is the angle measured in plane transverse to the beam direction,
 and $\eta$ is the psuedorapidity defined by equation~\ref{eqn:psuedorapidity}.
@@ -421,9 +525,14 @@ The choice of what to include when calculating isolation is defined differently 
 
 \subsection{leptons and photons}
 \label{ssec:lepsandphots}
-Z bosons decay leptonically to $e\bar{e}$, $\mu\bar{\mu}$, and $\tau\bar{\tau}$~pairs approximately 10\% of the time.
+Z bosons decay leptonically to $e\bar{e}$, $\mu\bar{\mu}$, and $\tau\bar{\tau}$~pairs 3.363 $\pm$ 0.004\%, 3.366 $\pm$ 0.007\%\ and 3.370 $\pm$ 0.008\% of the time respectively.
 The rest of the time they decay to neutrinos, or to quark-antiquark pairs.
-This analysis focuses on decays to $e\bar{e}$ and $\mu\bar{\mu}$ because identifying $\tau$s is very complicated in CMS, and their resolution is not as good as electrons and muons.
+This analysis focuses on decays to $e\bar{e}$ and $\mu\bar{\mu}$.
+This is due to the fact that $\tau$s have a large mass and short lifetime which leads to them decaying.
+This is further complicated by the fact that $\tau$s decay to an electron ($\mu$) and two neutrinos 17.85 $\pm$ 0.05\% (17.36 $\pm$ 0.05\%) of the time,
+and the rest of the time the $\tau$ decays to hadronic final state particles.
+This leads to worse measurements in leptonic final states due to the missing energy from not detecting the neutrinos,
+and makes it hard to distinguish $\tau$s from jets in hadronic channels.
 In order to keep the analysis simple, this search is done in final states with $Z\rightarrow ee$ and $Z\rightarrow\mu\bar{\mu}$ only,
 and when referencing leptons, only electrons and muons are considered.
 It is also important to be able to identify photons in order to measure one of the main backgrounds.
@@ -432,12 +541,6 @@ The depth of the ECAL is \textasciitilde{}25 radiation lengths which means elect
 Another thing that helps to distinguish electrons from photons is that electrons will deposit energy in the silicon tracker whereas photons will not.
 Therefore, a track can be matched to energy deposits in the ECAL to help identify electrons.
 Similarly, a track found to correspond to a hit in the ECAL can be used to help determined that the energy deposited in the ECAL was not from a photon.
-
-Muons have a low interaction cross section with the materials used to build CMS in the energy range they are most produced in collisions at the LHC.
-They are referred to as minimum ionizing particles, and the stopping power of copper on muons can be seen in figure~\ref{fig:muonenergyloss}.
-Therefore, muons do not deposit very much energy in any of the calorimeters.
-Typical momenta of muons in this analysis are between 20-200 GeV.
-When muons have momenta greater than 200 GeV, radiative losses start to become the primary reason for energy loss.
 
 A different approach is taken to identify and measure muons in the CMS detector.
 Since muons are charged, they leave hits in the silicon detector which can be reconstructed as a track.
@@ -451,15 +554,6 @@ The main thing all of these objects have in common is they are produced in inter
 Quantifying this energy is done by calculating the particles isolation, as described in section~\ref{ssec:isolation_summary},
 and is used to discriminate against unwanted physics processes.
 
-\begin{figure}[!htb]
-  \begin{center}
-    \includegraphics[width=0.8\textwidth]{cms/figs/muon_energy_loss.pdf}
-    \caption{
-      \label{fig:muonenergyloss}
-      Stopping power of copper as a function of muon momentum. Typical momenta of muons in this analysis are between 20-200 GeV.
-    }
-  \end{center}
-\end{figure}
 
 
 \subsection{jets}

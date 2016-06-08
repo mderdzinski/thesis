@@ -4,7 +4,9 @@
 \label{ch:MET}
 % --------------------------------------------------------------------------- %
 % --------------------------------------------------------------------------- %
-In the final state targeted by this analysis, large values of \MET\ arise from the LSP escaping detection.
+In the final state targeted by this analysis, a gravitino is proposed as the LSP.
+This particle is weakly interacting and makes a good dark matter candidate
+which lead to signal events having large values of \MET\ due to this particle escaping detection.
 It is important that \MET\ from standard model processes is predicted accurately.
 \MET\ can be calculated using the full collection of PF candidates described in section~\ref{subs:particleflow}.
 In the following sections, \MET\ calculations and corrections are described in detail.
@@ -22,19 +24,31 @@ When \MET\ is calculated without any calibration applied to the pf candidates, i
 
 \subsection{Sources of \texorpdfstring{\MET}{MET}}
 \label{sec:metsources}
-\MET\ comes from two main sources,
-resolution effects due to mismeasurement of physics objects (referred to as fake \MET),
-particles escaping detection in the detector.
+\MET\ comes from three main sources,
+noise in the detector from various sources,
+resolution effects due to mismeasurement of physics objects and
+visible particles from the hard interaction being too far forward in $\eta$ to be within the detector geometry (referred to as fake \MET)
+and particles from real physics processes not interacting with the detector thereby escaping detection.
 
-%% fake \MET\ comes {\bf add plot with metx mety etc}
+\MET\ due to noise in the detector can lead to huge tails in the \MET\ distribution.
+The size of this effect is shown in figure~\ref{fig:cleanmet} for the data taken in 2012.
+A set of filters is applied to mitigate these effects,
+and the details of these filters is described in section~\ref{ssec:metfilter}.
 
-Events having real \MET\ can happen in two ways,
-a visible particle from the hard interaction being too far forward in $\eta$ to be within the detector geometry,
-and real physics process where particles do not interact with the detector, thereby escaping detection.
-Particles that do not interact with the detector can be standard model neutrinos, or particles from BSM theories such as the $\mathrm{\tilde{G}}$.
+\begin{figure}[!ht]
+  \begin{center}
+    \includegraphics[width=0.8\textwidth]{MET/figs/Fig4EventCleaning.pdf}
+    \caption{
+      \label{fig:cleanmet}
+      \MET\ distributions for events passing the dijet selection without 2012 cleaning algorithms applied (open markers),
+      with 2012 cleaning algorithms applied including the one based on jet identification requirements (filled markers),
+      and events from MC (filled histograms).
+    }
+  \end{center}
+\end{figure}
+
+Particles that do not interact with the detector that lead to real \MET\ can be standard model neutrinos, or particles from BSM theories such as the $\mathrm{\tilde{G}}$.
 Since this analysis is searching in regions with large \MET, it is very important to be able to identify and measure backgrounds with fake \MET and real \MET.
-
-%% \section{Corrections to \texorpdfstring{\MET}{MET}}
 
 \section{Type-1 \texorpdfstring{\MET}{MET}}
 \label{sec:t1met}
@@ -115,21 +129,21 @@ and the bottom row shows the HF region only.
 \end{figure}
 
 \begin{figure}[!ht]
-\begin{center}
-\begin{tabular}{cc}
-\includegraphics[width=0.4\textwidth]{MET/figs/h_met_phpfcands_0013_pt_ll_signalregion_inclusive_passtrig.pdf} &
-\includegraphics[width=0.4\textwidth]{MET/figs/h_met_phpfcands_1316_pt_ll_signalregion_inclusive_passtrig.pdf} \\
-\includegraphics[width=0.4\textwidth]{MET/figs/h_met_phpfcands_1624_pt_ll_signalregion_inclusive_passtrig.pdf} &
-\includegraphics[width=0.4\textwidth]{MET/figs/h_met_phpfcands_2430_pt_ll_signalregion_inclusive_passtrig.pdf} \\
-\end{tabular}
-\includegraphics[width=0.4\textwidth]{MET/figs/h_met_phpfcands_30in_pt_ll_signalregion_inclusive_passtrig.pdf} 
-\caption{The \MET\ distribution is shown for neutral electromagnetic PF candidates only.
-The top row shows the barrel region on the left and transition region between the barrel and endcap on the right,
-the second row shows the endcap region including the tracker on the left and endcap region excluding the tracker on the right
-and the bottom row shows the HF region only.
-\label{fig:phpfcands}
-}
-\end{center}
+  \begin{center}
+    \begin{tabular}{cc}
+      \includegraphics[width=0.4\textwidth]{MET/figs/h_met_phpfcands_0013_pt_ll_signalregion_inclusive_passtrig.pdf} &
+      \includegraphics[width=0.4\textwidth]{MET/figs/h_met_phpfcands_1316_pt_ll_signalregion_inclusive_passtrig.pdf} \\
+      \includegraphics[width=0.4\textwidth]{MET/figs/h_met_phpfcands_1624_pt_ll_signalregion_inclusive_passtrig.pdf} &
+      \includegraphics[width=0.4\textwidth]{MET/figs/h_met_phpfcands_2430_pt_ll_signalregion_inclusive_passtrig.pdf} \\
+    \end{tabular}
+    \includegraphics[width=0.4\textwidth]{MET/figs/h_met_phpfcands_30in_pt_ll_signalregion_inclusive_passtrig.pdf} 
+    \caption{The \MET\ distribution is shown for neutral electromagnetic PF candidates only.
+      The top row shows the barrel region on the left and transition region between the barrel and endcap on the right,
+      the second row shows the endcap region including the tracker on the left and endcap region excluding the tracker on the right
+      and the bottom row shows the HF region only.
+      \label{fig:phpfcands}
+    }
+  \end{center}
 \end{figure}
 
 \begin{figure}[!htb]
