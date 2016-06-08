@@ -6,7 +6,7 @@
 \section{The Large Hadron Collider}
 The Large Hadron Collider (LHC) is the largest particle accelerator in the world~\cite{lhcmachine}.
 It is designed to collide protons against other protons with a center of mass energy up to 14 TeV.
-The first collisions used for physics happened in March 2010, where the LHC was running at a center of mass energy of 7 TeV.
+The first collisions used for physics happened in March 2010, when the LHC was running at a center of mass energy of 7 TeV.
 The LHC was restarted the following year and operated at a higher energy of 8 TeV
 eventually delivering about four times the amount of data that was taken at 7 TeV.
 After the successful first run ended, the machine was shut down in order to upgrade many components.
@@ -14,11 +14,14 @@ The next time the LHC was run was in May 2015, where protons were successfully c
 The analysis shown in this thesis is based on the data taken during the 2015 running period at 13 TeV.
 
 In order to achieve such large center of mass energies,
-the protons are accelerated in a circular beam pipe which is 27 km long and and 100 m underground.
+the protons are accelerated in two separate circular beam pipes which are 27 km long and and 100 m underground.
+These beam pipes are kept as close as possible to vacuum in order to minimize the interaction of protons with other particles.
 Since the pipe is circular,
 it's possible to accelerate two beams of protons in opposite directions and repeatedly collide them at various points around the ring.
 There are 4 points along the ring where protons are made to collide and the resulting collisions are recorded by various experiments as seen in figure~\ref{fig:lhcunderground}.
 The Compact Muon Solenoid (CMS) experiment~\cite{jinst} is where the data was taken used for the results shown in this thesis.
+
+{\bf FIXME: write some stuff about luminosity}
 
 \begin{figure}[!ht]
 \begin{center}
@@ -33,7 +36,7 @@ The Compact Muon Solenoid (CMS) experiment~\cite{jinst} is where the data was ta
 The CMS detector consists of a triggering system and many sub detectors,
 where measurements taken using these sub detectors are used as input to the triggering system.
 When protons are collided at the interaction point within CMS, approximately N collisions happen per second.
-The volume of collisions is so high that it is impossible to record all of the data all of the time.
+The rate of collisions is so high that it is impossible to record all of the data all of the time.
 The way this is controlled is by the use of triggers, the level 1 (L1) trigger and the high level triggers (HLT).
 The triggers are designed such that the full event information is stored when all the requirements of a trigger are met.
 For some physics processes, trigger rates are much higher than can be afforded by the allowed budget of the CMS experiment.
@@ -41,16 +44,14 @@ These processes can still be studied by prescaling the triggers meaning the full
 As the prescale N is increased, the rate of the trigger is reduced.
 
 The CMS sub detector components are layered in such a way that one can take advantage of different particle interactions with different materials.
-The innermost layer is the tracker (decribed in section~\ref{subs:tracker}) which is used to measure the charge and and momentum of charged particles.
-When a charged particle passes through the silicon layers tracker, a small amount of energy is deposited.
-The deposit is lager enough that a hit will be registered by the electronics, but small enough that the trajectory of the particle will be minimally affected.
-Neutral particles do not interact with the tracker.
+The innermost layer is the tracker (decribed in section~\ref{subs:tracker}) which is used to measure the charge and momentum of charged particles.
+When a charged particle passes through the silicon tracker's layers, a small amount of energy is deposited.
+The deposit is large enough that a hit will be registered by the electronics, but small enough that the trajectory of the particle will be minimally affected.
+%% Neutral particles interact minimally with the tracker. ADD TO LATER SECTION
 
 The next layer is the Electromagnetic Calorimeter (decribed in section~\ref{subs:ECAL}) which is used to contain and measure the energy of electrons and photons.
 The Electromagnetic Calorimeter (ECAL) is made of lead tungstate ($\mathrm{PbWO_{4}}$) scintilating crystals.
 Electrons and photons that enter the ECAL lose energy due to showering, and the depth of the ECAL is sufficient enought to fully contain these particles.
-The ECAL material has a radiation length~\ref{eqn:radiation_length} of 0.89 cm and Moli\`ere radius ($\mathrm{R_{M} \simeq 2.19~cm}$).
-$\mathrm{R_{M}}$ is defined as the radius of a cylinder containing on average 90\% of the shower's energy deposition.
 
 Outside of the ECAL is the Hadronic Calorimeter (decribed in section~\ref{subs:HCAL}) which is used to contain and measure the energy of hadronic particles.
 The Hadronic Calorimeter (HCAL) is designed in such a way that hadronic particles incident on the HCAL lose energy to showering.
@@ -71,9 +72,48 @@ Neutrinos are measured indirectly by assuming that the momentum in the direction
 and then calculating the sum of the total transverse momentum of all particles directly measuered in the detector.
 Since Neutrinos pass through the detector with no interactions, they contribute to missing transverse momentum, which will be referred to as (\MET) or MET.
 
-Lastly, the muon system (decribed in section~\ref{subs:MUON}) is used to measure the charge and and momentum of muons.
+Lastly, the muon system (decribed in section~\ref{subs:MUON}) is used to measure the charge and momentum of muons.
 At the energies that muons are most commonly produced in collisions at the LHC, muons are minimum ionizing particles (MIPs)
 meaning they do not lose very much energy as they pass through the detector components.
+
+\subsection{Particle Interactions With Matter}
+
+The total amount of energy lost by a particle when interacting with matter can be characterized simply using two equations,
+~\ref{eqn:radiation_length} and~\ref{eqn:interaction_length}.
+Equation~\ref{eqn:radiation_length} represents the average energy left over as a particle travels a distance x through a material with radiation length ($X_{0}$).
+Equation~\ref{eqn:interaction_length} represents the average number of particles left when $N_{0}$ particles traverse a distance x through a material with interaction length ($\lambda_{int}$).
+The largest source of uncertainty when measuring a particles energy using the ECAL or HCAL is called the ``stochastic term''
+and is mostly due to intrinsic statistical shower fluctuations and sampling fluctuations.
+The energy of a parton is distributed evenly among all of its decay products on average,
+so the initial particles energy is proportional to the number of decay products $E_{0} \propto N_{0}$.
+The overall uncertainty due to the stochastic term becomes proportional to $\sqrt{N_{0}}$ in the limit where N is large,
+therefore these two equations can be used to calculate the average energy lost due to
+electromagnetic interactions (radiation length) and strong interactions (interaction length).
+
+\begin{equation}
+  \label{eqn:radiation_length}
+  E(x) = E_{0}e^{\frac{-x}{X_{0}}}  
+\end{equation}
+
+\begin{equation}
+  \label{eqn:interaction_length}
+  N(x) = N_{0}e^{\frac{-x}{\lambda_{int}}}  
+\end{equation}
+
+Typical values for radiation and interaction lengths are shown in table~\ref{tab:rad_int_lengths}
+for the different materials making up the tracker (silicon), ECAL (PbWO4) and HCAL (Copper).
+In table~\ref{tab:materialbudget}, the depth of each of these materials corresponding to $|\eta| = 0$ is shown as a function of $X_{0}$ and $\lambda_{int}$.
+The values in tables~\ref{tab:materialbudget}~and~\ref{tab:rad_int_lengths} are taken from a talk given at CERN in May 2016~\cite{calorimetry}.
+Based on these values, an electron or photon loses at least \textasciitilde{}40\%
+of its energy on average when traveling through the tracker before it is incident on the ECAL.
+This means either has a relatively high chance of interacting, where a photon might pair-produce and an electron might brem a photon.
+These effects are taken into consideration when reconstructing photons and electrons and better-described in chapter~\ref{ch:evtsel}.
+
+Another effect that can be seen is in the HCAL, there are 16 layers of absorber material.
+This means that each layer has more than 4.5 radiation lengths.
+When a hadronic shower evolves, approximately 30\% of the shower is in the form of EM energy.
+4.5$\mathrm{X_{0}}$ is essentially deep enough to completely contain the EM component of the hadronic shower before it can be measured.
+This leads to an increased uncertainty of the initial parton's energy.
 
 \begin{table}[htb]                                                                                                                                                              
   \begin{center}
@@ -119,7 +159,7 @@ meaning they do not lose very much energy as they pass through the detector comp
 \label {subs:tracker}
 The tracker, shown in figure~\ref{fig:tracker}, has two main components, the pixels and the strips.
 The pixel component has three cylindrical layers very close to the beam pipe, which are positioned at 4, 7 and 11 cm from the center.
-Each layer is tiled with over 65 million sensors (pixels) measuring 150 by 150 $\mu$m which are connected directly to a chip used to read out the data.
+The pixel detector contains over 65 million sensors (pixels) measuring 150 by 150 $\mu$m which are connected directly to a chip used to read out the data.
 A diagram showing the pixels can be seen in figure~\ref{fig:pixels}.
 When a charged particle travels through the three pixel layers,
 the hits are recorded then used together with the measurement of the particle's trajectory through the strip component of the tracker.
@@ -134,13 +174,16 @@ the hits are recorded then used together with the measurement of the particle's 
   \end{center}
 \end{figure}
 
-Immediately outside of the the pixel layer is the strip layer.
+Immediately outside of the pixel layer is the strip layer.
 There are 10 layers of strips through which a charged particle passing through will leave deposits of energy that are read out.
 The very large magnetic field in this region from the solenoid is in the same direction as the beam,
 and this causes particle trajectories to curve in a direction tangent to the beam direction. 
 The radius of this curvature is proportional to the particle's momentum and inversely proportional to the particle's charge according to equation~\ref{eqn:bfieldmomentum}.
 Using the hit information from the pixels and strips together,
-the momentum of all the charged particles that pass through the tracker is reconstructed and used as input to the particle flow algorithm~\ref{subs:particleflow} in order to identify particles produced in the collision.
+the momentum of all the charged particles that pass through the tracker is reconstructed and
+used as input to the particle flow algorithm~\ref{subs:particleflow} in order to identify particles produced in the collision.
+The total material budget of the tracker as a function of radiation and interaction length is shown in figure~\ref{fig:trackerbudget}.
+The total depth is seen to be increasing with $|\eta|$ up to where the tracker barrel meets the tracker endcap then decreasing after this point.
 
 \begin{figure}[!htb]
 \begin{center}
@@ -187,7 +230,7 @@ The geometry can be seen in figure~\ref{fig:ecal_eta}.
 As written previously, the ECAL is made of lead tungstate crystals.
 These crystals act as absorbers as well as scintilators.
 What this means is that the when electrons or photons are incident on the crystals, they lose energy due to showering.
-The showering process can be simply described as a combination of photon emission, and electron-positron pair production.
+The showering process can be simply described as a combination of electron-positron pair production, and photon emission.
 Leading order diagrams of these processes are shown in figures~\ref{fig:pair_production}~and~\ref{fig:photon_brem}.
 
 \begin{figure}[!ht]
@@ -215,16 +258,13 @@ This light is read out using a avalanche photo-diode (APDs) for each crystal in 
 The amount of energy absorbed by the crystals can be parameterized by a quantity known as the radiation length ($X_{0}$).
 The expected amount of energy left (E(x)) after a particle with initial energy ($E_{0}$)
 travels a distance x through an absorbing material is shown in equation~\ref{eqn:radiation_length}.
-The CMS ECAL has a depth of \~25$X_{0}$ at small (0-1.3) and large (1.6-3.0) values of $\eta$.
+The CMS ECAL has a depth of \textasciitilde{}25$X_{0}$ at small (0-1.3) and large (1.6-3.0) values of $\eta$.
 In between these regions, the depth is larger due to the barrel-like geometry of the ECAL.
-Because of this depth, electron and photon energies are measured very well in the ECAL.
+Additionally, the ECAL material has a Moli\`ere radius ($\mathrm{R_{M} \simeq 2.19~cm}$) where
+$\mathrm{R_{M}}$ is defined as the radius of a cylinder containing on average 90\% of the shower's energy deposition.
+Because of the depth and intrinsic resolution, electron and photon energies are measured very well in the ECAL.
 There is one exception where the depth of the ECAL is small, and this is where the barrel and endcap meet.
 This leads to poor reconstruction of electrons and photons in this region.
-
-\begin{equation}
-  \label{eqn:radiation_length}
-  E(x) = E_{0}e^{\frac{-x}{X_{0}}}  
-\end{equation}
 
 \subsection{Hadronic Calorimeter}
 \label {subs:HCAL}
@@ -249,16 +289,14 @@ The expected number of secondary particles produced ($N(x)$)
 by a number of particles traveling through the HCAL ($N_{0}$)
 is written in equation~\ref{eqn:interaction_length} as a function of $\lambda_{int}$ and the distance traveled (x).
 
-\begin{equation}
-  \label{eqn:interaction_length}
-  N(x) = N_{0}e^{\frac{-x}{\lambda_{int}}}  
-\end{equation}
-
 \subsection{Muon System}
 \label {subs:MUON}
 The muon system is made up of 1400 chambers divided into 3 categories: 610 resistive plate chambers (RPCs), 250 drift tubes (DTs), and 540 cathode strip chambers (CSCs).
-It is the only detector subsystem which lies completely outside of the solenoid.
-The information from these systems is used sometimes for triggering on events as well as help to identify muons and measure the muon properties.
+It is the only detector subsystem which lies outside of the solenoid, but it is embedded within the return yoke of the solenoid.
+Therefore, the magnetic field in the muon system is non-uniform leading to a characteristic s-curve
+flight path in the R-$\phi$ plane for muons originating from the center of the detector.
+The B-field decreases in the return yoke as the distance from the solenoid increases radially outward leading to the bending radius of the muon decreasing as well.
+The information from these systems is used for triggering on events with muons as well as help to identify muons and measure the their properties.
 Each system is located in different regions in the detector, with some systems overlapping others.
 The DTs cover a region of $|\eta| < 1.2$, the CSCs cover a region of $0.9 < |\eta| < 2.4$, and the RPCs cover a region of $|\eta| < 2.1$.
 
@@ -324,8 +362,8 @@ The reconstruction of these objects is discussed in detail in the following sect
 \subsection{Particle Flow}
 \label{subs:particleflow}
 In order to classify objects, an algorithm named particle flow (PF) is used~\cite{pfReco}. 
-The main goal when using the PF algorithm is to account for all energy deposits measured in the detector.
-The way this is done is by clustering energy deposits measured across all subdetectors into separate PF candidates, and classifying these cadidates.
+The main goal when using the PF algorithm is to account for all energy deposits measured in the detector in a consistent fashion.
+The way this is done is by clustering energy deposits measured across all subdetectors into separate PF candidates, and classifying these candidates.
 Once an object is classified, the clustering is done again with all the energy associated with the classified object removed.
 This process is repeated until all measured energy deposits are accounted for.
 The objects that are identified by this algorithm are listed below.
@@ -390,7 +428,7 @@ In order to keep the analysis simple, this search is done in final states with $
 and when referencing leptons, only electrons and muons are considered.
 It is also important to be able to identify photons in order to measure one of the main backgrounds.
 
-The depth of the ECAL is \textasciitilde25 radiation lengths which means electrons and photons lose almost all of their energy in the ECAL.
+The depth of the ECAL is \textasciitilde{}25 radiation lengths which means electrons and photons lose almost all of their energy in the ECAL.
 Another thing that helps to distinguish electrons from photons is that electrons will deposit energy in the silicon tracker whereas photons will not.
 Therefore, a track can be matched to energy deposits in the ECAL to help identify electrons.
 Similarly, a track found to correspond to a hit in the ECAL can be used to help determined that the energy deposited in the ECAL was not from a photon.
@@ -398,6 +436,9 @@ Similarly, a track found to correspond to a hit in the ECAL can be used to help 
 Muons have a low interaction cross section with the materials used to build CMS in the energy range they are most produced in collisions at the LHC.
 They are referred to as minimum ionizing particles, and the stopping power of copper on muons can be seen in figure~\ref{fig:muonenergyloss}.
 Therefore, muons do not deposit very much energy in any of the calorimeters.
+Typical momenta of muons in this analysis are between 20-200 GeV.
+When muons have momenta greater than 200 GeV, radiative losses start to become the primary reason for energy loss.
+
 A different approach is taken to identify and measure muons in the CMS detector.
 Since muons are charged, they leave hits in the silicon detector which can be reconstructed as a track.
 The ECAL and HCAL are designed to contain all measureable energy,
@@ -415,7 +456,7 @@ and is used to discriminate against unwanted physics processes.
     \includegraphics[width=0.8\textwidth]{cms/figs/muon_energy_loss.pdf}
     \caption{
       \label{fig:muonenergyloss}
-      Stopping power of copper as a function of muon momentum. Typical momenta of muons in this analysis are between 20-200 GeV. 
+      Stopping power of copper as a function of muon momentum. Typical momenta of muons in this analysis are between 20-200 GeV.
     }
   \end{center}
 \end{figure}
