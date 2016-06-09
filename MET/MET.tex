@@ -86,13 +86,13 @@ The \MET in each region is defined by calculating the negative magnitude of the 
 The plots showing the agreement for each \MET\ component are shown in figures~\ref{fig:chpfcands},~\ref{fig:phpfcands}, and~\ref{fig:nupfcands} respectively. 
 The charged  component of \MET\ shows reasonable agreement over the entire CMS detector.
 The neutral electromagnetic component of \MET\ shows good agreement in the tracker volume of CMS, and the agreement is bad for cadidates outside of the tracker.
-The neutral hadronic component of \MET\ shows poor agreement in the tracker volume of CMS, and the agreement is gets much worse for cadidates in the very forward region.
+The neutral hadronic component of \MET\ shows poor agreement in the tracker volume of CMS, and the agreement gets much worse for cadidates in the very forward region.
 
 \begin{table}[htb]
 \scriptsize
 \begin{center}
 \caption{
-Definitions for the $\eta$ region chosen for each subdetector.
+Definitions for the $\eta$ region chosen to define each subdetector region are listed in this table.
 \label{tab:subdetector_eta}}
 \begin{tabular}{l|c}
 
@@ -180,9 +180,11 @@ and reasonable agreement is seen in the fake \MET\ region.
 \includegraphics[width=0.4\textwidth]{MET/figs/h_met_T1CHS_pt_mm_inclusive_passtrig.pdf} \\
 \end{tabular}
 \includegraphics[width=0.6\textwidth]{MET/figs/h_met_T1CHS_pt_ll_inclusive_passtrig.pdf}
-\caption{The \MET\ distribution is shown with data vs. MC for events with $Z\rightarrow\ell\ell$.
-The top row shows ee events on the left and $\mu\mu$ events on the left,
-and the bottom row shows ee$+\mu\mu$ events together.
+\caption{
+  The \MET\ distribution is shown with data vs. MC for events while only requirement two leptons with $|M_{\ell\ell}-M_{Z}| < 10 GeV$.
+  The top row shows ee events on the left and $\mu\mu$ events on the left,
+  and the bottom row shows ee$+\mu\mu$ events together.
+  The MC is normalized to data.
 \label{fig:T1MET_datavsmc}
 }
 \end{center}
@@ -191,6 +193,7 @@ and the bottom row shows ee$+\mu\mu$ events together.
 \subsection{Data-driven \texorpdfstring{\MET}{MET}\ Predictions}
 Although good agreement is seen in data and MC after applying Type-1 corrections to \MET, 
 it's clear that there are still problems with the simulation based on the studies in section~\ref{subs:MET_datavsmc}.
+Additionally, a new discovery in physics is important enough that it is imperatave that the background predictions can be trusted.
 Therefore, it's important to make sure there is a reliable prediction for backgrounds coming from standard model processes in regions with large values of \MET.
-Data-driven techniques were developed to predict the largest backgrounds,
+Techniques were developed to predict the largest backgrounds using control regions in data,
 and these techniques are described in detail in chapter~\ref{ch:bkgd}.

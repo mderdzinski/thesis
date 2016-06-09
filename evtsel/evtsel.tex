@@ -35,7 +35,10 @@ All triggers used to collect data for this analysis are listed in table~\ref{tab
   \begin{center}
     \caption{
       \label{table:triggers}
-      List of all triggers used in this analysis.
+      A list of all triggers used in this analysis is shown in the table below.
+      The signal triggers all require at least two same flavor leptons,
+      The control triggers require either at least one photon,
+      or at least two different flavor leptons.
     }
     \begin{tabular}{l}
       \hline
@@ -89,6 +92,10 @@ All triggers used to collect data for this analysis are listed in table~\ref{tab
 
 \section{Simulations from Monte-Carlo}
 The CMS detector is simulated using the Geant4 toolbox~\cite{Geant}, and various physics processes are simulated.
+This simulation keeps track of energies deposited by each particle,
+above a certain threshold, as the incident particle's shower progresses through detector materials.
+This is process is very computationally intensive and time consuming,
+so an alternative method of simulation using parameterized shapes of particle showers, named FastSim, was developed.
 The simulation is composed of the following steps
 \begin{itemize}
 \item Modeling the Interaction Region
@@ -98,7 +105,7 @@ The simulation is composed of the following steps
 \end{itemize}
 
 The actual simulation of the physics process is done using a variety of different software where the various packages used perform differently at simulating certain physics effects.
-In this analysis, \ttbar\ events are simulated using powheg~\cite{powheg} and DY processes are simulated using MadGraph~\cite{aMCatNLO}.
+In this analysis, \ttbar\ events are simulated using powheg~\cite{powheg} and Drell-Yan processes are simulated using MadGraph~\cite{aMCatNLO}.
 The matrix element calculations performed with these generators are then interfaced with pythia 8~\cite{Pythia} for the simulation of parton showering and hadronization.
 
 After selecting events with two leptons, data is compared to MC and good agreement can be seen in the plots shown in section~\ref{ssec:datavsmc}.
@@ -111,7 +118,13 @@ and the MC is then reweighted to accurately represent the number of pileup event
 \begin{sidewaystable}[htb]                                                                                                                                                              
 \begin{center}                                                                                                                                                
 %% \scriptsize
-\caption{\label{tab:mcsamples} List of MC samples.}
+  \caption{
+    \label{tab:mcsamples}
+    A list of MC samples used in this analysis are shown in this table.
+    The MC samples used for background studies are all made with different generators,
+    depending on which physics process that is being modeled.
+    The signal MC is produced using the FastSim package.
+  }
 \begin{tabular}{l|l|l}  
 \hline
 \hline
@@ -168,7 +181,8 @@ data is compared to MC simulation for many kinematic variables relevant to the s
     \end{tabular}
     \caption{
       \label{fig:datavsmc_mll_eemm}
-      data vs. MC comparison showing \mll\ with ee events on the left and $\mu\mu$~events on the right.
+      Data vs. MC comparison showing \mll\ with ee events on the left and $\mu\mu$~events on the right.
+      For this analysis, a cut is required that $|M_{\ell\ell}-M_{Z}| < 10 GeV$.
     }
   \end{center}
 \end{figure}
@@ -272,12 +286,12 @@ A filter is then applied for situations where the ECAL readout is saturated.
 This happens in regions of the ECAL where there is no coverage due to bad crystals or lack of crystals.
 In these regions, the trigger readout is still available but saturates above a certain energy.
 When the trigger readout is saturated and the \MET\ vector aligns with an ECAL object in $\phi$, these events are removed.
-The next filter applied has to do with known regions in the ECAL where the crystals were previously shown to give incorrect measurements in an incosistent way.
+The next filter applied has to do with known regions in the ECAL where the crystals were previously shown to give incorrect measurements in an inconsistent way.
 When events have large energies in any of these regions aligned with \MET, the event is filtered.
 The last filter has to do with muon reconstruction.
 Muons are reconstructed using hits in the muon chamber and matching them with tracks in the tracker.
 When a low quality muon is reconstructed,
-there is a non-negligible chance for the muon to be matched incorrectly in such a way that gives a large \pt\ value,
+there is a non-negligible chance for the muon to be matched incorrectly in such a way that it gives a large \pt\ value,
 which then translates to large \MET.
 
 \subsection{Lepton Selection}
@@ -298,7 +312,7 @@ This is done by requiring both leptons to have $|\eta| < 2.4$.
 In order to avoid the transition region from the endcap to the barrel, 
 where the muon and electron reconstruction efficiencies are very different, 
 leptons having $|\eta|$ in the range 1.4 $< |\eta| <$ 1.6 are rejected.
-Events are vetoed if the two leading leptons are within a cone of $\Delta R < 0.1$ from eachother,
+Events are vetoed if the two leading leptons are within a cone of $\Delta R < 0.1$ from each other,
 in order to reduce the rate of events with fake leptons.
 These selections are summarized below.
 
@@ -344,7 +358,7 @@ These factors are derived separately for electrons and muons and shown in tables
 \begin{center}
   \caption{
     \label{tab:eamus}
-    Effective area values for muons derived in separate regions of $\eta$.
+    Effective area values for muons derived in separate regions of $\eta$ are shown in this table.
   }
 \begin{tabular}{l|c}
 \hline
@@ -366,7 +380,7 @@ $|\eta| < 0.8$       & 0.0735 \\
 \begin{center}
   \caption{
     \label{tab:eaels}
-    Effective area values for electrons derived in separate regions of $\eta$.
+    Effective area values for electrons derived in separate regions of $\eta$ are shown in this table.
   }
 \begin{tabular}{l|c}
 \hline
@@ -436,13 +450,13 @@ This gives an efficiency for prompt leptons of $>$~90\% and rejection rate for n
 
 \subsection{Lepton Scale Factors}
 \label{ssec:lepscalefactors}
-Scale factors are applied in order to correct for the differences in efficiencies in data and MC when selecting applying lepton ID and isolation requirements.
+Scale factors are applied in order to correct for the differences in efficiencies in data and MC when applying lepton ID and isolation requirements.
 Additional scale factors are derived to correct for differences in simulation of leptons when using Fastsim~\cite{fastsim} instead of fullsim.
 These scale factors are derived in data and MC using a ``tag and probe'' technique.
 The main premise of this technique is that leptons coming from a Z boson are produced in opposite-sign same-flavor pairs in very large quantities.
 In an event, a lepton with very tight ID and isolation requirements is chosen (the tag),
 and then a second lepton with very loose requirements (the probe) can be studied if it is found that the pair of leptons has a dilepton mass consistent with the Z mass.
-The efficiency of various kinematic cut requirements can then be assessed on individual leptons, such as the efficiency of the ID and isolation requirements.
+The efficiency of various cut requirements is then assessed for individual leptons, such as the efficiency of the ID and isolation requirements.
 This is done separately in data and MC, and then the MC is corrected based on these differences to match what is observed in data.
 Scale factors for electron ID and isolation criteria are shown in~\ref{fig:sf_electrons},
 scale factors for muon ID and isolation criteria are shown in~\ref{fig:sf_muons},
@@ -503,12 +517,13 @@ required to be matched to generator level electrons, and electrons used as backg
 Variables used to differentiate electrons from fakes mainly use information from the tracker and ECAL.
 Measurements made by the ECAL and tracker are compared using the ratio of the electron cluster energy to the track momentum at the outermost track layer.
 This ratio is expected to be 1 for real electrons, but not necessarily for fakes.
-$\sigma_{i\eta i\eta}$ is a purely calometric variable which uses the shower shape of the electron object to differentiate real and fake electrons.
+$\sigma_{i\eta i\eta}$ is a purely calorimetric variable which uses the shower shape of the electron object to differentiate real and fake electrons.
 The main premise behind this variable is that electron energies are contained within 1-2 crystals in $\eta$
-where ECAL energy from jets is spread across many crystals leading to the shape for real electrons and fake electrons to be very different making it a good variable to differentiate the two.
+where ECAL energy from charged hadrons is spread across many crystals leading to the shape for real electrons and fake electrons to be very different making it a good variable to differentiate the two.
 A way to differentiate real and fake electrons is to check the consistency of the track of the reconstructed electron object left in the tracker.
 This is done by measuring the difference in $\eta$ of the track measured in the outer layer and the electron cluster in the ECAL ($\mathrm{\Delta\eta(track-cluster)}$).
-An plot showing how each of these variables looks for real and fake electrons is shown in figure~\ref{fig:electron_mva_vars}.
+An plot showing how each of these variables looks for real and fake electrons is shown in figure~\ref{fig:electron_mva_vars},
+and the output of the MVA variable in figure~\ref{fig:electron_mva_output}.
 
 \begin{figure}[!htb]
   \begin{center}
@@ -524,6 +539,21 @@ An plot showing how each of these variables looks for real and fake electrons is
       \label{fig:electron_mva_vars}
       Kinematic variables used to distinguish real electrons from fake electrons are shown
       with electrons in the barrel on the left and electrons in the endcap on the right.
+    }
+  \end{center}
+\end{figure}
+  
+\begin{figure}[!htb]
+  \begin{center}
+    \begin{tabular}{cc}
+      \includegraphics[width=0.4\textwidth]{evtsel/figs/MVA_output_EB.pdf} &
+      \includegraphics[width=0.4\textwidth]{evtsel/figs/MVA_output_EE.pdf} \\      
+    \end{tabular}
+    \caption{
+      \label{fig:electron_mva_output}
+      The output of the electron MVA is shown comparing the distributions of electrons matched
+      with generator level electrons (blue) vs. jets that fake electrons.
+      The output in the barrel is shown in the left and endcap on the right.
     }
   \end{center}
 \end{figure}
@@ -555,7 +585,8 @@ and the MVA cut requirement for this analysis is shown in table~\ref{table:elect
   \begin{center}
     \caption{
       \label{table:electrons}
-      Requirements for electrons with \pt\ $>$ 10 \gev.
+      All the requirements for electrons with \pt\ $>$ 10 \gev are shown in the table below.
+      The electrons in the signal region are required to have \pt\ $>$ 20 \gev.
     }
     \begin{tabular}{l|cc}
       \hline
@@ -608,7 +639,7 @@ The full muon selection requirements are listed in Table~\ref{tab:muons}.
 
 \begin{table}[htb]
 \begin{center}
-\caption{\label{tab:muons} Summary of the muons selection requirements.}
+\caption{\label{tab:muons} A summary of the muons selection requirements is shown in this table for all muons used in this analysis.}
 \begin{tabular}{l|c}
 \hline
 \hline
@@ -657,7 +688,7 @@ The cuts on neutral isolation are made as a function of the photon \pt, and all 
   \begin{center}
     \caption{
       \label{tab:photons}
-      Summary of the photon isolation requirements.
+      A summary of the photon isolation requirements is shown in this table for all photons used in the template method prediction.
     }
     \begin{tabular}{l|l|l}
       \hline
@@ -691,7 +722,7 @@ The full photon requirement is listed in~\ref{tab:photonselection}.
   \begin{center}
     \caption{
       \label{tab:photonselection}
-      Summary of the photon selection requirements.
+      A summary of the photon selection requirements is shown in this table for all photons used in the template method prediction.
     }
     \begin{tabular}[width=0.4\textwidth]{l|l}
       \hline
@@ -721,18 +752,6 @@ The full photon requirement is listed in~\ref{tab:photonselection}.
 \label{ssec:MET}
 Type 1 corrected \MET\ is used in this analysis, and a full description can be found in chapter~\ref{ch:MET}.
 
-\subsection{\texorpdfstring{$\mathrm{H_{T}}$}{HT}}
-\label{ssec:HT}
-
-The signal model targeted by this analysis is expected to have large amounts of hadronic activity.
-A simple way to quantify the amount of hadronic activity in an event is to use the variable ``$H_{T}$''.
-\HT\ can be simply described as the scalar sum of the \pt\ of the jets in the event and is defined by the equation~\ref{eqn:HT}.
-
-\begin{equation}
-  \label{eqn:HT}
-  H_{T} = \sum{\mathrm{|\mathbf{p}_{T}(jet)|}}
-\end{equation}
-
 \subsection{Jets}
 \label{ssec:jetsel}
 
@@ -749,7 +768,7 @@ The full jet selection is listed in table~\ref{tab:jetsel}.
   \begin{center}
     \caption{
       \label{tab:jetlooseid}
-      Criteria for a jet to pass the loose ID requirement.
+      All the criteria for a jet to pass the loose ID requirement is shown in this table.
     }
     \begin{tabular}[width=0.4\textwidth]{l|l}
       \hline
@@ -772,7 +791,7 @@ The full jet selection is listed in table~\ref{tab:jetsel}.
   \begin{center}
     \caption{
       \label{tab:jetsel}
-      Summary of the jet selection requirements.
+      A summary of the jet selection requirements is shown in this table for all jets used in this analysis.
     }
     \begin{tabular}[width=0.4\textwidth]{l|l}
       \hline
@@ -844,7 +863,7 @@ and the cut value corresponding to the working point in this analysis is CSV$~>~
       \includegraphics[width=0.8\textwidth]{evtsel/figs/secondaryVTX.pdf}
     \caption{
       \label{fig:secondaryVTX}
-      A diagram showing a jet forming away from the primary vertex of a heavy flavor parton, for example a b or c quark.
+      A plot showing a jet forming away from the primary vertex of a heavy flavor parton, for example a b or c quark.
     }
   \end{center}
 \end{figure}
@@ -860,9 +879,21 @@ and the cut value corresponding to the working point in this analysis is CSV$~>~
   \end{center}
 \end{figure}
 
+\subsection{\texorpdfstring{$\mathrm{H_{T}}$}{HT}}
+\label{ssec:HT}
+
+The signal model targeted by this analysis is expected to have large amounts of hadronic activity.
+A simple way to quantify the amount of hadronic activity in an event is to use the variable ``$H_{T}$''.
+\HT\ can be simply described as the scalar sum of the \pt\ of the jets in the event and is defined by the equation~\ref{eqn:HT}.
+
+\begin{equation}
+  \label{eqn:HT}
+  H_{T} = \sum{\mathrm{|\mathbf{p}_{T}(jet)|}}
+\end{equation}
+
 \subsection{Signal Region Definitions}
 \label{sec:SRs}
-Multiple, orthogonal signal regions are based on cuts on the number of jets, \Ht, and \MET.
+Multiple, orthogonal signal regions are defined based on cuts on the number of jets, \Ht, and \MET.
 These regions are then divided up into two categories, with and without b-tags.
 The signal regions are classified into two separate categories called the ``A'' signal regions and ``B'' signal regions.
 The ``A'' regions are defined as having \Ht\ $>~400$~\gev\ and 2-3 jets,
@@ -870,7 +901,8 @@ whereas the ``B'' regions are defined as having at least 4 jets.
 This leads to 16 orthogonal signal regions.
 These regions are analyzed separately and then eventually combined to interpret results using the signal model described in~\ref{sec:signalmodel}.
 
-In addition to the inclusive signal regions listed, a special signal region is defined which is designed to probe the region where a 3.0~$\sigma$~excess was seen in run-I by ATLAS~\cite{ATLASZPAPER}.
+In addition to the inclusive signal regions listed,
+a special signal region is defined which is designed to probe the region where a 3.0~$\sigma$~excess was seen in run-I by ATLAS~\cite{ATLASZPAPER}.
 The requirements of this signal region in this analysis are as follows:
 
 \begin{itemize}
@@ -888,7 +920,9 @@ The preselection and the signal region selections are summarized in table~\ref{t
 %% selections table
 \begin{table}[htb]
 \begin{center}
-\caption{\label{tab:selections} List of all selections used to define the preselection and signal regions. }
+  \caption{\label{tab:selections}
+    A list of all selections used to define the preselection and signal regions is shown in the following table.
+  }
 \begin{tabular}{l|l}
 \hline
 \hline

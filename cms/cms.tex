@@ -41,7 +41,7 @@ The integrated luminosity ($\mathcal{L}$) is dependent on the brightness of the 
 The cross section for the event to happen ($\sigma$),
 which includes the branching fraction for a particle to decay to a specific final state,
 is a fundamental physics quantity.
-the units for cross section is ``barns'', and a barn is defined as $\mathrm{10^{-24}~cm^{2}}$
+the units for cross section is ``barns'', and a barn is defined as $\mathrm{10^{-24}~cm^{2}}$.
 Lastly, the efficiency for the event to be reconstructed ($\epsilon$) is completely determined by the detector.
 
 \begin{equation}
@@ -53,7 +53,7 @@ Protons can interact elastically (scattering) or inelastically, meaning they are
 The inelastic cross section for two protons to collide at a center of mass energy of 13 TeV is about 100 mb.
 This can be seen in figure~\ref{fig:xsecs} along with the cross section values for other interesting
 standard model processes.
-Other processes that are main backgrounds in the signal region of this analysis are Z and $\mathrm{t\bar{t}}$ production
+Other processes that are main backgrounds in the signal region of this analysis are Drell-Yan and $\mathrm{t\bar{t}}$ production
 which have a cross section at 13 TeV of roughly 4 nb, and 0.8 nb respectively.
 Taking into account all the branching fractions and detector efficiencies,
 these processes are reconstructed roughly once in a billion (trillion) times per inelastic proton collision for Z ($\mathrm{t\bar{t}}$) production.
@@ -94,51 +94,7 @@ but due to data quality issues the amount that was useable for physics analysis 
   \end{center}
 \end{figure}
 
-\section{The Compact Muon Solenoid}
-The CMS detector consists of a triggering system and many sub detectors,
-where measurements taken using these sub detectors are used as input to the triggering system.
-When protons are collided at the interaction point within CMS, approximately N collisions happen per second.
-The rate of collisions is so high that it is impossible to record all of the data all of the time.
-The way this is controlled is by the use of triggers, the level 1 (L1) trigger and the high level triggers (HLT).
-The triggers are designed such that the full event information is stored when all the requirements of a trigger are met.
-For some physics processes, trigger rates are much higher than can be afforded by the allowed budget of the CMS experiment.
-These processes can still be studied by prescaling the triggers meaning the full information is saved once per N events.
-As the prescale N is increased, the rate of the trigger is reduced.
-
-The CMS sub detector components are layered in such a way that one can take advantage of different particle interactions with different materials.
-The innermost layer is the tracker (decribed in section~\ref{subs:tracker}) which is used to measure the charge and momentum of charged particles.
-When a charged particle passes through the silicon tracker's layers, a small amount of energy is deposited.
-The deposit is large enough that a hit will be registered by the electronics, but small enough that the trajectory of the particle will be minimally affected.
-%% Neutral particles interact minimally with the tracker. ADD TO LATER SECTION
-
-The next layer is the Electromagnetic Calorimeter (decribed in section~\ref{subs:ECAL}) which is used to contain and measure the energy of electrons and photons.
-The Electromagnetic Calorimeter (ECAL) is made of lead tungstate ($\mathrm{PbWO_{4}}$) scintilating crystals.
-Electrons and photons that enter the ECAL lose energy due to showering, and the depth of the ECAL is sufficient enought to fully contain these particles.
-
-Outside of the ECAL is the Hadronic Calorimeter (decribed in section~\ref{subs:HCAL}) which is used to contain and measure the energy of hadronic particles.
-The Hadronic Calorimeter (HCAL) is designed in such a way that hadronic particles incident on the HCAL lose energy to showering.
-The goal is to fully contain these particles, although sometimes particles have sufficient energy that they are able to escape before losing sufficient energy to showering.
-This phenomenon is known as punch-through.
-
-Beyond the HCAL is the solenoid which produces a magnetic field of 3.8 T at the center of the detector.
-This magnetic field is used to bend the tracks of charged particles in order to measure the momentum following the equation~\ref{eqn:bfieldmomentum},
-where q is the particle charge, r is the radius of curvature, and B is the magnetic field magnitude.
-
-\begin{equation}
-  \label{eqn:bfieldmomentum}
-p = qrB
-\end{equation}
-
-The only particles that should pass beyond the HCAL are muons and neutrinos.
-Neutrinos are measured indirectly by assuming that the momentum in the direction transverse to the beam is zero at the beginning of each collision,
-and then calculating the sum of the total transverse momentum of all particles directly measuered in the detector.
-Since Neutrinos pass through the detector with no interactions, they contribute to missing transverse momentum, which will be referred to as (\MET) or MET.
-
-Lastly, the muon system (decribed in section~\ref{subs:MUON}) is used to measure the charge and momentum of muons.
-At the energies that muons are most commonly produced in collisions at the LHC, muons are minimum ionizing particles (MIPs)
-meaning they do not lose very much energy as they pass through the detector components.
-
-\subsection{Particle Interactions With Matter}
+\section{Particle Interactions With Matter}
 
 The total amount of energy lost by a particle when interacting with matter is mainly due to two effects,
 interactions that lead to the particle decaying or ``showering'',
@@ -219,12 +175,24 @@ This leads to an increased uncertainty of the initial parton's energy.
   \end{center}
 \end{table}
 
-Energy loss by ionization is mostly due to a particle having elastic collisions with electrons.
+Energy loss by ionization is mostly due to a particle having elastic collisions with electrons and can be characterized by the Bethe-Bloch formula shown in equation~\ref{eqn:bethebloch}.
+In this equation, K is a constant equalling 0.307 MeV $\mathrm{g^{-1}}cm^{2}$,
+$\mathrm{T_{max}}$ is the max energy transfer in a single collision,
+$z$ is the charge of the incident particle,
+Z is the charge number of the medium,
+A is is the atomic mass of the medium,
+$m_{e}$ is the mass of an electron,
+and I is the mean excitation energy of the medium.
 Muons have a low interaction cross section with the materials used to build CMS in the energy range that they are produced when coming from Z bosons produced at the LHC.
 They are referred to as minimum ionizing particles, and the stopping power of copper on muons can be seen in figure~\ref{fig:muonenergyloss}.
 Therefore, muons do not deposit very much energy in any of the calorimeters.
 Typical momenta of muons in this analysis are between 20-200 GeV.
 When muons have momenta greater than 200 GeV, radiative losses start to become the primary reason for energy loss.
+
+\begin{equation}
+  \label{eqn:bethebloch}
+-<\frac{dE}{dx}> = Kz^{2}\frac{Z}{A}\frac{1}{\beta^{2}}[\frac{1}{2}ln\frac{2m_{e}c^{2}\beta^{2}\gamma^{2}T_{max}}{I^{2}}-\beta^{2}-\frac{\delta(\beta\gamma)}{2}]
+\end{equation}
 
 \begin{figure}[!htb]
   \begin{center}
@@ -235,6 +203,49 @@ When muons have momenta greater than 200 GeV, radiative losses start to become t
     }
   \end{center}
 \end{figure}
+
+\section{The Compact Muon Solenoid}
+The CMS detector consists of a triggering system and many sub detectors,
+where measurements taken using these sub detectors are used as input to the triggering system.
+When protons are collided at the interaction point within CMS, approximately N collisions happen per second.
+The rate of collisions is so high that it is impossible to record all of the data all of the time.
+The way this is controlled is by the use of triggers, the level 1 (L1) trigger and the high level triggers (HLT).
+The triggers are designed such that the full event information is stored when all the requirements of a trigger are met.
+For some physics processes, trigger rates are much higher than can be afforded by the allowed budget of the CMS experiment.
+These processes can still be studied by prescaling the triggers meaning the full information is saved once per N events.
+As the prescale N is increased, the rate of the trigger is reduced.
+
+The CMS sub detector components are layered in such a way that one can take advantage of different particle interactions with different materials.
+The innermost layer is the tracker (decribed in section~\ref{subs:tracker}) which is used to measure the charge and momentum of charged particles.
+When a charged particle passes through the silicon tracker's layers, a small amount of energy is deposited.
+The deposit is large enough that a hit will be registered by the electronics, but small enough that the trajectory of the particle will be minimally affected.
+
+The next layer is the Electromagnetic Calorimeter (decribed in section~\ref{subs:ECAL}) which is used to contain and measure the energy of electrons and photons.
+The Electromagnetic Calorimeter (ECAL) is made of lead tungstate ($\mathrm{PbWO_{4}}$) scintilating crystals.
+Electrons and photons that enter the ECAL lose energy due to showering, and the depth of the ECAL is sufficient enought to fully contain these particles.
+
+Outside of the ECAL is the Hadronic Calorimeter (decribed in section~\ref{subs:HCAL}) which is used to contain and measure the energy of hadronic particles.
+The Hadronic Calorimeter (HCAL) is designed in such a way that hadronic particles incident on the HCAL lose energy to showering.
+The goal is to fully contain these particles, although sometimes particles have sufficient energy that they are able to escape before losing sufficient energy to showering.
+This phenomenon is known as punch-through.
+
+Beyond the HCAL is the solenoid which produces a magnetic field of 3.8 T at the center of the detector.
+This magnetic field is used to bend the tracks of charged particles in order to measure the momentum following the equation~\ref{eqn:bfieldmomentum},
+where q is the particle charge, r is the radius of curvature, and B is the magnetic field magnitude.
+
+\begin{equation}
+  \label{eqn:bfieldmomentum}
+p = qrB
+\end{equation}
+
+The only particles that should pass beyond the HCAL are muons and neutrinos.
+Neutrinos are measured indirectly by assuming that the momentum in the direction transverse to the beam is zero at the beginning of each collision,
+and then calculating the sum of the total transverse momentum of all particles directly measuered in the detector.
+Since Neutrinos pass through the detector with no interactions, they contribute to missing transverse momentum, which will be referred to as (\MET) or MET.
+
+Lastly, the muon system (decribed in section~\ref{subs:MUON}) is used to measure the charge and momentum of muons.
+At the energies that muons are most commonly produced in collisions at the LHC, muons are minimum ionizing particles (MIPs)
+meaning they do not lose very much energy as they pass through the detector components.
 
 
 \subsection{Silicon Tracker}

@@ -6,7 +6,7 @@
 % --------------------------------------------------------------------------- %
 The techniques used to estimate the SM backgrounds in the signal regions are descibed in detail in this chapter.
 The SM backgrounds fall into three categories, Z+jets, Flavor symmetric, and other SM backgrounds.
-The first two backgrounds are estimated using a data-driven method developed for this analysis,
+The first two backgrounds are estimated using data from a control region orthogonal to the signal region with techniques developed for this analysis,
 and the backgrounds falling into the third category are estimated using MC simulation.
 The MC samples used to estimate these backgrounds are studied in a control region which is orthogonal to the signal regions.
 
@@ -19,7 +19,7 @@ However, the resolution of the jet system is poor leading to events with \MET\ d
 The resolution of photons is similar to that of leptons,
 so the assumption is made that \MET\ in \gjets\ events is from the same sources as in \zjets\ events.
 This method also works in cases where there is real \MET\ in the event,
-for example when an event containing a b-jet that decays semi-leptonically,
+for example in events containing a b-jet that decays semi-leptonically,
 since the \MET\ source is not from the leptons or photon.
 The main difference between these samples is the fact that the Z-boson is massive whereas the photon is not.
 To account for this difference,
@@ -30,7 +30,7 @@ it only matters that the photon-like object is well-measured.
 The selection described in Sec.~\ref{ssec:phosel} is used to select the photon-like object.
 The \gjets\ events are selected with a suite of single photon triggers with \pt\ thresholds varying from 22--165 GeV.
 These triggers as well as their average prescales are listed in table~\ref{tab:photontriggers}.
-Each \gjets\ event is weighted by the trigger prescale, such that these events evenly sample the conditions over the full 2015 year period of data taking.
+Each \gjets\ event is weighted by the trigger prescale, in order to remove the bias in photon \pt\ before the reweighting is done.
 When an event passes a trigger, the trigger information is stored for all triggers that pass.
 Due to the way the prescale software is written,
 the triggers with larger prescales must be prescaled by an integer multiple of a lower prescale value,
@@ -40,7 +40,7 @@ otherwise the trigger information will not be saved.
   \begin{center}
     \caption{
       \label{tab:photontriggers}
-      List of single-$\gamma$ triggers used in this analysis and their prescales.
+      A list of single-$\gamma$ triggers used in this analysis and their prescales is shown in this table.
     }
     \begin{tabular}{l|l|l}
       \hline
@@ -613,7 +613,7 @@ Good agreement between data and MC is observed within the uncertainties.
   \begin{center}
     \caption{
       \label{tab:factorization}
-      The values for \rmue, \rt, and \rsfof\ are shown.
+      All the calculated values for \rmue, \rt, and \rsfof\ are shown in this table.
     }
     \begin{tabular}{l| c| c| c| c}
       & \multicolumn{2}{c}{Central} & \multicolumn{2}{c}{Forward} \\ 
