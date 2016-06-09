@@ -31,30 +31,32 @@ The Compact Muon Solenoid (CMS) experiment~\cite{jinst} is where the data was ta
 \end{figure}
 
 \section{Physics Processes and Cross Sections}
-The way physics processes are measured is by predicting the number of times a given event will occur when two protons collide.
+Particle physics processes are studied by measuring various quantities such as particle masses,
+lifetimes, and production rates both inclusively and differentially with respect to certain kinematic variables.
 When protons collide,
 it is not the protons themselves that interact but rather the constituents, or partons, that make up the proton.
 The formula describing this is given in equation~\ref{eqn:nevts}.
-In this formula,
-the number of events of a specific physics process is given by
-the integrated luminosity ($\mathcal{L}$) times
-the cross section for the event to happen ($\sigma$) times
-the efficiency for the event to be reconstructed ($\epsilon$).
-One other thing that needs to be accounted for is the branching fraction of a specific process to decay to a certain final state.
-For example, Z bosons decay to $\mathrm{e^{+}e^{-}}$ or $\mathrm{mu^{+}\mu^{-}}$ pairs roughly 6\% of the time.
+The number of events expected for a specific physics process is given by three quantities.
+The integrated luminosity ($\mathcal{L}$) is dependent on the brightness of the proton beam.
+The cross section for the event to happen ($\sigma$),
+which includes the branching fraction for a particle to decay to a specific final state,
+is a fundamental physics quantity.
+the units for cross section is ``barns'', and a barn is defined as $\mathrm{10^{-24}~cm^{2}}$
+Lastly, the efficiency for the event to be reconstructed ($\epsilon$) is completely determined by the detector.
 
 \begin{equation}
 \label{eqn:nevts}
   \mathrm{N_{events} = \mathcal{L} * \sigma * \epsilon}
 \end{equation}
 
-The cross section for two protons to collide at a center of mass energy of 13 TeV is about 100 mb.
+Protons can interact elastically (scattering) or inelastically, meaning they are destroyed in the process.
+The inelastic cross section for two protons to collide at a center of mass energy of 13 TeV is about 100 mb.
 This can be seen in figure~\ref{fig:xsecs} along with the cross section values for other interesting
 standard model processes.
 Other processes that are main backgrounds in the signal region of this analysis are Z and $\mathrm{t\bar{t}}$ production
-which have a cross section at 13 TeV of roughly 4 nb, and .8 nb respectively.
+which have a cross section at 13 TeV of roughly 4 nb, and 0.8 nb respectively.
 Taking into account all the branching fractions and detector efficiencies,
-these processes are reconstructed roughly once in a billion (trillion) times per proton collision for Z ($\mathrm{t\bar{t}}$) production.
+these processes are reconstructed roughly once in a billion (trillion) times per inelastic proton collision for Z ($\mathrm{t\bar{t}}$) production.
 
 \begin{figure}[!ht]
   \begin{center}
@@ -67,12 +69,12 @@ these processes are reconstructed roughly once in a billion (trillion) times per
   \end{center}
 \end{figure}
 
-The peak instantaneous luminosity per day during the 2015 data taking period is shown on the left in figure~\ref{fig:peaklumi},
+The peak instantaneous luminosity measured in a given day during the 2015 data taking period is shown on the left in figure~\ref{fig:peaklumi},
 and the highest value is 5.13 $\mathrm{\frac{Hz}{nb}}$.
 This means that approximately $\mathrm{10^{8}}$ protons collide per second.
 The rate of collisions is much larger than the capacity for the detector to write out data,
-and as discussed previously, most of these events are just soft collisions of two protons.
-In order to maximize the efficiency of collecting data that is useful to this analysis,
+and as discussed previously, most of these events are just soft inelastic collisions of two protons.
+In order to maximize the efficiency of collecting data that is useful to any physics analysis,
 a triggering system is put in place which only writes out the event information if certain conditions are met.
 The maximum rate of all the concurrent triggers in CMS is about 1 kHz.
 The total luminosity collected in 2015 was 3.81 $\mathrm{fb^{-1}}$ which can be seen on the right in figure~\ref{fig:peaklumi},
@@ -138,8 +140,10 @@ meaning they do not lose very much energy as they pass through the detector comp
 
 \subsection{Particle Interactions With Matter}
 
-The total amount of energy lost by a particle when interacting with matter can be characterized simply using two equations,
-~\ref{eqn:radiation_length} and~\ref{eqn:interaction_length}.
+The total amount of energy lost by a particle when interacting with matter is mainly due to two effects,
+interactions that lead to the particle decaying or ``showering'',
+and energy loss by ionization.
+Two equations are used to describe energy loss due to showering, equations~\ref{eqn:radiation_length} and~\ref{eqn:interaction_length}.
 Equation~\ref{eqn:radiation_length} represents the average energy left over as a particle travels a distance x through a material with radiation length ($X_{0}$).
 Equation~\ref{eqn:interaction_length} represents the average number of particles left when $N_{0}$ particles traverse a distance x through a material with interaction length ($\lambda_{int}$).
 The largest source of uncertainty when measuring a particles energy using the ECAL or HCAL is called the ``stochastic term''
@@ -214,6 +218,24 @@ This leads to an increased uncertainty of the initial parton's energy.
     \end{tabular}
   \end{center}
 \end{table}
+
+Energy loss by ionization is mostly due to a particle having elastic collisions with electrons.
+Muons have a low interaction cross section with the materials used to build CMS in the energy range that they are produced when coming from Z bosons produced at the LHC.
+They are referred to as minimum ionizing particles, and the stopping power of copper on muons can be seen in figure~\ref{fig:muonenergyloss}.
+Therefore, muons do not deposit very much energy in any of the calorimeters.
+Typical momenta of muons in this analysis are between 20-200 GeV.
+When muons have momenta greater than 200 GeV, radiative losses start to become the primary reason for energy loss.
+
+\begin{figure}[!htb]
+  \begin{center}
+    \includegraphics[width=0.8\textwidth]{cms/figs/muon_energy_loss.pdf}
+    \caption{
+      \label{fig:muonenergyloss}
+      Stopping power of copper as a function of muon momentum. Typical momenta of muons in this analysis are between 20-200 GeV.
+    }
+  \end{center}
+\end{figure}
+
 
 \subsection{Silicon Tracker}
 \label {subs:tracker}
@@ -412,22 +434,6 @@ The readout for the RPCs is very fast (1 ns) which makes it ideal to use for tri
   \end{center}
 \end{figure}
 
-Muons have a low interaction cross section with the materials used to build CMS in the energy range that they are produced when coming from Z bosons produced at the LHC.
-They are referred to as minimum ionizing particles, and the stopping power of copper on muons can be seen in figure~\ref{fig:muonenergyloss}.
-Therefore, muons do not deposit very much energy in any of the calorimeters.
-Typical momenta of muons in this analysis are between 20-200 GeV.
-When muons have momenta greater than 200 GeV, radiative losses start to become the primary reason for energy loss.
-
-\begin{figure}[!htb]
-  \begin{center}
-    \includegraphics[width=0.8\textwidth]{cms/figs/muon_energy_loss.pdf}
-    \caption{
-      \label{fig:muonenergyloss}
-      Stopping power of copper as a function of muon momentum. Typical momenta of muons in this analysis are between 20-200 GeV.
-    }
-  \end{center}
-\end{figure}
-
 \section{Physics objects}
 The data taken by the CMS detector has to be processed in such a way that all the physics processes that happen in a single collision can be reconstructed.
 Each reconstructed collision is called an event.
@@ -484,6 +490,15 @@ ITPU occurs when protons other than those in the primary interaction interact in
 and the particles produced are reconstructed.
 OOTPU occurs mainly due to the fact that protons are collided with a frequency of 25ns,
 and the timing resolution of some detector components is not fast enough to resolve which bunch crossing certain reconstructed particles came from.
+The number of expected pileup events can be determined using equation~\ref{eqn:pileup} where$\mathcal{L}_{inst.}$ is the instantaneous luminosity,
+$\sigma(p-p)_{inelastic}$ is the total inelastic scattering cross section for protons,
+and $f_{collision}$ is the collision frequency.
+For 2015, this value is 12.75.
+
+\begin{equation}
+\label{eqn:pileup}
+  \mathrm{N_{pileup} = \mathcal{L}_{inst.}*\sigma(p-p)_{inelastic}*f_{collision}}
+\end{equation}
 
 The majority of energy from pileup comes from proton-proton interactions other than the primary interaction.
 These ``soft'' interactions produce predominantly hadronic final states,
