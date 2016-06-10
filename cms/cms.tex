@@ -99,16 +99,16 @@ but due to data quality issues the amount that was useable for physics analysis 
 The total amount of energy lost by a particle when interacting with matter is mainly due to two effects,
 interactions that lead to the particle decaying or ``showering'',
 and energy loss by ionization.
-Two equations are used to describe energy loss due to showering, equations~\ref{eqn:radiation_length} and~\ref{eqn:interaction_length}.
+Two equations are used to describe energy loss due to showering,
+equations~\ref{eqn:radiation_length} describes particle interactions via QED processes,
+and~\ref{eqn:interaction_length} describes particle interactions via QCD processes.
 Equation~\ref{eqn:radiation_length} represents the average energy left over as a particle travels a distance x through a material with radiation length ($X_{0}$).
 Equation~\ref{eqn:interaction_length} represents the average number of particles left when $N_{0}$ particles traverse a distance x through a material with interaction length ($\lambda_{int}$).
-The largest source of uncertainty when measuring a particles energy using the ECAL or HCAL is called the ``stochastic term''
+The largest source of uncertainty when measuring a particle's energy using the ECAL or HCAL is called the ``stochastic term''
 and is mostly due to intrinsic statistical shower fluctuations and sampling fluctuations.
 The energy of a parton is distributed evenly among all of its decay products on average,
 so the initial particles energy is proportional to the number of decay products $E_{0} \propto N_{0}$.
-The overall uncertainty due to the stochastic term becomes proportional to $\sqrt{N_{0}}$ in the limit where N is large,
-therefore these two equations can be used to calculate the average energy lost due to
-electromagnetic interactions (radiation length) and strong interactions (interaction length).
+The overall uncertainty due to the stochastic term becomes proportional to $\sqrt{N_{0}}$ in the limit where N is large.
 
 \begin{equation}
   \label{eqn:radiation_length}
@@ -123,7 +123,7 @@ electromagnetic interactions (radiation length) and strong interactions (interac
 Typical values for radiation and interaction lengths are shown in table~\ref{tab:rad_int_lengths}
 for the different materials making up the tracker (silicon), ECAL (PbWO4) and HCAL (Copper).
 In table~\ref{tab:materialbudget}, the depth of each of these materials corresponding to $|\eta| = 0$ is shown as a function of $X_{0}$ and $\lambda_{int}$.
-The values in tables~\ref{tab:materialbudget}~and~\ref{tab:rad_int_lengths} are taken from a talk given at CERN in May 2016~\cite{calorimetry}.
+The values in tables~\ref{tab:rad_int_lengths}~and~\ref{tab:materialbudget} are taken from a talk given at CERN in May 2016~\cite{calorimetry}.
 Based on these values, an electron or photon loses at least \textasciitilde{}40\%
 of its energy on average when traveling through the tracker before it is incident on the ECAL.
 This means either has a relatively high chance of interacting, where a photon might pair-produce and an electron might brem a photon.
@@ -339,8 +339,7 @@ Leading order diagrams of these processes are shown in figures~\ref{fig:pair_pro
 \begin{center}
 \includegraphics[width=0.8\textwidth]{cms/figs/photon_brem.png}
 \caption{
-  A feynman diagram is shown of a process where an electron scatters off of an incoming photon,
-  and then radiates a photon through bremsstrahlung.
+  A feynman diagram is shown of a process where an electron radiates a photon through bremsstrahlung.
 \label{fig:photon_brem}
 }
 \end{center}
@@ -457,14 +456,14 @@ The reconstruction of these objects is discussed in detail in the following sect
 \label{subs:particleflow}
 In order to classify objects, an algorithm named particle flow (PF) is used~\cite{pfReco}. 
 The main goal when using the PF algorithm is to account for all energy deposits measured in the detector in a consistent fashion.
-The way this is done is by clustering energy deposits measured across all subdetectors into separate PF candidates, and classifying these candidates.
+The way this is done is by clustering energy deposits measured across all subdetectors into separate PF candidates.
 Once an object is classified, the clustering is done again with all the energy associated with the classified object removed.
 This process is repeated until all measured energy deposits are accounted for.
 For example, a charged hadron would be reconstructed by first identifying a track in the tracker.
-Then a check is done to see if this track is consistent with an identified muon in the muon chambers.
+Then a check is done to see if this track is consistent with an identified electron, or muon.
 If not, all the energy that is associated with this track in the ECAL and HCAL is removed from the event,
 and the track measurement is used to describe the particle.
-This is done because the precision in the tracker is much better than in the calorimeters.
+This is done because the precision of measuring charged hadrons is much better in the tracker than in the calorimeters.
 This is done iteratively for all particles in the event until there are no tracks left,
 then all that remain are the neutral energy deposits.
 The use of particle flow leads to greatly improved measurements of jets since more of the jet energy is measured using the tracker.
@@ -486,9 +485,9 @@ These cuts are described in detail in the following section for each object we a
 \label{ssec:vtxandpileup}
 The LHC collides protons in large bunches to maximize the probability of a hard collision.
 Multiple pairs of protons interact at each bunch crossing,
-and the number of interactions is stochastic but depends on the beam density.
+and the number of interactions is stochastic but depends on the beam intensity.
 Each proton proton collision can produce particles that get reconstructed,
-and when these particles are reconstructed they are associated to a specific proton proton collision using track information.
+and when these particles are reconstructed they are associated to a specific proton proton collision using charged particle information.
 It is important to identify which proton-pair interaction is responsible for triggering the event being studied.
 Every particle track is associated with a unique vertex,
 and the primary vertex is chosen by finding the vertex with the largest sum of $\mathrm{(p_{T})^{2}}$ of tracks associated with that vertex.
@@ -511,7 +510,7 @@ For 2015, this value is 12.75.
   \mathrm{N_{pileup} = \mathcal{L}_{inst.}*\sigma(p-p)_{inelastic}*f_{collision}}
 \end{equation}
 
-The majority of energy from pileup comes from proton-proton interactions other than the primary interaction.
+All of the energy from pileup comes from proton-proton interactions other than the primary interaction.
 These ``soft'' interactions produce predominantly hadronic final states,
 and the majority of these interactions are due to gluons scattering off of quarks or other gluons.
 These final states inherently do not have \MET\ due to particles escaping detection due to them being hadronic,
@@ -524,8 +523,8 @@ A calibration is applied to account for pileup according to the method described
 \label{ssec:isolation_summary}
 Isolation is a concept that is very important when identifying leptons, and photons.
 Isolation can be simply described as the total energy in the detector near an object of interest.
-Leptons and photons from the primary interaction are not produced together with colored objects,
-and are deemed prompt.
+When leptons or photons from the primary interaction are not produced together with colored objects,
+they are deemed prompt.
 Non-prompt leptons, such as those from a b-quark decaying semi-leptonically,
 and non-prompt photons such as those from $\pi ^{0}$ decay,
 are always produced in conjunction with a hadronic shower.
