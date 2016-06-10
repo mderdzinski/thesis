@@ -129,7 +129,11 @@ of its energy on average when traveling through the tracker before it is inciden
 This means either has a relatively high chance of interacting, where a photon might pair-produce and an electron might brem a photon.
 These effects are taken into consideration when reconstructing photons and electrons and better-described in chapter~\ref{ch:evtsel}.
 
-Another effect that can be seen is in the HCAL, there are 16 layers of absorber material.
+Another effect that can be seen is in the HCAL, which is a ``sampling'' calorimeter.
+A sampling calorimeter is designed to have layers of material with large
+$\lambda_{int}$~interpsered with layers of material that are used to measure particles.
+This is described in more detail in subsection~\ref{subs:HCAL}.
+In the HCAL in CMS, there are 16 layers of absorber material.
 This means that each layer has more than 4.5 radiation lengths.
 When a hadronic shower evolves, approximately 30\% of the shower is in the form of EM energy.
 4.5$\mathrm{X_{0}}$ is essentially deep enough to completely contain the EM component of the hadronic shower before it can be measured.
@@ -360,19 +364,26 @@ This leads to poor reconstruction of electrons and photons in this region.
 
 \subsection{Hadronic Calorimeter}
 \label {subs:HCAL}
-The Hadronic Calorimeter (HCAL) is used to measure energies of hadronic particles, such as pions, gluons, protons, kaons and neutrons~\cite{hcalperformance}.
+The Hadronic Calorimeter (HCAL) is used to measure energies of hadronic particles, such as charged pions, gluons, protons, kaons and neutrons~\cite{hcalperformance}.
 It is a sampling calorimeter meaning it has many layers of absorber material (brass) and scintilator material (plastic).
 As hadronic particles pass through the HCAL, they interacts with the absorber layers by showering, meaning they decay to multiple lower energy particles.
 As these particles shower and the constituents pass through the scintilator, photons are emitted by the scintilating material and then measured by Hybrid-Photo Diodes (HPDs).
 
-Approximately a third of the particles produced in a hadronic shower are $\pi_{0}$s, which immediately decay to two photons most of the time.
-These particles are mostly stopped in the absorbing layer making it hard to accurately determine the energy lost due to this effect.
+When a hadronic particle is incident on the HCAL, a hadronic shower is induced.
+Approximately two third of the particles produced in a hadronic shower are charged pions,
+and the rest are $\pi_{0}$s which immediately decay to two photons most of the time.
+the charged pions in the shower produce scintillating light in the scintilator layer which is measured.
+Due to the very large radiation length depth of~\textasciitilde{}5$X_{0}$~per layer of absorber,
+the photons produced from the $\pi_{0}$ decays do not leave the absorbing material and as a result are not measured.
+The total scintilation light is measured, and the incident particle's energy is inferred from this measurement.
+The inferred energy is then subject to fluctuations depending on the relative number of $\pi_{0}$s produced in the shower which are lost in the absorbing layer.
+
 Some detectors however are built to be able to accurately measure the energy lost to electromagnetic effects in the shower, and these are known as ``compensating'' calorimeters.
 When a particle is stopped by the HCAL, the energy deposited in all the layers is integrated over a full segment of the HCAL, and used to determine an incident particles energy.
 The HCAL at CMS is not able to compensate for these effects, so it must be calibrated offline using particles with a well-known initial energy.
 
-The HCAL geometry is such that it is fully contained within the solenoid.
-It is divided into towers, each of which lies behind an integer number of ECAL crystals.
+%% The HCAL geometry is such that it is fully contained within the solenoid.
+The HCAL is divided into towers, each of which lies behind an integer number of ECAL crystals.
 This helps in calibrating the energies of incident particles during reconstruction.
 The number of interaction lengths ($\lambda_{int}$) in the HCAL starts at about $\lambda_{int} = 7$ at $\eta = 0$, and increases with eta to the end of the barrel up to $\lambda_{int} = 11$.
 There is then a slight decrease in the endcap of $\lambda_{int} = 10$.
@@ -380,6 +391,9 @@ The interaction length is used to characterize the longitudinal and transverse p
 The expected number of secondary particles produced ($N(x)$)
 by a number of particles traveling through the HCAL ($N_{0}$)
 is written in equation~\ref{eqn:interaction_length} as a function of $\lambda_{int}$ and the distance traveled (x).
+
+Quarks and gluons produced in proton collisions hadronize to form jets,
+and the momentum of these jets can be measured using measurements from both the HCAL and ECAL.
 
 \subsection{Muon System}
 \label {subs:MUON}
