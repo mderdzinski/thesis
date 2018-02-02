@@ -1,0 +1,69 @@
+% --------------------------------------------------------------------------- %
+% --------------------------------------------------------------------------- %
+\section{The Compact Muon Solenoid}
+\label{sec:cms}
+The Compact Muon Solenoid (CMS) is a general-purpose physics detector at the LHC, situated at one of the five collision points along the main ring. The detector encapsulates the collision point with layers of various subsystems designed to interact with the outgoing particles of the proton-proton collisions, and measure the position and energies of the collision products. Because of the extremely high rate of interactions at the collision point \fm{add specifics about number of collisions per second and ave collisions per crossing?}, saving data from every bunch crossing would be unsustainable, and so the detector is also equipped with a system of hardware and software implemented "triggers" which identify events of interest for physics analyses to be saved to disk for further analysis.
+
+The physical construction of the detector is motivated by the different interaction of particles with different types of materials, and consists of several subsystems layered as coaxial cylinders around the interaction point. Each subsystem consists of (sometimes different) components covering the fiducial area coaxial with the beamline (the "barrel") and also the ends of the cylinder (the "endcaps"). The innermost subsystem of CMS is the silicon tracker, which consists of many layered silicon pixels designed to pinpoint the locations of charged particles while minimally interacting with the particle's trajectory. The layer beyond the tracker is the electromagnetic calorimeter (ECAL), a grid of lead-tungstate crystals which scintillate to measure the energies of electromagnetic particles. Beyond the ECAL is the hadronic calorimeter (HCAL), a sampling calorimeter designed to measure the energies of hadronic particles (which deposit minimal energy in the ECAL). The final, outer layer is the CMS muon detector, where the muon detection stations are interweaved with the magnetic return yoke that generates the toroidal 3.8T magnetic field inside the detector volume. The total dimensions of the detector are \fm{cms actual size}.
+
+\subsection{Silicon Vertex Tracker} 
+\label{subsec:tracker}
+The silicon vertex tracker (SVT) is a series of silicon pixels and strips designed to measure the position of charged particles in the detector, while disturbing their path as little as possible. The position of particles in the interior is of particular importance in event reconstruction; charged particles traveling in a magnetic field will deflect in a curved path with radius proportional to the particles momentum as described in equation \ref{eq:momentum}, and so the track reconstruct can be used to not only determine a particle's momentum with high precision, but also the sign of its charge based on the direction of curvature.
+\begin{equation}
+	\label{eq:momentum}
+	p = qrB
+\end{equation}
+As the innermost detector subsystem, the SVT experiences the highest flux of particle radiation. In the barrel region, the tracker layers are oriented in 3 coaxial layers. Closest to the interaction point where particle flux is the greatest, very precise silicon pixels are used, measuring $100\times150 \mu \text{m}^2$, whereas in other layers the flux is low enough to use microstrip detectors, measuring $10 \text{cm}\times80\mu \text{m}$ and  $25 \text{cm}\times180\mu \text{m}$ in the middle and outer layers respectively. In the endcaps, the pixel strips are arranged in a turbine-like pattern in two separate layers on each end. This configuration allows for the precise measurement of particle position for track reconstruction, while minimizing the amount of material which might deflect particles from their original trajectories.The geometry of the SVT layout can be seen in figure \ref{fig:pixelLayout}.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.45\textwidth]{figs/placeholder}
+	\caption{Geometry of silicon tracker layers in CMS.}
+	\label{fig:pixelLayout}
+\end{figure}
+
+\subsection{Electromagnetic Calorimeter}
+\label{subsec:ecal}
+The ECAL is used to measure the energies of particles which interact electromagnetically, both absorbing the incident particles and scintillating to provide an energy-readout to photodiodes attached to each crystal. Constructed of lead-tungstate ($\text{PbWO}_4$), electromagnetically interacting particles (such as electrons or photons) will interact with the crystal material, losing energy through a cascade of electromagnetic interactions including election-positron pair production and bremsstrahlung, as pictured in figure \ref{fig:ecalFeynman}. This phenomenon --- also referred to as "showering" --- causes the crystals to scintillate proportional to the energy deposited in the crystal, which is then measured by various photodiodes to extract an accurate measurement of the particle energy, now fully absorbed by the calorimeter.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.4\textwidth]{figs/placeholder}
+	\includegraphics[width=0.4\textwidth]{figs/placeholder}
+	\caption{Feynman diagrams depicting the main processes by which particles shower in the ECAL. The left diagram depicts electron-positron pair production from a photon, and the right diagram depicts bremsstrahlung, where an electron radiates energy away through a photon.}
+	\label{fig:ecalFeynman}
+\end{figure}
+
+The fundamental principle of the calorimeter measurement relies on the energy loss of particles interacting with matter. In general, the energy of a particle traveling a distance $X$ through some material is given by equation \ref{eq:energyDist}, where $E_0$ is the initial energy of the particle and $X_0$ is the material-dependent radiation length. The design of the calorimeter is motivated by the choice of a scintillating, radiation-hard material with short $X_0$ such that incident electromagnetic particles deposit all their energy and are stopped by the ECAL. The resolution of the energy measurement is also dependent on the "stochastic term", which parametrizes the uncertainty due to statistical and measurement fluctuations in the calorimeter, and is given by equation \ref{eq:ecalSigma}, where $S$ is the stochastic term, $N$ the noise, and $C$ the constant term. The energy resolution can be measured by a test beam of known energy, as shown in figure \ref{fig:ecalSigma}.
+\begin{equation}
+	\label{eq:energyDist}
+	E(x)=E_0 e^{\frac{-x}{X_0}}
+\end{equation}
+\begin{equation}
+	\label{eq:ecalSigma}
+	\left(\frac{\sigma}{E}\right)^2=\left(\frac{S}{\sqrt{E}}\right)^2+\left(\frac{N}{E}\right)^2+C^2
+\end{equation}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.45\textwidth]{figs/placeholder}
+	\caption{Energy resolution $\sigma/E$ of the ECAL as a function of electron energy measured using a test beam. The energy was measured in a $3\times3$ crystal array with electrons incident on the center crystal, with electrons falling in a $4\times4\text{mm}^2$ region (lower points) and $20\times20\text{mm}^2$ region (upper points).}
+	\label{fig:ecalSigma}
+\end{figure}
+
+The construction of the calorimeter is also divided into two sections by the cylindrical geometry, the ECAL barrel section (EB) and ECAL endcap sections (EE). The EB consists of 61,200 crystals arranged into 36 "supermodules", each spanning half the barrel length, and uses silicon avalanche photodiodes (APDs) as photodetectors. The individual crystals are tilted slightly (3\textdegree) in an $\eta-\phi$ grid with respect to the nominal interaction point, with a front-facing area of $22\times22\text{mm}^2$ and a length of 230mm. The EE instead uses vacuum phototriodes (VPTs) as photodetectors, and consists of approximately 15,000 crystals clustered in $5\times5$ units, also offset from the interaction point but arranged in an $x-y$ grid, with a cross section of $28.6\times28.6\text{mm}^2$ and a length of 220mm. The EE is also equipped with a "preshower" device placed in front of the crystal calorimeter, consisting of two strips of silicon strip detectors to enhance $\pi^0$ rejection. The layout of the ECAL can be seen in figure \ref{fig:ecalGeometry}. Because of the depth of the ECAL crystals (which are $\tilde 25X_0$, and the confining properties of the crystals (which have a Moliere radius of 2.2cm, the radius of a cylinder containing 90\% of a shower's energy on average), electrons and photons are typically well reconstructed in CMS, except in the transition region where EB and EE meet.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.45\textwidth]{figs/placeholder}
+	\caption{A cross section of the ECAL geometry, with the dashed lines marking the pseudorapidity values $\eta$ covered by the various subsystems.}
+	\label{fig:ecalGeometry}
+\end{figure}
+
+\subsection{Hadronic Calorimeter}
+\label{subsec:hcal}
+The CMS HCAL is a sampling calorimeter. Designed with alternating layers of scintillating and absorbing material, incident hadronic particles (such as charged pions, kaons, protons, etc.) interact with the absorber material and consequently shower into electromagnetic particles, whose energy can be read out by photodiodes connected to the scintillating material. Brass is used as the absorber material for both its interaction length and non-magnetic properties, and plastic scintillator tiles connected to embedded wavelength-shifting fibers carry the light to a readout system.
+
+
+
+\subsection{Muon Detectors}
+\label{subsec:muondetector}
+
+% --------------------------------------------------------------------------- %
+% --------------------------------------------------------------------------- %
