@@ -32,15 +32,17 @@ The ECAL is used to measure the energies of particles which interact electromagn
 	\label{fig:ecalFeynman}
 \end{figure}
 
-The fundamental principle of the calorimeter measurement relies on the energy loss of particles interacting with matter. In general, the energy of a particle traveling a distance $X$ through some material is given by equation \ref{eq:energyDist}, where $E_0$ is the initial energy of the particle and $X_0$ is the material-dependent radiation length. The design of the calorimeter is motivated by the choice of a scintillating, radiation-hard material with short $X_0$ such that incident electromagnetic particles deposit all their energy and are stopped by the ECAL. The resolution of the energy measurement is also dependent on the "stochastic term", which parametrizes the uncertainty due to statistical and measurement fluctuations in the calorimeter, and is given by equation \ref{eq:ecalSigma}, where $S$ is the stochastic term, $N$ the noise, and $C$ the constant term. The energy resolution can be measured by a test beam of known energy, as shown in figure \ref{fig:ecalSigma}.
+The fundamental principle of the calorimeter measurement relies on the energy loss of particles interacting with matter. In general, the energy of a particle traveling a distance $X$ through some material is given by equation \ref{eq:energyDist}, where $E_0$ is the initial energy of the particle and $X_0$ is the material-dependent radiation length. 
 \begin{equation}
 	\label{eq:energyDist}
 	E(x)=E_0 e^{\frac{-x}{X_0}}
 \end{equation}
+The design of the calorimeter is motivated by the choice of a scintillating, radiation-hard material with short $X_0$ such that incident electromagnetic particles deposit all their energy and are stopped by the ECAL. The resolution of the energy measurement is also dependent on the "stochastic term", which parametrizes the uncertainty due to statistical and measurement fluctuations in the calorimeter, and is given by equation \ref{eq:ecalSigma}, where $S$ is the stochastic term, $N$ the noise, and $C$ the constant term. 
 \begin{equation}
 	\label{eq:ecalSigma}
 	\left(\frac{\sigma}{E}\right)^2=\left(\frac{S}{\sqrt{E}}\right)^2+\left(\frac{N}{E}\right)^2+C^2
 \end{equation}
+The energy resolution can be measured by a test beam of known energy, as shown in figure \ref{fig:ecalSigma}.
 \begin{figure}
 	\centering
 	\includegraphics[width=0.45\textwidth]{figs/placeholder}

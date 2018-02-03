@@ -3,5 +3,30 @@
 \section{CMS Physics Objects}
 \label{sec:physicsobjects}
 
+When physics events are fully reconstructed, detector data is used to identify {\it physics objects} representing real particles and event quantities for use in a physics analysis. The physics objects in an event --- such as leptons, jets, or missing energy --- and their properties are used to select events of interest for physics analyses targeting different final states. The properties of physics objects and global event data are also be used to make analysis level decisions of the quality of different objects. Here we describe some of the physics objects referred to in this analysis and how they are reconstructed, as well as some global event properties and quality variables used as discriminants for physics objects and events.
+
+\subsection{Particle Flow}
+\label{subsec:pf}
+Most of the physics objects described in the following sections are reconstructed and identified in CMS using the particle flow (PF) algorithm. The PF algorithm is a holistic, iterative algorithm which uses all the available data in the detector to classify "PF candidate" particles in an event. PF works iteratively by identifying tracks and calorimeter deposits into a PF candidate, removing all energy and hits associated with the candidate and repeating the algorithm until all the detector information has been associated to PF objects. First any muon tracks in the inner tracker associated with muon system hits are associated and removed. remaining tracks are extrapolated into the calorimeters, and any energy deposits on the path are associated with the track and removed from further consideration. Once all the tracks have been associated, the remaining energy clusters can be identified with photons and neutral hadrons (depending on their presence in the ECAL or HCAL, respectively). An example of the different tracks and energy deposits associated with various particles can be seen in figure \ref{fig:pfCandidates}.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.45\textwidth]{figs/placeholder}
+	\caption{A graphic depiction of different particles leaving various signatures in the different CMS detector subsystems. Particles may be detected via tracks hits, energy deposits, or a combination of both.}
+	\label{fig:pfCandidates}
+\end{figure}
+
+\subsection{Isolation}
+\label{subsec:iso}
+
+\subsection{Leptons and Photons}
+\label{subsec:lepgamme}
+
+\subsection{Jets}
+\label{subsec:jets}
+
+\subsection{Missing Energy}
+\label{subsec:met}
+
+
 % --------------------------------------------------------------------------- %
 % --------------------------------------------------------------------------- %

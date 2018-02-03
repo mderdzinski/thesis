@@ -4,15 +4,19 @@
 \label{ch:analysis}
 
 \section{Analysis Strategy}
+\label{sec:strategy}
 Searches for new physics targeting all-hadronic final states present unique challenges and opportunities at the LHC. While such searches typically implement stringent vetoes on lepton candidates and thus bypass the need to correctly identify "real" leptons from similar signals in the detector, the high rate of QCD processes in proton-proton collisions generates large amounts of SM events (with all-hadronic final states). Designing a search targeting signatures with all-hadronic final states thus requires a mechanism to distinguish and suppress the selection of SM-QCD events from new physics signatures, as well as robust background estimation methods to predict the yield of standard model events which may generate a momentum imbalance in the detector reconstruction of the event (such as \znunu).
 
 The \mttwo analysis harnesses the discriminating power of the \mttwo stransverse mass variable to distinguish standard model events from possible signatures including new physics. By first requiring a nominal amount of missing energy in the event, SM-QCD processes are greatly suppressed (since missing energy is not due to physics processes but detector reconstruction or mis-measurement of the underlying event). Additional requirements on the topology of the event (implemented using \mttwo) further suppress QCD-like processes and favor events with real missing energy anti-aligned with the all-hadronic energy deposits in the detector. After estimating the minimal QCD contribution remaining by extrapolating from a region orthogonal to the signal selection, the only remaining backgrounds are leptonic events where the lepton was failed to be constructed or identified (or "lost-lepton" events), and SM events where energy escapes the detector in the form of neutrinos from a decaying Z boson recoiling against jets (or "invisible Z" events).
 
+\section{The \mttwo Variable}
+\label{sec:mt2}
+
 \section{Event Selection Criteria}
+\label{sec:eventSelection}
 The general strategy for the event selection is to first apply baseline cuts on motivated by hardware and software-level triggers \fm{call back to trigger section in previous chapter? or explain triggers} and reducing the QCD multi-jet background to negligible levels. Events are further categorized using the scalar sum of the transverse momenta \pt of all selected jets (\HT), the total number of jets in the event (\nj), the total number of b-tagged jets in the event (\nb), and \mttwo. Events are reconstructed with the CMS particle-flow (PF) algorithm \fm{cite PF}, which is designed to holistically use all event information from each detector element to reconstruct and identify each particle in the event (hereafter referred to as "PF candidates"). A summary of the event preselections can be found in \fm{cite table with preselections}.
 
 \section{Search Regions}
-
 
 \section{Control Regions}
 
