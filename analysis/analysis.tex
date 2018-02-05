@@ -5,21 +5,138 @@
 
 \section{Analysis Strategy}
 \label{sec:strategy}
-Searches for new physics targeting all-hadronic final states present unique challenges and opportunities at the LHC. While such searches typically implement stringent vetoes on lepton candidates and thus bypass the need to correctly identify "real" leptons from similar signals in the detector, the high rate of QCD processes in proton-proton collisions generates large amounts of SM events (with all-hadronic final states). Designing a search targeting signatures with all-hadronic final states thus requires a mechanism to distinguish and suppress the selection of SM-QCD events from new physics signatures, as well as robust background estimation methods to predict the yield of standard model events which may generate a momentum imbalance in the detector reconstruction of the event (such as \znunu).
+Searches for new physics targeting all-hadronic final states present unique challenges and opportunities at the LHC. While such searches typically implement stringent vetoes on lepton candidates and thus bypass the need to correctly identify "real" leptons, the high rate of QCD processes in proton-proton collisions generates large amounts of SM events with all-hadronic final states. Designing a search targeting signatures with all-hadronic final states requires a mechanism to distinguish and suppress the selection of multi-jet QCD events from new physics signatures, as well as robust background estimation methods to predict the yield of standard model events which may generate missing energy (such as \znunu).
 
-The \mttwo analysis harnesses the discriminating power of the \mttwo stransverse mass variable to distinguish standard model events from possible signatures including new physics. By first requiring a nominal amount of missing energy in the event, SM-QCD processes are greatly suppressed (since missing energy is not due to physics processes but detector reconstruction or mis-measurement of the underlying event). Additional requirements on the topology of the event (implemented using \mttwo) further suppress QCD-like processes and favor events with real missing energy anti-aligned with the all-hadronic energy deposits in the detector. After estimating the minimal QCD contribution remaining by extrapolating from a region orthogonal to the signal selection, the only remaining backgrounds are leptonic events where the lepton was failed to be constructed or identified (or "lost-lepton" events), and SM events where energy escapes the detector in the form of neutrinos from a decaying Z boson recoiling against jets (or "invisible Z" events).
+The \mttwo analysis harnesses the discriminating power of the \mttwo variable to distinguish standard model events from possible signatures including new physics. By first requiring a significant amount of missing energy in the event, multi-jet QCD processes are greatly suppressed. Additional requirements on the topology of the event implemented using \mttwo further suppress QCD-like processes and favor events with real missing energy anti-aligned with the hadronic energy deposits in the detector. After estimating the minimal QCD contribution remaining by extrapolating from a region orthogonal to the signal selection, the only remaining backgrounds are leptonic events where the lepton failed reconstruction or identification (or "lost-lepton" events), and SM events creating real \MET, in the form of neutrinos from a decaying Z boson recoiling against jets (or "invisible Z" events).
 
 \section{The \mttwo Variable}
 \label{sec:mt2}
+\mttwo is a particularly useful kinematic mass variable for final states where two particles decay (possibly in a chain) to a final state containing an invisible particle X of mass $m_X$. The typical transverse mass $M_T$, is defined in equation \ref{eq:mt} for particles $i=1,2$, where the mass $m^{\text{vis}(i)}$, transverse momentum $\vec{p}_t^{\text{vis}(i)}$, and transverse energy $E_T^{\text{vis}(i)}$ characterize the visible kinematics of the decay chain, and $\vec{p}_t^{\text{X}(i)}$ and $E_T^{\text{X}(i)}$ characterize the unknown kinematics of the invisible particle X.
+\begin{equation}
+	(M_T^{(i)})^2 = (m^{\text{vis}(i)})^2 + m_{\text{X}}^2+2\left(E_T^{\text{vis}(i)} \cdot E_T^{\text{X}(i)} - \vec{p}_t^{\text{vis}(i)} \cdot \vec{p}_t^{\text{X}(i)} \right)
+	\label{eq:mt}
+\end{equation}
+In principle, if the correct values of $m_{\text{X}}$ and $\vec{p}_t^{\text{X}(i)}$ were accessible, then the transverse mass would have a kinematic endpoint and not exceed the mass of the parent particles. However, the individual momenta of the invisible particles in the two decay chains cannot be measured; the only quantity experimentally accessible is the total missing momentum $\vec{p}_T^{\text{miss}}$. With this in mind, the generalized transverse mass variable \mttwo is defined in equation \ref{eq:mt2}, where the unknown mass $m_{\text{X}}$ is a free parameter and a minimization is performed over the sum of invisible momenta $\vec{p}_t^{\text{X}(i)}$ that satisfy the measured $\vec{p}_T^{\text{miss}}$ constraint.
+\begin{equation}
+	M_{\text{T2}}(m_{\text{X}}) = \min_{\vec{p}_t^{\text{X}(1)}+\vec{p}_t^{\text{X}(2)}=\vec{p}_T^{\text{miss}}} \left[\max \left( M_T^{(1)},M_T^{(2)} \right) \right]
+	\label{eq:mt2}
+\end{equation}
+
+Because this analysis selects final states with (often several) jets in the final state, the calculation of \mttwo first requires grouping the hadronic jet activity into two large {\it pseudojets} to act as the visible components in the \mttwo equation. The jet activity in each event is divided into two hemispheres, and the jets in each hemisphere are summed together to created the pseudojets. The hemisphere algorithm (as defined in \ref{}) proceeds as follows:
+\begin{itemize}
+	\item The direction of the two jets with largest invariant mass is chosen as the initial seed for the two axes.
+	\item Jets are associated to one of the two axes according to the minimal Lund distance, such that jet $k$ is associated to hemisphere $i$ instead of $j$ if the condition in equation \ref{eq:lundDist} is true.
+	\item After each jet is associated to one of the two axes, the axes are recalculated by summing the momenta of all jets associated to an axis.
+	\item The association algorithm iterates using the new axes, and continues until no jets are associated to a different axis after an iteration.
+\end{itemize}
+\begin{equation}
+	(E_i - p_i \cos \theta_{ik}) \frac{E_i}{(E_i+E_k)^2} \leq (E_j - p_j \cos \theta_{jk}) \frac{E_j}{(E_j+E_k)^2} 
+	\label{eq:lundDist}
+\end{equation}
+QCD multijet events (when clustered using this pseudojet algorithm) may yield high \mttwo events if the pseudojets have high jet masses, thus the visible masses $m^{\text{vis}(i)}$ are set to zero to suppress such SM events. Since the kinetic components of \mttwo will be large for signal events, this suppression does not isgnificantly impact sensitivity to many BSM signatures, thus \mttwo is calculated in this analysis using only \MET and the two pseudojets.
+
 
 \section{Event Selection Criteria}
 \label{sec:eventSelection}
-The general strategy for the event selection is to first apply baseline cuts on motivated by hardware and software-level triggers \fm{call back to trigger section in previous chapter? or explain triggers} and reducing the QCD multi-jet background to negligible levels. Events are further categorized using the scalar sum of the transverse momenta \pt of all selected jets (\HT), the total number of jets in the event (\nj), the total number of b-tagged jets in the event (\nb), and \mttwo. Events are reconstructed with the CMS particle-flow (PF) algorithm \fm{cite PF}, which is designed to holistically use all event information from each detector element to reconstruct and identify each particle in the event (hereafter referred to as "PF candidates"). A summary of the event preselections can be found in \fm{cite table with preselections}.
+The general strategy for the event selection is to first apply baseline cuts on motivated by hardware and software-level triggers (discussed in section \ref{subsec:triggers}) and reducing the QCD multi-jet background to negligible levels. Events are further categorized using the scalar sum of the transverse momenta \pt of all selected jets (\HT), the total number of jets in the event (\nj), the total number of b-tagged jets in the event (\nb), and \mttwo. A summary of the event preselections can be found in table \ref{tbl:selections}.
+\begin{table}
+	\centering
+	\begin{tabular}[]{l c r}
+		\fm{Table of preselection cuts from MT2 paper} 
+	\end{tabular}
+	\caption{Summary of physics objects and preselection for events.}
+	\label{tbl:selections}
+\end{table}
 
 \section{Search Regions}
+\label{sec:searchRegions}
+The search regions are defined by categorizing events in bins of \HT, \nj, \nb, and \mttwo (in addition to the baseline selection described in section \ref{sec:eventSelection}). First events are categorized into "topological regions" according to \HT, \nj, and \nb:
+\begin{itemize}
+	\item \HT (GeV): [250, 450] (Very Low), [450,575] (Low), [575,1000] (Medium), [1000, 1500] (High), [1500, $\infty$] (Extreme)
+	\item \nj \& \nb: 2-3j 0b, 2-3j 1b, 2-3j 2b, 4-6j 0b, 4-6j 1b, 4-6j 2b, $\geq$7j 0b, $\geq$7j 1b, $\geq$7j 2b, 2-6j $\geq$3b, and $\geq$7j $\geq$3b (except in the region with 250 < \HT < 450 GeV, where bins $\geq$7j are merged with 4-6j bins due to lack of events).
+\end{itemize}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.45\textwidth]{figs/placeholder}
+	\caption{Topological regions in \nj and \nb for the [575,1000] \HT region. Within each region, the relative fraction of background events from different SM processes is shown based on simulation.}
+	\label{fig:topologicalRegions}
+\end{figure}
+The different topological regions for one \HT region and their background composition are depicted in figure \ref{fig:topologicalRegions}. Each topological region is further divided into bins based on \mttwo. The \mttwo binning is constructed such that the low edge of the first bin is 400\GeV in regions with \HT > 1500\GeV and 200\GeV everywhere else, and the low edge of the final bin is constructed to contain approximately one background event based on simulation and not exceeding the maximum \HT value in that topological region (since an upper limit on \HT places an upper limit on \mttwo). The detailed \mttwo binning is as follows:
+\begin{itemize}
+	\item Very Low \HT: [200,300], [300,400], [400,$\infty$]
+	\item Low \HT: [200,300], [300,400], [400,500], [500,$\infty$]
+	\item Medium \HT: [200,300], [300,400], [400,600], [600,800], [800,$\infty$]
+	\item High \HT: [200,400], [400,600], [600,800], [800, 1000], [1000, 1200], [1200,$\infty$]
+	\item Extreme \HT: [400,600], [600,800], [800,1000], [1000,1400], [1400,$\infty$]
+\end{itemize}
+The various \HT bins and associated \mttwo binning can be seen in figure \ref{fig:mt2bins}, and the full breakdown of signal regions (including \mttwo binning) is listed in tables \ref{tbl:mt2bins1} and \ref{tbl:mt2bins2} .
+\begin{figure}
+	\centering
+	\includegraphics[width=0.45\textwidth]{figs/placeholder}
+	\includegraphics[width=0.45\textwidth]{figs/placeholder}
+	\caption{Signal region bins in \HT and \MET (left) and \mttwo binning within each \HT region (right). If simulation predicts less than one background event in the greatest \mttwo bin within a region, it is merged with the previous bin.}
+	\label{fig:mt2bins}
+\end{figure}
+\begin{table}
+	\centering
+	\begin{tabular}[]{l c r}
+		\fm{Table of signal region binning VL, L, M} 
+	\end{tabular}
+	\caption{\mttwo binning in the Very Low, Low, and Medium \HT topological regions.}
+	\label{tbl:mt2bins1}
+\end{table}
+\begin{table}
+	\centering
+	\begin{tabular}[]{l c r}
+		\fm{Table of signal region binning H, VH} 
+	\end{tabular}
+	\caption{\mttwo binning in the High and Extreme \HT topological regions.}
+	\label{tbl:mt2bins2}
+\end{table}
+In addition to multi-jet search regions, this anlysis also considers monojet events. Because there is only a single jet (and \mttwo is ill-defined without multiple jets), binning in these regions is defined using \nb and \HT as follows:
+\begin{itemize}
+	\item \nb: 0b, $\geq$1b
+	\item \HT: [250,350], [350,450], [450,575], [575,700], [700,1000], [1000,1200], [1200,$\infty$]
+\end{itemize}
+As with the multi-jet regions, monojet \HT bins with less than one simulated background event in the final bin are merged with the penultimate bin.
+
+In addition to these signal regions used to interpret results in the context of various BSM physics models, the analysis also provides results in "super signal regions" (SSRs) as defined in table \ref{tbl:ssr}. These regions provide a simpler set of selection than the nominal signal regions so that phenomenologists may easily reinterpret results in the context of different signal models (as in \fm{reference paper using reinterpretations}). Results obtained using the SSRs are not as sensitive as the nominal binning --- finely binned regions have a higher signal-to-background ratio and the global background fit reduces the background uncertainties -- but are much easier to use for reinterpretation than the many correlated bins of the nominal analysis.
+\begin{table}
+	\centering
+	\begin{tabular}[]{l c r}
+		\fm{Table of super signal regions} 
+	\end{tabular}
+	\caption{Definition of "super signal regions" used in reinterpretations of the analysis.}
+	\label{tbl:ssr}
+\end{table}
 
 \section{Control Regions}
+\label{sec:controlRegions}
+In order to anchor the data-driven background estimates used in this analysis, {\it control regions} (CR) orthogonal to the signal region selection are defined for various processes. In particular, there are control regions corresponding to enriched samples of $\gamma$ + jet events, single lepton events, \zll events, and QCD multijet events.
 
+\subsection{$\gamma$ + jet Control Region}
+\label{subsec:gammaCR}
+
+\fm{photon plus jets CR selection}
+
+\subsection{Single Lepton Control Region}
+\label{subsec:leptonCR}
+The single lepton CR is constructed to select a sample enriched with single lepton events, the most dominant contributions being from \ttbar and \wjets production. The same baseline selections described in section \ref{sec:eventSelection} are applied with the exception of the following:
+\begin{itemize}
+	\item In lieu of the lepton veto, exactly one lepton candidate passing the reco or PF lepton selections is required. In order to avoid double counting (for leptons which are reconstructed both as a reco lepton and PF candidate), PF leptons within \DR < 0.1 of a reco lepton are not considered. 
+	\item The transverse mass \MT between the lepton and \MET must be less than 100\GeV to reduce possible signal contamination.
+\end{itemize}
+Since non-isolated leptons in the fiducial region of the detector are usually successfully reconstructed, the closest jet within \DR < 0.4 of the lepton is removed and the lepton instead counted as a visible object for the purposes of computing \Ht, \Htmiss, \dphilong, \htovermet, and \mttwo (as well as the hemispheres used to calculate \mttwo). Events are further subdivided into the topological regions described in section \ref{sec:searchRegions} using the modified \HT and \nj and \nb, but not in \mttwo to increase the statistical power of the CR. The signal regions with $\geq7$j,$\geq1$b are all predicted using CRs with identical \Ht bins but $\geq7$j,1-2b to increase the statistical power of those CRs (and to avoid signal contamination in regions with $\geq7$j,$\geq3$b). The monojet CR is binned identically to the signal region.
+
+\subsection{\zll Control Region}
+\label{subsec:zllCR}
+
+\fm{\zll CR selection}
+
+\subsection{Multijet Control Region}
+\label{subsec:multijetCR}
+
+\fm{qcd CR selection}
 
 % --------------------------------------------------------------------------- %
 % --------------------------------------------------------------------------- %
