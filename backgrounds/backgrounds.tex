@@ -5,14 +5,18 @@
 
 \section{Types of Backgrounds}
 \label{sec:bkgs}
+The \mttwo all-hadronic search is primarily a search for missing energy, and the backgrounds present in the signal region can be roughly categorized into two groups: events with ``fake'' missing energy due to mismeasurement of energies or other experimental effects, and those with``real'' missing energy due to the underlying physics process which escapes the detector. In this analysis, the primary backgrounds from SM processes with \MET and hadronic activity in the final state can be divided into three categories:
+\begin{itemize}
+	\item {\it Multijet events}, with no true missing energy generating fake \MET. Such all-hadronic events usually enter analysis signal regions due to mismeasurement of jet energy or sporadic noise.
+	\item {\it Lost lepton events}, with a lepton in the final state that is either not identified, reconstructed, in the fiducial region of the detector, or sufficiently isolated to pass the lepton selections. The bulk of these events are due to leptonic W boson or top quark decays (which may also produce significant real \MET with an associated neutrino) recoiling against jets.
+	\item {\it Invisible Z events}, where a Z boson produced in association with jets decays into neutrinos. The neutrinos are extremely weakly interacting particles which escape the detector without leaving any signature, and so this background is fundamentally very similar to many of the BSM signals which may appear in each search region. It is a dominant background in many signal regions, though the relative fraction decreases in regions with more b-tagged jets (\nb).
+\end{itemize}
 
-\section{Multi-jet Estimate}
-\label{sec:qcd}
+In order to provide a robust prediction of each background that is not heavily dependent on simulation alone, each background is estimated using data-driven techniques as described in the following sections. The control regions for each background can be found in chapter \ref{ch:analysis}.
 
-\section{Lost Lepton Estimate}
-\label{sec:lostlep}
+\input{backgrounds/qcd}
+\input{backgrounds/lostlep}
+\input{backgrounds/zinv}
 
-\section{Invisible Z Estimate}
-\label{sec:zinv}
 % --------------------------------------------------------------------------- %
 % --------------------------------------------------------------------------- %
