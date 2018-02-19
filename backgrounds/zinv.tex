@@ -2,5 +2,79 @@
 % --------------------------------------------------------------------------- %
 \section{Invisible Z Estimate}
 \label{sec:zinv}
+
+The invisible Z background is the dominant SM contribution in many signal regions due to the ``irreducible'' nature of the underlying physics. Because the primary interaction produces a massive particle decaying to an invisible final state (\znunu) recoiling against hadronic activity, the signature is fundamentally similar to that of the BSM physics the search is designed to target and difficult to reduce by conventional cuts removing SM background contributions. A robust method leveraging the well-understood Drell-Yan process (\zll) --- kinematically similar to the invisible Z background --- is used to predict the expected SM contribution based on data while minimizing the reliance on Monte Carlo modeling of the kinematics.
+
+\subsection{Background Prediction}
+\label{subsec:zinvPrediction}
+The invisible Z background is estimated using dilepton events selected in data. The control region consists of events selected with dilepton triggers, with addition requirements that the leptons are of the same flavor and opposite sign. The momentum of the leading and trailing lepton must also be at least 100\GeV and 30\GeV, respectively, and the invariant mass of the lepton system \mll must be withing 20\GeV of the Z boson mass. The individual CRs are then constructed by removing the dilepton system from the event and applying the baseline preselection requirements as for the signal regions. A detailed description of the CR can be found in section \ref{subsec:zllCR}.
+
+The invisible Z prediction is computed as described by equation \ref{eq:zinvEstimate}, where $N_{\ell\ell}^{\mathrm{CR(SF)}}$ is the number of events in the dilepton same-flavor (SF) region, $N_{\ell\ell}^{\mathrm{CR(OF)}}$ the number of events in the dilepton opposite-flavor (OF) region, $R^{\mathrm{SF/OF}}$ the SF-OF transfer factor, $R_{\mathrm{MC}}^{\znunu / \zll}$ the transfer factor from \zll to \znunu events, and $k(\mttwomath)$ the transfer factor into bins of \mttwo. Each factor is explained in detail below. 
+\begin{align}
+		N_{\znunu}^{\mathrm{SR}}(\HT,N_\mathrm{j},N_\mathrm{b},\mttwomath) =& \left[ N_{\ell\ell}^{\mathrm{CR(SF)}}(\HT,N_\mathrm{j},N_\mathrm{b}) - N_{\ell\ell}^{\mathrm{CR(OF)}}(\HT,N_\mathrm{j},N_\mathrm{b}) \cdot R^{\mathrm{SF/OF}} \right] \nonumber \\
+		& \times R_{\mathrm{MC}}^{\znunu / \zll}(\HT,N_\mathrm{j},N_\mathrm{b}) \cdot k(\mttwomath)
+	\label{eq:zinvEstimate}
+\end{align}
+
+The second term in equation \ref{eq:zinvEstimate}, $N_{\ell\ell}^{\mathrm{CR(OF)}}\cdot R^{\mathrm{SF/OF}}$, is a correction factor applied to the control region yield to correct for the contribution from processes producing SF and OF event, or {\it flavor-symmetric processes} (such as \ttbar). To compensate for this contribution, a separate control region enriched in \ttbar events is selected from data by using the same selections as the invisible Z CR, except for an inverted selection on the dilepton \pt and \mll requirements. The ratio of \ttbar events is then measured directly from data by counting the yield of SF ($ee$ or $\mu\mu$) and OF ($e\mu$ or $\mu e$) events in this CR. The ratio $R^{\mathrm{SF/OF}}$ is expected to be close to unity based on the underlying physics process, but due to varying acceptance and efficiency effects for different flavor leptons is measured as $R^{\mathrm{SF/OF}} = 1.13 \pm 0.15$, and is stable with respect to event kinematics as shown in figure \ref{fig:rsfof}. The Drell-Yan yield in each control region, as well as the SF yield, OF yield, and transfer factors can be found in table \ref{tbl:zinvCRs}.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.45\textwidth]{figs/placeholder}
+	\includegraphics[width=0.45\textwidth]{figs/placeholder}
+	\includegraphics[width=0.45\textwidth]{figs/placeholder}
+	\includegraphics[width=0.45\textwidth]{figs/placeholder}
+	\caption{The ratio of same-flavor to opposite-flavor events in a \ttbar enriched control region, as a function of \nj (top left), \nb (top right), \HT (bottom left), and \mttwo (bottom left). The solid black line corresponds to a constant value of $1.13 \pm 0.15$, while the dashed black lines correspond to the statistical uncertainty and the dashed red lines the total systematic uncertainty.}
+	\label{fig:rsfof}
+\end{figure}
+\begin{table}
+	\centering
+	\begin{tabular}[]{l c r}
+		\fm{Table of zinv CR yields} 
+	\end{tabular}
+	\caption{The control region predicted Drell-Yan (DY) yield, SF yield, OF yield, purity (the rfraction of \zll events), and ratio $R_{\mathrm{MC}}^{\znunu / \zll}$ for various topological regions. Note that the 7+ jet regions with b-tags (marked with an asterisk) share the same CR, and the fraction of events with different numbers of b-tags is folded into the ratio.}
+	\label{tbl:zinvCRs}
+\end{table}
+
+The ratio of invisible Z events to Drell-Yan events, $R_{\mathrm{MC}}^{\znunu / \zll}$, is measured in simulation for each CR. The ratio accounts for the branching fraction differences between \zll and \znunu decays, as well as differences in lepton acceptance and efficiency for dilepton pairs in the CR (including corrections for differences in lepton efficiency between data and simulation).
+
+The transfer factor $k(\mttwomath)$ uses a combination of data and simulation information to reduce the dependence of the prediction on the \mttwo shape modeling in simulation. Based on simulation, the \mttwo shape in ever \HT region is independent of \nb. In addition, in the extreme \HT region $\HT > 1500\GeV$, the shape is also independent of \nj. Based on these findings, \mttwo shape templates are constructed for each \HT and \nj region (inclusive in \nb\footnote{The only exception is for regions with more than 2 b-tags (2j3b and 2-6j3b), where at least 3 jets are required so as to avoid biasing the \nj distribution when requiring more b-tags than jets.}), with one single template for the extreme \HT region (which is also inclusive in \nj). 
+
+The \mttwo distribution, $k(\mttwomath)$, for each topological region is constructed from dilepton events in data where statistics allows, and \znunu simulation where statistics are sparse. In each template region, the greatest \mttwo bin is iteratively combined with the next-greatest bin until the total expected SM background yield in simulation is at least 50 events. For uncombined bins (where statistics in data is sufficient), the \mttwo shape is taken directly from dilepton data, corrected for the ratio $R_{\mathrm{MC}}^{\znunu / \zll}$. In the low-statistics combined regime, the \mttwo shape in \znunu simulation is used to determine the fraction of events in each \mttwo bin after normalizing the simulation yield to data in the combined bins. The extrapolation point after which the \mttwo shape is based on simulation in each signal region can be found in table \ref{tbl:zinvHybridPoint}.
+\begin{table}
+	\centering
+	\begin{tabular}[]{l c r}
+		\fm{Table of zinv hybrid extrapolation points} 
+	\end{tabular}
+	\caption{The \mttwo extrapolation point for each topological region, beyond which shape data from simulation is used to extrapolate the invisible Z estimate into \mttwo bins. ``NA'' indicates regions where the simulation shape is not used at all since dilepton statistics in data are sufficiently large to perform the estimate bin-by-bin.}
+	\label{tbl:zinvHybridPoint}
+\end{table}
+
+The accuracy of the \mttwo shape modeling in simulation is verified using other control samples enriched in $\gamma$, \wlnu, and \zll events in each \HT bin, as shown in figure \ref{fig:zinvMt2Shape}. The $\gamma$-enriched sample is selected using photon triggers and requiring $p_{\mathrm{T}}^{\gamma} > 180\GeV$, with corrections applied for multijet background contributions and the ratio of \mttwo distributions for photon to Z boson events, $R_{\mathrm{MC}}^{\mathrm{Z}/\gamma}$. The W and Z boson samples are selected in data using leptonic triggers, corrected to compensate for the contribution from top quark production, as well as the ratio of \mttwo distributions, $R_{\mathrm{MC}}^{\mathrm{Z}/W}$ and $R_{\mathrm{MC}}^{\znunu/\zll}$ respectively.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.35\textwidth]{figs/placeholder}
+	\includegraphics[width=0.35\textwidth]{figs/placeholder}
+	\includegraphics[width=0.35\textwidth]{figs/placeholder}
+	\includegraphics[width=0.35\textwidth]{figs/placeholder}
+	\includegraphics[width=0.35\textwidth]{figs/placeholder}
+	\caption{The \mttwo shape distribution in \znunu simulation compared to $\gamma$, \wlnu, and \zll enriched samples in data, for each \HT region. The solid grey band indicates the systematic uncertainty associated with the \mttwo shape modeling.}
+	\label{fig:zinvMt2Shape}
+\end{figure}
+
+\subsection{Systematic Uncertainties}
+\label{subsec:zinvSyst}
+
+Several sources of uncertainty are assessed for the invisible Z estimate, including those associated with the various transfer factors and the \mttwo shape modeling in simulation. The dominant uncertainty in regions using an \mttwo template constructed from data is the statistics of the template. The full list of systematic uncertainties is as follows:
+\begin{itemize}
+	\item {\it Control region statistical error:}  the Poisson error on the number of observed events in \zll data is taken as an uncorrelated uncertainty across all signal regions.
+	\item {\it $R_{\mathrm{MC}}^{\znunu/\zll}$ statistical error:} the statistical error associated with the number of MC events generated factors into the transfer factor.
+	\item {\it $R_{\mathrm{MC}}^{\znunu/\zll}$ systematic error:} a 5.5\% uncertainty based on variations of lepton efficiency uncertainties as well as other modeling parameters (jet energy scales, factorization and renormalization scales, etc.) is applied as a correlated error in each topological region.
+	\item {\it Flavor-symmetric subtraction statistical error:} a Poisson error based on the number of observed opposite-flavor events.
+	\item {\it Flavor-symmetric subtraction systematic error:} a 15\% uncertainty on the \ttbar contamination based on the $R^{\mathrm{SF/OF}}$ uncertainty.
+	\item {\it \mttwo shape uncertainty:} in regions where the simulation is used to model the \mttwo distribution, additional variations of the renormalization and factorization scales, parton distribution functions, b-tagging scale factor uncertainties, and jet energy scale uncertainties are performed to measure their effect on the \mttwo shape modeling. The most significant impact is seen in the highest \mttwo bins of up to 20\%. In order to cover the uncertainty from additional electro-weak corrections not present in simulation (and possibly not covered by the above variations), a conservative upper threshold of 40\% is used, and the shape uncertainty (in regions where MC \mttwo shape modeling is used) is assigned as a linear morphing of the \mttwo shape starting in the first bin from which MC extrapolation is used, growing to 40\% in the final bin. The shape morphing in every distinct topological region is taken as an uncorrelated error.
+	
+\end{itemize}
+
+
 % --------------------------------------------------------------------------- %
 % --------------------------------------------------------------------------- %

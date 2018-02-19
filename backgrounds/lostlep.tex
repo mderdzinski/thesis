@@ -6,11 +6,11 @@
 The lost lepton background is predicted by taking the yield of single lepton events in similar kinematic regions, measuring the ratio of events where the lepton is lost to those where it is found, and extrapolating into the lost lepton regime. The control region for the lost lepton estimate is described in detail in section \ref{subsec:leptonCR}, and is comprised of events in data with the same signal triggers and preselection, with the exception of an inverted lepton veto and an additional requirement on lepton $M_{\mathrm{T}}$ (to reduce signal contamination). 
 
 \subsection{Background Prediction}
-\label{subsec:lostlepEstimate}
+\label{subsec:lostlepPrediction}
 
 The estimate in a given signal region is obtained from a control region using transfer factors as described in equation \ref{eq:lostlepEstimate}, where $N_{\mathrm{1L}}^{\mathrm{CR}}$ is the number of events in the corresponding CR, $R_{\mathrm{MC}}^{0l/1l}$ is the ratio of zero-lepton to one-lepton events derived from simulation, and $k(\mttwomath)$ is the transfer factor into bins of \mttwo in a given topological region. The ratio $R_{\mathrm{MC}}^{0l/1l}$ is measured in Monte Carlo after normalizing the yield to data in each CR and correcting for differences in lepton efficiency between data and simulation, and also factors in lepton acceptance, efficiency of reconstruction and identification, as well as contributions from W bosons decaying through $\tau$ leptons to a hadronic final state. The \mttwo transfer factor $k(\mttwomath)$ is taken from data where statistics permit, and uses information from simulation to project events into bins of \mttwo in the low-statistics regime.
 \begin{equation}
-	N_{\mathrm{LL}}^{\mathrm{SR}}(\HT,N_j,N_b,\mttwomath) = N_{\mathrm{1L}}^{\mathrm{CR}}(\HT,N_j,N_b,\mttwomath) \cdot R_{\mathrm{MC}}^{0l/1l}(\HT,N_j,N_b,\mttwomath) \cdot k(\mttwomath)
+	N_{\mathrm{LL}}^{\mathrm{SR}}(\HT,N_\mathrm{j},N_\mathrm{b},\mttwomath) = N_{\mathrm{1L}}^{\mathrm{CR}}(\HT,N_\mathrm{j},N_\mathrm{b},\mttwomath) \cdot R_{\mathrm{MC}}^{0l/1l}(\HT,N_\mathrm{j},N_\mathrm{b},\mttwomath) \cdot k(\mttwomath)
 	\label{eq:lostlepEstimate}
 \end{equation}
 
@@ -18,7 +18,7 @@ To reduce the dependence of the estimate on the \mttwo shape modeling in simulat
 \begin{table}
 	\centering
 	\begin{tabular}[]{l c r}
-		\fm{Table of lostlep hybrid extrapolation points points} 
+		\fm{Table of lostlep hybrid extrapolation points} 
 	\end{tabular}
 	\caption{The last \mttwo bin and the \mttwo extrapolation point for each topological region, beyond which shape data from simulation is used to extrapolate the lost lepton estimate into \mttwo bins.}
 	\label{tbl:lostlepHybridPoint}
@@ -34,7 +34,7 @@ To reduce the dependence of the estimate on the \mttwo shape modeling in simulat
 \subsection{Systematic Uncertainties}
 \label{subsec:lostlepSyst}
 
-Several sources of systematic uncertainty are assessed for the lost lepton estimate, including those associated with the topological transfer factor and the \mttwo shape modeling in simulation. The full list of systematic uncertainties is as follows:
+Several sources of uncertainty are assessed for the lost lepton estimate, including those associated with the topological transfer factor and the \mttwo shape modeling in simulation. The full list of systematic uncertainties is as follows:
 \begin{itemize}
 	\item {\it Control region statistical error:} the Poisson error on the number of observed events in data is taken as a correlated uncertainty in each signal region using the same control region. The error is uncorrelated amongst \mttwo bins, except in regions sharing merged \mttwo bins for the estimate.
 	\item {\it Monte Carlo statistical error:} where the simulation is used to compute the transfer factor (and in some cases, the \mttwo shape), the MC statistical uncertainty ranges from 1-50\%, taken as uncorrelated amongst all bins.
