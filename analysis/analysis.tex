@@ -113,11 +113,11 @@ In addition to these signal regions used to interpret results in the context of 
 \section{Control Regions}
 \label{sec:controlRegions}
 In order to anchor the data-driven background estimates used in this analysis, {\it control regions} (CR) orthogonal to the signal region selection are defined for various processes. In particular, there are control regions corresponding to enriched samples of $\gamma$ + jet events, single lepton events, \zll events, and QCD multijet events.
-
-\subsection{$\gamma$ + jet Control Region}
-\label{subsec:gammaCR}
-
-\fm{photon plus jets CR selection}
+%
+%\subsection{$\gamma$ + jet Control Region}
+%\label{subsec:gammaCR}
+%
+%\fm{photon plus jets CR selection}
 
 \subsection{Single Lepton Control Region}
 \label{subsec:leptonCR}
@@ -128,10 +128,18 @@ The single lepton CR is constructed to select a sample enriched with single lept
 \end{itemize}
 Since non-isolated leptons in the fiducial region of the detector are usually successfully reconstructed, the closest jet within \DR < 0.4 of the lepton is removed and the lepton instead counted as a visible object for the purposes of computing \Ht, \Htmiss, \dphilong, \htovermet, and \mttwo (as well as the hemispheres used to calculate \mttwo). Events are further subdivided into the topological regions described in section \ref{sec:searchRegions} using the modified \HT and \nj and \nb, but not in \mttwo to increase the statistical power of the CR. The signal regions with $\geq7$j,$\geq1$b are all predicted using CRs with identical \Ht bins but $\geq7$j,1-2b to increase the statistical power of those CRs (and to avoid signal contamination in regions with $\geq7$j,$\geq3$b). In addition, for regions with $\HT > 1500\GeV$, the minimum \mttwo threshold is set to 200\GeV to increase available statistics. The monojet CR is binned identically to the signal region.
 
-\subsection{\zll Control Region}
+\subsection{Dilepton Control Region}
 \label{subsec:zllCR}
 
-\fm{\zll CR selection}
+Control regions corresponding to opposite-sign same-flavor leptons (OSSF) from \zll events are used to estimate the \znunu background, with corresponding sets of control regions requiring an opposite-sign opposite-flavor (OSOF) pair to estimate the flavor-symmetric background component in the former dilepton CR. The same baseline selections as described in section \ref{sec:eventSelection} are applied with the exception of the follow:
+\begin{itemize}
+	\item In lieu of the lepton veto, exactly 2 leptons ($ee$, $e\mu$, or $\mu\mu$) passing loose lepton selections are required.
+	\item There is no requirement on \MET. Instead, the dilepton system must have a transverse momentum $p_{\mathrm{T}}(\ell\ell) > 200\GeV$ to mimic the kinematics of the \znunu background and suppress the \ttbar contribution.
+	\item Without a missing energy requirement, events are selected in data using leptonic trigger paths. Dimuon events are selected using a combination of dimuon and high-\pt single muon triggers, dielectron events using a combination of dielectron and high-\pt single photon paths (which do not require isolation and recover efficiency for high-\pt electrons or those highly co-linear high-\pt Z bosons), and opposite-flavor events are selected using a combination of $e\mu$ triggers and higher threshold single-lepton paths (to again recover efficiency for some events).
+	\item To improve trigger efficiency for these regions, the leading lepton is required to have a minimum momentum $\pt > 100\GeV$ and the sub-leading lepton $\pt > 30\GeV$.
+	\item When selecting Z boson candidates for the \znunu estimate, the leptons are also required to be OSSF with an invariant mass $|\mll - m_{\mathrm{Z}}| < 20\GeV$, where $m_{\mathrm{Z}}$ is the nominal Z boson mass.
+\end{itemize}
+Similar to the single lepton control region, the closest jet within \DR < 0.4 of each lepton is removed and the leptons added to the \MET vector for the purposes of computing \nj, \nb, \Ht, \Htmiss, \dphilong, \htovermet, and \mttwo (as well as the hemispheres used to calculate \mttwo). Additional information on the \mttwo binning for these regions is detailed in section \ref{sec:zinv}.
 
 \subsection{Multijet Control Region}
 \label{subsec:multijetCR}
