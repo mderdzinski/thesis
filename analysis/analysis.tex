@@ -22,7 +22,7 @@ In principle, if the correct values of $m_{\text{X}}$ and $\vec{p}_t^{\text{X}(i
 	\label{eq:mt2}
 \end{equation}
 
-Because this analysis selects final states with (often several) jets in the final state, the calculation of \mttwo first requires grouping the hadronic jet activity into two large {\it pseudojets} to act as the visible components in the \mttwo equation. The jet activity in each event is divided into two hemispheres, and the jets in each hemisphere are summed together to created the pseudojets. The hemisphere algorithm (as defined in \ref{}) proceeds as follows:
+Because this analysis selects final states with (often several) jets in the final state, the calculation of \mttwo first requires grouping the hadronic jet activity into two large {\it pseudojets} to act as the visible components in the \mttwo equation. The jet activity in each event is divided into two hemispheres, and the jets in each hemisphere are summed together to created the pseudojets. The hemisphere algorithm proceeds as follows:
 \begin{itemize}
 	\item The direction of the two jets with largest invariant mass is chosen as the initial seed for the two axes.
 	\item Jets are associated to one of the two axes according to the minimal Lund distance, such that jet $k$ is associated to hemisphere $i$ instead of $j$ if the condition in equation \ref{eq:lundDist} is true.
@@ -41,10 +41,35 @@ QCD multijet events (when clustered using this pseudojet algorithm) may yield hi
 The general strategy for the event selection is to first apply baseline cuts on motivated by hardware and software-level triggers (discussed in section \ref{subsec:triggers}) and reducing the QCD multi-jet background to negligible levels. Events are further categorized using the scalar sum of the transverse momenta \pt of all selected jets (\HT), the total number of jets in the event (\nj), the total number of b-tagged jets in the event (\nb), and \mttwo. A summary of the event preselections can be found in table \ref{tbl:selections}.
 \begin{table}
 	\centering
-	\begin{tabular}[]{l c r}
-		\fm{Table of preselection cuts from MT2 paper} 
-	\end{tabular}
-	\caption{Summary of physics objects and preselection for events.}
+	 \begin{tabular}{ l | l }
+      \hline
+      \multirow{3}{*}{Trigger} & $\MET>120\GeV$ and $\Htmiss>120\GeV$ or \\
+      & $\Ht>300\GeV$ and $\MET>110\GeV$ or \\
+      & $\Ht>900\GeV$ or jet $\pt>450\GeV$ \\  \hline
+      Jet selection & $R=0.4$, $\pt>30\GeV$, $|\eta|<2.4$ \\ \hline
+      b tag selection & $\pt>20\GeV$, $|\eta|<2.4$ \\  \hline
+%      \ \ \ b-tagging performance & $\epsilon\sim$60-75\% for jet \Pt 20-400 \GeV, mis-tag rate $\sim$1.5\% \\
+      \multirow{3}{*}{$\MET$} & $\MET>250\GeV$ for $\Ht<1000\GeV$,
+      else $\MET>30\GeV$\\ 
+%      & $\Delta\phi\left(\ETmiss,j_{\mathrm{1,2,3,4}}\right)>0.3$ \\
+      & $\dphimin = \Delta\phi\left(\ptmiss,\rm{j}_{\mathrm{1,2,3,4}}\right)>0.3$ \\
+      & $|\vec{\MET}-\vec{\Htmiss}|/\MET<0.5$ \\ \hline
+      \mttwo & $\mttwo>200\GeV$ for $\Ht<1500\GeV$, else
+      $\mttwo>400\GeV$ \\ \hline
+      \multirow{2}{*}{Veto muon} & $\pt>10\GeV$, $|\eta|<2.4$, $\pt^{\mathrm{sum}} < 0.2 \times \pt^{\mathrm{lep}}$ or \\
+      & $\pt>5\GeV$, $|\eta|<2.4$, $\Mt<100\GeV$, $\pt^{\mathrm{sum}}
+      < 0.2 \times \pt^{\mathrm{lep}}$ \\ \hline
+      \multirow{2}{*}{Veto electron} & $\pt>10\GeV$, $|\eta|<2.4$, $\pt^{\mathrm{sum}} < 0.1 \times \pt^{\mathrm{lep}}$ or \\
+      & $\pt>5\GeV$, $|\eta|<2.4$, $\Mt<100\GeV$, $\pt^{\mathrm{sum}}
+      < 0.2 \times \pt^{\mathrm{lep}}$ \\ \hline
+      Veto track & $\pt>10\GeV$, $|\eta|<2.4$, $\Mt<100\GeV$,
+      $\pt^{\mathrm{sum}} < 0.1 \times \pt^{\mathrm{track}}$ \\ \hline
+\multirow{2}{*}{$\pt^{\mathrm{sum}} $ cone} & Veto e or $\mu$: $\Delta R=$ min(0.2, max(10
+GeV/$\pt^{\mathrm{lep}}$,0.05))  \\
+    & Veto track: $\Delta R=$ 0.3 \\
+      \hline
+    \end{tabular}
+	\caption{Summary of physics objects and preselection for events. Here $R$ is the distance parameter of the anti-\kt algorithm, and for veto leptons and tracks, the transverse mass \Mt is determined using the veto object and the $\vec{\MET}$, while $\pt^{\mathrm{sum}}$ denotes the sum of the transverse momenta of all the PF candidates in a cone around the lepton or track. The size of the cone, in units of $\Delta R \equiv \sqrt{\left(\Delta \phi\right)^2 + \left(\Delta \eta\right)^2}$ is given in the table. }
 	\label{tbl:selections}
 \end{table}
 
@@ -57,7 +82,7 @@ The search regions are defined by categorizing events in bins of \HT, \nj, \nb, 
 \end{itemize}
 \begin{figure}
 	\centering
-	\includegraphics[width=0.45\textwidth]{figs/placeholder}
+	\includegraphics[width=0.75\textwidth]{analysis/figs/bkgComposition_HTlabel}
 	\caption{Topological regions in \nj and \nb for the [575,1000] \HT region. Within each region, the relative fraction of background events from different SM processes is shown based on simulation.}
 	\label{fig:topologicalRegions}
 \end{figure}
@@ -72,24 +97,142 @@ The different topological regions for one \HT region and their background compos
 The various \HT bins and associated \mttwo binning can be seen in figure \ref{fig:mt2bins}, and the full breakdown of signal regions (including \mttwo binning) is listed in tables \ref{tbl:mt2bins1} and \ref{tbl:mt2bins2} .
 \begin{figure}
 	\centering
-	\includegraphics[width=0.45\textwidth]{figs/placeholder}
-	\includegraphics[width=0.45\textwidth]{figs/placeholder}
+	\includegraphics[width=0.4\textwidth]{analysis/figs/HTvsMET_2017}
+	\includegraphics[width=0.5\textwidth]{analysis/figs/HTvsMT2bins_Moriond2017}
 	\caption{Signal region bins in \HT and \MET (left) and \mttwo binning within each \HT region (right). If simulation predicts less than one background event in the greatest \mttwo bin within a region, it is merged with the previous bin.}
 	\label{fig:mt2bins}
 \end{figure}
-\begin{table}
+\begin{table}[htbp]
 	\centering
-	\begin{tabular}[]{l c r}
-		\fm{Table of signal region binning VL, L, M} 
-	\end{tabular}
+	\renewcommand{\arraystretch}{0.65}
+	\begin{tabular}{ccl}
+
+\hline
+
+\HT Range [GeV] & Jet Multiplicities & Binning [GeV] \\
+
+\hline%
+
+[ 250, 450 ] & $2-3$j, $  0$b  &  [ 200, 300, 400,  $\infty$ ] \\
+
+ & $2-3$j, $  1$b  &  [ 200, 300, 400,  $\infty$  ] \\
+
+ & $2-3$j, $  2$b  &  [ 200, 300, 400,  $\infty$  ] \\
+
+ & $\geq4$j, $  0$b  &  [ 200, 300, 400,  $\infty$  ] \\
+
+ & $\geq4$j, $  1$b  &  [ 200, 300, 400,  $\infty$  ] \\
+
+ & $\geq4$j, $  2$b  &  [ 200, 300, 400,  $\infty$  ] \\
+
+ & $\geq2$j, $  \geq3$b  &  [ 200, 300, 400,  $\infty$  ] \\ \hline
+
+[ 450, 575 ] & $2-3$j, $  0$b  &  [ 200, 300, 400, 500,  $\infty$  ] \\
+
+ & $2-3$j, $  1$b  &  [ 200, 300, 400, 500,  $\infty$  ] \\
+
+ & $2-3$j, $  2$b  &  [ 200, 300, 400, 500,  $\infty$  ] \\
+
+ & $4-6$j, $  0$b  &  [ 200, 300, 400, 500,  $\infty$  ] \\
+
+ & $4-6$j, $  1$b  &  [ 200, 300, 400, 500,  $\infty$  ] \\
+
+ & $4-6$j, $  2$b  &  [ 200, 300, 400, 500,  $\infty$  ] \\
+
+ & $\geq7$j, $  0$b  &  [ 200, 300, 400,  $\infty$  ] \\
+
+ & $\geq7$j, $  1$b  &  [ 200, 300, 400,  $\infty$  ] \\
+
+ & $\geq7$j, $  2$b  &  [ 200, 300, 400,  $\infty$  ] \\
+
+ & $2-6$j, $  \geq3$b  &  [ 200, 300, 400, 500,  $\infty$  ] \\
+
+ & $\geq7$j, $  \geq3$b  &  [ 200, 300, 400,  $\infty$  ] \\ \hline
+
+[ 575, 1000 ] & $2-3$j, $  0$b  &  [ 200, 300, 400, 600, 800,  $\infty$  ] \\
+
+ & $2-3$j, $  1$b  &  [ 200, 300, 400, 600, 800,  $\infty$  ] \\
+
+ & $2-3$j, $  2$b  &  [ 200, 300, 400, 600, 800,  $\infty$  ] \\
+
+ & $4-6$j, $  0$b  &  [ 200, 300, 400, 600, 800,  $\infty$  ] \\
+
+ & $4-6$j, $  1$b  &  [ 200, 300, 400, 600, 800,  $\infty$  ] \\
+
+ & $4-6$j, $  2$b  &  [ 200, 300, 400, 600, 800,  $\infty$  ] \\
+
+ & $\geq7$j, $  0$b  &  [ 200, 300, 400, 600, 800,  $\infty$  ] \\
+
+ & $\geq7$j, $  1$b  &  [ 200, 300, 400, 600,  $\infty$  ] \\
+
+ & $\geq7$j, $  2$b  &  [ 200, 300, 400, 600,  $\infty$  ] \\
+
+ & $2-6$j, $  \geq3$b  &  [ 200, 300, 400, 600,  $\infty$  ] \\
+
+ & $\geq7$j, $  \geq3$b  &  [ 200, 300, 400, 600,  $\infty$  ] \\ \hline
+ 
+ \end{tabular}
 	\caption{\mttwo binning in the Very Low, Low, and Medium \HT topological regions.}
 	\label{tbl:mt2bins1}
 \end{table}
 \begin{table}
 	\centering
-	\begin{tabular}[]{l c r}
-		\fm{Table of signal region binning H, VH} 
-	\end{tabular}
+	\renewcommand{\arraystretch}{0.65}
+	\begin{tabular}{ccl}
+
+\hline
+
+\HT Range [GeV] & Jet Multiplicities & Binning [GeV] \\
+
+\hline%
+
+[ 1000, 1500 ] & $2-3$j, $  0$b  &  [ 200, 400, 600, 800, 1000, 1200,  $\infty$  ] \\
+
+ & $2-3$j, $  1$b  &  [ 200, 400, 600, 800, 1000, 1200,  $\infty$  ] \\
+
+ & $2-3$j, $  2$b  &  [ 200, 400, 600, 800, 1000,  $\infty$  ] \\
+
+ & $4-6$j, $  0$b  &  [ 200, 400, 600, 800, 1000, 1200,  $\infty$  ] \\
+
+ & $4-6$j, $  1$b  &  [ 200, 400, 600, 800, 1000, 1200,  $\infty$  ] \\
+
+ & $4-6$j, $  2$b  &  [ 200, 400, 600, 800, 1000,  $\infty$  ] \\
+
+ & $\geq7$j, $  0$b  &  [ 200, 400, 600, 800, 1000,  $\infty$  ] \\
+
+ & $\geq7$j, $  1$b  &  [ 200, 400, 600, 800,  $\infty$  ] \\
+
+ & $\geq7$j, $  2$b  &  [ 200, 400, 600, 800,  $\infty$  ] \\
+
+ & $2-6$j, $  \geq3$b  &  [ 200, 400, 600,  $\infty$  ] \\
+
+ & $\geq7$j, $  \geq3$b  &  [ 200, 400, 600,  $\infty$  ] \\ \hline
+
+[ 1500, $\infty$  ] & $2-3$j, $  0$b  &  [ 400, 600, 800, 1000, 1400,  $\infty$  ] \\
+
+ & $2-3$j, $  1$b  &  [ 400, 600, 800, 1000,  $\infty$  ] \\
+
+ & $2-3$j, $  2$b  &  [ 400,  $\infty$  ] \\
+
+ & $4-6$j, $  0$b  &  [ 400, 600, 800, 1000, 1400,  $\infty$  ] \\
+
+ & $4-6$j, $  1$b  &  [ 400, 600, 800, 1000, 1400,  $\infty$  ] \\
+
+ & $4-6$j, $  2$b  &  [ 400, 600, 800,  $\infty$  ] \\
+
+ & $\geq7$j, $  0$b  &  [ 400, 600, 800, 1000,  $\infty$  ] \\
+
+ & $\geq7$j, $  1$b  &  [ 400, 600, 800,  $\infty$  ] \\
+
+ & $\geq7$j, $  2$b  &  [ 400, 600, 800,  $\infty$  ] \\
+
+ & $2-6$j, $  \geq3$b  &  [ 400, 600, $\infty$  ] \\
+
+ & $\geq7$j, $  \geq3$b  &  [ 400, $\infty$ ] \\ 
+
+\hline
+
+\end{tabular}
 	\caption{\mttwo binning in the High and Extreme \HT topological regions.}
 	\label{tbl:mt2bins2}
 \end{table}
@@ -103,9 +246,29 @@ As with the multi-jet regions, monojet \HT bins with less than one simulated bac
 In addition to these signal regions used to interpret results in the context of various BSM physics models, the analysis also provides results in "super signal regions" (SSRs) as defined in table \ref{tbl:ssr}. These regions provide a simpler set of selection than the nominal signal regions so that phenomenologists may easily reinterpret results in the context of different signal models (as in \fm{reference paper using reinterpretations}). Results obtained using the SSRs are not as sensitive as the nominal binning --- finely binned regions have a higher signal-to-background ratio and the global background fit reduces the background uncertainties -- but are much easier to use for reinterpretation than the many correlated bins of the nominal analysis.
 \begin{table}
 	\centering
-	\begin{tabular}[]{l c r}
-		\fm{Table of super signal regions} 
-	\end{tabular}
+	\begin{tabular}{l||c|c|c|c}
+\hline\hline
+Region & \nj & \nb & \HT [GeV] & \mttwo [GeV] \\
+\hline\hline
+2j loose & $\geq 2$ & - & $> 1000$ & $> 1200$ \\
+2j tight & $\geq 2$ & - & $> 1500$ & $> 1400$ \\
+\hline
+4j loose & $\geq 4$ & - & $> 1000$ & $> 1000$ \\
+4j tight & $\geq 4$ & - & $> 1500$ & $> 1400$ \\
+\hline
+7j loose & $\geq 7$ & - & $> 1000$ & $> 600$ \\
+7j tight & $\geq 7$ & - & $> 1500$ & $> 800$ \\
+\hline
+2b loose & $\geq 2$ & $\geq 2$ & $> 1000$ & $> 600$ \\
+2b tight & $\geq 2$ & $\geq 2$ & $> 1500$ & $> 600$ \\
+\hline
+3b loose & $\geq 2$ & $\geq 3$ & $> 1000$ & $> 400$ \\
+3b tight & $\geq 2$ & $\geq 3$ & $> 1500$ & $> 400$ \\
+\hline
+7j3b loose & $\geq 7$ & $\geq 3$ & $> 1000$ & $> 400$ \\
+7j3b tight & $\geq 7$ & $\geq 3$ & $> 1500$ & $> 400$ \\
+\hline
+\end{tabular}
 	\caption{Definition of "super signal regions" used in reinterpretations of the analysis.}
 	\label{tbl:ssr}
 \end{table}

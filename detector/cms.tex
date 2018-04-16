@@ -16,21 +16,21 @@ The silicon vertex tracker (SVT) is a series of silicon pixels and strips design
 As the innermost detector subsystem, the SVT experiences the highest flux of particle radiation. In the barrel region, the tracker layers are oriented in 3 coaxial layers. Closest to the interaction point where particle flux is the greatest, very precise silicon pixels are used, measuring $100\times150 \mu \text{m}^2$, whereas in other layers the flux is low enough to use microstrip detectors, measuring $10 \text{cm}\times80\mu \text{m}$ and  $25 \text{cm}\times180\mu \text{m}$ in the middle and outer layers respectively. In the endcaps, the pixel strips are arranged in a turbine-like pattern in two separate layers on each end. This configuration allows for the precise measurement of particle position for track reconstruction, while minimizing the amount of material which might deflect particles from their original trajectories. A partial geometry of the SVT layout can be seen in figure \ref{fig:pixelLayout}.
 \begin{figure}
 	\centering
-	\includegraphics[width=0.45\textwidth]{figs/placeholder}
+	\includegraphics[width=0.95\textwidth]{detector/figs/trackerGeometry}
 	\caption{Geometry of silicon tracker inner layers in CMS.}
 	\label{fig:pixelLayout}
 \end{figure}
 
 \subsection{Electromagnetic Calorimeter}
 \label{subsec:ecal}
-The ECAL is used to measure the energies of particles which interact electromagnetically, both absorbing the incident particles and scintillating to provide an energy-readout to photodiodes attached to each crystal. Constructed of lead-tungstate ($\text{PbWO}_4$), electromagnetically interacting particles (such as electrons or photons) will interact with the crystal material, losing energy through a cascade of electromagnetic interactions including election-positron pair production and bremsstrahlung, as pictured in figure \ref{fig:ecalFeynman}. This phenomenon --- also referred to as "showering" --- causes the crystals to scintillate proportional to the energy deposited in the crystal, which is then measured by various photodiodes to extract an accurate measurement of the particle energy, now fully absorbed by the calorimeter.
-\begin{figure}
-	\centering
-	\includegraphics[width=0.4\textwidth]{figs/placeholder}
-	\includegraphics[width=0.4\textwidth]{figs/placeholder}
-	\caption{Feynman diagrams depicting the main processes by which particles shower in the ECAL. The left diagram depicts electron-positron pair production from a photon, and the right diagram depicts bremsstrahlung, where an electron radiates energy away through a photon.}
-	\label{fig:ecalFeynman}
-\end{figure}
+The ECAL is used to measure the energies of particles which interact electromagnetically, both absorbing the incident particles and scintillating to provide an energy-readout to photodiodes attached to each crystal. Constructed of lead-tungstate ($\text{PbWO}_4$), electromagnetically interacting particles (such as electrons or photons) will interact with the crystal material, losing energy through a cascade of electromagnetic interactions including election-positron pair production and bremsstrahlung. This phenomenon --- also referred to as "showering" --- causes the crystals to scintillate proportional to the energy deposited in the crystal, which is then measured by various photodiodes to extract an accurate measurement of the particle energy, now fully absorbed by the calorimeter.
+%\begin{figure}
+%	\centering
+%	\includegraphics[width=0.4\textwidth]{figs/placeholder}
+%	\includegraphics[width=0.4\textwidth]{figs/placeholder}
+%	\caption{Feynman diagrams depicting the main processes by which particles shower in the ECAL. The left diagram depicts electron-positron pair production from a photon, and the right diagram depicts bremsstrahlung, where an electron radiates energy away through a photon.}
+%	\label{fig:ecalFeynman}
+%\end{figure}
 
 The fundamental principle of the calorimeter measurement relies on the energy loss of particles interacting with matter. In general, the energy of a particle traveling a distance $X$ through some material is given by equation \ref{eq:energyDist}, where $E_0$ is the initial energy of the particle and $X_0$ is the material-dependent radiation length. 
 \begin{equation}
@@ -45,7 +45,7 @@ The design of the calorimeter is motivated by the choice of a scintillating, rad
 The energy resolution can be measured by a test beam of known energy, as shown in figure \ref{fig:ecalSigma}.
 \begin{figure}
 	\centering
-	\includegraphics[width=0.45\textwidth]{figs/placeholder}
+	\includegraphics[width=0.65\textwidth]{detector/figs/ecalRes}
 	\caption{Energy resolution $\sigma/E$ of the ECAL as a function of electron energy measured using a test beam. The energy was measured in a $3\times3$ crystal array with electrons incident on the center crystal, with electrons falling in a $4\times4\text{mm}^2$ region (lower points) and $20\times20\text{mm}^2$ region (upper points).}
 	\label{fig:ecalSigma}
 \end{figure}
@@ -53,7 +53,7 @@ The energy resolution can be measured by a test beam of known energy, as shown i
 The construction of the calorimeter is also divided into two sections by the cylindrical geometry, the ECAL barrel section (EB) and ECAL endcap sections (EE). The EB consists of 61,200 crystals arranged into 36 "supermodules", each spanning half the barrel length, and uses silicon avalanche photodiodes (APDs) as photodetectors. The individual crystals are tilted slightly (3\textdegree) in an $\eta-\phi$ grid with respect to the nominal interaction point, with a front-facing area of $22\times22\text{mm}^2$ and a length of 230mm. The EE instead uses vacuum phototriodes (VPTs) as photodetectors, and consists of approximately 15,000 crystals clustered in $5\times5$ units, also offset from the interaction point but arranged in an $x-y$ grid, with a cross section of $28.6\times28.6\text{mm}^2$ and a length of 220mm. The EE is also equipped with a "preshower" device placed in front of the crystal calorimeter, consisting of two strips of silicon strip detectors to enhance $\pi^0$ rejection. The layout of the ECAL can be seen in figure \ref{fig:ecalGeometry}. Because of the depth of the ECAL crystals (which are $\sim25X_0$, and the confining properties of the crystals (which have a Moliere radius of 2.2cm, the radius of a cylinder containing 90\% of a shower's energy on average), electrons and photons are typically well reconstructed in CMS, except in the transition region where EB and EE meet.
 \begin{figure}
 	\centering
-	\includegraphics[width=0.45\textwidth]{figs/placeholder}
+	\includegraphics[width=0.95\textwidth]{detector/figs/ecalGeometry}
 	\caption{A cross section of the ECAL geometry, with the dashed lines marking the pseudorapidity values $\eta$ covered by the various subsystems.}
 	\label{fig:ecalGeometry}
 \end{figure}
@@ -65,7 +65,7 @@ The CMS HCAL is a sampling calorimeter. Designed with alternating layers of scin
 As with the ECAL, the energy loss of hadronic particles in the absorber is characterized by the (hadronic) interaction length and equation \ref{eq:energyDist}. However, unlike the ECAL, the HCAL contains both hadronic and electromagnetic showers. Electromagnetic particles generated in hadronic showers  often fail to escape the absorber layers, and thus some electromagnetic energy is lost in the absorbers. The CMS HCAL is sometimes referred to as a {\it non-compensating calorimeter} because it is not constructed to actively compensate for the energy lost to these electromagnetic effects and the energy measurements must be corrected offline, known as "jet energy corrections" (JECs).  JECs are typically calculated by examining data from collisions producing a boson recoiling against  hadronic particles. By accurately measuring the boson energy in the ECAL, the sum of the recoiling hadronic energy in the HCAL is inferred (by momentum conservation) and compared to the detector response. Because the performance of the HCAL can fluctuate with time and run conditions, JECs are regularly recalculated and applied to the raw energy measurements taken by the HCAL to compensate for these effects. Additional information on the corrections contained in JECs is detailed in section \ref{subsec:jets}. The energy resolution of the HCAL in different regions of pseudorapidity can be seen in figure \ref{fig:hcalSigma}.
  \begin{figure}
 	\centering
-	\includegraphics[width=0.45\textwidth]{figs/placeholder}
+	\includegraphics[width=0.75\textwidth]{detector/figs/jetEnergyRes}
 	\caption{The jet transverse energy resolution as a function of the jet transverse energy, in different regions of pseudorapidity. For an explanation of jets, see section \ref{subsec:jets}}
 	\label{fig:hcalSigma}
 \end{figure}
@@ -77,8 +77,8 @@ The geometry of the HCAL can be reduced to four sections. The HCAL barrel (HB) c
 The muon detector is the only subsystem which is constructed outside of the toroidal magnetic field. Interleaved with the magnetic return yoke, different muon detectors are used to aid in the identification and reconstruction of muon tracks. Because muons typically penetrate every other layer of the detector and have a large bending radius, additional measurements in the muon system --- combined with measurements in the SVT --- can lead to vastly improved resolution of muon momentum. The non-uniform magnetic field in the muon detector region (beyond the toroidal regime) causes an s-shaped trajectory and tighter bending radius (than in the SVT) for the muons, which improves the resolution for particles with transverse momentum above $\sim200\text{GeV}$ as seen in figure \ref{fig:muonSigma}.
  \begin{figure}
 	\centering
-	\includegraphics[width=0.45\textwidth]{figs/placeholder}
-	\includegraphics[width=0.45\textwidth]{figs/placeholder}
+	\includegraphics[width=0.45\textwidth]{detector/figs/muonResInner}
+	\includegraphics[width=0.45\textwidth]{detector/figs/muonResOuter}
 	\caption{Muon momentum resolution as a function of muon momentum using only the inner tracking system, only the muon system, or both combined in the barrel region (left) or endcap region (right).}
 	\label{fig:muonSigma}
 \end{figure}
@@ -86,7 +86,7 @@ The muon detector is the only subsystem which is constructed outside of the toro
 Different types of muon detectors are deployed (sometimes in combination) in different sections of the full muon system. In the barrel region ($-1.2<\eta<1.2$) where the muon flux, neutral background, and magnetic field are small, drift tube (DT) chambers are used. In the endcaps where the the muon flux, neutral background, and magnetic field are much greater, cathode strip chambers (CSC) are used to increase coverage up to $|\eta|<2.4$. In addition to these technologies, both the barrel and endcap systems are supplemented with resistive plate chambers (RPC) to provide complementary information to the DT and CSC detectors. The layout of the different muon detector components in the barrel and endcap can be seen in figure \ref{fig:muonGeometry}.
  \begin{figure}
 	\centering
-	\includegraphics[width=0.45\textwidth]{figs/placeholder}
+	\includegraphics[width=0.75\textwidth]{detector/figs/muonGeometry}
 	\caption{Layout of the CMS muon system for initial run configurations. The DT system is used only in the barrel region and CSCs in the endcap region, while RPCs are deployed in both the barrel and endcap.}
 	\label{fig:muonGeometry}
 \end{figure}
