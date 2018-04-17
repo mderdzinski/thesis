@@ -41,6 +41,7 @@ QCD multijet events (when clustered using this pseudojet algorithm) may yield hi
 The general strategy for the event selection is to first apply baseline cuts on motivated by hardware and software-level triggers (discussed in section \ref{subsec:triggers}) and reducing the QCD multi-jet background to negligible levels. Events are further categorized using the scalar sum of the transverse momenta \pt of all selected jets (\HT), the total number of jets in the event (\nj), the total number of b-tagged jets in the event (\nb), and \mttwo. A summary of the event preselections can be found in table \ref{tbl:selections}.
 \begin{table}
 	\centering
+	\caption{Summary of physics objects and preselection for events. Here $R$ is the distance parameter of the anti-\kt algorithm, and for veto leptons and tracks, the transverse mass \Mt is determined using the veto object and the $\vec{\MET}$, while $\pt^{\mathrm{sum}}$ denotes the sum of the transverse momenta of all the PF candidates in a cone around the lepton or track. The size of the cone, in units of $\Delta R \equiv \sqrt{\left(\Delta \phi\right)^2 + \left(\Delta \eta\right)^2}$ is given in the table. }
 	 \begin{tabular}{ l | l }
       \hline
       \multirow{3}{*}{Trigger} & $\MET>120\GeV$ and $\Htmiss>120\GeV$ or \\
@@ -68,8 +69,7 @@ The general strategy for the event selection is to first apply baseline cuts on 
 GeV/$\pt^{\mathrm{lep}}$,0.05))  \\
     & Veto track: $\Delta R=$ 0.3 \\
       \hline
-    \end{tabular}
-	\caption{Summary of physics objects and preselection for events. Here $R$ is the distance parameter of the anti-\kt algorithm, and for veto leptons and tracks, the transverse mass \Mt is determined using the veto object and the $\vec{\MET}$, while $\pt^{\mathrm{sum}}$ denotes the sum of the transverse momenta of all the PF candidates in a cone around the lepton or track. The size of the cone, in units of $\Delta R \equiv \sqrt{\left(\Delta \phi\right)^2 + \left(\Delta \eta\right)^2}$ is given in the table. }
+      \end{tabular}
 	\label{tbl:selections}
 \end{table}
 
@@ -104,6 +104,7 @@ The various \HT bins and associated \mttwo binning can be seen in figure \ref{fi
 \end{figure}
 \begin{table}[htbp]
 	\centering
+	\caption{\mttwo binning in the Very Low, Low, and Medium \HT topological regions.}
 	\renewcommand{\arraystretch}{0.65}
 	\begin{tabular}{ccl}
 
@@ -171,12 +172,12 @@ The various \HT bins and associated \mttwo binning can be seen in figure \ref{fi
 
  & $\geq7$j, $  \geq3$b  &  [ 200, 300, 400, 600,  $\infty$  ] \\ \hline
  
- \end{tabular}
-	\caption{\mttwo binning in the Very Low, Low, and Medium \HT topological regions.}
+	 \end{tabular}
 	\label{tbl:mt2bins1}
 \end{table}
 \begin{table}
 	\centering
+	\caption{\mttwo binning in the High and Extreme \HT topological regions.}
 	\renewcommand{\arraystretch}{0.65}
 	\begin{tabular}{ccl}
 
@@ -231,9 +232,7 @@ The various \HT bins and associated \mttwo binning can be seen in figure \ref{fi
  & $\geq7$j, $  \geq3$b  &  [ 400, $\infty$ ] \\ 
 
 \hline
-
-\end{tabular}
-	\caption{\mttwo binning in the High and Extreme \HT topological regions.}
+	\end{tabular}
 	\label{tbl:mt2bins2}
 \end{table}
 In addition to multi-jet search regions, this anlysis also considers monojet events. Because there is only a single jet (and \mttwo is ill-defined without multiple jets), binning in these regions is defined using \nb and \HT as follows:
@@ -246,6 +245,7 @@ As with the multi-jet regions, monojet \HT bins with less than one simulated bac
 In addition to these signal regions used to interpret results in the context of various BSM physics models, the analysis also provides results in "super signal regions" (SSRs) as defined in table \ref{tbl:ssr}. These regions provide a simpler set of selection than the nominal signal regions so that phenomenologists may easily reinterpret results in the context of different signal models. Results obtained using the SSRs are not as sensitive as the nominal binning --- finely binned regions have a higher signal-to-background ratio and the global background fit reduces the background uncertainties -- but are much easier to use for reinterpretation than the many correlated bins of the nominal analysis.
 \begin{table}
 	\centering
+	\caption{Definition of "super signal regions" used in reinterpretations of the analysis.}
 	\begin{tabular}{l||c|c|c|c}
 \hline\hline
 Region & \nj & \nb & \HT [GeV] & \mttwo [GeV] \\
@@ -268,8 +268,7 @@ Region & \nj & \nb & \HT [GeV] & \mttwo [GeV] \\
 7j3b loose & $\geq 7$ & $\geq 3$ & $> 1000$ & $> 400$ \\
 7j3b tight & $\geq 7$ & $\geq 3$ & $> 1500$ & $> 400$ \\
 \hline
-\end{tabular}
-	\caption{Definition of "super signal regions" used in reinterpretations of the analysis.}
+	\end{tabular}
 	\label{tbl:ssr}
 \end{table}
 

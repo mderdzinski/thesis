@@ -28,6 +28,7 @@ The second term in equation \ref{eq:zinvEstimate}, $N_{\ell\ell}^{\mathrm{CR(OF)
 \end{figure}
 \begin{table}
 	\centering
+	\caption{The control region predicted Drell-Yan (DY) yield, SF yield, OF yield, purity (the rfraction of \zll events), and ratio $R_{\mathrm{MC}}^{\znunu / \zll}$ for the very low, low, and medium \HT topological regions. Note that the 7+ jet regions with b-tags (marked with an asterisk) share the same CR, and the fraction of events with different numbers of b-tags is folded into the ratio.}
 	\footnotesize
 	\renewcommand{\arraystretch}{0.5}
 	\begin{tabular}{c|c|c|c|c|c|c|c}
@@ -67,13 +68,13 @@ $[575,1000]$ &7+&2&15.6&19&3&0.823$\pm$0.088&1.10$^{(*)}$\\
 $[575,1000]$ &2-6&3+&5.8&8&2&0.720$\pm$0.159&5.82\\
 $[575,1000]$ &7+&3+&15.6&19&3&0.823$\pm$0.088&0.22$^{(*)}$\\
 \hline \hline
-\end{tabular}
-	\caption{The control region predicted Drell-Yan (DY) yield, SF yield, OF yield, purity (the rfraction of \zll events), and ratio $R_{\mathrm{MC}}^{\znunu / \zll}$ for the very low, low, and medium \HT topological regions. Note that the 7+ jet regions with b-tags (marked with an asterisk) share the same CR, and the fraction of events with different numbers of b-tags is folded into the ratio.}
+	\end{tabular}
 	\label{tbl:zinvCRs1}
 \end{table}
 
 \begin{table}
 	\centering
+	\caption{The control region predicted Drell-Yan (DY) yield, SF yield, OF yield, purity (the rfraction of \zll events), and ratio $R_{\mathrm{MC}}^{\znunu / \zll}$ for the high and extreme \HT topological regions. Note that the 7+ jet regions with b-tags (marked with an asterisk) share the same CR, and the fraction of events with different numbers of b-tags is folded into the ratio.}
 	\footnotesize
 	\renewcommand{\arraystretch}{0.5}
 	\begin{tabular}{c|c|c|c|c|c|c|c}
@@ -105,8 +106,7 @@ $[1500,\infty]$ &7+&2&1.9&3&1&0.627$\pm$0.279&1.18$^{(*)}$\\
 $[1500,\infty]$ &2-6&3+&1.0&1&0&1.000$\pm$0.000&6.27\\
 $[1500,\infty]$ &7+&3+&1.9&3&1&0.627$\pm$0.279&0.18$^{(*)}$\\
 \hline \hline
-\end{tabular}
-	\caption{The control region predicted Drell-Yan (DY) yield, SF yield, OF yield, purity (the rfraction of \zll events), and ratio $R_{\mathrm{MC}}^{\znunu / \zll}$ for the high and extreme \HT topological regions. Note that the 7+ jet regions with b-tags (marked with an asterisk) share the same CR, and the fraction of events with different numbers of b-tags is folded into the ratio.}
+	\end{tabular}
 	\label{tbl:zinvCRs2}
 \end{table}
 
@@ -117,7 +117,8 @@ The transfer factor $k(\mttwomath)$ uses a combination of data and simulation in
 The \mttwo distribution, $k(\mttwomath)$, for each topological region is constructed from dilepton events in data where statistics allows, and \znunu simulation where statistics are sparse. In each template region, the greatest \mttwo bin is iteratively combined with the next-greatest bin until the total expected SM background yield in simulation is at least 50 events. For uncombined bins (where statistics in data is sufficient), the \mttwo shape is taken directly from dilepton data, corrected for the ratio $R_{\mathrm{MC}}^{\znunu / \zll}$. In the low-statistics combined regime, the \mttwo shape in \znunu simulation is used to determine the fraction of events in each \mttwo bin after normalizing the simulation yield to data in the combined bins. The extrapolation point after which the \mttwo shape is based on simulation in each signal region can be found in tables \ref{tbl:zinvHybridPoint1} and \ref{tbl:zinvHybridPoint2}.
 \begin{table}
 	\centering
-	\footnotesize
+	\caption{The \mttwo extrapolation point for the very low, low, and medium \HT topological regions, beyond which shape data from simulation is used to extrapolate the invisible Z estimate into \mttwo bins. ``NA'' indicates regions where the simulation shape is not used at all since dilepton statistics in data are sufficiently large to perform the estimate bin-by-bin.}
+	\small
 	\renewcommand{\arraystretch}{0.5}
 	\begin{tabular}{c|c|c|c}
 \hline \hline
@@ -156,14 +157,14 @@ $[575,1000]$ &7+&2& 200 \\
 $[575,1000]$ &2-6&3+& NA \\
 $[575,1000]$ &7+&3+& 200 \\
 \hline \hline
-\end{tabular}
-	\caption{The \mttwo extrapolation point for the very low, low, and medium \HT topological regions, beyond which shape data from simulation is used to extrapolate the invisible Z estimate into \mttwo bins. ``NA'' indicates regions where the simulation shape is not used at all since dilepton statistics in data are sufficiently large to perform the estimate bin-by-bin.}
+	\end{tabular}
 	\label{tbl:zinvHybridPoint1}
 \end{table}
 
 \begin{table}
 	\centering
-	\footnotesize
+	\caption{The \mttwo extrapolation point for the high and extreme \HT topological regions, beyond which shape data from simulation is used to extrapolate the invisible Z estimate into \mttwo bins. ``NA'' indicates regions where the simulation shape is not used at all since dilepton statistics in data are sufficiently large to perform the estimate bin-by-bin.}
+	\small
 	\renewcommand{\arraystretch}{0.5}
 	\begin{tabular}{c|c|c|c}
 \hline \hline
@@ -195,8 +196,7 @@ $[1500,\infty]$ &7+&2& 400 \\
 $[1500,\infty]$ &2-6&3+& 400 \\
 $[1500,\infty]$ &7+&3+& 400 \\
 \hline \hline
-\end{tabular}
-	\caption{The \mttwo extrapolation point for the high and extreme \HT topological regions, beyond which shape data from simulation is used to extrapolate the invisible Z estimate into \mttwo bins. ``NA'' indicates regions where the simulation shape is not used at all since dilepton statistics in data are sufficiently large to perform the estimate bin-by-bin.}
+	\end{tabular}
 	\label{tbl:zinvHybridPoint2}
 \end{table}
 
