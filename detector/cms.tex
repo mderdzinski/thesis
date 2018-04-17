@@ -83,7 +83,7 @@ The muon detector is the only subsystem which is constructed outside of the toro
 	\label{fig:muonSigma}
 \end{figure}
 
-Different types of muon detectors are deployed (sometimes in combination) in different sections of the full muon system. In the barrel region ($-1.2<\eta<1.2$) where the muon flux, neutral background, and magnetic field are small, drift tube (DT) chambers are used. In the endcaps where the the muon flux, neutral background, and magnetic field are much greater, cathode strip chambers (CSC) are used to increase coverage up to $|\eta|<2.4$. In addition to these technologies, both the barrel and endcap systems are supplemented with resistive plate chambers (RPC) to provide complementary information to the DT and CSC detectors. The layout of the different muon detector components in the barrel and endcap can be seen in figure \ref{fig:muonGeometry}.
+Different types of muon detectors are deployed (sometimes in combination) in different sections of the full muon system. In the barrel region ($-1.2<\eta<1.2$) where the muon flux, neutral background, and magnetic field are small, drift tube (DT) chambers are used. In the endcaps where the the muon flux, neutral background, and magnetic field are much greater, cathode strip chambers (CSCs) are used to increase coverage up to $|\eta|<2.4$. In addition to these technologies, both the barrel and endcap systems are supplemented with resistive plate chambers (RPCs) to provide complementary information to the DT and CSC detectors. The layout of the different muon detector components in the barrel and endcap can be seen in figure \ref{fig:muonGeometry}.
  \begin{figure}
 	\centering
 	\includegraphics[width=0.75\textwidth]{detector/figs/muonGeometry}
@@ -93,9 +93,9 @@ Different types of muon detectors are deployed (sometimes in combination) in dif
 
 The DT detectors are chambers filled with gas surrounding a wire, with a voltage difference between the wire and outside of the DT. When charged particles pass through the drift chamber, they ionize the gas, and the ionization products will drift across the voltage difference in the tube, resulting in a detectable voltage change in the DT. By measuring both the position along the DT wire where charge is deposited, as well as reconstructing the "drift time" it takes for the ionized particles to reach the wire, DTs provide a 2-dimensional measurement of a particle's position. In CMS, the DT chambers consist of a dozen layers arranged into 3 groups, each with up to 60 DTs. The layers are arranged in such a way that some measure the direction of the muon parallel to the proton beam and others along the perpendicular coordinate, such that the full muon trajectory can be reconstructed by using the DT station information.
 
-\fm{add paragraph on CSCs}
+The CSCs in each endcap are trapezoidal in shape and overlap in the phi coordinate, increasing the fiducial coverage of the muon system. Each CSC consists of 6 gas gaps, where each gap is comprised of radially aligned cathode strips and a plane of anodes wires nearly perpendicular to the strips. When a muon passes through the CSCs, the ensuing ionization and electron avalanche deposits a charge on the anode wire and an image charge on the cathode strips. A measurement of the muon position can be reconstructed by determining the center-of-gravity of the charge distribution on the cathode strips, and the fast readout of the anode wire is used in low-latency trigger decisions as described in section \ref{subsec:triggers}.
 
-\fm{add paragraph on RPCs}
+The RPCs are complementary systems in both the barrel and endcap used to improve the time resolution of muon measurements. Each RPC consists of two parallel anode and cathode plates, separated by a gas chamber. The ionization of the gas as muons travel through the chamber is quickly deposited on the plates, and used for a precise time measurement of the muon crossing. Though the spatial resolution of the RPCs is poor, in conjunction with the other muon systems they allow for an unambiguous association of muons with different bunch crossings.
  
 \subsection{Trigger Systems}
 \label{subsec:triggers}
