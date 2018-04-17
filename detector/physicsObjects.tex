@@ -51,5 +51,14 @@ Missing energy refers to the sum of all energy which has escaped the detector, a
 
 The missing energy in an event is inferred from all other measured quantities in an event, and there are many sources of \MET which are unphysical in nature but rather dependent on experimental effects. Particles from the primary interaction with a sufficiently large pseudorapidity may escape the fiducial region of the detector subsystems, and resolution effects or intrinsic noise in the detector may lead to fluctuations in measured energies. These experimental effects must be suppressed or distinguished from "real" \MET due to physics processes creating particles which escape the detector (e.g. neutrinos). Analyses sensitive to final states with \MET often employ robust data-driven methods to predict or suppress backgrounds which might generate experimental sources of \MET or physics processes which can contribute real \MET (such as \znunu).
 
+\subsection{Monte Carlo Simulation}
+\label{subsec:simulation}
+
+Monte Carlo (MC) simulation of events within the CMS detector is frequently generated to understand the expected physics, design analyses, and help predict certain backgrounds. The simulation begins with the underlying physics process of interest, and subsequently models the trajectories of particles in the final state through the detector volume, their interactions in those volumes and with the detector material, the effects of pileup, and the detector response.
+
+The process of generating MC proceeds in multiple steps interfacing different software packages. In this analysis, many MC samples are generated using the POWHEG \cite{Oleari:2010nx} and MadGraph \cite{Alwall:2011uj} generator packages to calculate the matrix elements for the underlying physics process. The calculations performed by these generators are then interfaced with Pythia \cite{Sjostrand:2007gs} to model parton showering and hadronization effects. The material interaction in the detector volume are modeled with the Geant4 toolkit \cite{Agostinelli:2002hh}, and the detector's response is digitized to model the final readout from the event.
+
+Because of the many computationally expensive steps involved in creating MC and the large amount of events required to suppress statistical uncertainties, simulation is occasionally generated with the Fastsim package \cite{1742-6596-331-3-032049} to decrease computational burden at the expense of some modeling quality. When Fastsim is employed in this analysis for the purpose of generating signal MC, effects due to potential mismodeling introduced by the simulation are accounted for in studies of the systematic uncertainty (as shown in section \ref{subsec:signalSyst}).
+ 
 % --------------------------------------------------------------------------- %
 % --------------------------------------------------------------------------- %
