@@ -104,5 +104,15 @@ When operating at design luminosity, the LHC can deliver proton bunches to the c
 The L1 trigger system is comprised of specialized hardware processors to rapidly pre-select events of interest based on the calorimeter and muon systems. Based on the beam crossing frequency, the L1 electronics have only a few microseconds to collect readout data from the front end electronics and execute logic to select events of interest, such that the total time allotted for L1 trigger calculations is $<1\mu s$. During this time the bulk of detector data is held in a buffer while L1 trigger decisions are made based on data with reduced granularity and resolution rapidly collected from the calorimeter and muon systems, where triggers typically check for "trigger primitive" objects (such as photons, muons, electrons, etc.). Trigger primitives must meet certain momentum or energy thresholds, and L1 triggers may also check global data about the event such as the sum of transverse energy or the missing transverse energy (inferred from momentum conservation). 
 
 After an L1 trigger tags an event, high-resolution data is read out from buffers for additional data processing before reaching the HLT. Each event of $\sim1.5MB$ is transferred to front-end readout buffers which then pipes data to a processor containing the HLT code. HLT code is designed to discard events as soon as possible when making trigger decisions and only a subset of objects or partial reconstruction of events may occur before the final trigger decision is made, though HLT algorithms typically approach the quality of final reconstruction. The HLT reduces the L1 output rate to $\mathcal{O}(100\text{Hz})$ for event storage and full reconstruction.
+
+In this analysis, the primary triggers used for selecting signal events depend on the total hadronic energy (\HT), jet momentum (described in section \ref{subsec:jets}), or missing energy (\MET, described in section \ref{subsec:met}). These triggers are seeded by L1 paths which rapidly reconstruct \HT, jet \pt, or \MET in an event. If the L1 trigger flags the event, it is passed to HLT triggers that check for higher-level reconstructed quantities of  \HT, jet \pt,  \MET, or a combination thereof. The efficiency for one of the signal triggers paths (\texttt{HLT PFHT900} OR \texttt{HLT PFJet450}) as a function of the total hadronic energy in the event can be seen in figure \ref{fig:triggerTurnon}. Additional triggers in this analysis for lepton-rich and QCD-rich control regions are also used as described in chapter \ref{ch:bkgs}.
+
+ \begin{figure}
+	\centering
+	\includegraphics[width=0.75\textwidth]{detector/figs/trigeff_PFHT900_PFJet450_36p5fb}
+	\caption{The efficiency of the \texttt{HLT PFHT900} OR \texttt{HLT PFJet450} triggers as a function of total hadronic energy \HT. }
+	\label{fig:triggerTurnon}
+\end{figure}
+
 % --------------------------------------------------------------------------- %
 % --------------------------------------------------------------------------- %
