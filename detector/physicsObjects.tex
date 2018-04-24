@@ -11,7 +11,8 @@ Most of the physics objects described in the following sections are reconstructe
 \begin{figure}
 	\centering
 	\includegraphics[width=0.95\textwidth]{detector/figs/CMS_Slice_2}
-	\caption{A graphic depiction of different particles leaving various signatures in the different CMS detector subsystems. Particles may be detected via tracks hits, energy deposits, or a combination of both.}
+	\renewcommand{\baselinestretch}{1.0}
+	\caption[A graphic depiction of different particles leaving various signatures in the different CMS detector subsystems.]{A graphic depiction of different particles leaving various signatures in the different CMS detector subsystems. Particles may be detected via tracks hits, energy deposits, or a combination of both.}
 	\label{fig:pfCandidates}
 \end{figure}
 
@@ -27,9 +28,19 @@ Electrons in CMS are identified primarily through the existence of a charged par
 
 Photons are distinguished from electrons by the lack of a track in the SVT. As a neutral particle, the only sign of a photon will be the energy deposit in the ECAL where the photon is stopped and deposits all its energy. Photons are typically distinguished from other neutral electromagnetic particles (such as a $\pi^0$) by the shape of the shower in the ecal. Whereas photons typically shower through pair production and bremsstrahlung, other hadronic particles may cascade via different physics processes leading to measurable difference in the shape of the energy cluster.
 
+The all-hadronic search described here makes use of electrons and photons in the construction of different control regions to predict background processes (described in detail in chapter \ref{ch:bkgs}). While an electron veto is used in the signal region, electrons are selected in the single lepton control region and other dilepton regions. Photons are primarily used as a cross-check in \mttwo shape studies as described in section \ref{sec:zinv}.
+
 \subsection{Muons}
 \label{subsec:muons}
 Prompt muons produced in collisions at the LHC are generally minimum ionizing particles, and will penetrate the bulk of the detector. Without any matching calorimeter deposits, they are reconstructed using hits in the muon system matched to inner tracker hits \cite{Chatrchyan:2009ae}. The muon system flags muon candidates, which are then matched to inner tracker hits for the best fit of the muon track. Given the track hits, the transverse momentum and energy of the muon can be calculated by a fit to the track parameters. As with electrons, muons are customarily distinguished by both the presence of a track originating at the primary vertex and a sufficiently low isolation.
+
+As with electrons, muons are primarily used in the all-hadronic analysis to select lepton-enriched control regions for the estimation of different backgrounds (described in detail in chapter \ref{ch:bkgs}). A muon veto is applied in the signal region, and muons are used in single lepton and dilepton control regions for different background estimates.
+
+\subsection{Isolated Tracks}
+\label{subsec:isotrack}
+Not all charged tracks in the detector are necessarily associated with leptons or other physics objects. {\it Isolated tracks} are a collection of objects where a charged track consistent with the primary interaction vertex is also isolated (and thus not likely part of jet hadronization as described in section \ref{subsec:jets}).
+
+The analysis described in this dissertation makes particular use of isolated tracks in rejecting events with leptons. Because leptons are not always fully reconstructed into higher-level physics objects, an additional isolated track veto as described in chapter \ref{ch:analysis} removes additional events with prompt leptons.
 
 \subsection{Jets}
 \label{subsec:jets}

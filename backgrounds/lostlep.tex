@@ -17,6 +17,7 @@ The estimate in a given signal region is obtained from a control region using tr
 To reduce the dependence of the estimate on the \mttwo shape modeling in simulation, the transfer factor $k(\mttwomath)$ uses a combination of data and simulation information. In each topological region, the greatest \mttwo bin is iteratively combined with the next-greatest bin until the total expected SM background yield in simulation is at least 50 events. These combined bins together form the CR for a range of \mttwo values, where the fraction of events falling in a particular \mttwo bin, $k(\mttwomath)$, is determined from simulation. In all the other \mttwo bins in the topological region, statistics are sufficient for a direct measurement in data and $k(\mttwomath)=1$. The extrapolation point for each topological region can be found in table \ref{tbl:lostlepHybridPoint}. The shape modeling in simulation is verified in data by selecting an inclusive sample enriched in either W boson or \ttbar production (using the number of b-tags in the event), and predicting the \mttwo distribution using simulation after normalizing simulation yield to data and summing all the control regions together, as seen in figure \ref{fig:lostlepHybrid}.
 \begin{table}
 	\centering
+	\renewcommand{\baselinestretch}{1.0}
 	\caption{The last \mttwo bin and the \mttwo extrapolation point for each topological region, beyond which shape data from simulation is used to extrapolate the lost lepton estimate into \mttwo bins.}
 	\footnotesize
 	\renewcommand{\arraystretch}{0.4}
@@ -76,7 +77,8 @@ $[1500,\infty]$ &2-6&3+& $>$ 200& $>$ 600\\
 	\centering
 	\includegraphics[width=0.45\textwidth]{backgrounds/figs/lostlepHybrid_0b_mt2bins.pdf}
 	\includegraphics[width=0.45\textwidth]{backgrounds/figs/lostlepHybrid_ge1b_mt2bins}
-	\caption{The \mttwo shape in data and simulation using the single lepton CR selection, for events with zero b-tagged jets (left) or at least one b-tagged jet (right). The simulation is normalized to data in each topological region before summing to create the inclusive region. The hatched bands in each upper plot show the MC statistical uncertainty, while the shaded bands in each lower plot represent the systematic shape uncertainty.}
+	\renewcommand{\baselinestretch}{1.0}
+	\caption[The \mttwo shape in data and simulation using the single lepton CR selection, for events with zero b-tagged jets (left) or at least one b-tagged jet (right).]{The \mttwo shape in data and simulation using the single lepton CR selection, for events with zero b-tagged jets (left) or at least one b-tagged jet (right). The simulation is normalized to data in each topological region before summing to create the inclusive region. The hatched bands in each upper plot show the MC statistical uncertainty, while the shaded bands in each lower plot represent the systematic shape uncertainty.}
 	\label{fig:lostlepHybrid}
 \end{figure}
 

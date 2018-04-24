@@ -41,7 +41,8 @@ QCD multijet events (when clustered using this pseudojet algorithm) may yield hi
 The general strategy for the event selection is to first apply baseline cuts on motivated by hardware and software-level triggers (discussed in section \ref{subsec:triggers}) and reducing the QCD multi-jet background to negligible levels. Events are further categorized using the scalar sum of the transverse momenta \pt of all selected jets (\HT), the total number of jets in the event (\nj), the total number of b-tagged jets in the event (\nb), and \mttwo. A summary of the event preselections can be found in table \ref{tbl:selections}.
 \begin{table}
 	\centering
-	\caption{Summary of physics objects and preselection for events. Here $R$ is the distance parameter of the anti-\kt algorithm, and for veto leptons and tracks, the transverse mass \Mt is determined using the veto object and the $\vec{\MET}$, while $\pt^{\mathrm{sum}}$ denotes the sum of the transverse momenta of all the PF candidates in a cone around the lepton or track. The size of the cone, in units of $\Delta R \equiv \sqrt{\left(\Delta \phi\right)^2 + \left(\Delta \eta\right)^2}$ is given in the table. }
+	\renewcommand{\baselinestretch}{1.0}
+	\caption{Summary of physics objects and preselection for signal events. Here $R$ is the distance parameter of the anti-\kt algorithm, and for veto leptons and tracks, the transverse mass \Mt is determined using the veto object and the $\vec{\MET}$, while $\pt^{\mathrm{sum}}$ denotes the sum of the transverse momenta of all the PF candidates in a cone around the lepton or track. The size of the cone, in units of $\Delta R \equiv \sqrt{\left(\Delta \phi\right)^2 + \left(\Delta \eta\right)^2}$ is given in the table. }
 	 \begin{tabular}{ l | l }
       \hline
       \multirow{3}{*}{Trigger} & $\MET>120\GeV$ and $\Htmiss>120\GeV$ or \\
@@ -83,7 +84,8 @@ The search regions are defined by categorizing events in bins of \HT, \nj, \nb, 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.75\textwidth]{analysis/figs/bkgComposition_HTlabel}
-	\caption{Topological regions in \nj and \nb for the [575,1000] \HT region. Within each region, the relative fraction of background events from different SM processes is shown based on simulation.}
+	\renewcommand{\baselinestretch}{1.0}
+	\caption[Topological regions in \nj and \nb for the [575,1000] \HT region.]{Topological regions in \nj and \nb for the [575,1000] \HT region. Within each region, the relative fraction of background events from different SM processes is shown based on simulation.}
 	\label{fig:topologicalRegions}
 \end{figure}
 The different topological regions for one \HT region and their background composition are depicted in figure \ref{fig:topologicalRegions}. Each topological region is further divided into bins based on \mttwo. The \mttwo binning is constructed such that the low edge of the first bin is 400\GeV in regions with \HT > 1500\GeV and 200\GeV everywhere else, and the low edge of the final bin is constructed to contain approximately one background event based on simulation and not exceeding the maximum \HT value in that topological region (since an upper limit on \HT places an upper limit on \mttwo). The detailed \mttwo binning is as follows:
@@ -99,11 +101,13 @@ The various \HT bins and associated \mttwo binning can be seen in figure \ref{fi
 	\centering
 	\includegraphics[width=0.4\textwidth]{analysis/figs/HTvsMET_2017}
 	\includegraphics[width=0.5\textwidth]{analysis/figs/HTvsMT2bins_Moriond2017}
-	\caption{Signal region bins in \HT and \MET (left) and \mttwo binning within each \HT region (right). If simulation predicts less than one background event in the greatest \mttwo bin within a region, it is merged with the previous bin.}
+	\renewcommand{\baselinestretch}{1.0}
+	\caption[Signal region bins in \HT and \MET (left) and \mttwo binning within each \HT region (right).]{Signal region bins in \HT and \MET (left) and \mttwo binning within each \HT region (right). If simulation predicts less than one background event in the greatest \mttwo bin within a region, it is merged with the previous bin.}
 	\label{fig:mt2bins}
 \end{figure}
 \begin{table}[htbp]
 	\centering
+	\renewcommand{\baselinestretch}{1.0}
 	\caption{\mttwo binning in the Very Low, Low, and Medium \HT topological regions.}
 	\renewcommand{\arraystretch}{0.65}
 	\begin{tabular}{ccl}
@@ -177,6 +181,7 @@ The various \HT bins and associated \mttwo binning can be seen in figure \ref{fi
 \end{table}
 \begin{table}
 	\centering
+	\renewcommand{\baselinestretch}{1.0}
 	\caption{\mttwo binning in the High and Extreme \HT topological regions.}
 	\renewcommand{\arraystretch}{0.65}
 	\begin{tabular}{ccl}
@@ -245,6 +250,7 @@ As with the multi-jet regions, monojet \HT bins with less than one simulated bac
 In addition to these signal regions used to interpret results in the context of various BSM physics models, the analysis also provides results in "super signal regions" (SSRs) as defined in table \ref{tbl:ssr}. These regions provide a simpler set of selection than the nominal signal regions so that phenomenologists may easily reinterpret results in the context of different signal models. Results obtained using the SSRs are not as sensitive as the nominal binning --- finely binned regions have a higher signal-to-background ratio and the global background fit reduces the background uncertainties -- but are much easier to use for reinterpretation than the many correlated bins of the nominal analysis.
 \begin{table}
 	\centering
+	\renewcommand{\baselinestretch}{1.0}
 	\caption{Definition of "super signal regions" used in reinterpretations of the analysis.}
 	\begin{tabular}{l||c|c|c|c}
 \hline\hline

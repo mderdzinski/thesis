@@ -23,14 +23,16 @@ The second term in equation \ref{eq:zinvEstimate}, $N_{\ell\ell}^{\mathrm{CR(OF)
 	\includegraphics[width=0.45\textwidth]{backgrounds/figs/RSFOF_nb}
 	\includegraphics[width=0.45\textwidth]{backgrounds/figs/RSFOF_ht}
 	\includegraphics[width=0.45\textwidth]{backgrounds/figs/RSFOF_mt2}
-	\caption{The ratio of same-flavor to opposite-flavor events in a \ttbar enriched control region, as a function of \nj (top left), \nb (top right), \HT (bottom left), and \mttwo (bottom left). The solid black line corresponds to a constant value of $1.13 \pm 0.15$, while the dashed black lines correspond to the statistical uncertainty and the dashed red lines the total systematic uncertainty.}
+	\renewcommand{\baselinestretch}{1.0}
+	\caption[The ratio of same-flavor to opposite-flavor events in a \ttbar enriched control region, as a function of \nj (top left), \nb (top right), \HT (bottom left), and \mttwo (bottom left).]{The ratio of same-flavor to opposite-flavor events in a \ttbar enriched control region, as a function of \nj (top left), \nb (top right), \HT (bottom left), and \mttwo (bottom left). The solid black line corresponds to a constant value of $1.13 \pm 0.15$, while the dashed black lines correspond to the statistical uncertainty and the dashed red lines the total systematic uncertainty.}
 	\label{fig:rsfof}
 \end{figure}
 \begin{table}
 	\centering
+	\renewcommand{\baselinestretch}{1.0}
 	\caption{The control region predicted Drell-Yan (DY) yield, SF yield, OF yield, purity (the rfraction of \zll events), and ratio $R_{\mathrm{MC}}^{\znunu / \zll}$ for the very low, low, and medium \HT topological regions. Note that the 7+ jet regions with b-tags (marked with an asterisk) share the same CR, and the fraction of events with different numbers of b-tags is folded into the ratio.}
 	\small
-	\renewcommand{\arraystretch}{0.5}
+	\renewcommand{\arraystretch}{1.0}
 	\begin{tabular}{c|c|c|c|c|c|c|c}
 \hline \hline
 \multicolumn{8}{c}{Invisible Z} \\
@@ -74,9 +76,10 @@ $[575,1000]$ &7+&3+&15.6&19&3&0.823$\pm$0.088&0.22$^{(*)}$\\
 
 \begin{table}
 	\centering
+	\renewcommand{\baselinestretch}{1.0}
 	\caption{The control region predicted Drell-Yan (DY) yield, SF yield, OF yield, purity (the rfraction of \zll events), and ratio $R_{\mathrm{MC}}^{\znunu / \zll}$ for the high and extreme \HT topological regions. Note that the 7+ jet regions with b-tags (marked with an asterisk) share the same CR, and the fraction of events with different numbers of b-tags is folded into the ratio.}
 	\small
-	\renewcommand{\arraystretch}{0.5}
+	\renewcommand{\arraystretch}{1.0}
 	\begin{tabular}{c|c|c|c|c|c|c|c}
 \hline \hline
 \multicolumn{8}{c}{Invisible Z} \\
@@ -117,9 +120,10 @@ The transfer factor $k(\mttwomath)$ uses a combination of data and simulation in
 The \mttwo distribution, $k(\mttwomath)$, for each topological region is constructed from dilepton events in data where statistics allows, and \znunu simulation where statistics are sparse. In each template region, the greatest \mttwo bin is iteratively combined with the next-greatest bin until the total expected SM background yield in simulation is at least 50 events. For uncombined bins (where statistics in data is sufficient), the \mttwo shape is taken directly from dilepton data, corrected for the ratio $R_{\mathrm{MC}}^{\znunu / \zll}$. In the low-statistics combined regime, the \mttwo shape in \znunu simulation is used to determine the fraction of events in each \mttwo bin after normalizing the simulation yield to data in the combined bins. The extrapolation point after which the \mttwo shape is based on simulation in each signal region can be found in tables \ref{tbl:zinvHybridPoint1} and \ref{tbl:zinvHybridPoint2}.
 \begin{table}
 	\centering
+	\renewcommand{\baselinestretch}{1.0}
 	\caption{The \mttwo extrapolation point for the very low, low, and medium \HT topological regions, beyond which shape data from simulation is used to extrapolate the invisible Z estimate into \mttwo bins. ``NA'' indicates regions where the simulation shape is not used at all since dilepton statistics in data are sufficiently large to perform the estimate bin-by-bin.}
 	\small
-	\renewcommand{\arraystretch}{0.5}
+	\renewcommand{\arraystretch}{1.0}
 	\begin{tabular}{c|c|c|c}
 \hline \hline
 \multicolumn{4}{c}{Invisible Z} \\
@@ -163,9 +167,10 @@ $[575,1000]$ &7+&3+& 200 \\
 
 \begin{table}
 	\centering
+	\renewcommand{\baselinestretch}{1.0}
 	\caption{The \mttwo extrapolation point for the high and extreme \HT topological regions, beyond which shape data from simulation is used to extrapolate the invisible Z estimate into \mttwo bins. ``NA'' indicates regions where the simulation shape is not used at all since dilepton statistics in data are sufficiently large to perform the estimate bin-by-bin.}
 	\small
-	\renewcommand{\arraystretch}{0.5}
+	\renewcommand{\arraystretch}{1.0}
 	\begin{tabular}{c|c|c|c}
 \hline \hline
 \multicolumn{4}{c}{Invisible Z} \\
@@ -208,7 +213,8 @@ The accuracy of the \mttwo shape modeling in simulation is verified using other 
 	\includegraphics[width=0.35\textwidth]{backgrounds/figs/MT2M_W_GJ_log}
 	\includegraphics[width=0.35\textwidth]{backgrounds/figs/MT2H_W_GJ_log}
 	\includegraphics[width=0.35\textwidth]{backgrounds/figs/MT2UH_W_GJ_log}
-	\caption{The \mttwo shape distribution in \znunu simulation compared to $\gamma$, \wlnu, and \zll enriched samples in data, for each \HT region. The solid grey band indicates the systematic uncertainty associated with the \mttwo shape modeling.}
+	\renewcommand{\baselinestretch}{1.0}
+	\caption[The \mttwo shape distribution in \znunu simulation compared to $\gamma$, \wlnu, and \zll enriched samples in data, for each \HT region.]{The \mttwo shape distribution in \znunu simulation compared to $\gamma$, \wlnu, and \zll enriched samples in data, for each \HT region. The solid grey band indicates the systematic uncertainty associated with the \mttwo shape modeling.}
 	\label{fig:zinvMt2Shape}
 \end{figure}
 
