@@ -25,7 +25,7 @@ In principle, if the correct values of $m_{\text{X}}$ and $\vec{p}_t^{\text{X}(i
 Because this analysis selects final states with multiple jets in the final state, the calculation of \mttwo first requires grouping the hadronic jet activity into two large {\it pseudojets} to act as the visible components in the \mttwo equation. The jet activity in each event is divided into two hemispheres, and the jets in each hemisphere are summed together to created the pseudojets. The hemisphere algorithm proceeds as follows:
 \begin{itemize}
 	\item The direction of the two jets with largest invariant mass is chosen as the initial seed for the two axes.
-	\item Jets are associated to one of the two axes according to the minimal Lund distance, such that jet $k$ is associated to hemisphere $i$ instead of $j$ if the condition in equation \ref{eq:lundDist} is true.
+	\item Jets are associated to one of the two axes according to the minimal Lund distance \cite{Ball:2007zza}, such that jet $k$ is associated to hemisphere $i$ instead of $j$ if the condition in equation \ref{eq:lundDist} is true.
 	\item After each jet is associated to one of the two axes, the axes are recalculated by summing the momenta of all jets associated to an axis.
 	\item The association algorithm iterates using the new axes, and continues until no jets are associated to a different axis after an iteration.
 \end{itemize}
@@ -33,12 +33,12 @@ Because this analysis selects final states with multiple jets in the final state
 	(E_i - p_i \cos \theta_{ik}) \frac{E_i}{(E_i+E_k)^2} \leq (E_j - p_j \cos \theta_{jk}) \frac{E_j}{(E_j+E_k)^2} 
 	\label{eq:lundDist}
 \end{equation}
-When clustered using this pseudojet algorithm, QCD multijet events may yield high \mttwo if the pseudojets have high jet masses, thus the visible masses $m^{\text{vis}(i)}$ are set to zero to suppress such SM events. Since the kinetic components of \mttwo will be large for signal events, this suppression does not isgnificantly impact sensitivity to many BSM signatures, thus \mttwo is calculated in this analysis using only \MET and the two pseudojets.
+When clustered using this pseudojet algorithm, QCD multijet events may yield high \mttwo if the pseudojets have high jet masses, thus the visible masses $m^{\text{vis}(i)}$ are set to zero to suppress such SM events. Since the kinetic components of \mttwo will be large for signal events, this suppression does not isgnificantly impact sensitivity to many BSM signatures, thus \mttwo is calculated in this analysis using only \MET and the two pseudojets with $m_{\text{X}}\equiv 0$.
 
 
 \section{Event Selection Criteria}
 \label{sec:eventSelection}
-The general strategy for the event selection is to first apply baseline cuts on motivated by hardware and software-level triggers (discussed in section \ref{subsec:triggers}) and reducing the QCD multi-jet background to negligible levels. Events are further categorized using stransverse mass (\mttwo), the scalar sum of the transverse momenta \pt of all selected jets (\HT), the total number of jets in the event (\nj), and the total number of b-tagged jets in the event (\nb). A summary of the event preselections can be found in table \ref{tbl:selections}.
+The general strategy for the event selection is to first apply baseline cuts motivated by hardware and software-level triggers (discussed in section \ref{subsec:triggers}) and reducing the QCD multi-jet background to negligible levels. Events are further categorized using stransverse mass (\mttwo), the scalar sum of the transverse momenta \pt of all selected jets (\HT), the total number of jets in the event (\nj), and the total number of b-tagged jets in the event (\nb). A summary of the event preselections can be found in table \ref{tbl:selections}.
 \begin{table}
 	\centering
 	\renewcommand{\baselinestretch}{1.0}
@@ -76,7 +76,7 @@ GeV/$\pt^{\mathrm{lep}}$,0.05))  \\
 
 \section{Search Regions}
 \label{sec:searchRegions}
-The search regions are defined by categorizing events in bins of \HT, \nj, \nb, and \mttwo (in addition to the baseline selection described in section \ref{sec:eventSelection}). First events are categorized into ``topological regions'' according to \HT, \nj, and \nb:
+There are 213 individual search regions are defined by categorizing events in bins of \HT, \nj, \nb, and \mttwo (in addition to the baseline selection described in section \ref{sec:eventSelection}). First events are categorized into ``topological regions'' according to \HT, \nj, and \nb:
 \begin{itemize}
 	\item \HT (GeV): [250, 450] (Very Low), [450,575] (Low), [575,1000] (Medium), [1000, 1500] (High), [1500, $\infty$] (Extreme)
 	\item \nj \& \nb: 2-3j 0b, 2-3j 1b, 2-3j 2b, 4-6j 0b, 4-6j 1b, 4-6j 2b, $\geq$7j 0b, $\geq$7j 1b, $\geq$7j 2b, 2-6j $\geq$3b, and $\geq$7j $\geq$3b (except in the region with 250 < \HT < 450 GeV, where bins $\geq$7j are merged with 4-6j bins due to lack of events).
@@ -85,7 +85,7 @@ The search regions are defined by categorizing events in bins of \HT, \nj, \nb, 
 	\centering
 	\includegraphics[width=0.75\textwidth]{analysis/figs/bkgComposition_HTlabel}
 	\renewcommand{\baselinestretch}{1.0}
-	\caption[Topological regions in \nj and \nb for the [575,1000] \HT region.]{Topological regions in \nj and \nb for the [575,1000] \HT region. Within each region, the relative fraction of background events from different SM processes is shown based on simulation.}
+	\caption[Topological regions in \nj and \nb for the medium \HT region.]{Topological regions in \nj and \nb for the [575,1000] \HT region. Within each region, the relative fraction of background events from different SM processes is shown based on simulation.}
 	\label{fig:topologicalRegions}
 \end{figure}
 The different topological regions for one \HT region and their background composition are depicted in figure \ref{fig:topologicalRegions}. Each topological region is further divided into \mttwo bins. The \mttwo binning is constructed such that the low edge of the first bin is 400\GeV in regions with \HT > 1500\GeV and 200\GeV everywhere else, and the low edge of the final bin is constructed to contain approximately one background event based on simulation and not exceeding the maximum \HT value in that topological region (since an upper limit on \HT places an upper limit on \mttwo). The detailed \mttwo binning is as follows:
@@ -289,10 +289,10 @@ In order to anchor the data-driven background estimates used in this analysis, {
 
 \subsection{Single Lepton Control Region}
 \label{subsec:leptonCR}
-The single lepton CR is constructed to select a sample enriched with single lepton events, the most dominant contributions being from \ttbar and \wjets production. The same baseline selections described in section \ref{sec:eventSelection} are applied with the exception of the following:
+The single lepton CR is constructed to select a sample enriched with single lepton events, the most dominant contributions being from \ttbar and \Wj production. The same baseline selections described in section \ref{sec:eventSelection} are applied with the exception of the following:
 \begin{itemize}
 	\item In lieu of the lepton veto, exactly one lepton candidate passing the reco or PF lepton selections is required. In order to avoid double counting (for leptons which are reconstructed both as a reco lepton and PF candidate), PF leptons within \DR < 0.1 of a reco lepton are not considered. 
-	\item The transverse mass \MT between the lepton and \MET must be less than 100\GeV to reduce possible signal contamination.
+	\item The transverse mass \Mt between the lepton and \MET must be less than 100\GeV to reduce possible signal contamination.
 \end{itemize}
 Since non-isolated leptons in the fiducial region of the detector are usually successfully reconstructed, the closest jet within \DR < 0.4 of the lepton is removed and the lepton instead counted as a visible object for the purposes of computing \Ht, \Htmiss, \dphilong, \htovermet, and \mttwo (as well as the hemispheres used to calculate \mttwo). Events are further subdivided into the topological regions described in section \ref{sec:searchRegions} using the modified \HT and \nj and \nb, but not in \mttwo to increase the statistical power of the CR. The signal regions with $\geq7$j,$\geq1$b are all predicted using CRs with identical \Ht bins but $\geq7$j,1-2b to increase the statistical power of those CRs (and to avoid signal contamination in regions with $\geq7$j,$\geq3$b). In addition, for regions with $\HT > 1500\GeV$, the minimum \mttwo threshold is set to 200\GeV to increase available statistics. The monojet CR is binned identically to the signal region.
 
@@ -307,7 +307,7 @@ Control regions corresponding to opposite-sign same-flavor leptons (OSSF) from \
 	\item To improve trigger efficiency for these regions, the leading lepton is required to have a minimum momentum $\pt > 100\GeV$ and the sub-leading lepton $\pt > 30\GeV$.
 	\item When selecting Z boson candidates for the \znunu estimate, the leptons are also required to be OSSF with an invariant mass $|\mll - m_{\mathrm{Z}}| < 20\GeV$, where $m_{\mathrm{Z}}$ is the nominal Z boson mass.
 \end{itemize}
-Similar to the single lepton control region, the closest jet within \DR < 0.4 of each lepton is removed and the leptons added to the \MET vector for the purposes of computing \nj, \nb, \Ht, \Htmiss, \dphilong, \htovermet, and \mttwo (as well as the hemispheres used to calculate \mttwo). Additional information on the \mttwo binning for these regions is detailed in section \ref{sec:zinv}.
+Similar to the single lepton control region, the closest jet within \DR < 0.4 of each lepton is removed and the leptons added to the \MET vector for the purposes of computing \Ht, \Htmiss, \dphilong, \htovermet, and \mttwo (as well as the hemispheres used to calculate \mttwo). Additional information on the \mttwo binning for these regions is detailed in section \ref{sec:zinv}.
 
 \subsection{Multijet Control Region}
 \label{subsec:multijetCR}

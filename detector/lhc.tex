@@ -23,7 +23,7 @@ The protons delivered by the LHC are accelerated in stages before reaching final
 	\label{fig:lhcSchematic}
 \end{figure}
 
-The total amount of proton-proton collisions delivered by the LHC is often measured by the {\it integrated luminosity}. The {\it instantaneous luminosity} (L) is a measure of the number of interactions that can be produced per unit area per second, and the integrated luminosity ($\mathcal{L}$) is the total luminosity integrated over some time interval. Integrated luminosity is thus a unit of inverse area and typically measured in barns (1 barn = 100 $\text{fm}^2$). The total number of a particular type of event measured by a detector $N_{\mathrm{events}}$ is the product of the integrated luminosity, the cross section for that particular process ($\sigma$), and the detector-determined efficiency ($\epsilon$) as described in equation \ref{eq:lumi}. The total integrated luminosty delivered by the LHC compared that recorded by CMS is illustrated in figure \ref{fig:lumi}.
+The total amount of proton-proton collisions delivered by the LHC is often measured by the {\it integrated luminosity}. The {\it instantaneous luminosity} (L) is a measure of the number of interactions that can be produced per unit area per second, and the integrated luminosity ($\mathcal{L}$) is the total luminosity integrated over some time interval. Integrated luminosity is thus a unit of inverse area and typically measured in barns (1 barn = 100 $\text{fm}^2$). The total number of a particular type of event measured by a detector $N_{\mathrm{events}}$ is the product of the integrated luminosity, the cross section for that particular process ($\sigma$), and the detector-determined efficiency ($\epsilon$) as described in equation \ref{eq:lumi}. The total integrated luminosty delivered by the LHC compared to that recorded by CMS is illustrated in figure \ref{fig:lumi}.
 \begin{equation}
 	N_{\mathrm{events}} = \mathcal{L} \cdot \sigma \cdot \epsilon
 	\label{eq:lumi}
@@ -40,9 +40,18 @@ The total amount of proton-proton collisions delivered by the LHC is often measu
 \subsection{Proton Bunches and Pileup}
 \label{subsec:pileup}
 
-The protons delivered by the LHC are not in a continuous stream, but separated into ``bunches'' so that interactions occur at discrete intervals. Each proton bunch is approximately 30 centimeters long and contains over 100 billion protons at the beginning of the machine fill. Proton bunches are injected into the LHC and stored with a bunch spacing of 25ns (or 40 MHz), where they can be accelerated and circulated for hours while collisions occur at the interaction points.
+The protons delivered by the LHC are not in a continuous stream, but separated into ``bunches'' so that interactions occur at discrete intervals. Each proton bunch is centimeters long and contains over 100 billion protons at the beginning of the machine fill. Proton bunches are injected into the LHC and stored with a bunch spacing of 25ns (or 40 MHz), where they can be accelerated and circulated for hours while collisions occur at the interaction points.
 
-Because protons are delivered in discrete bunches at such a high rate, any bunch crossing results in multiple interactions and outgoing particles. This is known as {\it pileup}, and presents a significant challenge for physics detectors which must be able to associate outgoing particles to a specific interaction. {\it In-time pileup} is caused by multiple interactions per bunch crossing (the majority of interaction in a given bunch crossing are soft proton-proton inelastic scattering), and {\it out-of-time pileup} is due to interactions from a different bunch crossing (such as the read-out time of a detector subsystem). An effective detector needs to correctly identify which particles are associated with the interaction of interest in any given event, and mitigate the effects of pileup in design and construction.
+Because protons are delivered in discrete bunches at such a high rate, any bunch crossing results in multiple interactions and outgoing particles. This is known as {\it pileup}, and presents a significant challenge for physics detectors which must be able to associate outgoing particles to a specific interaction. {\it In-time pileup} is caused by multiple interactions per bunch crossing (the majority of interaction in a given bunch crossing are soft proton-proton inelastic scattering), and {\it out-of-time pileup} is due to interactions from a different bunch crossing. The latter effect is due to the  readout time of some of the detector electronics being longer than the 25ns bunch spacing. A distribution illustrating the mean number of interactions per bunch crossing is shown in figure \ref{fig:pileup2016}. An effective detector needs to correctly identify which particles are associated with the interaction of interest in any given event, and mitigate the effects of pileup in design and construction.
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.75\textwidth]{detector/figs/pileup_pp_2016}
+	\renewcommand{\baselinestretch}{1.0}
+	\caption[The mean number of interactions per bunch crossing for the 2016 run at 13 TeV.]{The mean number of interactions per bunch crossing for the 2016 run at 13 TeV. The cross section is taken to be 80 mb.}
+	\label{fig:pileup2016}
+\end{figure}
 
 % --------------------------------------------------------------------------- %
 % --------------------------------------------------------------------------- %
